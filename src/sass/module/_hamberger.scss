@@ -1,0 +1,185 @@
+@use "../global/" as *;
+
+$drawer-width: 32px;
+$drawer-height: 2px;
+$drawer-color: $white;
+
+.hamberger {
+    transition: 0.3s ease;
+    width: 100%;
+    height: inherit;
+    @include mq("md"){
+        width: 0;
+        height: 0;
+    }
+}
+.top__drawer.hamberger {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.hamberger .menu__button{
+    position: relative;
+    display: block;
+    z-index: 1001;
+    margin: 0.75rem auto 0;
+    height: $drawer-height;
+    width: $drawer-width;
+    background-color: $white;
+    transition: ease 0.3s;
+}
+.hamberger .menu__button2,
+.hamberger .menu__button3{
+    margin: rem(8) auto 0;
+    position: relative;
+    display: block;
+    z-index: 1001;
+    height: $drawer-height;
+    width: $drawer-width;
+    transition: ease 0.3s;
+}
+
+.js-hamberger.is-active {
+    transition: 0.3s ease;
+}
+
+
+.sp-nav{
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    transition: 0.3s ease;
+    z-index: 999;
+    @include mq("md"){
+        position: relative;
+        top: initial;
+        left: initial;
+        right: initial;
+        transform: initial;
+        background-color: transparent;
+        width: initial;
+        height: initial;
+        overflow-y: initial;
+        z-index: 1;
+    }
+}
+.js-hamberger.is-active .menu__button{
+    right: 0;
+}
+.drawer__item,
+.drawer__item a,
+.drawer__link,
+.drawer__link-mail,
+.drawer__link-cvr,
+.drawer__mail-image {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+.js-hamberger.is-active .js__drawer{
+    right: 0rem;
+    transform: translateX(0);
+}
+
+.hamberger .menu:nth-child(1){
+    top: 1.1rem;
+}
+.js-hambergeris-active .menu__button2{
+    top: 0.9875rem;
+}
+.hamberger .menu:nth-child(2){
+    top: 1.25rem;
+    margin: 0.1em auto ;
+}
+
+
+.hamberger.is-active .menu__button:nth-child(1){
+    top: 0.65rem;
+    transform: rotate(45deg);
+}
+
+.hamberger.is-active .menu__button:nth-child(2){
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.hamberger.is-active .menu__button:nth-child(3){
+    top: -0.575rem;
+    transform: rotate(-45deg);
+}
+
+
+.sp-nav.is-active{
+    transform: translateX(0);
+    text-align: center;
+}
+.sp-nav.is-active .accordion__hide{
+    text-align: center;
+}
+
+.sp-nav__drawers{
+    display: block;
+    @include mq("md"){
+        height: initial;
+    }
+}
+.sp-nav__drawer{
+    height: inherit;
+}
+.drawer__items{
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+.drawer__item{
+    display: block;
+    width: 100%;
+    height: 4.625rem;
+    font-size: 1rem;
+    font-weight: $bold;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+.drawer__item {
+    border-bottom: solid 1px $white;
+}
+
+
+.drawer__item a {
+    display: block;
+    width: 100%;
+    font-family: $base-font;
+    color: $white;
+    height: inherit;
+    font-size: 1rem;
+    padding: 1.5rem 0;
+}
+
+.drawer__link.drawer__link-mail{
+    display: flex;
+    align-items: center;
+}
+.drawer__link-cvr{
+    display: inline-block;
+    margin-left: 0.75rem;
+}
+.drawer__mail-image{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    max-width: 100%;
+}
+
+.menu__nav-top.menu__nav--topix.u-mobile {
+    display: block;
+    font-weight: $bold;
+    @include mq("md") {
+        display: none;
+    }
+}

@@ -1,0 +1,46 @@
+@use "../global" as *;
+
+.swiper {
+  width: 100%;
+  overflow: hidden;          // grid指定はやめる
+  min-height: 331px;
+}
+/* slidesPerView: 'auto' のときは width を固定しない */
+.about__swiper .swiper-slide { width: auto; }
+
+
+/* スライドの動き等速 */
+.swiper-wrapper {
+  height: inherit;
+  transition-timing-function: linear;
+  justify-content: center;
+  }
+/* 画像のサイズ調整 */
+
+  .swiper-container,
+  .swiper-slide {
+    // width: 200px;
+    margin-left: 0.25rem;
+    @include mq("md"){
+      width: 360px;
+    //  min-height: 331px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    margin-bottom: 10px;
+  }
+}
+  .swiper-slide img {
+    display: block;
+    // align-self: center; /* 上下の中央揃え */
+    max-width: 100%;
+    aspect-ratio: 1;
+    // width: auto;
+    width: 12.5rem;
+    object-fit: cover; /* IE: not support */
+    @include mq("md"){
+      width: 22.5rem;
+    }
+  }

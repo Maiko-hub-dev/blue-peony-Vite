@@ -1,0 +1,144 @@
+@use "../global" as *;
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 4.5rem;
+    background-color: $white;
+    padding-top: 4.5rem;
+    @include mq("md"){
+        padding-left: 17.5rem;
+        z-index: 2000;
+    }
+}
+.about__inner{
+    width: inherit;
+    background-color: $content;
+    margin-top: 4.5rem;
+    padding: 0 1.25rem;
+    @include mq("md"){
+        padding: 3.875rem 0;
+        position: relative;
+    }
+}
+
+.about__swiper{
+    width: inherit;
+    padding-top: 4.5rem;
+    @include mq("md"){
+        padding-top: 0;
+    }
+}
+.about__subtitle {
+  position: absolute;
+  top: 50%;
+  background-color: $content;
+  writing-mode: vertical-rl;   /* テキストを縦書きに */
+  font-size: 1.5rem;
+  color: black;
+  padding: 1rem 1.5rem;
+  width: 7rem;
+  z-index: 5;
+  margin-top: -3rem;
+  right: 1.6875rem;
+  font-weight: $bold;
+  letter-spacing: 0.04em;
+  @include mq("md"){
+    top: 65%;
+    bottom: -10.7875rem;
+    font-size: 2.5rem;
+    padding: 2rem 1.5rem;
+    width: 10.74rem;
+    right: min(8.874rem, 6%);
+    letter-spacing: 0.1em;
+  }
+}
+
+
+.subtitle__blue{
+    color: $blue;
+}
+
+.about__text-block{
+    position: relative;
+    top: 50%;
+    bottom: 0;
+    margin: 2rem auto 4rem 0;
+    max-width: rem(600);
+    padding: 0 1.25rem;
+    @include mq("md"){
+        margin: 3rem auto 6rem 0;
+    }
+    @include mq("lg"){
+        margin: 4rem auto 8rem 0;
+    }
+}
+.about__title{
+    font-size: 1.25rem;
+    color: $black;
+    @include mq("md"){
+        font-size: 1.5rem;
+    }
+}
+.about__heading{
+    font-family: $eng-font;
+    color: $white;
+    text-shadow:  1px 1px 0 $blue,1px -1px 0 $blue,-1px 1px 0 $blue,-1px -1px 0 $blue;
+    // text-stroke: 2px  $blue;
+    font-size: 4.5rem;
+    @include mq("md"){
+        font-size: 8rem;
+    }
+}
+
+.about__interview{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    padding-right: 39.46%;
+    top: max(75%, 18.75rem);
+    @include mq("sp"){
+        padding-right: min(22%, 20.875rem);
+    }
+    @include mq("md"){
+        top: 0;
+        transform: translateY(60%);
+        padding-right: min(23%,20.875rem);
+    }
+}
+
+.about__interview img{
+    display: block;
+    aspect-ratio: 161/213;
+    width: 100%;
+    height: 5rem;
+    @include mq("md"){
+        width: 10.0625em;
+        height: 13.3125em;
+    }
+}
+.about__link {
+    text-decoration: none;
+    width: 15rem;
+    display: block;
+    color: $black;
+    padding: 1.375rem 5.125rem;
+    width: fit-content;
+    border: 1px solid $black;
+    border-radius: 0.625rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    margin-top: 2rem;
+    @include mq("md"){
+
+    };
+}
+.about__elipse {
+    font-size: 0.625rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.75rem;
+    text-align: center;
+}

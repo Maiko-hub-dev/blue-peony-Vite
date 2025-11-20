@@ -1,0 +1,81 @@
+  @use "../global/" as *;
+  
+  /*アコーディオンタイトル*/
+  .accordion__title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-weight: normal;
+    padding: 1rem 0.125rem;
+    font-size: 1rem;
+    font-weight: $bold;
+    width: 100%;
+    margin-right: -0.75rem;
+    @include mq("md"){
+      padding: 1.125rem 0.125rem;
+    }
+  }
+ 
+  /* タイトル横のプラスマーク縦線 */
+  .accordion__door::before{
+    display: none;
+    @include mq("md"){
+      display: block;
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 1.9375rem;
+      height: 1px;
+      background-color: $blue;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-out;
+      width: 1.5rem;
+      right: 0.025rem;
+    }
+  }
+  /* タイトル横のプラスマーク横線 */
+  .accordion__door::after{
+    display: none;
+    @include mq("md"){
+      display: block;
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 1.9375rem;
+      height: 1px;
+      background-color: $blue;
+    transform: rotate(0);
+    transition: transform 0.5s ease-out;
+      width: 1.5rem;
+      right: 0.025rem;
+    }
+  }
+  /* アコーディオンが開いたとき縦線の変化 */
+  .accordion__title.open  .accordion__door::before{
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+
+  /*　closeというクラスがついたら形状変化　*/
+  .accordion__title.open  .accordion__door::after{
+    opacity: 0;
+  }
+  /*アコーディオンで現れるエリア*/
+  .accordion__hide {
+    font-size: 1rem;
+    font-weight: $bold;
+    margin: 0 ;
+    line-height: 1.875714;
+    @include mq("md"){
+      padding: 0.625rem;
+      display: none;/*はじめは非表示*/
+      font-size: 0.875rem;
+      padding: 1.5rem 2rem 1.5rem rem(17);
+    }
+}
+.accordion--open{
+  display: block;
+  @include mq("md"){
+    display: none;
+  }
+}

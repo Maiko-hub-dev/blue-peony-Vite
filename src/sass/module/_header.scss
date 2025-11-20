@@ -1,0 +1,124 @@
+@use "../global/" as *;
+
+.header{
+    width: 100%;
+    height: 4.3125rem;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    z-index: 2999;
+    @include mq("md"){
+        position: relative;
+        height: 0;
+        background-color: initial;
+    }
+}
+.header__ao {
+    height: inherit;
+    margin-top: 0.625rem;
+    @include mq("md"){
+        height: inherit;
+        margin-top: 0;
+    }
+}
+.header__ao--sp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding-left: 1rem;
+    @include mq("md"){
+        display: none;
+    }
+}
+.header__ao-sp-logo{
+    padding: 0.625rem 0;
+    @include mq("md"){
+        padding: 0;
+    }
+}
+.header__nav {
+    display: none;
+        @include mq("sp"){
+            margin: 0 0 0 9rem;
+        }
+        @include mq("md"){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: inherit;
+            margin:  0 auto;
+            padding: 0 ;
+        }
+        @include mq("lg"){
+            transform: scale(1);
+            padding: 0 3% 0 1em;
+            max-width: 100%;
+        }
+}
+.header__btns{
+    margin-left: 5rem;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    width: 3.5rem;
+    height: 3rem;
+    @include mq("md"){
+        width: 0;
+        height: 0;
+        display: none;
+        margin-left: 0;
+    }
+    @include mq("lg"){
+        width: auto;
+        justify-content: end;
+    }
+}
+
+.hero__link{
+    @include mq("md"){
+    display: block;
+    max-width: 14.1875rem;
+    margin-left: 1.25rem;
+    height: inherit;
+    }
+    @include mq("lg"){
+        width: 15.875rem;
+    }
+}
+.header__logo {
+    display: block;
+    width: 6.125rem;
+    height: 3.6875rem;
+    @include mq("md"){
+        display: none;
+    }
+}
+
+.header__menu-button {
+    position: sticky;
+    display: block;
+    width: 4rem;
+    height: inherit;
+    padding:  0.5rem;
+    cursor: pointer;
+    right: 0;
+    @include mq("sp"){
+        height: 0;
+        width: 0;
+    }
+    @include mq("md"){
+        display: none;
+    }
+}
+
+
+

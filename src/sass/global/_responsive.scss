@@ -1,0 +1,53 @@
+@use "sass:math";
+//ブレイクポイントの値
+$breakpoints: (
+  sp: 375,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaqueries: (
+  sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+
+//メディアクエリー
+$mediaquerys: (
+  sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// ブレイクポイントの設定
+@mixin mq($mediaquery: md) {
+  @media #{map.get($mediaqueries, $mediaquery)} {
+    @content;
+  }
+}
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}  
+
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}

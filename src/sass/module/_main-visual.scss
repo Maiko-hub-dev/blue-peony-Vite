@@ -1,0 +1,404 @@
+@use "../global/" as *;
+
+
+.main-visual {
+    width: 100%;
+    height: 100vh;
+    padding: 2.0625rem 0 0 0.625rem;
+    @include mq("md"){
+        padding-left: 17.5rem;
+    }
+}
+.main-visual__inner{
+    padding: 0 0.625rem;
+    width: 100%;
+    height: inherit;
+    background-color: $content;
+
+    margin-top: 4.3125rem;
+    border-radius: 10px 0 0 10px;
+    @include mq("md"){
+        padding: 0 2.5rem;
+        // background: none;
+        margin-top: 0;
+    }
+}
+
+.main-visual__rightbox {
+    @include mq("md"){
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $blue;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    max-width: 45.4375rem;
+    max-height: 45.4375rem;
+    }
+}
+
+.main-visual__container {
+    position: relative;
+    width: 100%;
+    height: inherit;
+    @include mq("sp"){
+        padding: 0.75rem 0.75rem 0.75rem 0;
+    }
+    
+    @include mq("md"){
+        background-color: $content;
+        padding: 2.5em 2.5em 2.5em 0;
+        border-radius: 50px;
+        height: 100vh;
+        z-index: 22;
+    }
+}
+.main-visual__titles{
+    position: static;
+    width: 100%;
+    display: block;
+    z-index: 2;
+    transform: translateY(-7rem);
+    bottom: auto;
+    @include mq("sp"){
+        width: 100%;
+        bottom: initial;
+        transform: translateY(-25px);
+    }
+    @include mq("md"){
+            justify-content: flex-end; // ← 右寄せ
+        }
+}
+.main-visual__title{
+    @include mq("sp"){
+        padding: 0 0.5rem;
+        text-align: left;
+        position: static;
+    }
+    @include mq("md"){
+        width: 100%;
+        max-width: 100%; 
+    }
+}
+.main-visual__catch {
+    background-color: $white;
+    border-radius: 0.625rem;
+    color: $black;
+    font-size: 1.5rem;
+    position: static;
+    font-family: $base-font;
+    font-weight: $bold;
+    padding: 0.875rem ;
+    text-align: left;
+    line-height: 1.5;
+    display: inline-block;
+    width: auto;
+    bottom: 10rem;
+    // margin-left: 1.1875rem;
+    @include mq("sp"){
+        position: absolute;
+        // right: 1.1875rem;
+        white-space: nowrap;   // ★ 改行しない
+    }
+    @include mq("md"){
+        left: auto;
+        padding-left: 1rem;
+        font-size: 4rem;
+        right: 1.1875rem;
+        bottom: 8.0625rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1180px) {
+  .main-visual__catch {
+    position: absolute;
+    right: 1.1875rem;
+    bottom: max(8.0625rem, 10%);
+    font-size: 2.5rem;
+    white-space: nowrap;
+    width: fit-content;
+  }
+}
+
+.main-visual__members.members{
+ height: inherit;
+    @include mq("md"){
+    width: 100%;
+    height: 100%;
+    }
+}
+
+.main-visual__text{
+    position: absolute;
+    right: auto;
+    bottom: 6rem;
+    left: 1.1875rem;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    color: $black;
+    font-size: 0.75rem;
+    line-height: 1.75;
+    text-align: left;
+    font-weight: $bold;
+    padding: 0.5rem 1rem 0 0;
+    width: inherit;
+    letter-spacing: 0.04em;
+    opacity: 1;
+    transition: opacity .3s ease;
+    transform: translateY(40px);
+    @include mq("sp"){
+        right: 7.0625rem;
+        margin-top: 1.3125rem;
+        right: 0.25rem;
+        z-index: 11;
+        transform: translateY(0);
+    }
+    @include mq("md"){
+        padding-left: max(1.5rem,10%);
+        width: fit-content;
+        left: auto;
+        bottom: max(0.75rem, 1%);
+        margin-top: 1.1875rem;
+        line-height: 2;
+        font-size: 1rem;
+        right: 3.1875rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1180px) {
+    .main-visual__text {
+        font-size: 0.875rem;       // ★ ここで指定
+        right: 3.1875rem;
+    }
+}
+.main-visual__text.is-hidden {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+
+.members__img{
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+    @include mq("md"){
+    }
+} 
+
+.members .members__img.open{
+    @include mq("md"){
+    }
+}
+
+.members .members__dream{
+    background: url(".././src/images/dream-house.svg");
+    background-size: 6.875rem 9.1875rem;
+    background-repeat: no-repeat;
+    bottom: -1rem;
+    left: -1rem;
+    @include mq("sp"){
+        background-size: 10rem 13.3635rem;
+    }
+    @include mq("md"){
+        background-size: contain;
+    }
+}
+
+.members .members__dream {
+    width: 6.875rem;
+    height: 9.1875rem;
+    @include mq("sp"){
+        width: 7.5rem;
+        height: 10.5rem;
+    }
+    @include mq("md"){
+  width: 28.03571429%;
+  height: 47.65177549%;
+}
+}
+
+.members .members__dream.open {
+    bottom: 31%;
+    left: 0.5rem;
+    @include mq("md"){
+        bottom: 3.1875rem;
+        left: 5.4375rem;
+    }
+}
+.members .members__plan{
+    width: 8.375rem;
+    height: 8.8175rem;
+    @include mq("md"){
+        width: 22.85714%;
+        height: 22.86%;
+    }
+}
+.members .members__plan{
+    background: url(".././src/images/home-loan-application.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+    @include mq("sp"){
+        aspect-ratio: 256/ 252;
+    }
+    @include mq("md"){
+        top: -1rem;
+        right: -1rem;
+    }
+}
+.members .members__plan.open {
+    top: 0.875rem;
+    right: 0.5rem;
+    @include mq("md"){
+        top: 4rem;
+        right: 3.4375rem;
+    }
+}
+//. ここまでCSSで指定
+.members .members__homeloan{
+    width: 6.4375rem;
+    height: 7.7375rem;
+    @include mq("md"){
+        min-width: 17.4%;
+        height: 25.4%;
+    }
+}
+.members .members__homeloan{
+    background: url(".././src/images/planning_01.svg");
+    background-repeat: no-repeat;
+    background-size: 6.4375rem 7.7375rem ;
+    background-position: center;
+    @include mq("md"){
+    top: -1rem;
+    left: -1rem;
+    }
+}
+.members .members__homeloan.open{
+    @include mq("sp"){
+        background-size: contain;
+    }
+    @include mq("md"){
+        margin-top: 4.0625rem;
+        left: 4.4375rem;
+    }
+}
+.members .members__estimate{
+    width: 5.5rem;
+    height: 6.3125rem;
+    @include mq("md"){
+        width: 10.125rem;
+        height: 11.6875rem;
+    }
+}
+.members .members__estimate{
+    background: url(".././src/images/estimate.svg");
+    background-repeat: no-repeat;
+    background-size: 88px 101px;
+    background-position: center;
+    @include mq("md"){
+        background-size: 162px 187px;
+        bottom: -1rem;
+        right: -1rem;
+    }
+}
+.members .members__estimate.open{
+    right: 0.5rem;
+    bottom: 34%;
+    @include mq("md"){
+        right: 3.5rem;
+        bottom: 18.5rem;
+    }
+}
+.members .members__screen {
+    width: 5.125rem;
+    height: 5.875rem;
+    @include mq("sp"){
+        width: 7.5rem;
+        height: 8.5995rem;
+    }
+    @include mq("md"){
+        width: 18.39285714%;
+        height: 26.88%;
+    }
+
+}
+.members .members__img.members__screen {
+    background: url(".././src/images/loan-screening.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    top: 0;
+    left: 50%;
+    transform: scale(0.8);
+    transform: translateX(-50%);
+    transform: translateY(-100%);
+    transition-duration: transform 1s ease-in-out;
+    
+}
+.members .members__screen.open{
+    transform: scale(1);
+    transform: translateX(-30%);
+    top: 25%;
+    @include mq("md"){
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.main-visual__scroll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $blue;
+    font-family: $base-font;
+}
+/* スクロールダウンの位置 */
+.scroll {
+        position: absolute;
+        bottom: -2.8125rem;
+        z-index: 10;
+        @include mq("md"){
+            z-index: 100;
+            bottom: 1.1875rem;
+            margin-left: -1rem;
+        }
+}
+/* 線のアニメーション部分 */
+.scroll::before {
+  animation: scroll 2s infinite;
+  background-color: $blue;
+  content: "";
+  bottom: -4rem;
+  height: 4rem;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 1px;
+  @include mq("md"){
+    bottom: -7rem;
+    height: 7rem;
+  }
+}
+/* 線のアニメーション */
+@keyframes scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+.scroll__text{
+    letter-spacing: 0.04em;
+    margin-left: rem(9);
+    margin-bottom: 0.5rem;
+}

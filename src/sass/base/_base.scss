@@ -1,0 +1,42 @@
+@use "../global" as *;
+html {
+  font-size: 16px;
+}
+html.is-fixed {
+  overflow: hidden;
+}
+body {
+  font-family: $base-font;
+}
+/* iPhoneの表示のみ指定を上書き */
+@supports(-webkit-touch-callout: none){
+.upper{
+  height: -webkit-fill-available;
+  }
+}
+
+// PCでは電話番号のクリックを無効にする
+a[href^="tel:"] {
+  pointer-events: none;
+  @include mq("md") {
+    pointer-events: auto;
+  }
+}
+
+// aタグには標準でホバーアニメーションが付与されるようにする
+a {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+#loom-companion-mv3, #shadow-host-companion {
+  display: none !important; /* この要素を非表示にします */
+}
+
+/* 要素を保持したまま高さを調整する場合 */
+#loom-companion-mv3, #shadow-host-companion {
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
