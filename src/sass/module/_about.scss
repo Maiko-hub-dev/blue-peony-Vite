@@ -68,10 +68,10 @@
     max-width: rem(600);
     padding: 0 1.25rem;
     @include mq("md"){
-        margin: 3rem auto 6rem 0;
+        margin: 3rem auto 5.3125rem 0;
     }
     @include mq("lg"){
-        margin: 4rem auto 8rem 0;
+        margin: 4rem auto 5.3125rem 0;
     }
 }
 .about__title{

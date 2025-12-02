@@ -1,0 +1,165 @@
+@use "../global" as *;
+
+.service {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding-top: 0.5rem;
+    @include mq("md"){
+        padding-left: clamp(3rem, 6vw, 17.5rem);
+        z-index: 2000;
+    }
+}
+.service__inner{
+    width: inherit;
+    margin-top: 4.5rem;
+    padding: 0 1.25rem;
+    @include mq("md"){
+        padding: 0 0 0 clamp(1rem,2vw, 3.875rem);
+    }
+}
+.service__wall{
+    position: relative;
+    z-index: 1;
+    overflow: hidden; // ← 角丸のはみ出しを防ぐので必須！
+  // 擬似要素で背景色を右側に付ける
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    background: #f8f8f8;
+    border-radius: 3.125rem 0 0 3.125rem;
+    z-index: -1;
+    pointer-events: none;
+    width: 88%;
+}
+
+}
+.service__text-block{
+    position: relative;
+    bottom: 0;
+    margin: 2rem auto 4rem 0;
+    max-width: rem(600);
+    padding: 0 1.25rem;
+    @include mq("md"){
+        margin: 3rem auto 6rem 0;
+    }
+    @include mq("lg"){
+        margin: 4rem auto 8rem 0;
+    }
+}
+.service__title{
+    font-size: 1.25rem;
+    color: $black;
+    @include mq("md"){
+        font-size: 1.5rem;
+    }
+}
+.service__heading{
+    font-family: $eng-font;
+    color: $white;
+    text-shadow:  1px 1px 0 $blue,1px -1px 0 $blue,-1px 1px 0 $blue,-1px -1px 0 $blue;
+    // text-stroke: 2px  $blue;
+    font-size: 4.5rem;
+    @include mq("md"){
+        font-size: 8rem;
+    }
+}
+
+.service__item{
+    display: flex;
+    flex-direction: column;
+    @include mq("md"){
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 4rem;
+        max-width: 1002px;
+        margin: 0 auto;
+    }
+}
+
+.service__item.service__reverse{
+    @include mq("md"){
+        flex-direction: row-reverse;
+    }
+}
+.service__image{
+    position: relative;
+    z-index: 1;
+}
+.service__content{
+    position: relative;
+    z-index: 0;
+
+}
+.service__number{
+    color: $blue-line;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: $eng-font;
+    @include mq("sp"){
+        font-size: clamp(3rem, 8vw, 6rem);
+    }
+    @include mq("md"){
+        margin-left: -1.5rem;
+        font-size: 10.5rem;
+    }
+}
+.service__name{
+     font-size: 1.5rem;
+     font-family: $base-font;
+     color: $black;
+     font-weight: $bold;
+     background-color: $white;
+     padding: 0.625rem 1rem;
+     width: fit-content;
+    @include mq("md"){
+        font-size: 1.5rem;
+        margin-left: 3.5rem;
+    }
+}
+.service__description{
+    color: $black;
+    line-height: 1.8;
+    @include mq("md"){
+        max-width: 430px;
+        margin-left: 3.5rem;
+    }
+}
+.service__link{
+      text-decoration: none;
+    width: 15rem;
+    display: block;
+    color: $black;
+    padding: 1.375rem 5.125rem;
+    width: fit-content;
+    border: 1px solid $black;
+    border-radius: 0.625rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    margin-top: 2rem;
+    @include mq("md"){
+        margin-left: 3.5rem;
+        word-break: break-all
+    };
+}
+.service__photo{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 335/ 301;
+    @include mq("md"){
+        aspect-ratio: 516 /464;
+        max-width: 516px;
+    }
+}
+.service__reverse .service__number{
+    @include mq("md"){
+    text-align: right;
+    margin-right: -1.5rem;
+    }
+}
