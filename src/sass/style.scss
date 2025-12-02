@@ -2,3 +2,17 @@
 @use "./base/reset";
 @use "./module/index";
 @use "./global" as *;
+
+
+/* --- ガイド線用: ページ全体に表示 --- */
+// body::before {
+//   content: "";
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   width: 1px;
+//   background: rgba(255, 0, 0, 0.4); // 赤いガイド線
+//   left: 28%; // ← 位置をあなたのタイトル位置に合わせて調整
+//   z-index: 9999;
+//   pointer-events: none;
+// }
