@@ -10,6 +10,8 @@
     @include mq("md"){
         padding-left: 17.5rem;
         z-index: 2000;
+        margin-top: 0;
+        padding-top: 0;
     }
 }
 .about__inner{
@@ -20,6 +22,7 @@
     @include mq("md"){
         padding: 3.875rem 0;
         position: relative;
+        // margin-top: 2.5rem;
     }
 }
 
@@ -79,6 +82,8 @@
     color: $black;
     @include mq("md"){
         font-size: 1.5rem;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
     }
 }
 .about__heading{
@@ -89,6 +94,7 @@
     font-size: 4.5rem;
     @include mq("md"){
         font-size: 8rem;
+        padding-left: 0.5rem;
     }
 }
 
