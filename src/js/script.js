@@ -53,4 +53,40 @@ const swiper = new Swiper('.about__swiper', {
   loopedSlidesLimit: false,
 });
 
+MicroModal.init({
+  openClass: 'is-open',
+  disableScroll: true,
+});
+// スクロールで見えなくするサイドメニュー
+document.addEventListener('DOMContentLoaded', function () {
+  const sideMenu = document.querySelector('.side-menu');
+  if (!sideMenu) return;
+
+  // ★PC判定のブレイクポイント（プロジェクトに合わせて変更してください）
+  const PC_WIDTH = 1024; // 例：1024px以上をPCとみなす
+  const HIDE_SCROLL_Y = 989; // 989px以上スクロールしたら非表示
+
+  function updateSideMenuVisibility() {
+    const isPc = window.innerWidth >= PC_WIDTH;
+    const hasScrolledPast = window.scrollY >= HIDE_SCROLL_Y;
+
+    if (isPc && hasScrolledPast) {
+      // PC かつ 989px 以上スクロール → aside を隠す
+      sideMenu.classList.add('side-menu--hidden');
+    } else {
+      // それ以外（上に戻ってきた / SP幅など）→ aside を表示
+      sideMenu.classList.remove('side-menu--hidden');
+    }
+  }
+
+  // スクロールのたびにチェック
+  window.addEventListener('scroll', updateSideMenuVisibility);
+  // 画面サイズ変更時にもチェック（PC⇔SP切り替え用）
+  window.addEventListener('resize', updateSideMenuVisibility);
+
+  // 初期表示時にも一度実行（リロードで中途位置のとき用）
+  updateSideMenuVisibility();
+});
+
+
 

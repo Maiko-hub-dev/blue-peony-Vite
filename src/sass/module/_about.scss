@@ -16,13 +16,13 @@
 }
 .about__inner{
     width: inherit;
+     max-width: var(--container);
     background-color: $content;
     margin-top: 4.5rem;
     padding: 0 1.25rem;
     @include mq("md"){
         padding: 3.875rem 0;
         position: relative;
-        // margin-top: 2.5rem;
     }
 }
 
@@ -72,9 +72,11 @@
     padding: 0 1.25rem;
     @include mq("md"){
         margin: 3rem auto 5.3125rem 0;
+        transform: translateX(-20%);
     }
     @include mq("lg"){
         margin: 4rem auto 5.3125rem 0;
+        transform: translateX(-5%);
     }
 }
 .about__title{

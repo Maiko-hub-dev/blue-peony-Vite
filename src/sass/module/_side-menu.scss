@@ -11,7 +11,15 @@
         max-width: 30%;
         width: min(20%,11rem);
         height: 100vh;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     }
+}
+/* 隠すとき用のクラス */
+.side-menu.side-menu--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-10px); // お好みで。フワッと消える感じ
 }
 .side-menu__list{
     width: 100%;

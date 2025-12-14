@@ -7,12 +7,13 @@
     background-color: $white;
     padding-top: 0.5rem;
     @include mq("md"){
-        padding-left: clamp(3rem, 5%, 17.5rem);
-        z-index: 2000;
+        padding-left: max(2rem, calc((100% - var(--container)) / 2));
+        z-index: 100;
     }
 }
 .service__inner{
     width: inherit;
+     max-width: var(--container);
     padding: 0 1.25rem;
     margin-top: 2rem;
     @include mq("md"){
@@ -31,12 +32,12 @@
     top: 0;
     bottom: 0;
     right: 0;
-
     background: #f8f8f8;
     border-radius: 3.125rem 0 0 3.125rem;
     z-index: -1;
     pointer-events: none;
     width: 88%;
+}
 }
 .service__titles{
     width: 100%;
@@ -45,8 +46,12 @@
     position: absolute;
     top: 4.5rem;
     left: 10.875rem;
-    // left: clamp(2rem, 1vw, 14.875rem);
+    padding: 0 0 0 8.5rem;
     z-index: 2;
+    transform: translateX(-20%);
+    }
+    @include mq("lg"){
+        transform: translateX(-2%);
     }
 }
 .service__text-block{
@@ -60,7 +65,7 @@
     }
     @include mq("lg"){
         margin: 4rem auto 8rem 0;
-        padding-left: clamp(2rem, 1vw, 14.875rem);
+        padding-left:max(2rem, calc((100% - var(--container)) / 2));
     }
 }
 .service__title{
@@ -68,7 +73,7 @@
     color: $black;
     @include mq("md"){
         font-size: 1.5rem;
-         padding-left: clamp(2rem, 1vw, 14.875rem);
+        padding-left: 0.5rem;
     }
 }
 .service__heading{
@@ -79,7 +84,7 @@
     font-size: 4.5rem;
     @include mq("md"){
         font-size: 8rem;
-         padding-left: clamp(2rem, 1vw, 14.875rem);
+         padding-left: max(2rem, calc((100% - var(--container)) / 2));
     }
 }
 .service__items{
@@ -102,6 +107,7 @@
         max-width: 1002px;
         margin: 4rem auto ;
         padding-top: 4rem;
+        padding-left: 4rem;
     }
 }
 .service__item:last-child{
@@ -131,7 +137,7 @@
     font-weight: bold;
     font-family: $eng-font;
     @include mq("sp"){
-        font-size: clamp(3rem, 8vw, 10.5rem);
+        font-size: clamp(3rem, 8dvw, 10.5rem);
         margin-left: 0;
     }
     @include mq("lg"){
@@ -195,7 +201,7 @@
         margin-right: -1.5rem;
     }
 }
-}
+
 @media (min-width: 768px) and (max-width: 1180px) {
     .service__image{
         width: 50%;

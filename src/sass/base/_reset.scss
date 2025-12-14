@@ -29,6 +29,8 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable; // スクロールバー分のスペースを常に確保
+  overflow-x: clip;
 }
 
 /* Set core body defaults */
@@ -36,6 +38,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: clip;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
