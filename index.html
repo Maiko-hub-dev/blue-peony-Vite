@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="./css/style.css?ver=1.0.1">
       
         <!-- JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -47,6 +47,9 @@
           <script src="./js/script.js" defer></script>
     </head>
     <body>
+      <div id="splash">
+        <div id="splash_logo"><img src="./src/images/logo-pc.svg" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
+        <!--/splash--></div>
       <header class="header js-header">
           <div class="header__ao ao">
             <a href="#top" class="header__link">
@@ -101,7 +104,11 @@
                 住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？
               </div>
               <img src="./src/images/news-modal-house.jpg" alt="インテリアの写真" class="news__modal-image">
-              <div class="news__modal-description">みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。〜〜〜〜〜〜</div>
+              <div class="news__modal-description">
+                みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。
+                家を建てるというのは、人生の中で最も重要なイベントの一つです。そのためには、慎重な計画と適切なアドバイスが欠かせません。
+                そこで、弊社の建築士が皆様のお悩みやご要望をお聞きし、最適な家づくりの提案をさせていただきます。
+              </div>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
               </div>
             </div>
@@ -117,7 +124,9 @@
                 安全管理研修を実施しました！
               </div>
               <img src="./src/images/news-modal-seminer.jpg" alt="会議を行なっている様子" class="news__modal-image">
-              <div class="news__modal-description">弊社では、従業員の安全意識向上と安全管理の強化を目的として、安全管理研修を実施しました。この研修では、〜〜〜〜〜〜            </div>
+              <div class="news__modal-description">
+                弊社では、従業員の安全意識向上と安全管理の強化を目的として、安全管理研修を実施しました。この研修では、従業員全員が安全な作業環境を確保するための重要性や具体的な対策について学び、より安全な職場づくりに向けた取り組みを行いました。
+                </div>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
               </div>
             </div>
@@ -135,7 +144,8 @@
               <img src="./src/images/news-modal-meeting.jpg" alt="家の中で担当者と家族が話し合う様子" class="news__modal-image">
               <div class="news__modal-description">
                 弊社は、お客様により良いサービスを提供するため、ホームページをリニューアルいたしました。新しいデザインと使いやすさを追求し、お客様が情報をより簡単に見つけられるように工夫しました。
-                〜〜〜〜〜〜 </div>
+                新しいホームページでは、以下のような改善点がございます。
+              </div>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
               </div>
                 <!-- <button class="modal__close" aria-label="Close modal" data-micromodal-close>

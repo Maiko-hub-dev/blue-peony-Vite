@@ -139,9 +139,14 @@
     font-family: $base-font;
     font-weight: $bold;
     margin-top: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+        background-color: $black;
+        color: $white;
     @include mq("md"){
 
     };
+    }
 }
 .about__elipse {
     font-size: 0.625rem;

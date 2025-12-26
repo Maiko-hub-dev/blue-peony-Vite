@@ -104,7 +104,7 @@
 }
 }
 .news__item.news__line{
-    padding: 0 1rem;
+    padding: 0;
     border-top: 1px solid $blue-line;
     @include mq("md"){
     padding: 0 1.6875rem 0 2rem;
@@ -197,16 +197,7 @@
     margin-left: 1.75rem;
     text-align: center;
 }
-.news__modal--inner{
-    width: min(92vw, 860px);
-    margin: 0 auto;
-    background-color: $white;
-    padding: 1rem;
-    @include mq("md"){
-        padding: 1rem 6.375rem;
-        line-height: 1.75;
-    }
-}
+
 .news__modal-image{
     display: block;
     object-fit: cover;
@@ -219,6 +210,14 @@
         line-height: 1.875;
     }
 }
+.news__modal-description {
+  overflow-x: auto;        // 横スクロールON
+  overflow-y: hidden;      // 縦は隠す（必要なら外してOK）
+  white-space: nowrap;     // 折り返さない（＝横に伸ばす）
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch; // iOSでヌルヌル
+}
+
 #modal-2 {
   display: none;
 }
@@ -238,3 +237,57 @@
     width: 1rem;
     height: 1rem;
 }
+.news__modal--inner{
+    position: relative;
+    margin: 0 auto;
+     width: min(90vw, 540px);
+    background-color: $white;
+    padding: 1rem;
+    z-index: 99999;
+    overflow: visible; // ←これ超重要（後述）
+    @include mq("md"){
+        width: min(92vw, 860px);
+        padding: 1rem 6.375rem;
+        line-height: 1.75;
+    }
+}
+.news__modal--inner::before,
+.news__modal--inner::after{
+    position: absolute;
+    content: '';    
+    transform-origin: center;
+    z-index: 10;        // ←見えない対策
+    cursor: pointer;
+     top: -0.75rem;
+     right: -0.5rem;
+     @include mq("md"){
+            top: -1.25rem;
+            right: -1.25rem;
+     }
+}
+/* “外側”に出す：右上からはみ出す */
+.news__modal--inner::before{
+  transform: translate(50%,-50%) rotate(45deg);
+}
+.news__modal--inner::after{
+  transform: translate(50%,-50%) rotate(135deg);
+}
+/* モーダル横のバツ横線 */
+ .news__modal--inner::before{
+     width: 20px;
+     height: 4px;
+     background-color: $white;
+     transition: transform 0.5s ease-out;
+     @include mq("md"){
+         width: 2rem;
+    }
+  }
+  .news__modal--inner::after{
+    width: 20px;
+    height: 4px;
+    background-color: $white;
+    transition: transform 0.5s ease-out;
+    @include mq("md"){
+      width: 2rem;
+    }
+  }
