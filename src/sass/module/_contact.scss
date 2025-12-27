@@ -1,0 +1,128 @@
+@use "../global" as *;
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding-top: 0.5rem;
+    @include mq("md"){
+    padding-left: max(2rem,(100% - var(--container)) / 2);
+    z-index: 12;
+    margin-top: 6rem;
+    }
+}
+.contact__inner{
+    width: inherit;
+    max-width: var(--container);
+    margin-top: 4.5rem;
+    padding: 0 4rem 0 8rem;   
+}
+.contact__wrapper{
+    position: relative;
+    background-color: $content;
+    border-radius: 3.125rem 0 0 3.125rem;
+    width: inherit;
+    max-width: var(--container);
+    margin-top: 4.5rem;
+    padding: 0 1.25rem;
+    @include mq("md"){
+        padding: 0 0 0 0.5rem;
+        margin-left: 2rem;
+    }
+}
+.contact__titles{
+    width: 100%;
+    height: auto;
+    @include mq("md"){
+    top: 4.5rem;
+    padding: 4rem 0 0 8.5rem;
+    z-index: 2;
+    transform: translateX(-2%);
+    }
+}
+.contact__title{
+    font-size: 1.25rem;
+    color: $black;
+    @include mq("md"){
+        font-size: 1.5rem;
+        // padding-left: 3rem;
+         padding-left:max(2rem, calc((100% - var(--container)) / 2));
+    }
+}
+.contact__heading{
+    font-family: $eng-font;
+    color: $white;
+    text-shadow:  1px 1px 0 $blue,1px -1px 0 $blue,-1px 1px 0 $blue,-1px -1px 0 $blue;
+    // text-stroke: 2px  $blue;
+    font-size: 4.5rem;
+    @include mq("md"){
+        font-size: 8rem;
+        // padding-left: 3rem;
+         padding-left:max(2rem, calc((100% - var(--container)) / 2));
+    }
+}
+.contact__info{
+    @include mq("md"){
+        display: flex;
+        padding-left: 8rem;
+    }
+}
+.contact__telephone{
+    @include mq("md"){
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.contact__tel--num{
+        display: block;
+        border-right: 1px solid $black;
+    @include mq("md"){
+        padding: 0.5rem 0;
+    }
+}
+.contact__tel--num.label{
+    @include mq("md"){
+    width: 4.625rem;
+    }
+}
+.contact__tel--num.number{
+    @include mq("md"){
+    padding: 0 2rem;
+    }
+}
+.contact__label,.contact__number{
+    display: block;
+    font-family: $eng-font;
+    font-size: 2rem;
+    @include mq("md"){
+        padding-bottom: 0.5rem;
+    }
+}
+.contact__text{
+    font-size: 0.75rem;
+    font-family: $base-font;
+    font-weight: $bold;
+}
+.contact__note{
+    font-size: 0.75rem;
+    font-family: $base-font;
+    font-weight: $bold;
+}
+.contact__access{
+    @include mq("md"){
+        padding: 6px 2rem 2px;
+    }
+}
+.news__link{
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    width: 90%;
+    text-align: left;
+    @include mq("md"){
+    max-width: 1120px;
+    padding: 0 1.6875rem 2rem 2rem;
+}
+}
