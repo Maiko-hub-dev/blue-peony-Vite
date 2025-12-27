@@ -58,33 +58,35 @@ MicroModal.init({
   disableScroll: true,
 });
 // スクロールで見えなくするサイドメニュー
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const sideMenu = document.querySelector('.side-menu');
-  if (!sideMenu) return;
+  const mainVisual = document.querySelector('.main-visual');
 
-  // ★PC判定のブレイクポイント（プロジェクトに合わせて変更してください）
-  const PC_WIDTH = 1024; // 例：1024px以上をPCとみなす
-  const HIDE_SCROLL_Y = 989; // 989px以上スクロールしたら非表示
+  if (!sideMenu || !mainVisual) return;
+
+  const PC_WIDTH = 768;
 
   function updateSideMenuVisibility() {
     const isPc = window.innerWidth >= PC_WIDTH;
-    const hasScrolledPast = window.scrollY >= HIDE_SCROLL_Y;
 
-    if (isPc && hasScrolledPast) {
-      // PC かつ 989px 以上スクロール → aside を隠す
-      sideMenu.classList.add('side-menu--hidden');
-    } else {
-      // それ以外（上に戻ってきた / SP幅など）→ aside を表示
+    // PC以外はJSで触らない（SPはハンバーガーの挙動優先）
+    if (!isPc) {
       sideMenu.classList.remove('side-menu--hidden');
+      return;
     }
+
+    const scrollY = window.scrollY;
+
+    // FVの下端（ここを超えたら非表示）
+    const fvBottom = mainVisual.offsetTop + mainVisual.offsetHeight;
+
+    const shouldHide = scrollY >= fvBottom;
+
+    sideMenu.classList.toggle('side-menu--hidden', shouldHide);
   }
 
-  // スクロールのたびにチェック
-  window.addEventListener('scroll', updateSideMenuVisibility);
-  // 画面サイズ変更時にもチェック（PC⇔SP切り替え用）
+  window.addEventListener('scroll', updateSideMenuVisibility, { passive: true });
   window.addEventListener('resize', updateSideMenuVisibility);
-
-  // 初期表示時にも一度実行（リロードで中途位置のとき用）
   updateSideMenuVisibility();
 });
 

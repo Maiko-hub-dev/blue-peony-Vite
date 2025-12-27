@@ -1,0 +1,115 @@
+@use "../global" as *;
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding-top: 0.5rem;
+    @include mq("md"){
+    padding-left: max(2rem,(100% - var(--container)) / 2);
+    z-index: 12;
+    margin-top: 5.25rem;
+    }
+}
+.footer__inner{
+    width: inherit;
+    max-width: var(--container);
+    margin-top: 4.5rem;
+    padding: 0 2rem;
+    @include mq("md"){
+        display: flex;
+        justify-content: space-around;
+        padding: 0 4rem 0 8.5rem;
+    }   
+}
+.footer__column{
+    @include mq("md"){
+        margin-left: 2rem;
+    }
+}
+.footer__logo{
+    width: 13.875rem;
+}
+.footer__logo .footer__icon {
+    display: block;
+    width: 3rem;
+    @include mq("md"){
+        width: inherit;
+        margin-top: rem(38);
+        object-fit: cover;
+        padding-left: 0.5rem;
+        transform: scale(1.2);
+    }
+}
+.footer__address{
+    font-family: $base-font;
+    color: $black;
+    @include mq("md"){
+        margin-top: 2.4375rem;
+        padding-top: 2.4375rem;
+    }
+}
+.footer__hours, .footer__holiday{
+    margin-top: 1rem;
+}
+.address__jp,.hours__jp{
+    margin-left: 1rem;
+}
+.holiday__week{
+    margin-left: 1rem;
+}
+.footer__tablecontents{
+        margin-top: 1.5625rem;
+}
+.footer__nav-item.footer__contact{
+    display: flex;
+    align-items: center;
+}
+
+.footer__contact-contact img{
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+.footer__contact-text{
+    display: block;
+    font-family: $base-font;
+    color: $black;
+}
+.footer__nav{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $black;
+}
+
+.footer__nav-item a{
+    display: flex;
+    font-family: $base-font;
+    align-items: center;
+    text-decoration: none;
+    color: $black;
+    font-weight: $bold;
+}
+.footer__nav-item.item{
+    margin-left: 1.5rem;
+}
+.footer__nav--first,
+.footer__nav--second,
+ .footer__nav--third{
+    padding-top: 1.5625rem;
+    @include mq("md"){
+        padding-top: 2.5rem;
+    }
+}
+.footer__copyright{
+    font-size: 0.875rem;
+    text-align: right;
+    @include mq("md"){
+        padding-top: 0.5rem;
+        padding-right: 3.5rem;
+        padding-bottom: 1.625rem;
+    }
+}
+

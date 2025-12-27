@@ -32,7 +32,8 @@
         <link rel="stylesheet" href="./css/style.css?ver=1.0.1">
       
         <!-- JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       
@@ -43,10 +44,13 @@
       <!-- Viteを使う想定をしたコード -->
 
           <script src="./js/script.js" defer></script>
-      <script type="module" crossorigin src="/assets/index-BzTZZW0-.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/index-B458p4Dq.css">
+      <script type="module" crossorigin src="/assets/index-BIlQMicF.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-Chotx_WR.css">
     </head>
     <body>
+      <div id="splash">
+        <div id="splash_logo"><img src="/assets/logo-pc-ClskmCck.svg" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
+        <!--/splash--></div>
       <header class="header js-header">
           <div class="header__ao ao">
             <a href="#top" class="header__link">
@@ -63,6 +67,7 @@
             </div><!--ハンバーガー-->
           </div> <!--btns-->  
       </header>
+   
       <div class="main-visual">
           <div class="main-visual__inner">
             <div class="main-visual__rightbox"></div>
@@ -89,6 +94,66 @@
             <span class="scroll__text">scroll&nbsp;down</span>
           </div>
       </div>
+       <div id="modal-1" aria-hidden="true">
+            <div class="news__modal modal__overlay" tabindex="-1" data-micromodal-close >
+              <div class="news__modal--inner modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+              <div class="news__content">
+                <span class="news__category">イベント情報</span>
+                <time class="news__date" datetime="2024-06-21">2024.06.03</time>
+                </div>
+              <div class="news__modal-container" id="modal-1-title">
+                住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？
+              </div>
+              <img src="/assets/news-modal-house-BFv5ZFfn.jpg" alt="インテリアの写真" class="news__modal-image">
+              <div class="news__modal-description">
+                みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。
+                家を建てるというのは、人生の中で最も重要なイベントの一つです。そのためには、慎重な計画と適切なアドバイスが欠かせません。
+                そこで、弊社の建築士が皆様のお悩みやご要望をお聞きし、最適な家づくりの提案をさせていただきます。
+              </div>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
+              </div>
+            </div>
+       </div>
+       <div id="modal-2" aria-hidden="true">
+            <div class="news__modal modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="news__modal--inner modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+              <div class="news__content">
+                <span class="news__category">イベント情報</span>
+                <time class="news__date" datetime="2024-06-21">2024.05.23</time>
+                </div>
+              <div class="news__modal-container" id="modal-2-title">
+                安全管理研修を実施しました！
+              </div>
+              <img src="/assets/news-modal-seminer-17OC2KPL.jpg" alt="会議を行なっている様子" class="news__modal-image">
+              <div class="news__modal-description">
+                弊社では、従業員の安全意識向上と安全管理の強化を目的として、安全管理研修を実施しました。この研修では、従業員全員が安全な作業環境を確保するための重要性や具体的な対策について学び、より安全な職場づくりに向けた取り組みを行いました。
+                </div>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
+              </div>
+            </div>
+       </div>
+       <div id="modal-3" aria-hidden="true">
+              <div class="news__modal modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="news__modal--inner modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+                <div class="news__content">
+                <span class="news__category">イベント情報</span>
+                <time class="news__date" datetime="2024-06-21">2024.05.23</time>
+                </div>
+              <div class="news__modal-container" id="modal-3-title">
+                ホームページをリニューアルしました！！
+              </div>
+              <img src="/assets/news-modal-meeting-B9daGpEL.jpg" alt="家の中で担当者と家族が話し合う様子" class="news__modal-image">
+              <div class="news__modal-description">
+                弊社は、お客様により良いサービスを提供するため、ホームページをリニューアルいたしました。新しいデザインと使いやすさを追求し、お客様が情報をより簡単に見つけられるように工夫しました。
+                新しいホームページでは、以下のような改善点がございます。
+              </div>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close>閉じる<span class="news__elipse">&#9679;</span></button>
+              </div>
+                <!-- <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+                  閉じる<span class="news__elipse">&#9679;</span>
+                </button> -->
+              </div>
+       </div>
             <!-- ここにサイドバーを書く -->
        <aside class="side-menu">
         <div class="side-menu__logo">
@@ -99,7 +164,7 @@
                 <div class="sp-nav__drawer drawers_drawer drawer">
               <p class="menu__nav side-menu__item menu__nav--topix menu__nav-top u-mobile">トップページ</p>
               <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
-                <a href="#about" class="menu__nav side-menu__link accordion__door">私達について
+                <a href="#" class="menu__nav side-menu__link accordion__door">私達について
                 </a>
               </p>
                 <ul class="menu__nav side-menu__sublist accordion__hide  accordion--open">
@@ -148,7 +213,7 @@
           </div>
         </aside>
 
-      <div class="about">
+      <div class="about" id="philosophy">
         <div class="about__inner">
           <div class="about__swiper cards swiper">
             <div class="about__swiper-wrapper swiper-wrapper">
@@ -182,17 +247,17 @@
           <!-- 縦文字のタイトル -->
         </div>
       </div>
-      <div class="about__subtitle subtitle"><span class="subtitle__blue">丁寧な家造り</span>で<br>理想を現実に</div>
-        </div>
-    <div class="about__text-block">
-      <p class="about__title">私達について</p>
-      <p class="about__heading">ABOUT</p>
-      <p class="about__description">「丁寧な家造り」で、信頼と実績を築いてきた私たち青牡丹工務店です。家づくりは人生の大切な一部。ご相談から完成まで、信頼できる工務店が寄り添います。</p>
-      <a href="#" class="about__link">Read More<span class="about__elipse">&#9679;</span></a>
-    </div>
-    <div class="about__interview interview">
-      <img src=".././src/images/interview_01.svg" alt="">
-    </div>
+          <div class="about__subtitle subtitle"><span class="subtitle__blue">丁寧な家造り</span>で<br>理想を現実に</div>
+          </div>
+          <div class="about__text-block" id="efforts">
+            <p class="about__title common__title">私達について</p>
+            <p class="about__heading">ABOUT</p>
+            <p class="about__description">「丁寧な家造り」で、信頼と実績を築いてきた私たち青牡丹工務店です。家づくりは人生の大切な一部。ご相談から完成まで、信頼できる工務店が寄り添います。</p>
+            <a href="#" class="about__link">Read More<span class="about__elipse">&#9679;</span></a>
+          </div>
+          <div class="about__interview interview">
+            <img src=".././src/images/interview_01.svg" alt="">
+          </div>
       </div>
       <!-- スライダー -->
   
@@ -200,7 +265,7 @@
         <div class="service__inner service__wall">
           <div class="service__icon"></div>
           <div class="service__titles">
-          <p class="service__title">事業内容</p>
+          <p class="service__title common__title">事業内容</p>
           <p class="service__heading">SERVICE</p>
           </div>
           <div class="service__items">
@@ -208,7 +273,7 @@
             <div class="service__image">
               <img src="/assets/service01-CzVm-Zds.jpg" alt="住宅の外観写真" loading="lazy" class="service__photo">
             </div>
-            <div class="service__content">
+            <div class="service__content" id="housing">
               <p class="service__number">01</p>
               <p class="service__name">住宅建築・リフォーム</p>
               <p class="service__description">
@@ -218,102 +283,123 @@
             </div>
           </div>
 
-          <div class="service__item service__reverse">
-            <div class="service__image">
-              <img src="/assets/service02-CXNRa6D4.jpg" alt="倉庫が並ぶ工場の外観" loading="lazy" class="service__photo">
-            </div>
-            <div class="service__content">
-              <p class="service__number">02</p>
-              <p class="service__name">法人新築・リフォーム</p>
-              <p class="service__description">法人新築では、商業施設やオフィスビル、工場など、さまざまなニーズに応じた建物の新築を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で機能的な建物を設計・施工します。
-              <a href="#" class="service__link">Read More<span class="about__elipse">&#9679;</span></a>
-            </div>
-          </div>
-
-          <div class="service__item">
-            <div class="service__image">
-              <img src="/assets/service03-sWyW26kt.jpg" alt="歴史的な公共施設の外観" loading="lazy" class="service__photo">
-            </div>
-            <div class="service__content">
-              <p class="service__number">03</p>
-              <p class="service__name">公共工事</p>
-              <p class="service__description">公共工事では、道路や橋梁、公共施設など、地域社会に欠かせないインフラや施設の建設・改修を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。
-              <a href="#" class="service__link">Read More<span class="about__elipse">&#9679;</span></a>
-            </div>
-          </div>
           </div>
         </div>
       </div>
 
       <div class="news">
         <div class="news__inner">
-          <p class="news__title">お知らせ</p>
+          <div class="news__titles">
+          <p class="news__title common__title">お知らせ</p>
           <p class="news__heading">NEWS</p>
+          </div>
           <ul class="news__list">
-            <li class="news__item">
-              <a href="#" class="news__link">
-                <div class="news__content">
+            <!-- <div class="news__line"></div> -->
+            <li class="news__item news__line" >
+              <button type="button" class="news__link"  data-micromodal-trigger="modal-1">
+                <span class="news__content">
                 <span class="news__category">イベント情報</span>
-                <time class="news__date" datetime="2024-06-21">2024.06.21</time>
-                </div>
-                <p class="news__text">住宅相談会を開催します。青壮丸工務店と夢の家造りを始めてみませんか？</p>
-              </a>
+                <time class="news__date" datetime="2024-06-21">2024.06.03</time>
+                </span>
+                <span class="news__text">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</span>
+              </button>
+              <span class="news__iconbox">
+              <img src="data:image/jpeg;base64,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" alt="何かを開くボタン" class="news__modalicon">
+              </span>
             </li>
+     
             <li class="news__item">
-              <a href="#" class="news__link">
-                 <div class="news__content">
+              <button type="button" class="news__link"  data-micromodal-trigger="modal-2">
+                 <span class="news__content">
                 <span class="news__category">イベント情報</span>
-                <time class="news__date" datetime="2024-06-17">2024.06.17</time>
-                </div>
-                <p class="news__text">安全研修を実施しました。</p>
-              </a>
+                <time class="news__date" datetime="2024-06-17">2024.05.23</time>
+                </span>
+                <span class="news__text">安全管理研修を行いました。</span>
+              </button>
+              <span class="news__iconbox">
+              <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAkACQAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAgACADAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+6H456j8WNJ+Efj7UvgZomheI/izZ+HrybwRo3iS8ay0q81dduBJIF8qe8itjcT6XYXc9hYalqcVpYahqml2VzPqFv7HD9LJ62c5dSz/EYjC5PPEwjj6+Fh7StCi77K94wc+WNWpCNSpSpOdSnSrVIxpy8jPqub0cnzGrkNChic3hhpywFDEz5KM62m72lOMOaVKnOVOnVqqFOpVpQlKpH+Wj9kL/AIKS/Gn9mj40+LbL4/ah4x8beC/G3jG/n+LOg+JRct4u8IeLmuRY6p4m0Kwvhbtpmp6Y1utlrHhJYrHT7zT7GLToLfT7vT9Oltv62408L8i4pyLB1OHaeCwGOwGCpxyfEYXlWCxuCUfaUcLiKlPmVWlVUnUoYy9SpCpUdWUqkKlVS/lDg3xNzzhfPMZDiGpjcdgcdjaks3w+K5njMHjHL2dXFYenU5XSq0nFQrYO1OnOnTVKMac6dKUP6x/BnjPwr8RPCug+OPA+vad4n8JeJ9Og1bQtd0mcXFjqNjcA7JYnwrxyRurwXVrOkV1ZXUU9neQQXUE0Kfx5jsDjMsxmIwGPw9XCYzCVZUcRh60eWpSqR3TWzTVpQnFuE4OM4SlCUZP+vMDjsJmWEw+PwGIpYrB4qlGth8RRlzU6lOWzT3TTvGcJJThNShOMZxlFdPXIdQUAfkL/AMFJP+Cbel/tKaXf/GD4P2Fjo/x70exD6jpyGCx074r6dYwBYtN1KVjFb2njC0t4lt9A1+4ZIb6FIdC12ZbJdM1PQv2jwv8AFCtwvWp5LnVSpX4dr1LUqr5qlXJ6tSV3VpJXlPBTk3LEYeKcqcnLEYeLm6tLEfjfib4ZUuJ6VTOslp06PEFGnerSXLTpZvSpxsqdRu0YY2EUo4fESaVRKNCvJQVKrQ/GT9g79vHx/wDsSeP7/wCHPxGsNfv/AIPX+v3Fh478CX9vcQ+IPAHiCG4+w6j4h8PadfeTLYaxYSwmHxF4dmFvFrMVuYpRbarbWl3D+4eIXh7l3HmXU8zyyphqed08NGpl+YU5Rlhsxw0o+0pYbE1afNGpQqRlzYXFR5nQcrrmoynB/ifh/wCIGYcC5hUy3MqeIqZLUxEqeYZfUjKOIy/ERl7OricNSqcrp1qbjy4nDS5VXUbPlrRhOP8AXd4M8Z+FfiJ4V0Hxx4H17TvE/hLxPp0GraFrukzi4sdRsbgHZLE+FeOSN1eC6tZ0iurK6ins7yCC6gmhT+MsdgcZlmMxGAx+Hq4TGYSrKjiMPWjy1KVSO6a2aatKE4twnBxnCUoSjJ/2NgcdhMywmHx+AxFLFYPFUo1sPiKMuanUpy2ae6ad4zhJKcJqUJxjOMorp65DqPyF/wCCkn/BSTS/2atLv/g/8H7+x1j496xYhNQ1BBBfab8KNNvoA0Wp6nEwlt7vxhd28q3GgaBcK8NlC8Ou67C1k2maZrv7R4X+F9bimtTzrOqdShw7QqXpUnzU6ucVacrOlSatKGChJOOJxMWpVJKWHw8lUVWrh/xvxN8TaXDFKpk2TVKdbiCtTtUqLlqUsopVI3VWqneM8bOLUsPh5JqmnHEYiLg6VLEfjH+wf+wf4/8A23PH9/8AEX4i3+v2HwfsNfuL/wAeePL+4uJvEHj7xBNcfbtR8O+HdRvvOlv9Zv5ZjN4i8RTG5i0WK5M0xudVubOzn/cPELxCy7gPLqeWZZTw1TOqmGjTy/L6cYxw2XYaMfZ0sTiaVPljToU4x5cNho8rruPLHloxnOP4n4f+H+YcdZhUzLMqmIp5LTxEqmYZhUlKWIzHESl7SrhsNVqczqVqjlzYnEy5lQUrvmrShB/13+C/BfhT4deFNB8D+B9B07wx4S8MadBpOhaFpMAt7HTrG3B2RRJlnkkkdnnurqd5bu9u5Z7y8nnup5pn/jLHY7GZnjMRj8fiKuLxmLqyrYjEVpc1SrUlu29kkrRhCKUKcFGEIxhGMV/Y2CwWEy3CYfAYDD0sLg8LSjRw+Hox5adOnHZJbtt3lKUm5zm5TnKU5Sk+P+OenfFjVvhH4+074Ga3oXhz4s3fh68h8Eaz4ks2vdKs9XbbgvGG8qC8lthcQaXf3cF/Yabqclnf6hpeqWVtcWFx28P1cno5zl1XiDD4jFZPDEwlj6GFmqdadFX2drygpcsqtOEqdSrSU6dOtRqSjUjxZ9Tzetk+YUshr4fDZvPDTjga+Jg50YVtN1e0ZuPNGlUnGpTpVXCpUpVacZU5fyzfshf8E2/jT+0x8afFt78fbDxj4J8F+CfGN/B8Wtf8Sm5Xxd4t8XLci+1TwzoV/fm4bU9V1Nrhb3WPFgkvtPstPvodShuNQu9Q02G6/rbjTxQyLhbIsHDh2pgsfjsfgqcsnw+F5fqWCwXL7OjisRTp8qpUaSi6dDB2p1J1KbpSjThTqyh/KHBvhlnnFGeYypxDTxuBwOBxtSOb4jFcyxmMxil7SrhcPUqczq1arlz18ZepThTqKpGVSdSmpf1k+C/BfhT4deFNB8D+B9B07wx4S8MadBpOhaFpMAt7HTrG3B2RRJlnkkkdnnurqd5bu9u5Z7y8nnup5pn/AI8x2OxmZ4zEY/H4iri8Zi6sq2IxFaXNUq1JbtvZJK0YQilCnBRhCMYRjFf15gsFhMtwmHwGAw9LC4PC0o0cPh6MeWnTpx2SW7bd5SlJuc5uU5ylOUpPp65DqP/Z" alt="何かを開くボタン" class="news__modalicon">
+              </span>
             </li>
-            <li class="news__item">
-              <a href="#" class="news__link">
-                 <div class="news__content">
-                <time class="news__date" datetime="2024-06-01">2024.06.01</time>
-                <span class="news__category">更新情報</span>
-                </div>
-                <p class="news__text">ホームページをリニューアルしました！！</p>
-              </a>
+        
+            <li class="news__item" data-micromodal-trigger="modal-3">
+              <button type="button" class="news__link">
+                 <span class="news__content">
+                   <span class="news__category">更新情報</span>
+                <time class="news__date" datetime="2024-06-01">2024.05.01</time>
+                </span>
+                <span class="news__text">ホームページをリニューアルしました！！</span>
+              </button>
+               <span class="news__iconbox">
+              <img src="data:image/jpeg;base64,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" alt="何かを開くボタン" class="news__modalicon">
+              </span>
             </li>
           </ul>
-        </div>
+
+
+          </div> 
       </div>
-<!-- 
+
       <div class="contact">
         <div class="contact__inner">
-          <p class="contact__title">お問い合わせ</p>
+          <div class="contact__wrapper">
+          <div class="contact__titles">
+          <p class="contact__title common__title">お問い合わせ</p>
           <p class="contact__heading">CONTACT</p>
+          </div>
           <div class="contact__info">
-            <div class="contact__tel">
-              <span class="contact__label">Tel</span>
+            <div class="contact__telephone">
+              <div class="contact__tel--num label">
+                <span class="contact__label">Tel</span>
+                <span class="contact__text">お電話</span>
+              </div>
+              <div class="contact__tel--num number">
               <span class="contact__number">0000-000-0000</span>
               <span class="contact__note">営業時間 9:00～18:00</span>
+              </div>
             </div>
-            <a href="#" class="contact__form-button">メールフォームはこちら</a>
+            <div class="contact__access">
+            <a href="contact.html" class="contact__form-button">
+              <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9484%204.38576C19.8582%203.93162%2019.6568%203.51604%2019.3756%203.17271C19.3163%203.09791%2019.2544%203.03092%2019.1872%202.96393C18.689%202.46322%2017.9897%202.15088%2017.2257%202.15088H2.77426C2.01031%202.15088%201.31352%202.46322%200.81293%202.96393C0.745938%203.03092%200.683984%203.09791%200.624531%203.17271C0.343164%203.516%200.141797%203.93162%200.0541406%204.38576C0.018125%204.56104%200%204.74217%200%204.92529V15.075C0%2015.4644%200.0825781%2015.8387%200.229844%2016.1767C0.366445%2016.4994%200.567852%2016.7913%200.812891%2017.0361C0.875%2017.0981%200.93668%2017.155%201.00398%2017.2117C1.48391%2017.6091%202.1034%2017.8492%202.77426%2017.8492H17.2257C17.8968%2017.8492%2018.519%2017.6091%2018.9962%2017.2092C19.0633%2017.155%2019.1253%2017.0981%2019.1872%2017.0361C19.4321%2016.7913%2019.6335%2016.4994%2019.7729%2016.1767V16.1742C19.9202%2015.8362%2020%2015.4644%2020%2015.0751V4.92529C20%204.74217%2019.9821%204.56104%2019.9484%204.38576ZM1.81676%203.96764C2.06461%203.72006%202.39746%203.57018%202.77426%203.57018H17.2257C17.6025%203.57018%2017.9383%203.72006%2018.1832%203.96764C18.2271%204.01174%2018.2684%204.06088%2018.3048%204.10971L10.7303%2010.7111C10.5214%2010.8942%2010.2634%2010.9846%2010%2010.9846C9.7393%2010.9846%209.48141%2010.8942%209.26973%2010.7111L1.69813%204.10689C1.73164%204.05807%201.77293%204.01174%201.81676%203.96764ZM1.4193%2015.075V5.57561L6.9007%2010.3574L1.42207%2015.1342C1.4193%2015.1161%201.4193%2015.0957%201.4193%2015.075ZM17.2257%2016.4296H2.77426C2.52891%2016.4296%202.29934%2016.3651%202.1034%2016.2518L7.88379%2011.2143L8.42344%2011.6838C8.87504%2012.0762%209.44016%2012.2749%2010%2012.2749C10.5627%2012.2749%2011.1278%2012.0762%2011.5794%2011.6838L12.1187%2011.2143L17.8969%2016.2518C17.7007%2016.3651%2017.4711%2016.4296%2017.2257%2016.4296ZM18.5807%2015.075C18.5807%2015.0957%2018.5807%2015.1161%2018.578%2015.1342L13.0995%2010.3602L18.5807%205.57814V15.075Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="contact__icon">
+              <span class="contact__button">メールフォームはこちら</span>
+              <span class="contact__elipse">&#9679;</span>
+            </a>
+            </div>
           </div>
         </div>
-      </div>  -->
-
-
-        <!-- <div class="footer">
+        </div>
+      </div> 
+      <div class="footer">
           <div class="footer__inner">
+            <div class="footer__column">
             <div class="footer__logo">
-              <img src="./src/images/logo.svg" alt="青壮丸工務店のロゴ" loading="lazy">
+              <img src="/assets/logo-pc-ClskmCck.svg" alt="青牡丹工務店のロゴ" loading="lazy" class="footer__icon">
             </div>
-            <p class="footer__address">〒000-0000 大阪府大阪市中央区本町西0-0-0</p>
-            <p class="footer__hours">営業時間：9:00〜18:00　定休日：日・祝・夏季（8月13日〜15日）・年末年始</p>
-            <ul class="footer__nav">
+            <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市北区南町西5-6-7</span></p>
+            <p class="footer__hours hours">営業時間<span class="hours__jp">10:00〜20:00</span></p>
+            <p class="footer__holiday holiday">定休日<span class="holiday__week">日曜日、祝日、年末年始（12月31日から1月3日まで）</span></p>
+            </div>
+            <div class="footer__tablecontents">
+            <ul class="footer__nav--first footer__nav">
               <li class="footer__nav-item"><a href="#">トップページ</a></li>
-              <li class="footer__nav-item"><a href="#">私たちについて</a></li>
-              <li class="footer__nav-item"><a href="#">事業内容</a></li>
-              <li class="footer__nav-item"><a href="#">お知らせ</a></li>
-              <li class="footer__nav-item"><a href="#">お問い合わせ</a></li>
+              <li class="footer__nav-item item"><a href="#">私たちについて</a></li>
+              <li class="footer__nav-item item"><a href="#">経営理念</a></li>
             </ul>
-            <p class="footer__copyright">© AOSOMARU INC.</p>
+            <ul class="footer__nav--second footer__nav">
+              <li class="footer__nav-item"><a href="#">会社概要</a></li>
+              <li class="footer__nav-item item"><a href="#">安全への取り組み</a></li>
+              <li class="footer__nav-item item"><a href="#">事業内容</a></li>
+              <li class="footer__nav-item item"><a href="#">住宅建築・リフォーム</a></li>
+            </ul>
+            <ul class="footer__nav--third footer__nav">
+              <li class="footer__nav-item"><a href="#">法人新築・リフォーム</a></li>
+              <li class="footer__nav-item item"><a href="#">公共工事</a></li>
+              <li class="footer__nav-item item"><a href="#">お知らせ</a></li>
+              <li class="footer__nav-item footer__contact item"><a href="contact.html" class="footer__contact-contact"><img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9484%204.38576C19.8582%203.93162%2019.6568%203.51604%2019.3756%203.17271C19.3163%203.09791%2019.2544%203.03092%2019.1872%202.96393C18.689%202.46322%2017.9897%202.15088%2017.2257%202.15088H2.77426C2.01031%202.15088%201.31352%202.46322%200.81293%202.96393C0.745938%203.03092%200.683984%203.09791%200.624531%203.17271C0.343164%203.516%200.141797%203.93162%200.0541406%204.38576C0.018125%204.56104%200%204.74217%200%204.92529V15.075C0%2015.4644%200.0825781%2015.8387%200.229844%2016.1767C0.366445%2016.4994%200.567852%2016.7913%200.812891%2017.0361C0.875%2017.0981%200.93668%2017.155%201.00398%2017.2117C1.48391%2017.6091%202.1034%2017.8492%202.77426%2017.8492H17.2257C17.8968%2017.8492%2018.519%2017.6091%2018.9962%2017.2092C19.0633%2017.155%2019.1253%2017.0981%2019.1872%2017.0361C19.4321%2016.7913%2019.6335%2016.4994%2019.7729%2016.1767V16.1742C19.9202%2015.8362%2020%2015.4644%2020%2015.0751V4.92529C20%204.74217%2019.9821%204.56104%2019.9484%204.38576ZM1.81676%203.96764C2.06461%203.72006%202.39746%203.57018%202.77426%203.57018H17.2257C17.6025%203.57018%2017.9383%203.72006%2018.1832%203.96764C18.2271%204.01174%2018.2684%204.06088%2018.3048%204.10971L10.7303%2010.7111C10.5214%2010.8942%2010.2634%2010.9846%2010%2010.9846C9.7393%2010.9846%209.48141%2010.8942%209.26973%2010.7111L1.69813%204.10689C1.73164%204.05807%201.77293%204.01174%201.81676%203.96764ZM1.4193%2015.075V5.57561L6.9007%2010.3574L1.42207%2015.1342C1.4193%2015.1161%201.4193%2015.0957%201.4193%2015.075ZM17.2257%2016.4296H2.77426C2.52891%2016.4296%202.29934%2016.3651%202.1034%2016.2518L7.88379%2011.2143L8.42344%2011.6838C8.87504%2012.0762%209.44016%2012.2749%2010%2012.2749C10.5627%2012.2749%2011.1278%2012.0762%2011.5794%2011.6838L12.1187%2011.2143L17.8969%2016.2518C17.7007%2016.3651%2017.4711%2016.4296%2017.2257%2016.4296ZM18.5807%2015.075C18.5807%2015.0957%2018.5807%2015.1161%2018.578%2015.1342L13.0995%2010.3602L18.5807%205.57814V15.075Z'%20fill='black'/%3e%3c/svg%3e" alt="メールのアイコン"><span class="footer__contact-text">お問い合わせ</span></a></li>
+            </ul>
+            </div>
           </div>
-        </div> -->
+          <p class="footer__copyright">© AOSOMARU INC.</p>
+      </div>
 
     </body>
     

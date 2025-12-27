@@ -27,18 +27,25 @@
     margin-top: 4.5rem;
     padding: 0 1.25rem;
     @include mq("md"){
-        padding: 0 0 0 0.5rem;
+        padding: 0 0 3.3125rem 0.5rem;
         margin-left: 2rem;
     }
 }
 .contact__titles{
     width: 100%;
     height: auto;
+    @include mq("sp"){
+         max-width: var(--container);
+        padding: 4rem 0 0 4rem;
+    }
     @include mq("md"){
     top: 4.5rem;
-    padding: 4rem 0 0 8.5rem;
+    padding: 4rem 0 0 4.5rem;
     z-index: 2;
     transform: translateX(-2%);
+    }
+    @include mq("lg"){
+        padding: 4rem 0 0 8.5rem;
     }
 }
 .contact__title{
@@ -58,36 +65,52 @@
     font-size: 4.5rem;
     @include mq("md"){
         font-size: 8rem;
-        // padding-left: 3rem;
-         padding-left:max(2rem, calc((100% - var(--container)) / 2));
+        padding-left: max(2rem, calc((100% - var(--container)) / 2));
     }
 }
+
 .contact__info{
+    @include mq("sp"){
+        padding-left: 4rem;
+         max-width: var(--container);
+        }
     @include mq("md"){
         display: flex;
-        padding-left: 8rem;
+        padding-left: 4.5rem;
+    }
+    @include mq("lg"){
+        padding: 0 0 0 8.5rem;
     }
 }
+
 .contact__telephone{
+    display: flex;
     @include mq("md"){
         display: flex;
         align-items: center;
-        gap: 2rem;
     }
 }
 .contact__tel--num{
-        display: block;
-        border-right: 1px solid $black;
+    display: flex;
+    flex-direction: column; // 中身を縦並び
+    justify-content: center;
+    border-right: 1px solid $black;
+
     @include mq("md"){
         padding: 0.5rem 0;
     }
 }
+
 .contact__tel--num.label{
     @include mq("md"){
-    width: 4.625rem;
+        min-width: 74px;
+        width: max(4.625rem, 74px);
     }
 }
 .contact__tel--num.number{
+    @include mq("sp"){
+        padding: 0 0 0 1rem;
+    }
     @include mq("md"){
     padding: 0 2rem;
     }
@@ -112,17 +135,39 @@
 }
 .contact__access{
     @include mq("md"){
-        padding: 6px 2rem 2px;
+        padding: 1rem 2rem 2px;
     }
 }
-.news__link{
+.contact__form-button{
+    background-color: $white;
+    border-radius: 0.625rem;
+    padding: 1.25rem 0.5rem 1.25rem 1.25rem;
+    display: flex;
+    align-items: center;
+    width: min(22%, 284px);
+    min-width: 284px;
+    @include mq("md"){
+        margin-left: 2rem;
+    }
+}
+.contact__button{
     display: inline-block;
     text-decoration: none;
     color: $black;
-    width: 90%;
-    text-align: left;
-    @include mq("md"){
-    max-width: 1120px;
-    padding: 0 1.6875rem 2rem 2rem;
+    font-family: $base-font;
+    font-weight: $bold;
 }
+.contact__icon{
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+}
+.contact__elipse{
+    position: relative;
+    font-size: 0.625rem;
+    color: $black;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 1.25rem;
 }
