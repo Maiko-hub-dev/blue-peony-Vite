@@ -103,6 +103,7 @@
 
 .contact__tel--num.label{
     @include mq("md"){
+        height: 100%;
         min-width: 74px;
         width: max(4.625rem, 74px);
     }
