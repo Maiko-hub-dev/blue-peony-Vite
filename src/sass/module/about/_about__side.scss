@@ -1,0 +1,27 @@
+@use "../../global/" as *;
+
+.about__side.side-menu{
+    @include mq("sp"){
+        position: relative;
+        transform: translateX(-50%);
+        width: 100%;
+        left: -50%;
+        height: 0;
+    }
+    @include mq("md"){
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4.25rem;
+        background-color: $white;
+        z-index: 10;
+        max-width: 30%;
+        width: min(20%,11rem);
+        height: 100vh;
+        transform: translateX(0);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+}
+.side-menu__nav.about__side-menu{
+    display: block;
+}
