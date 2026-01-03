@@ -14,10 +14,10 @@
 .footer__inner{
     width: inherit;
     max-width: var(--container);
-    margin-top: 4.5rem;
     padding: 0 2rem;
     @include mq("md"){
         display: flex;
+        margin-top: 4.5rem;
         justify-content: space-around;
         padding: 0 4rem 0 8.5rem;
     }   
@@ -28,14 +28,16 @@
     }
 }
 .footer__logo{
-    width: 13.875rem;
+    @include mq("md"){
+    width: 13.875rem;}
 }
 .footer__logo .footer__icon {
     display: block;
-    width: 3rem;
+    max-width: 222px;
+    margin: 0 auto;
     @include mq("md"){
-        width: inherit;
-        margin-top: rem(38);
+        width: 3rem;
+        margin: rem(38) 0 0 0;
         object-fit: cover;
         padding-left: 0.5rem;
         transform: scale(1.2);
@@ -44,22 +46,40 @@
 .footer__address{
     font-family: $base-font;
     color: $black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2.25rem;
     @include mq("md"){
+        flex-direction: row;
         margin-top: 2.4375rem;
         padding-top: 2.4375rem;
+        text-align: left;
     }
 }
 .footer__hours, .footer__holiday{
     margin-top: 1rem;
+    text-align: center;
+    padding-top: 0.25rem;
+    @include mq("md"){
+        padding-top: 0;
+        text-align-last: left;
+    }
 }
 .address__jp,.hours__jp{
-    margin-left: 1rem;
+    padding-top: 1.25rem;
+    @include mq("md"){
+    margin-left: 1rem;}
 }
 .holiday__week{
     margin-left: 1rem;
 }
 .footer__tablecontents{
         margin-top: 1.5625rem;
+        padding: 2.5625rem 0;
+        @include mq("md"){
+            padding: 0;
+        }
 }
 .footer__nav-item.footer__contact{
     display: flex;
@@ -79,9 +99,13 @@
 }
 .footer__nav{
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: $black;
+    @include mq("md"){
+        flex-direction: row;
+    }
 }
 
 .footer__nav-item a{
@@ -93,7 +117,11 @@
     font-weight: $bold;
 }
 .footer__nav-item.item{
+    padding-top: 2rem;
+    @include mq("md"){
     margin-left: 1.5rem;
+    padding-top: 0;
+    }
 }
 .footer__nav--first,
 .footer__nav--second,
@@ -103,11 +131,19 @@
         padding-top: 2.5rem;
     }
 }
+.footer__nav--second,
+ .footer__nav--third{
+    padding-top: 2rem;
+    @include mq("md"){
+        padding-top: 0;
+ }
+}
 .footer__copyright{
     font-size: 0.875rem;
-    text-align: right;
+    text-align: center;
     @include mq("md"){
         padding-top: 0.5rem;
+        text-align: right;
         padding-right: 3.5rem;
         padding-bottom: 1.625rem;
     }

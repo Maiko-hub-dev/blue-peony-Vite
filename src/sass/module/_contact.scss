@@ -13,20 +13,24 @@
     }
 }
 .contact__inner{
+    padding: 0;
+    @include mq("md"){
     width: inherit;
     max-width: var(--container);
     margin-top: 4.5rem;
     padding: 0 4rem 0 8rem;   
+    }
 }
 .contact__wrapper{
     position: relative;
+    border-radius: 0;
     background-color: $content;
-    border-radius: 3.125rem 0 0 3.125rem;
     width: inherit;
     max-width: var(--container);
     margin-top: 4.5rem;
-    padding: 0 1.25rem;
+    padding: 0 1.25rem 2.5rem;
     @include mq("md"){
+        border-radius: 3.125rem 0 0 3.125rem;
         padding: 0 0 3.3125rem 0.5rem;
         margin-left: 2rem;
     }
@@ -35,8 +39,8 @@
     width: 100%;
     height: auto;
     @include mq("sp"){
-         max-width: var(--container);
-        padding: 4rem 0 0 4rem;
+        padding: 1.6875rem 0 0;
+        max-width: var(--container);
     }
     @include mq("md"){
     top: 4.5rem;
@@ -57,6 +61,7 @@
          padding-left:max(2rem, calc((100% - var(--container)) / 2));
     }
 }
+
 .contact__heading{
     font-family: $eng-font;
     color: $white;
@@ -70,12 +75,16 @@
 }
 
 .contact__info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.4375rem;
     @include mq("sp"){
-        padding-left: 4rem;
-         max-width: var(--container);
-        }
+        padding-left: 0;
+        max-width: var(--container);
+    }
     @include mq("md"){
-        display: flex;
+        flex-direction: row;
+        padding-top: 0;
         padding-left: 4.5rem;
     }
     @include mq("lg"){
@@ -85,56 +94,76 @@
 
 .contact__telephone{
     display: flex;
+    flex-direction: column;
     @include mq("md"){
-        display: flex;
+        flex-direction: row;
         align-items: center;
     }
 }
 .contact__tel--num{
     display: flex;
-    flex-direction: column; // 中身を縦並び
-    justify-content: center;
-    border-right: 1px solid $black;
-
+    
     @include mq("md"){
+        border-right: 1px solid $black;
+        justify-content: center;
+        flex-direction: column; // 中身を縦並び
         padding: 0.5rem 0;
     }
 }
 
 .contact__tel--num.label{
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $black;
     @include mq("md"){
         height: 100%;
+        border-bottom: none;
         min-width: 74px;
         width: max(4.625rem, 74px);
+        padding: 0;
+
     }
 }
 .contact__tel--num.number{
-    @include mq("sp"){
-        padding: 0 0 0 1rem;
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+
     @include mq("md"){
-    padding: 0 2rem;
+        flex-direction: row;
+        padding: 0 2rem;
     }
 }
 .contact__label,.contact__number{
     display: block;
     font-family: $eng-font;
     font-size: 2rem;
+    letter-spacing: 0.02em;
     @include mq("md"){
         padding-bottom: 0.5rem;
     }
 }
 .contact__text{
+    margin-left: 1rem;
     font-size: 0.75rem;
     font-family: $base-font;
     font-weight: $bold;
+    padding-top: 1.25rem;
+    @include mq("md"){
+        margin-left: 0;
+        padding-top: 0;
+    }
 }
 .contact__note{
     font-size: 0.75rem;
     font-family: $base-font;
     font-weight: $bold;
+    margin-top: 0.5rem;
+    @include mq("md"){
+        margin-top: 0;
+    }
 }
 .contact__access{
+    padding-top: 0.75rem;
     @include mq("md"){
         padding: 1rem 2rem 2px;
     }
@@ -142,12 +171,14 @@
 .contact__form-button{
     background-color: $white;
     border-radius: 0.625rem;
-    padding: 1.25rem 0.5rem 1.25rem 1.25rem;
     display: flex;
     align-items: center;
-    width: min(22%, 284px);
     min-width: 284px;
+    width: fit-content;
+    padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
     @include mq("md"){
+        padding: 1.25rem 0.5rem 1.25rem 1.25rem;
+        width: min(22%, 284px);
         margin-left: 2rem;
     }
 }
