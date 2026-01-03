@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@sass": path.resolve(__dirname, "src/sass"),
+      "@images": path.resolve(__dirname, "src/images"),
     },
   },
     build: {

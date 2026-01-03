@@ -15,15 +15,23 @@
     width: inherit;
     max-width: var(--container);
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
     @include mq("md"){
-        display: flex;
+        align-items: center;
+        flex-direction: row;
         margin-top: 4.5rem;
         justify-content: space-around;
+        padding: 0 0 0 2rem;
+    }
+    @include mq("lg"){
         padding: 0 4rem 0 8.5rem;
     }   
 }
 .footer__column{
+    padding-top: 1rem;
     @include mq("md"){
+        padding-top: 0;
         margin-left: 2rem;
     }
 }
@@ -36,7 +44,7 @@
     max-width: 222px;
     margin: 0 auto;
     @include mq("md"){
-        width: 3rem;
+        width: inherit;
         margin: rem(38) 0 0 0;
         object-fit: cover;
         padding-left: 0.5rem;
@@ -132,11 +140,9 @@
     }
 }
 .footer__nav--second,
- .footer__nav--third{
+.footer__nav--third{
     padding-top: 2rem;
-    @include mq("md"){
-        padding-top: 0;
- }
+
 }
 .footer__copyright{
     font-size: 0.875rem;
