@@ -18,7 +18,7 @@
     width: inherit;
     max-width: var(--container);
     margin-top: 4.5rem;
-    padding: 0 0rem 0 8rem;   
+    padding: 0 0rem 0 7rem;   
     }
 }
 .contact__wrapper{
@@ -32,6 +32,8 @@
     @include mq("md"){
         border-radius: 3.125rem 0 0 3.125rem;
         padding: 0 0 3.3125rem 0.5rem;
+    }
+    @include mq("lg"){
         margin-left: 2rem;
     }
 }

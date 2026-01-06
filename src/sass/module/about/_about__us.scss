@@ -14,6 +14,7 @@
     padding: 0 0.625rem;
     width: 100%;
     margin-top: 4.3125rem;
+    aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
     border-radius: 50px 50px 50px 50px;
     overflow: hidden;
     @include mq("md"){
@@ -35,21 +36,139 @@
         max-height: 45.4375rem;
     }
 }
-.about-visual__img{
-    position: absolute;
+.about__us{
+    padding: 0 ;
+    @include mq("md"){
+        padding: 0 0 0 6rem;
+    }
+    @include mq("lg"){
+        padding: 0 0 0 4rem;
+    }   
+}
+.about__us--inner{
+        width: inherit;
+        max-width: var(--container);
+        @include mq("md"){
+            padding: 0 0rem 0 7rem;
+            margin-top: 4rem;
+        }
+}
+.about__us--wrapper{
+    position: relative;
+    width: inherit;
+    max-width: var(--container);
+    padding: 0 1.25rem 2.5rem;
+    @include mq("md"){
+        padding: 0 0 0 3.3125rem ;
+    }
+    @include mq("lg"){
+        margin-left: 2rem;
+    }
+}
+.about__us--title{
+    font-size: 2.5rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    padding: 2rem 0 0 0.685rem;
+
+}
+.about__us--text{
+        line-height: 1.825;
+        padding: 2rem 0 0 0.6875rem;
+        @include mq("md"){
+        padding: 4rem 0 0 0.685rem;
+        line-height: 2;
+        }
+}
+.about__us--illust.offline-hearing{
     display: block;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 22;
+    object-fit: contain;
+}
+.about__us--illust{
+        visibility: visible;
+        position: absolute;
+        width:  4.875rem;
+        height: 7.1175rem;
+        background: url(/src/images/offline-hearing.svg) no-repeat;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 1rem;
+        right: 56px;
+        aspect-ratio: 110 / 161; 
+        opacity: 1;
+        z-index: 2;
+        @include mq("md"){
+            right: 7.5rem; // 例：mdはrem指定
+        }
+        @include mq("lg"){
+            right: 14rem;
+            width: 10.3125rem;
+            height: 12.375rem;
+        }
+}
+
+.about__us--navs{
+    display: flex;
+    align-items: center;
+    margin-top: 4.6875rem;
+    @include mq("md"){
+    }
+}
+.about__us--nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //. ボーダーで囲む
+    border: 1px solid $blue;
+    border-radius: 0.6875rem;
+    //. 最低208px
+    min-width: 168px;
+    @include mq("md"){
+        min-width: 208px;
+    }
+    }
+.about__us--nav:not(:first-child){
+    margin-left: 1rem;
+    @include mq("md"){
+        margin-left: 2rem;
+    }
+}
+.about__us--nav{
+    padding: 0.6875rem 1rem;
+    text-align: center;
+    @include mq("md"){
+        padding: 0.6875rem 2rem;
+    }
+}
+.about-visual__img{
+    position: static;
+    display: block;
     -o-object-fit: cover;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
     @include mq("md"){
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 22;
     }
     @include mq("lg"){
         aspect-ratio: 1120/ 661;
     }
+}
+.about__us-list-down{
+  display: inline-block;
+  vertical-align: middle;
+  color: $blue;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateY(-25%) rotate(135deg);
 }

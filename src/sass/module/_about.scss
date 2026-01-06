@@ -8,10 +8,13 @@
     background-color: $white;
     padding-top: 4.5rem;
     @include mq("md"){
-        padding-left: 17.5rem;
+        padding-left: 15rem;
         z-index: 2000;
         margin-top: 0;
         padding-top: 0;
+    }
+    @include mq("lg"){
+        padding-left: 17.75rem;
     }
 }
 .about__inner{

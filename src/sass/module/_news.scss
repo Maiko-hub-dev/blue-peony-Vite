@@ -28,12 +28,15 @@
     position: absolute;
     top: 4.5rem;
     left: 10.875rem;
-    padding: 0 0 0 8.5rem;
+    // padding: 0 0 0 8.5rem;
     z-index: 2;
     transform: translateX(-20%);
     }
     @include mq("md"){
+      padding: 0;
         transform: translateX(-2%);
+    }@include mq("lg"){
+          padding: 0 0 0 8rem;
     }
 }
 .news__title{
