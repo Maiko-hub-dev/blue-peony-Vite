@@ -55,6 +55,9 @@
     }
 }
 .main-visual__titles{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
     position: static;
     width: 100%;
     display: block;
@@ -70,6 +73,13 @@
             justify-content: flex-end; // ← 右寄せ
         }
 }
+.main-visual__titles.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
 .main-visual__title{
     @include mq("sp"){
         padding: 0 0.5rem;

@@ -61,8 +61,10 @@ MicroModal.init({
 document.addEventListener('DOMContentLoaded', () => {
   const sideMenu = document.querySelector('.side-menu');
   const mainVisual = document.querySelector('.main-visual');
+  const aboutVisual = document.querySelector('.about-visual');
 
   if (!sideMenu || !mainVisual) return;
+  if (!sideMenu || !aboutVisual) return;
 
   const PC_WIDTH = 768;
 
@@ -101,3 +103,13 @@ $(window).on('load', function () {
   });
 });
 
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+  const titles = document.querySelector(".main-visual__titles");
+
+  // ローディングが消えたあと少し待つ
+  setTimeout(() => {
+    splash.classList.add("is-hidden");
+    titles.classList.add("is-show");
+  }, 500); // ← ローディング演出に合わせて調整
+});

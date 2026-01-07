@@ -1,0 +1,45 @@
+@use "../../global/" as *;
+
+.overview{
+    margin-top: 3.1875rem;
+    @include mq("md"){
+        padding-left: 12rem;
+    }
+}
+
+.overview__inner{
+    position: relative;
+    padding: 0 0.625rem;
+    width: 100%;
+    margin-top: 4.3125rem;
+    @include mq("md"){
+        padding: 0 2.5rem;
+        margin-top: 0;
+    }
+}
+.overview__wrapper{
+    position: relative;
+    width: inherit;
+    max-width: var(--container);
+    padding: 0 1.25rem 2.5rem;
+    @include mq("md"){
+        padding: 0 0 0 0;
+    }
+    @include mq("lg"){
+        margin-left: 2.5rem;
+    }
+}
+.overview__title{
+    font-size: 1.75rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    padding: 1rem 0 0 2rem;
+    letter-spacing: 0.04em;
+    @include mq("md"){
+        padding: 1rem 0 0 2rem;
+        font-size: 2rem;
+    }
+    @include mq("lg"){
+        padding: 2rem 0 0 0;
+    }
+}
