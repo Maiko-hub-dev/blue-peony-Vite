@@ -10,10 +10,9 @@
 .overview__inner{
     position: relative;
     padding: 0 0.625rem;
-    width: 100%;
     margin-top: 4.3125rem;
     @include mq("md"){
-        padding: 0 2.5rem;
+        padding: 0;
         margin-top: 0;
     }
 }
@@ -23,7 +22,7 @@
     max-width: var(--container);
     padding: 0 1.25rem 2.5rem;
     @include mq("md"){
-        padding: 0 0 0 0;
+        padding: 0 0 0 2.5rem;
     }
     @include mq("lg"){
         margin-left: 2.5rem;
@@ -36,10 +35,104 @@
     padding: 1rem 0 0 2rem;
     letter-spacing: 0.04em;
     @include mq("md"){
-        padding: 1rem 0 0 2rem;
+        padding: 1rem 0 0 0rem;
         font-size: 2rem;
     }
     @include mq("lg"){
         padding: 2rem 0 0 0;
+    }
+}
+.overview__container{
+    @include mq("lg"){
+        padding: 0 2.5rem 0 0;
+    }
+}
+.overview__description{
+    display: flex;
+    flex-direction: column;
+    @include mq("md"){
+        margin-top: 4rem;
+    }
+    @include mq("lxg"){
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+.overview__text{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $black;
+    margin-top: 2rem;
+    @include mq("md"){
+        margin-top: 0;
+        width: fit-content;
+        line-height: 2;
+    }
+    @include mq("lxg"){
+        max-width: 465px;
+    }
+}
+.overview__ceo{
+    @include mq("md"){
+        widthh: 80%;
+        padding: 0;
+    }
+    @include mq("lg"){
+        widthh: 50%;
+        padding: 0 0 0 4.25rem;
+    }
+    @include mq("lxg"){
+         padding: 0 0 0 6.25rem;
+    }
+}
+.overview__ceo-img{
+    display: block;
+    margin-top: 2rem;
+    width: min(465px, 80%);
+    @include mq("md"){
+        margin-top: 0;
+    }
+    @include mq("lg"){
+        width: 100%;
+        max-width: 20.6875rem;
+    }
+}
+.overview__ceo-president{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    @include mq("md"){
+        // 仮
+        margin-top: 1rem;
+        padding: 0 0 0 2rem;
+    }
+    @include mq("lg"){
+        flex-direction: column;
+        //. 仮
+        margin-top: 0;
+    }
+}
+.overview__composition{
+    position: relative;
+    margin-top: 4.3125rem;
+    width: 100%;
+    @include mq("md"){
+        margin-top: 5.125rem;
+    }
+}
+
+
+.company {
+    letter-spacing: 0.04em;
+}
+.company__title,.company__content {
+    display: inline-block;
+}
+.company__title{
+    text-align: left;
+    font-weight: $bold;
+    @include mq("md"){
+        min-width: 242px;
     }
 }

@@ -1,18 +1,18 @@
-<svg width="98" height="59" viewBox="0 0 98 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="0" width="34" height="39">
+<svg wiph="98" height="59" viewBox="0 0 98 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="0" wiph="34" height="39">
 <path d="M32.4186 0.608429H65.5426V38.9164H32.4186V0.608429Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_101_8686)">
 <path d="M48.9857 38.9164V36.79L32.4186 26.1966V28.3231L48.9857 38.9164ZM48.9857 23.9759V26.1157L55.5456 21.916L53.8826 20.8528L48.9857 23.9759ZM49.0122 0.608429V2.73591L65.5793 13.3283V11.2018L49.0122 0.608429ZM49.0122 15.55V13.4092L42.4391 17.6088L44.1163 18.6721L49.0122 15.55Z" fill="#4282B8"/>
 </g>
-<mask id="mask1_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="4" width="34" height="31">
+<mask id="mask1_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="4" wiph="34" height="31">
 <path d="M32.4186 4.78146H65.5426V34.6625H32.4186V4.78146Z" fill="white"/>
 </mask>
 <g mask="url(#mask1_101_8686)">
 <path d="M48.9857 34.6492V32.5094L32.4186 21.916V24.0558L48.9857 34.6492ZM48.9857 30.383L58.8857 24.0435L57.2218 22.9793L48.9857 28.2555V30.383ZM49.0122 4.8757V7.01548L65.5793 17.6088V15.468L49.0122 4.8757ZM49.0122 9.14193L39.0999 15.4824L40.7761 16.5456L49.0122 11.2694V9.14193Z" fill="black"/>
 <path d="M48.9857 30.383V28.2422L32.4186 17.6498V19.7896L48.9857 30.383ZM48.9857 34.6492L62.2392 26.1833L60.563 25.1057L48.9857 32.5227V34.6492ZM49.0122 9.14193V11.2827L65.5793 21.8761V19.7363L49.0122 9.14193ZM49.0122 4.8757L35.7587 13.3426L37.4227 14.4192L49.0122 7.00216V4.8757Z" fill="#4A4C4E"/>
 </g>
-<mask id="mask2_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="0" width="34" height="39">
+<mask id="mask2_101_8686" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="0" wiph="34" height="39">
 <path d="M32.4186 0.608429H65.5426V38.9164H32.4186V0.608429Z" fill="white"/>
 </mask>
 <g mask="url(#mask2_101_8686)">

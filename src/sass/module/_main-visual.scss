@@ -190,6 +190,7 @@
 .members__img{
     position: absolute;
     transition: all 0.8s ease-in-out;
+    width: 100%;
     @include mq("md"){
     }
 } 
@@ -200,7 +201,7 @@
 }
 
 .members .members__dream{
-    background: url(".././src/images/dream-house.svg");
+    background: url("/src/images/dream-house.svg");
     background-size: 6.875rem 9.1875rem;
     background-repeat: no-repeat;
     bottom: -1rem;
@@ -273,7 +274,7 @@
     }
 }
 .members .members__homeloan{
-    background: url(".././src/images/planning_01.svg");
+    background: url(".././src/images/planning.svg");
     background-repeat: no-repeat;
     background-size: 6.4375rem 7.7375rem ;
     background-position: center;

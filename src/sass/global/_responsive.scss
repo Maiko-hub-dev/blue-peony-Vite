@@ -4,6 +4,7 @@ $breakpoints: (
   sp: 375,
   md: 768,
   lg: 1024,
+  lxg: 1120,
   xl: 1440,
 );
 
@@ -12,6 +13,7 @@ $mediaqueries: (
   sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  lxg: "screen and (min-width: #{map-get($breakpoints,'lxg')}px)",
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
 );
 
@@ -21,6 +23,7 @@ $mediaquerys: (
   sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
   lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  lxg: "screen and (min-width: #{map-get($breakpoints,'lxg')}px)",
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
 );
 

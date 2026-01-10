@@ -12,8 +12,9 @@
     }
 }
 .service__inner{
+    position: relative;
     width: inherit;
-     max-width: var(--container);
+    max-width: var(--container);
     padding: 0 1.25rem;
     margin-top: 2rem;
     @include mq("md"){
@@ -71,6 +72,34 @@
         padding-left:max(2rem, calc((100% - var(--container)) / 2));
     }
 }
+
+.service__icon{
+    position: absolute;
+    background: url(../../images/contract.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    aspect-ratio: 124/ 172;
+    object-fit: contain;
+    top: 1rem;
+    top: 2.25rem;
+    right: 2rem;
+
+    @include mq("lxg"){
+        top: 5.8125rem;
+        right: 11.125rem;
+    }
+}
+.service__icon{
+    width: 4.5rem;
+    height: auto;
+
+    @include mq("lg"){
+        width: 7.75rem;
+        height: 10.75rem;
+    }
+}
+
 .service__title{
     font-size: 1.25rem;
     color: $black;
