@@ -35,6 +35,7 @@
     letter-spacing: 0.04em;
     @include mq("md"){
         font-size: 2rem;
+        padding: 1rem 0 0 2rem;
     }
     @include mq("lg"){
         padding: 2rem 0 0 0rem;
@@ -43,12 +44,21 @@
 .safety__contents{
     padding: 0 0 0 1rem;
     @include mq("md"){
-        padding: 0 0 0 2.5rem;
-        margin: 4rem 0 0 2.5rem;
+        padding: 0;
+        margin: 4rem 0 0 2rem;
     }
     @include mq("lg"){
-        margin: 5.375rem 0 0 2.5rem;
-        padding: 0 2rem 0 2.5rem;
+        padding: 0 2rem 0 0rem;
+        margin: 4rem 0 0 0;
+    }
+    @include mq("lxg"){
+        margin: 5.375rem 0 0 0;
+    }
+}
+.safety__content:not(:first-child){
+    margin-top: 2rem;
+    @include mq("lg"){
+        margin-top: 0;
     }
 }
 .safety__content--title{
@@ -68,8 +78,10 @@
     display: flex;
     flex-direction: column;
     @include mq("md"){
+    }
+    @include mq("lg"){
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start
     }
 }
 .safety__workon.workon{
@@ -83,18 +95,22 @@
 .workon__detail{
     line-height: 1.8125;
     @include mq("md"){
-        max-width: 642px;
         line-height: 2;
+        width: max(642px, 50%);
     }
 }
 .workon__image img{
     display: block;
       @include mq("md"){
         width: 80%;
-        padding: 0 0 0 2rem;
+        margin-top: 2rem;
     }
     @include mq("lg"){
         width: auto;
+        padding: 0 0 0 2rem;
+        margin-top: 0;
+    }
+    @include mq("lxg"){
         padding: 0 0 0 2.75rem;
     }
 }

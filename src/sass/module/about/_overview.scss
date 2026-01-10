@@ -52,11 +52,15 @@
     flex-direction: column;
     @include mq("md"){
         margin-top: 4rem;
+        padding: 0 2rem;
+    }
+    @include mq("lg"){
     }
     @include mq("lxg"){
         flex-direction: row-reverse;
         align-items: flex-start;
         justify-content: flex-end;
+        padding: 0;
     }
 }
 .overview__text{
@@ -66,12 +70,14 @@
     margin-top: 2rem;
     letter-spacing: 0.04em;
     @include mq("md"){
-        margin-top: 0;
         width: fit-content;
         line-height: 2;
+        padding: 0 0 0 2rem;
     }
     @include mq("lxg"){
+        margin-top: 0;
         max-width: 465px;
+        padding: 0;
     }
 }
 .overview__ceo{
@@ -102,13 +108,13 @@
 }
 .overview__ceo-president{
     display: flex;
-    justify-content: flex-start;
     margin-top: 2.5rem;
     @include mq("md"){
         margin-top: 1rem;
         padding: 0;
     }
     @include mq("lg"){
+        justify-content: flex-start;
         flex-direction: column;
         //. 仮
         margin-top: 0;
@@ -118,14 +124,26 @@
     position: relative;
     margin-top: 4.3125rem;
     width: 100%;
+    padding: 0 2rem;
     @include mq("md"){
         margin-top: 5.125rem;
+        padding: 0 0 0 2rem;
+    }
+    @include mq("lg"){
+        width: 85%;
+        padding: 0;
+    }
+    @include mq("lxg"){
         width: 70%;
     }
+}
+.composition__company{
+    padding: 0 2rem;
     @include mq("lg"){
         padding: 0;
     }
 }
+
 .overview__position{
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -137,11 +155,14 @@
     color: $blue;
     font-size: 1.5rem;
     font-weight: $bold;
+    margin-left: 2rem;
     @include mq("md"){
         font-size: 2rem;
+        margin-left: 3rem;
     }
     @include mq("lg"){
         margin-top: 1rem;
+        margin-left: 0;
     }
     @include mq("lxg"){
         margin-top: 2rem;
@@ -151,13 +172,22 @@
 .company {
     letter-spacing: 0.04em;
 }
-.company__title,.company__content {
+.company__content {
     display: inline-block;
+    margin-left: 2rem;
+    @include mq("md"){
+        margin-left: 1rem;
+    }
+    @include mq("lg"){
+        margin-left: 0;
+    }
 }
 .company__title{
+    display: inline-block;
     text-align: left;
     font-weight: $bold;
-    @include mq("md"){
+    min-width: 140px;
+    @include mq("lg"){
         min-width: 242px;
     }
 }
