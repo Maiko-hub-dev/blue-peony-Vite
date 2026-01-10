@@ -35,11 +35,11 @@
     padding: 1rem 0 0 2rem;
     letter-spacing: 0.04em;
     @include mq("md"){
-        padding: 1rem 0 0 0rem;
+        padding: 1rem 0 0 2rem;
         font-size: 2rem;
     }
     @include mq("lg"){
-        padding: 2rem 0 0 0;
+        padding: 2rem 0 0 0rem;
     }
 }
 .overview__container{
@@ -56,7 +56,7 @@
     @include mq("lxg"){
         flex-direction: row-reverse;
         align-items: flex-start;
-        justify-content: space-around;
+        justify-content: flex-end;
     }
 }
 .overview__text{
@@ -64,6 +64,7 @@
     line-height: 1.8;
     color: $black;
     margin-top: 2rem;
+    letter-spacing: 0.04em;
     @include mq("md"){
         margin-top: 0;
         width: fit-content;
@@ -75,11 +76,11 @@
 }
 .overview__ceo{
     @include mq("md"){
-        widthh: 80%;
-        padding: 0;
+        width: 80%;
+        padding: 0 0 0 2rem;
     }
     @include mq("lg"){
-        widthh: 50%;
+        width: auto;
         padding: 0 0 0 4.25rem;
     }
     @include mq("lxg"){
@@ -91,6 +92,7 @@
     margin-top: 2rem;
     width: min(465px, 80%);
     @include mq("md"){
+        width: inherit;
         margin-top: 0;
     }
     @include mq("lg"){
@@ -100,12 +102,11 @@
 }
 .overview__ceo-president{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 2.5rem;
     @include mq("md"){
-        // 仮
         margin-top: 1rem;
-        padding: 0 0 0 2rem;
+        padding: 0;
     }
     @include mq("lg"){
         flex-direction: column;
@@ -119,9 +120,33 @@
     width: 100%;
     @include mq("md"){
         margin-top: 5.125rem;
+        width: 70%;
+    }
+    @include mq("lg"){
+        padding: 0;
     }
 }
-
+.overview__position{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    @include mq("md"){
+        font-size: 1rem;
+    }
+}
+.overview__name{
+    color: $blue;
+    font-size: 1.5rem;
+    font-weight: $bold;
+    @include mq("md"){
+        font-size: 2rem;
+    }
+    @include mq("lg"){
+        margin-top: 1rem;
+    }
+    @include mq("lxg"){
+        margin-top: 2rem;
+    }
+}
 
 .company {
     letter-spacing: 0.04em;
@@ -134,5 +159,12 @@
     font-weight: $bold;
     @include mq("md"){
         min-width: 242px;
+    }
+}
+.company__qualification{
+    border-bottom: 1px solid $blue-line;
+    padding: 1.5rem 0;
+    @include mq("md"){
+        padding: 1.875rem 0;
     }
 }

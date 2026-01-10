@@ -168,7 +168,7 @@
     object-fit: cover;
     overflow: hidden;
     @include mq("md"){
-            -webkit-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
         z-index: 22;
     }
