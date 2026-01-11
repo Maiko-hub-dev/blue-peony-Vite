@@ -3,10 +3,12 @@
 .housing{
     width: 100%;
     padding: 0 ;
+    margin-top: 2.75rem;
     @include mq("md"){
         padding: 0 0 0 12rem;
     }
     @include mq("lg"){
+        margin-top: 4.6875rem;
         padding: 0 0 0 12rem;
     }   
 }
@@ -28,46 +30,99 @@
     max-width: var(--container);
     padding: 0 1.25rem 2.5rem;
     @include mq("md"){
-        padding: 2rem 0 0 4rem;
+        padding: 2rem 1rem 0 4rem;
     }
     @include mq("lg"){
-        margin-left: 2rem;
+        width: max(770px, 90%);
+        margin: 0 auto;
         padding: 0 0 0 2rem;
     }
     @include mq("lg"){
-        margin-left: 2rem;
-        padding: 0 0 0 2rem;
+        width: max(960px,90%);
+        padding: 0 3.5rem 0 5rem;
+        margin: 0 auto 0 0;
     }
 }
 .housing__img-wrapper{
     position: relative;
-    width: inherit;
-    padding: 0 2.5rem;
+    width: 100%;
+    padding: 0 ;
+    border-radius: 3.125rem;
+    background-color: $white;
+    overflow: hidden;
     @include mq("lg"){
-        padding: 0;
+        max-width: 960px;
+        // padding: 0 0 0 2rem;
     }
 }
 .housing__vision{
     display: block;
-    width: 100%;
+    width: min(960px,100%);
     height: 50dvh;
-    position: absolute;
+    position: static;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     -o-object-fit: cover;
     object-fit: cover;
-    overflow: hidden;
-    border-radius: 25px;
+    object-position: left center; // ← 左を見せる
+    border-radius: 0;
     @include mq("md"){
+        width: 100%;
         left: 50%;
-        -webkit-transform: translate(-50%, 0%);
-        transform: translate(-50%, 0%);
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
         z-index: 22;
     }
     @include mq("lg"){
-        border-radius: 50px;
-        aspect-ratio: 900/ 400;
+        aspect-ratio: 960/ 400;
     }
+}
+
+.service__contents{
+    padding: 0 0 0 1rem;
+    @include mq("md"){
+        padding: 0;
+        margin: 4rem 0 0 2rem;
+    }
+    @include mq("lg"){
+        padding: 0 2rem 0 0rem;
+        margin: 4rem 0 0 0;
+    }
+    @include mq("lxg"){
+        margin: 5.375rem 0 0 0;
+    }
+}
+.service__content:not(:first-child){
+    margin-top: 2rem;
+    @include mq("lg"){
+        margin-top: 0;
+    }
+}
+.service__content--title{
+    font-size: 1.5rem;
+    font-weight: $bold;
+    letter-spacing: 0.04em;
+    margin-top: 1rem;
+}
+
+.service__content--title:not(:first-child){
+    margin-top: 1rem;
+    @include mq("md"){
+        margin-top: 1.875rem;
+    }
+}
+.service__workon{
+    display: flex;
+    flex-direction: column;
+    @include mq("md"){
+    }
+    @include mq("lg"){
+        flex-direction: row;
+        justify-content: flex-start
+    }
+}
+.housing-contents{
+    margin-top: 1rem;
 }
