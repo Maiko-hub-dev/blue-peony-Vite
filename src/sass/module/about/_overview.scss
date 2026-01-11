@@ -72,7 +72,7 @@
     @include mq("md"){
         width: fit-content;
         line-height: 2;
-        padding: 0 0 0 2rem;
+        padding: 0 ;
     }
     @include mq("lxg"){
         margin-top: 0;
@@ -87,7 +87,7 @@
     }
     @include mq("lg"){
         width: auto;
-        padding: 0 0 0 4.25rem;
+        padding: 0 0 0 2.25rem;
     }
     @include mq("lxg"){
          padding: 0 0 0 6.25rem;

@@ -30,7 +30,7 @@
           <!-- for Datepicker -->
       
         <link rel="stylesheet" href="./css/style.css?ver=1.0.1">
-        <link rel="stylesheet" href="./src/sass/about.scss" />
+        <link rel="stylesheet" href="./src/sass/service.scss" />
       
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -65,10 +65,10 @@
           </div> <!--btns-->  
       </header>
    
-      <div class="about-visual">
-        <div class="about-visual__rightbox"></div>
-        <div class="about-visual__inner">
-          <img src="./src/images/about-us.jpg" alt="" class="about-visual__img">
+      <div class="service-visual">
+        <div class="service-visual__rightbox"></div>
+        <div class="service-visual__inner">
+          <img src="./src/images/Fireflyjpg.jpg" alt="木製の家の模型" class="service-visual__img">
         </div>
       </div>
 
@@ -77,7 +77,7 @@
         <div class="side-menu__logo">
           <img src="./src/images/logo-pc.svg" alt="青壮丸工務店のロゴ" loading="lazy">
         </div>
-          <div class="about__side-menu side-menu__nav menu__nav sp-nav js-drawer">
+          <div class="about__side-menu side-menu__nav menu__nav sp-nav js__drawer">
             <nav class="menu__nav side-menu__list sp-nav__drawers drawers">
                 <div class="sp-nav__drawer drawers_drawer drawer">
               <p class="menu__nav side-menu__item menu__nav--topix menu__nav-top u-mobile">トップページ</p>
@@ -102,7 +102,7 @@
               </nav>
             <nav class="menu__nav side-menu__list">
               <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
-                <a href="service.html" class="menu__nav side-menu__link accordion__door">事業内容</a>
+                <a href="#service" class="menu__nav side-menu__link accordion__door">事業内容</a>
               </p>
                 <ul class="menu__nav side-menu__sublist menu__nav--topix accordion__hide accordion--open">
                   <li class="menu__nav side-menu__subitem">
@@ -112,7 +112,7 @@
                     <a href="#corporate" class="menu__nav side-menu__sublink">法人新築・リフォーム</a>
                   </li>
                   <li class="menu__nav side-menu__subitem">
-                    <a href="service.html#public-work" class="menu__nav side-menu__sublink">公共工事</a>
+                    <a href="#public" class="menu__nav side-menu__sublink">公共工事</a>
                   </li>
                 </ul>
               </nav>
@@ -130,58 +130,55 @@
             </ul>
           </div>
         </aside>
-      <div class="about__us">
-        <div class="about__us--inner">
-          <div class="about__us--wrapper">
-            <h1 class="about__us--title">私達について</h1>
-            <p class="about__us--text">「丁寧な家造りで、理想を現実に」<br>
-              これを実現するために、わたしたちが行っていることを<br class="u-desktop">
-              一部ご紹介します。</p>
-              <div class="about__us--illust offline-hearing"></div>
-              <ul class="about__us--navs">
-                <li class="about__us--nav">
-                  <a href="#philosophy" class="about__us--nav-link">
-                  <span class="about__us-list">経営理念</span>
-                  <span class="about__us-list-down"></span></a>
+      <div class="service__us">
+        <div class="service__us--inner">
+          <div class="service__us--wrapper">
+            <h1 class="service__us--title">事業内容</h1>
+            <p class="service__us--text">
+              青牡丹工務店は、「住宅建築・リフォーム」「方針新築・リフォーム」「公共工事」の3つを事業の柱としています。ここではそれぞれご紹介します。</p>
+              <div class="service__us--illust paperless"></div>
+              <ul class="service__us--navs">
+                <li class="service__us--nav">
+                  <a href="#housing" class="service__us--nav-link">
+                  <span class="service__us-list">住宅建築・リフォーム</span>
+                  <span class="service__us-list-down"></span></a>
                 </li>
-                <li class="about__us--nav">
-                  <a href="#overview" class="about__us--nav-link">
-                  <span class="about__us-list">会社概要</span>
-                  <span class="about__us-list-down"></span></a>
+                <li class="service__us--nav">
+                  <a href="#corporate" class="service__us--nav-link">
+                  <span class="service__us-list">法人新築・リフォーム</span>
+                  <span class="service__us-list-down"></span></a>
                 </li>
-                <li class="about__us--nav">
-                  <a href="#philosophy" class="about__us--nav-link">
-                  <span class="about__us-list">安全への取り組み</span>
-                  <span class="about__us-list-down"></span></a>
+                <li class="service__us--nav">
+                  <a href="#public-work" class="service__us--nav-link">
+                  <span class="service__us-list">公共工事</span>
+                  <span class="service__us-list-down"></span></a>
                 </li>
               </ul>
               </div>
            </div>
         </div>
-      <div class="philosophy" id="philosophy">
-        <div class="philosophy__innner">
-          <div class="philosophy--wrapper">
-          <h2 class="philosophy__title">経営理念</h2>
-          <img src="./src/images/vision.jpg" class="pholosophy__vision" alt="青牡丹工務店の経営理念を構成する6つの要素が円グラフと文章で説明されている図。「品質第一」「顧客志向」「創造性と革新」「社会貢献」「チームワーク」「誠実と透明性」の6項目を紹介。各項目に簡潔な説明が添えられ、中央には円形の番号付きグラフが配置されている構成">
+      <div class="housing" id="housing">
+        <div class="housing__innner">
+          <div class="housing__wrapper">
+            <div class="housing__img-wrapper">
+             <img src="./src/images/works01.jpg" class="housing__vision" alt="落ち着きのある和風なダイニングテーブルがある部屋"></div>
           </div>
         </div>
       </div>
-      <!-- スライダー -->
   
-       <div class="overview" id="overview">
-        <div class="overview__inner">
-          <div class="overview__wrapper">
-          <h2 class="overview__title common__title">会社概要</h2>
-          <div class="overview__container">
-          <div class="overview__description">
-            <div class="overview__ceo">
-            <img src="./src/images/ceo.jpg" alt="代表取締役の写真" class="overview__ceo-img">
-            <div class="overview__ceo-president">
-              <p class="overview__position">代表取締役</p>
-              <p class="overview__name">谷垣周平</p>
+       <div class="corporate__container" id="corporate__container">
+        <div class="corporate__container__inner">
+          <div class="corporate__container__wrapper">
+          <h2 class="corporate__container__title common__title">会社概要</h2>
+          <div class="corporate__container__container">
+          <div class="corporate__container__description">
+            <div class="corporate__container__ceo">
+            <div class="corporate__container__ceo-president">
+              <p class="corporate__container__position">代表取締役</p>
+              <p class="corporate__container__name">谷垣周平</p>
             </div>
             </div>
-            <p class="overview__text">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。<br>
+            <p class="corporate__container__text">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。<br>
               創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。<br>
               その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。
               私たちの理念は、常に社会に貢献し、持続可能な未来を築くことにあります。地域社会や環境への配慮を大切にし、誠実な姿勢で仕事に取り組むことで、より良い社会を築いていくことを目指しています。<br>
@@ -190,47 +187,11 @@
           </div>
           </div>
 
-          <!-- white__Stout参考 -->
-          <div class="overview__composition composition">
-              <div class="composition__company company">
-                <div class="company__qualification">
-                  <p class="company__title">商号</p>
-                  <p class="company__content">株式会社&emsp;青牡丹工務店 </p>
-                </div>
-                  <div class="company__qualification">
-                  <p class="company__title">創業</p>
-                  <p class="company__content">昭和40年5月3日</p></div>
-
-                  <div class="company__qualification">
-                  <p class="company__title">資本金</p>
-                  <p class="company__content">2000万円</p></div>
-
-                  <div class="company__qualification">
-                  <p class="company__title">従業員数</p>
-                  <p class="company__content">24人</p>
-                  </div>
-                  <div class="company__qualification">
-                  <p class="company__title">営業種目</p>
-                  <p class="company__content">総合建設設計施工&middot;不動産業&middot;倉庫業&middot;リフォーム工事</p>
-                  </div>
-                  <div class="company__qualification">
-                  <p class="company__title">資&nbsp;本&nbsp;金</p>
-                  <p class="company__content">2000万円</p>
-                  </div>
-                  <div class="company__qualification">
-                  <p class="company__title">本社所在地</p>
-                  <p class="company__content">〒000-0000&emsp;&nbsp;大阪府大阪市中央区北区南町5-6-7</p></div>
-                   <div class="company__qualification">
-                  <p class="company__title">代表取締役</p>
-                  <p class="company__content">谷垣周平</p></div>
-              </div>
-             
-          </div> 
           </div>
         </div>
         </div>
 
-      <div class="safety" id="efforts">
+      <div class="safety" id="safety">
         <div class="safety__inner">
           <div class="safety__wrapper">
           <h2 class="safety__title common__title">安全への取り組み</h2>
@@ -263,8 +224,8 @@
           </div>
              </div>
           </div>
-      </div> 
-   
+          </div> 
+      <!-- </div> -->
 
       <div class="contact">
         <div class="contact__inner">

@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "index.html"),
         about: path.resolve(__dirname, "about.html"),
+        service: path.resolve(__dirname, "service.html"),
       },
     },
   },

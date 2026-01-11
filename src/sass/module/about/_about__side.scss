@@ -2,11 +2,11 @@
 
 .about__side.side-menu{
     @include mq("sp"){
-        position: relative;
-        transform: translateX(-50%);
+        position: static;
+        left: 0;
+        transform: none;
         width: 100%;
-        left: -50%;
-        height: 0;
+        height: auto;
     }
     @include mq("md"){
         position: fixed;
@@ -24,4 +24,9 @@
 }
 .side-menu__nav.about__side-menu{
     display: block;
+}
+
+.sp-nav.side-menu__nav.is-active{
+    transform: translateX(0);
+    text-align: center;
 }

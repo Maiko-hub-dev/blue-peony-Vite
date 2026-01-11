@@ -85,9 +85,10 @@
     }
 }
 .safety__workon.workon{
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     @include mq("md"){
-    margin-top: 2rem;}
+    margin-top: 2rem auto 0;
+    }
 }
 .workon__image{
     padding: 0;
@@ -96,7 +97,10 @@
     line-height: 1.8125;
     @include mq("md"){
         line-height: 2;
-        width: max(642px, 50%);
+        width: max(642px,70%);
+    }
+    @include mq("lg"){
+        width: min(642px, 48%);
     }
 }
 .workon__image img{
@@ -106,7 +110,7 @@
         margin-top: 2rem;
     }
     @include mq("lg"){
-        width: auto;
+        width: max(267px,70%);
         padding: 0 0 0 2rem;
         margin-top: 0;
     }

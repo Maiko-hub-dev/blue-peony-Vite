@@ -15,11 +15,21 @@ $(document).ready(function() {
 // ドロワーメニュー
 $(function () {
   // ハンバーガーメニュー
-  $(".js-hamberger, .js-grawer, .js-drawer a").click(function () {
-      $(this).toggleClass("is-active");
-      $(".sp-nav").toggleClass("is-active");
-      $(".sp-nav").fadeIn(300); // ふわっと表示
-    });
+  const $hamburger = $(".js-hamberger");
+  const $drawer = $(".js-drawer");     // ← HTMLと一致させる
+  const $drawerNav = $(".sp-nav");     // sp-nav全体を開閉するならこれでもOK
+
+  // ハンバーガーで開閉
+  $hamburger.on("click", function () {
+    $hamburger.toggleClass("is-active");
+    $drawerNav.toggleClass("is-active");
+  });
+
+  // ドロワー内リンクを押したら閉じる
+  $drawer.on("click", "a", function () {
+    $hamburger.removeClass("is-active");
+    $drawerNav.removeClass("is-active");
+  });
     $(".js-drawer a").click(function() {
         $(".js-hamberger").removeClass("is-active");
         $(".sp-nav").removeClass("is-active");
