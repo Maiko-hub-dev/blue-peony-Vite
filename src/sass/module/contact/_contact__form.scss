@@ -1,0 +1,105 @@
+@use "../../global/" as *;
+@use "@sass/global" as *;
+
+.contact__form{
+    padding: 0 ;
+    @include mq("md"){
+        padding: 0 0 0 6rem;
+    }
+    @include mq("lg"){
+        padding: 0 0 0 4rem;
+    }   
+}
+.contact__form--inner{
+        width: inherit;
+        max-width: var(--container);
+        @include mq("md"){
+            padding: 0 0rem 0 7rem;
+            margin-top: 4rem;
+        }
+        @include mq("xl"){
+            padding: 0 0 0 12rem;
+        }
+}
+.contact__form--wrapper{
+    position: relative;
+    width: inherit;
+    max-width: var(--container);
+    padding: 0 1.25rem 2.5rem;
+    @include mq("md"){
+        padding: 0 0 0 3.3125rem ;
+    }
+    @include mq("lg"){
+        margin-left: 2rem;
+    }
+}
+.contact__form-group {
+  margin-bottom: 2rem;
+}
+
+.contact__form-title {
+  font-weight: $bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.contact__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+}
+
+.contact__radio {
+position: relative; // ← ★必須
+  padding-left: 36px; // 丸の分の余白
+  cursor: pointer;
+  display: block;
+  align-items: center;
+}
+.contact__radio-input{
+      position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.contact__radio-text {
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    padding-left: 2rem;
+}
+/* 外側の丸 */
+.contact__radio-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #eee;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+/* 中の●（最初は非表示） */
+.contact__radio-text::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #1e4fff; // いったんベタ書きでOK（後で$blueに）
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* ✅ checked になったら中●を表示 */
+.contact__radio-input:checked + .contact__radio-text::after {
+  opacity: 1;
+}

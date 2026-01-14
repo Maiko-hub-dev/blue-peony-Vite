@@ -1,4 +1,8 @@
-import '../sass/style.scss';
+
+import "/src/sass/style.scss";
+// src/js/contact.js
+import "@sass/contact.scss";
+
 
 $(document).ready(function () {
   $('.members__img').addClass('open');
@@ -71,7 +75,6 @@ MicroModal.init({
 document.addEventListener('DOMContentLoaded', () => {
   const fv = document.querySelector('.main-visual'); // FV要素
   const PC_WIDTH = 768;
-
   // 下層ページなどで .main-visual が無い場合：常に非表示（= is-top を付けない）
   if (!fv) return;
 
@@ -103,6 +106,34 @@ $(window).on('load', function () {
   });
 });
 
+
+
+
+//. お問い合わせフォーム
+$(document).ready(function () {
+
+      $('#form').submit(function (event) {
+        var formData = $('#form').serialize();
+        $.ajax({
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSfdZryH4JHiJMnxWmUb-LIQ2HQVnEfnYgeT1abMJK0VUQPaqw/viewform",
+          data: formData,
+          type: "POST",
+          dataType: "xml",
+          statusCode: {
+            0: function () {
+              $(".end-message").slideDown();
+              $(".submit-btn").fadeOut();
+              //window.location.href = "thanks.html";
+            },
+            200: function () {
+              $(".false-message").slideDown();
+            }
+          }
+        });
+        event.preventDefault();
+      });
+
+    });
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   const titles = document.querySelector(".main-visual__titles");
@@ -113,3 +144,15 @@ window.addEventListener("load", () => {
     titles.classList.add("is-show");
   }, 500); // ← ローディング演出に合わせて調整
 });
+
+    //  ローディングが残り続ける時の保険
+// window.addEventListener("load", () => {
+//   const splash = document.getElementById("splash");
+//   if (splash) splash.style.display = "none";
+// });
+
+// // さらに「JSが途中で死んだ」場合でも数秒後に消す保険
+// setTimeout(() => {
+//   const splash = document.getElementById("splash");
+//   if (splash) splash.style.display = "none";
+// }, 4000);

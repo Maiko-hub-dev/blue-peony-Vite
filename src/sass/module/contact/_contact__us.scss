@@ -1,0 +1,231 @@
+@use "@sass/global" as *;
+@use "../../global/" as *;
+
+.contact-visual {
+    width: 100%;
+    padding: 2.0625rem 0 0 2.0625rem;
+    @include mq("md"){
+        padding: 2.0625rem 2.5rem 0 2.0625rem;
+        height: 100vh;
+        padding-left: 17.5rem;
+        object-fit: cover;
+    }
+}
+.contact-visual.main-visual{
+    height: 100%;
+}
+.contact-visual__inner{
+    position: relative;
+    padding: 0 0.625rem;
+    width: 100%;
+    height: 100vh;
+    margin-top: 4.3125rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    @include mq("md"){
+        height: inherit;
+        padding: 0 2.5rem;
+        aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
+        margin-top: 0;
+        border-radius: 50px 50px 50px 50px;
+    }
+}
+.contact-visual__image{
+    width: inherit;
+    height: inherit;
+}
+
+.contact-visual__rightbox {
+    @include mq("md"){
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $blue;
+        z-index: 0;
+        max-width: 45.4375rem;
+        max-height: 45.4375rem;
+    }
+}
+
+.contact__us.contact__info{
+    width: 100%;
+    padding: 0 ;
+    @include mq("md"){
+        padding: 0 0 0 6rem;
+    }
+    @include mq("lg"){
+        padding: 0 0 0 12rem;
+    }  
+}
+.contact__inform{
+    width: 100%;
+     @include mq("md"){
+            padding: 0 0rem 0 7rem;
+            margin-top: 4rem;
+        }
+        @include mq("xl"){
+            padding: 0 0 0 12rem;
+        }
+}
+.contact__inner.contact__inform{
+        width: 100%;
+        max-width: var(--container);
+        @include mq("md"){
+            padding: 0 0rem 0 7rem;
+            margin-top: 4rem;
+        }
+        @include mq("xl"){
+            padding: 0 0 0 12rem;
+        }
+}
+.contact__wrap.inform__box{
+    position: relative;
+    width: inherit;
+    max-width: var(--container);
+    padding: 0 1.25rem 2.5rem;
+    
+}
+.contact__inform--title{
+    font-size: 2rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    padding: 2rem 0 0 0.685rem;
+    @include mq("md"){
+        font-size: 2.5rem;
+    }
+}
+.contact__form.inform-text{
+        line-height: 1.825;
+        padding: 2rem 0 0 0.6875rem;
+        @include mq("md"){
+            max-width: 422px;
+        padding: 4rem 0 0 0.685rem;
+        line-height: 2;
+        }
+}
+.contact__us--illust.contact-input{
+    display: block;
+    object-fit: contain;
+}
+.contact__us--illust.contact-input{
+        position: absolute;
+        width: 4.875rem;
+        height: 7.1175rem;
+        background: url("./../../../images/contact_01.svg") no-repeat;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        top: 1rem;
+        right: 50%;
+        opacity: 1;
+        transform: translateX(-50%);
+        z-index: 2;
+        @include mq("md"){
+            right: 7.5rem; // 例：mdはrem指定
+        }
+        @include mq("lg"){
+            right: 14rem;
+            width: 10.3125rem;
+            height: 12.375rem;
+        }
+}
+
+
+.contact__us--navs{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    // li間の余白はgapで管理
+    gap: 1rem;
+    @include mq("md"){
+    gap: 2rem;
+    }
+    @include mq("lg"){
+        padding-left: 1rem;
+    }
+}
+.contact__us--nav{
+    //. ボーダーで囲む
+    color: $white;
+    border: 1px solid $blue;
+    min-width: 208px;
+    text-align: center;
+    background-color: $blue;
+    font-weight: $bold;
+    @include mq("md"){
+        padding: 0;
+    }
+}
+.contact__us--nav.contact__num{
+    //. ボーダーで囲む
+    color: $blue;
+    border: 1px solid $blue;
+    min-width: 208px;
+    text-align: center;
+    background-color: $white;
+    
+    @include mq("md"){
+        padding: 0;
+    }
+}
+.contact__us--nav-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.6875rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+   font-weight: $bold;
+  @include mq("md"){
+      padding: 0.6875rem 1rem;
+  }
+}
+
+.contact-visual__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: static;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50px;
+    overflow: hidden;
+    @include mq("md"){
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+        z-index: 22;
+    }
+    @include mq("lg"){
+        aspect-ratio: 1120/ 661;
+    }
+}
+.contact__us-number{
+  display: inline-block;
+  vertical-align: middle;
+  color: $white;
+  line-height: 1;
+  margin-top: 0.8125rem;
+  width: 0.625em;
+  height: 0.625em;
+  border-left: 0;
+  border-bottom: 0;
+   font-weight: $bold;
+}
+.contact__us-number.number01{
+    color: $blue;
+}
+.contact__flex{
+    display: flex;
+    flex-direction: column;
+    @include mq("md"){
+        flex-direction: row;
+    }
+}
