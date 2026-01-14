@@ -26,6 +26,11 @@
         border-radius: 50px 50px 50px 50px;
     }
 }
+.service-visual__image{
+    width: inherit;
+    height: inherit;
+}
+
 .service-visual__rightbox {
     @include mq("md"){
         width: 50%;
@@ -55,6 +60,9 @@
         @include mq("md"){
             padding: 0 0rem 0 7rem;
             margin-top: 4rem;
+        }
+        @include mq("xl"){
+            padding: 0 0 0 12rem;
         }
 }
 .service__us--wrapper{
@@ -165,14 +173,15 @@
     position: static;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     -o-object-fit: cover;
     object-fit: cover;
+    border-radius: 50px;
     overflow: hidden;
     @include mq("md"){
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
         z-index: 22;
     }
     @include mq("lg"){

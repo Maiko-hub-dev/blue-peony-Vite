@@ -1,18 +1,21 @@
 @use "../../global/" as *;
 
-.housing{
+@use "../../global/" as *;
+
+.public{
     width: 100%;
     padding: 0 ;
     margin-top: 2.75rem;
     @include mq("md"){
         padding: 0 0 0 12rem;
+        margin-top: 4rem;
     }
     @include mq("lg"){
         margin-top: 4.6875rem;
         padding: 0 0 0 12rem;
     }   
 }
-.housing__inner{
+.public__inner{
         width: inherit;
         max-width: var(--container);
         @include mq("md"){
@@ -26,7 +29,7 @@
         }
         
 }
-.housing__wrapper{
+.public__wrapper{
     position: relative;
     width: inherit;
     height: 100%;
@@ -46,7 +49,7 @@
         margin: 0 auto 0 0;
     }
 }
-.housing__img-wrapper{
+.public__img-wrapper{
     position: relative;
     width: 100%;
     padding: 0 ;
@@ -57,7 +60,7 @@
         max-width: 960px;
     }
 }
-.housing__vision{
+.public__vision{
     display: block;
     width: min(960px,100%);
     height: 50dvh;
@@ -82,8 +85,7 @@
         aspect-ratio: 960/ 400;
     }
 }
-
-.service__contents{
+.public__contents{
     padding: 0 0 0 1rem;
     @include mq("md"){
         padding: 0;
@@ -97,28 +99,28 @@
         margin: 2.375rem 0 0 0;
     }
 }
-.service__content{
+.public__content{
     padding: 0 1.75rem;
     @include mq("md"){
         padding: 0 2rem 0 1rem;
     }
     @include mq("lg"){
-        padding: 0 2rem;
+        padding: 0 1.75rem;
     }
     @include mq("lxg"){
-        padding: 0 2.125rem;
+        padding: 0 2rem;
     }
     @include mq("xl"){
         padding: 0 2.125rem;
     }
 }
-.service__content:not(:first-child){
+.public__content:not(:first-child){
     margin-top: 2rem;
     @include mq("lg"){
         margin-top: 0;
     }
 }
-.service__content--title{
+.public__content--title{
     font-size: 1.5rem;
     font-weight: $bold;
     letter-spacing: 0.04em;
@@ -130,13 +132,13 @@
     }
 }
 
-.service__content--title:not(:first-child){
+.public__content--title:not(:first-child){
     margin-top: 1rem;
     @include mq("md"){
         margin-top: 1.875rem;
     }
 }
-.service__content--information{
+.public__content--information{
     display: flex;
     flex-direction: column;
     padding: 1.25rem 1.75rem 0;
@@ -146,43 +148,37 @@
         padding: 1.25rem 3.125rem 1.25rem 1rem;
     }
     @include mq("lg"){
-        padding: 1.5rem 0rem 1.5rem 2rem;
+        padding: 1.5rem 0rem 1.5rem 1.75rem;
     }
 }
-.service__content--how_works{
+.public__content--how_works{
     font-size: 1.25rem;
     font-weight: $bold;
     line-height: 1.75;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
     @include mq("md"){
-        line-height: 1.8;
-            span {
-                display: block; // ← これで必ず改行
-            }
+    width: max(374px, 46%);
     }
     
 }
-
-.housing-contents{
-    margin-top: 1rem;
-}
-.service__content--detail{
+.public__content--detail{
     font-size: 1rem;
     line-height: 1.8;
     width: fit-content;
     @include mq("md"){
-        width: max(45%,474px);
+        width: max(45%,500px);
         padding-left: 2.5rem;
         span {
                    display: block; // ← これで必ず改行
                }
     }
 }
-
-.service__workon.workon{
+.public__workon.workon{
     padding: 0 2rem;
     margin-top: 2rem;
     @include mq("md"){
-        padding: 0 2.125rem;
+        padding: 5.125rem 2.125rem 0;
         margin-top: 4rem;
     }
 }
@@ -195,17 +191,35 @@
         grid-template-columns:  repeat(auto-fit, minmax(352px, 1fr));
     }
 }
+
+.workon__cards.card.public__card{
+    height: 100%;
+}
 .workon__card--title{
     color: $black;
     font-weight: $bold;
 }
-.workon__card--image{
-    padding-top: 1.25rem;
+
+.workon__card--image {
+//   position: relative;
+//   width: 100%;
+//   aspect-ratio: 352 / 274; // （写真系はこれ）
+//   overflow: hidden;
+  padding-top: 1.25rem;
+}
+.public__cards-image.workon__card--image{
+    height: inherit;
 }
 .workon__card--image img {
     display: block;
 }
-.card__workon{
+
+.public__cards-image.workon__card--image img{
+    width: 100%;
+    object-fit: cover;
+}
+.card__workon.public__cards{
+    height: inherit;
     @include mq("md"){
         padding-right: 3.875rem;
     }
@@ -213,6 +227,6 @@
 .workon__card--const{
     font-size: 0.875rem;
     margin-top: 1.25rem;
-    letter-spacing: 0.04em;
+       letter-spacing: 0.04em;
     padding-left: 0.5rem;
 }

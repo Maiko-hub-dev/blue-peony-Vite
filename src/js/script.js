@@ -69,37 +69,27 @@ MicroModal.init({
 });
 // スクロールで見えなくするサイドメニュー
 document.addEventListener('DOMContentLoaded', () => {
-  const sideMenu = document.querySelector('.side-menu');
-  const mainVisual = document.querySelector('.main-visual');
-  const aboutVisual = document.querySelector('.about-visual');
-
-  if (!sideMenu || !mainVisual) return;
-  if (!sideMenu || !aboutVisual) return;
-
+  const fv = document.querySelector('.main-visual'); // FV要素
   const PC_WIDTH = 768;
 
-  function updateSideMenuVisibility() {
-    const isPc = window.innerWidth >= PC_WIDTH;
+  // 下層ページなどで .main-visual が無い場合：常に非表示（= is-top を付けない）
+  if (!fv) return;
 
-    // PC以外はJSで触らない（SPはハンバーガーの挙動優先）
-    if (!isPc) {
-      sideMenu.classList.remove('side-menu--hidden');
+  function update() {
+    if (window.innerWidth < PC_WIDTH) {
+      document.body.classList.remove('is-top');
       return;
     }
 
-    const scrollY = window.scrollY;
+    const fvBottom = fv.offsetTop + fv.offsetHeight;
+    const isTop = window.scrollY < fvBottom; // FV内だけ true
 
-    // FVの下端（ここを超えたら非表示）
-    const fvBottom = mainVisual.offsetTop + mainVisual.offsetHeight;
-
-    const shouldHide = scrollY >= fvBottom;
-
-    sideMenu.classList.toggle('side-menu--hidden', shouldHide);
+    document.body.classList.toggle('is-top', isTop);
   }
 
-  window.addEventListener('scroll', updateSideMenuVisibility, { passive: true });
-  window.addEventListener('resize', updateSideMenuVisibility);
-  updateSideMenuVisibility();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 });
 
 
