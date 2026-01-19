@@ -93,6 +93,7 @@
     }
 }
 .menu__nav .side-menu__link{
+    text-decoration: none;
     color: $black;
     width: 100%;
     @include mq("md"){
@@ -117,10 +118,14 @@
     }
 }
 .menu__nav--topix.side-menu__item{
+    text-decoration: none;
+    color: $black;
     display: flex;
     justify-content: space-between;
 }
 .menu__nav.menu__nav--topix.side-menu__contact{
+        text-decoration: none;
+        color: $black;
     justify-content: center;
     @include mq("md"){
         justify-content: space-between;

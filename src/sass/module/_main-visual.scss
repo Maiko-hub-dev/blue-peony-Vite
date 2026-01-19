@@ -18,11 +18,10 @@
     height: inherit;
     background-color: $content;
 
-    margin-top: 4.3125rem;
+    margin-top: 2.3125rem;
     border-radius: 10px 0 0 10px;
     @include mq("md"){
         padding: 0 2.5rem;
-        // background: none;
         margin-top: 0;
     }
 }
@@ -65,7 +64,6 @@
     width: 100%;
     display: block;
     z-index: 2;
-    transform: translateY(-7rem);
     bottom: auto;
     @include mq("sp"){
         width: 100%;
@@ -79,7 +77,6 @@
 .main-visual__titles.is-show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -144,7 +141,7 @@
 .main-visual__text{
     position: absolute;
     right: auto;
-    bottom: 6rem;
+    bottom: 4rem;
     left: 1.1875rem;
     display: block;
     width: 100%;
@@ -231,7 +228,7 @@
 }
 
 .members .members__dream.open {
-    bottom: 31%;
+    bottom: 40%;
     left: 0.5rem;
     @include mq("md"){
         bottom: 3.1875rem;
@@ -239,15 +236,15 @@
     }
 }
 .members .members__plan{
-    width: 8.375rem;
-    height: 8.8175rem;
+    width: 5.375rem;
+    height: 5.8175rem;
     @include mq("md"){
         width: 22.85714%;
         height: 22.86%;
     }
 }
 .members .members__plan{
-    background: url(".././src/images/home-loan-application.svg");
+    background: url("/src/images/home-loan-application.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
@@ -277,7 +274,7 @@
     }
 }
 .members .members__homeloan{
-    background: url(".././src/images/planning.svg");
+    background: url("/src/images/planning.svg");
     background-repeat: no-repeat;
     background-size: 6.4375rem 7.7375rem ;
     background-position: center;
@@ -304,7 +301,7 @@
     }
 }
 .members .members__estimate{
-    background: url(".././src/images/estimate.svg");
+    background: url("/src/images/estimate.svg");
     background-repeat: no-repeat;
     background-size: 88px 101px;
     background-position: center;
@@ -316,7 +313,7 @@
 }
 .members .members__estimate.open{
     right: 0.5rem;
-    bottom: 34%;
+    bottom: 40%;
     @include mq("md"){
         right: 3.5rem;
         bottom: 18.5rem;
@@ -325,10 +322,7 @@
 .members .members__screen {
     width: 5.125rem;
     height: 5.875rem;
-    @include mq("sp"){
-        width: 7.5rem;
-        height: 8.5995rem;
-    }
+    
     @include mq("md"){
         width: 18.39285714%;
         height: 26.88%;
@@ -336,7 +330,7 @@
 
 }
 .members .members__img.members__screen {
-    background: url(".././src/images/loan-screening.svg");
+    background: url("/src/images/loan-screening.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
@@ -346,7 +340,6 @@
     transform: translateX(-50%);
     transform: translateY(-100%);
     transition-duration: transform 1s ease-in-out;
-    
 }
 .members .members__screen.open{
     transform: scale(1);
@@ -354,7 +347,7 @@
     top: 25%;
     @include mq("md"){
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-100%);
     }
 }
 .main-visual__scroll{
@@ -367,7 +360,7 @@
 /* スクロールダウンの位置 */
 .scroll {
         position: absolute;
-        bottom: -2.8125rem;
+        bottom: -5.8125rem;
         z-index: 10;
         @include mq("md"){
             z-index: 100;

@@ -41,9 +41,9 @@
           <!-- Initialize Swiper -->
       <!-- Viteを使う想定をしたコード -->
 
-      <script type="module" crossorigin src="./assets/script-CfAyEpbW.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/script-D_YMZLlM.css">
-      <link rel="stylesheet" crossorigin href="./assets/service-BcxLPq06.css">
+      <script type="module" crossorigin src="./assets/script-BiZ5cDO5.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/script-DXcYrSoR.css">
+      <link rel="stylesheet" crossorigin href="./assets/service-BvDDsKOT.css">
     </head>
     <body>
       <header class="header js-header">
@@ -139,18 +139,27 @@
               <ul class="contact__us--navs">
                 <li class="contact__us--nav">
                   <a href="#housing" class="contact__us--nav-link">
-                    <span class="contact__us-number">01</span></a>
-                  <span class="contact__us-list">入力</span>
+                    <span class="contact__us-number">01</span>
+                  <span class="contact__us-list">入力</span></a>
                 </li>
                 <li class="contact__us--nav contact__num">
                   <a href="#corporate" class="contact__us--nav-link">
-                    <span class="contact__us-number number01">02</span></a>
-                  <span class="contact__us-list number01-input">送信完了</span>
+                    <span class="contact__us-number number01">02</span>
+                  <span class="contact__us-list number01-input">送信完了</span></a>
                 </li>
              
               </ul>
-              <ul class="contact__us--tell">
-                <li class="contact__us-telephone">お電話も受け付けています。</li>
+              
+              <ul class="contact__reception">
+              <li class="contact__reception-label">
+                <span class="contact__recept">お電話も受け付けています。</span>
+              </li>
+              <li class="contact__reception">
+              <span class="contact__number">0000-000-0000</span>
+              </li>
+              <li class="contact__note">
+                営業時間10:00-20:00
+              </li>
               </ul>
               </div>
               <div class="contact__us--illust contact-input"></div>
@@ -169,7 +178,9 @@
             <div class="contact__radio-group">
               <label class="contact__radio">
                 <input
-                  type="radio" class="contact__radio-btn">
+                  type="radio" 
+                   name="inquiry_type"
+                  class="contact__radio-input">
                 <span class="contact__radio-text">住宅建築の相談</span>
               </label>
 
@@ -178,7 +189,7 @@
                   type="radio"
                   name="inquiry_type"
                   value="法人新築の相談"
-                  class="contact__radio-btn"
+                  class="contact__radio-input"
                 >
                 <span class="contact__radio-text">法人新築の相談</span>
               </label>
@@ -187,41 +198,37 @@
                   type="radio"
                   name="inquiry_type"
                   value="法人新築の相談"
-                  class="contact__radio-btn"
+                  class="contact__radio-input"
                 >
-                <span class="contact__radio-text">法人新築の相談</span>
+                <span class="contact__radio-text">リフォームの相談</span>
               </label>
               <label class="contact__radio">
                 <input
                   type="radio"
                   name="inquiry_type"
                   value="法人新築の相談"
-                  class="contact__radio-btn"
+                  class="contact__radio-input"
                 >
-                <span class="contact__radio-text">法人新築の相談</span>
+                <span class="contact__radio-text">その他</span>
+              </label>
+              <label class="contact__radio">
+                <input
+                  type="radio"
+                  name="inquiry_type"
+                  value="法人新築の相談"
+                  class="contact__radio-input"
+                >
+                <span class="contact__radio-text">公共工事の相談</span>
               </label>
             </div>
           </div>
             <div class="box">
               <label for="name">お名前</label>
-              <input type="text" name="entry.396652" id="name" placeholder="お名前" required>
+              <input type="text" name="entry.396652" id="name" placeholder="青牡丹" required>
             </div>
             <div class="box">
               <label for="mail">メールアドレス</label>
-              <input value="mail" name="entry.1934980" id="mail" placeholder="メールアドレス" required>
-            </div>
-            <div class="box">
-              <p class="box">お好きなプログラミング言語</p>
-              <div class="flex-box"><input type="radio" name="entry.1977612" required value="scala">
-                <p>scala</p>
-              </div>
-              <div class="flex-box"><input type="radio" name="entry.1977612" required value="kotlin">
-                <p>kotlin</p>
-              </div>
-              <div class="flex-box"><input type="radio" name="entry.1977612" required value="basic">
-                <p>basic</p>
-              </div>
-
+              <input value="" name="entry.1934980" id="mail" placeholder="aobotan@gmail.com" required>
             </div>
             
       <input type="submit" class="submit-btn">

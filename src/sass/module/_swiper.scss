@@ -38,7 +38,7 @@
     max-width: 100%;
     aspect-ratio: 1;
     // width: auto;
-    width: 12.5rem;
+    width: 14.5rem;
     object-fit: cover; /* IE: not support */
     @include mq("md"){
       width: 22.5rem;

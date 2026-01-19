@@ -122,7 +122,11 @@ $drawer-color: $white;
 .sp-nav.is-active .accordion__hide{
     text-align: center;
 }
-
+.sp-nav.is-active .about__interview {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .sp-nav__drawers{
     display: block;
     @include mq("md"){

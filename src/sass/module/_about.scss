@@ -6,10 +6,9 @@
     height: 100%;
     margin-top: 4.5rem;
     background-color: $white;
-    padding-top: 4.5rem;
+    padding-top: 0.5rem;
     @include mq("md"){
         padding-left: 15rem;
-        z-index: 2000;
         margin-top: 0;
         padding-top: 0;
     }
@@ -38,18 +37,17 @@
 }
 .about__subtitle {
   position: absolute;
-  top: 50%;
+  top: 30%;
   background-color: $content;
   writing-mode: vertical-rl;   /* テキストを縦書きに */
   font-size: 1.5rem;
   color: black;
   padding: 1rem 1.5rem;
   width: 7rem;
-  z-index: 5;
+  z-index: 1;
   margin-top: -3rem;
-  right: 1.6875rem;
+  right: 1rem;
   font-weight: $bold;
-  letter-spacing: 0.04em;
   @include mq("md"){
     top: 65%;
     bottom: -10.7875rem;
@@ -57,10 +55,14 @@
     padding: 2rem 1.5rem;
     width: 10.74rem;
     right: min(8.874rem, 6%);
-    letter-spacing: 0.1em;
   }
 }
-
+.about__subtitle {
+  letter-spacing: 11px;
+  @include mq("md"){
+    letter-spacing: 14px;
+  }
+}
 
 .subtitle__blue{
     color: $blue;
@@ -105,11 +107,11 @@
 
 .about__interview{
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     right: 0;
     bottom: 0;
-    padding-right: 39.46%;
-    top: max(75%, 18.75rem);
+    padding-right: 41.46%;
+    top: max(50%, 18.75rem);
     @include mq("sp"){
         padding-right: min(22%, 20.875rem);
     }

@@ -20,24 +20,30 @@ $(document).ready(function() {
 $(function () {
   // ハンバーガーメニュー
   const $hamburger = $(".js-hamberger");
-  const $drawer = $(".js-drawer");     // ← HTMLと一致させる
+  const $drawer = $(".js__drawer");     // ← HTMLと一致させる
   const $drawerNav = $(".sp-nav");     // sp-nav全体を開閉するならこれでもOK
 
+ 
   // ハンバーガーで開閉
   $hamburger.on("click", function () {
+    const isOpen = $drawerNav.hasClass("is-active");
+
     $hamburger.toggleClass("is-active");
     $drawerNav.toggleClass("is-active");
+
+    // フェードも入れたい場合（不要ならこのifごと消してOK）
+    if (!isOpen) {
+      $drawerNav.stop(true, true).fadeIn(300);
+    } else {
+      $drawerNav.stop(true, true).fadeOut(300);
+    }
   });
 
+
   // ドロワー内リンクを押したら閉じる
-  $drawer.on("click", "a", function () {
+  $drawerNav.on("click", "a", function () {
     $hamburger.removeClass("is-active");
-    $drawerNav.removeClass("is-active");
-  });
-    $(".js-drawer a").click(function() {
-        $(".js-hamberger").removeClass("is-active");
-        $(".sp-nav").removeClass("is-active");
-        $(".sp-nav").fadeOut(300); // ふわっと非表示
+    $drawerNav.removeClass("is-active").stop(true, true).fadeOut(300);
   });
 });
 //. mainvisual__textを非表示

@@ -110,14 +110,16 @@
 }
 .service__heading{
     font-family: $eng-font;
-    color: $white;
-    text-shadow:  1px 1px 0 $blue,1px -1px 0 $blue,-1px 1px 0 $blue,-1px -1px 0 $blue;
-    // text-stroke: 2px  $blue;
+    color: transparent;
+
     font-size: 4.5rem;
-    @include mq("md"){
-        font-size: 8rem;
-         padding-left: max(2rem, calc((100% - var(--container)) / 2));
-    }
+    -webkit-text-stroke: 2px $blue;     // ← 枠線だけ描画
+     line-height: 1.1;    // ← 枠線だけ描画
+    transform: scaleX(1.02);
+  @include mq("md"){
+    font-size: 8rem;
+    padding-left: max(2rem, calc((100% - var(--container)) / 2));
+  }
 }
 .service__items{
     margin-top: 6rem;
