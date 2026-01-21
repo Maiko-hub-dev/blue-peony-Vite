@@ -68,14 +68,16 @@
     line-height: 1.875714;
     @include mq("md"){
       padding: 0.625rem;
-      display: none;/*はじめは非表示*/
       font-size: 0.875rem;
       padding: 1.5rem 2rem 1.5rem rem(17);
+    }
+    @include mq("lg"){
+      display: none;/*はじめは非表示*/
     }
 }
 .accordion--open{
   display: block;
-  @include mq("md"){
+  @include mq("lxg"){
     display: none;
   }
 }

@@ -1,6 +1,5 @@
 
 import "/src/sass/style.scss";
-// src/js/contact.js
 import "@sass/contact.scss";
 
 
@@ -18,34 +17,28 @@ $(document).ready(function() {
   });
 // ドロワーメニュー
 $(function () {
-  // ハンバーガーメニュー
   const $hamburger = $(".js-hamberger");
-  const $drawer = $(".js__drawer");     // ← HTMLと一致させる
-  const $drawerNav = $(".sp-nav");     // sp-nav全体を開閉するならこれでもOK
+  const $drawerNav = $(".sp-nav");
 
- 
-  // ハンバーガーで開閉
   $hamburger.on("click", function () {
-    const isOpen = $drawerNav.hasClass("is-active");
-
     $hamburger.toggleClass("is-active");
     $drawerNav.toggleClass("is-active");
-
-    // フェードも入れたい場合（不要ならこのifごと消してOK）
-    if (!isOpen) {
-      $drawerNav.stop(true, true).fadeIn(300);
-    } else {
-      $drawerNav.stop(true, true).fadeOut(300);
-    }
   });
 
-
-  // ドロワー内リンクを押したら閉じる
   $drawerNav.on("click", "a", function () {
     $hamburger.removeClass("is-active");
-    $drawerNav.removeClass("is-active").stop(true, true).fadeOut(300);
+    $drawerNav.removeClass("is-active");
+  });
+
+  // 1120px以上になったら状態リセット（保険）
+  $(window).on("resize", function () {
+    if (window.matchMedia("(min-width: 1120px)").matches) {
+      $hamburger.removeClass("is-active");
+      $drawerNav.removeClass("is-active");
+    }
   });
 });
+
 //. mainvisual__textを非表示
 $('.js-hamberger').on('click', function () {
   $('.main-visual__text').toggleClass('is-hidden');
@@ -77,12 +70,26 @@ MicroModal.init({
   openClass: 'is-open',
   disableScroll: true,
 });
+
 // スクロールで見えなくするサイドメニュー
 document.addEventListener('DOMContentLoaded', () => {
-  const fv = document.querySelector('.main-visual'); // FV要素
-  const PC_WIDTH = 768;
-  // 下層ページなどで .main-visual が無い場合：常に非表示（= is-top を付けない）
-  if (!fv) return;
+  const sideMenu = document.querySelector('.side-menu');
+  if (!sideMenu) return;
+
+  const PC_WIDTH = 1120;
+
+  // ページごとのFV候補を順番に探す（見つかった最初の要素をFV扱い）
+  const fv =
+    document.querySelector('.main-visual') ||
+    document.querySelector('.contact__side') ||
+    document.querySelector('.about__side') ||
+    document.querySelector('.service__side');
+
+  // FVが無いページは、PCでは常に非表示（= is-top 付けない）
+  if (!fv) {
+    document.body.classList.remove('is-top');
+    return;
+  }
 
   function update() {
     if (window.innerWidth < PC_WIDTH) {
@@ -91,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const fvBottom = fv.offsetTop + fv.offsetHeight;
-    const isTop = window.scrollY < fvBottom; // FV内だけ true
+    const isTop = window.scrollY < fvBottom;
 
     document.body.classList.toggle('is-top', isTop);
   }
@@ -100,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', update);
   update();
 });
+
 
 
 //logoの表示

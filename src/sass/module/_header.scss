@@ -14,8 +14,10 @@
     z-index: 2999;
     @include mq("md"){
         position: relative;
-        height: 0;
         background-color: initial;
+    }
+    @include mq("lxg"){
+        height: 0;
     }
 }
 
@@ -24,6 +26,9 @@
     margin-top: 0.625rem;
     @include mq("md"){
         height: inherit;
+        margin-top: 1rem;
+    }
+    @include mq("lxg"){
         margin-top: 0;
     }
 }
@@ -33,7 +38,7 @@
     justify-content: space-between;
     height: inherit;
     padding-left: 1rem;
-    @include mq("md"){
+    @include mq("lxg"){
         display: none;
     }
 }
@@ -44,24 +49,24 @@
     }
 }
 .header__nav {
-    display: none;
-        @include mq("sp"){
-            margin: 0 0 0 9rem;
-        }
-        @include mq("md"){
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: auto;
-            height: inherit;
-            margin:  0 auto;
-            padding: 0 ;
-        }
-        @include mq("lg"){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: inherit;
+    @include mq("sp"){
+        margin: 0 0 0 9rem;
+    }
+    @include mq("md"){
+        margin:  0 auto;
+        padding: 0 ;
+    }
+    @include mq("lxg"){
+            display: none;
             transform: scale(1);
             padding: 0 3% 0 1em;
             max-width: 100%;
-        }
+    }
 }
 .header__btns{
     margin-left: 5rem;
@@ -73,13 +78,14 @@
     width: 3.5rem;
     height: 3rem;
     @include mq("md"){
-        width: 0;
-        height: 0;
-        display: none;
         margin-left: 0;
-    }
-    @include mq("lg"){
+        margin-top: 1rem;
         width: auto;
+    }
+    @include mq("lxg"){
+        display: none;
+        height: 0;
+        width: 0;
         justify-content: end;
     }
 }
@@ -90,6 +96,7 @@
     max-width: 14.1875rem;
     margin-left: 1.25rem;
     height: inherit;
+    margin-top: 1rem;
     }
     @include mq("lg"){
         width: 15.875rem;
@@ -99,7 +106,7 @@
     display: block;
     width: 6.125rem;
     height: 3.6875rem;
-    @include mq("md"){
+    @include mq("lxg"){
         display: none;
     }
 }
@@ -116,7 +123,7 @@
         height: 0;
         width: 0;
     }
-    @include mq("md"){
+    @include mq("lxg"){
         display: none;
     }
 }

@@ -42,26 +42,48 @@
   writing-mode: vertical-rl;   /* テキストを縦書きに */
   font-size: 1.5rem;
   color: black;
+  inline-size: 7rem;   // ← これが正解
   padding: 1rem 1.5rem;
-  width: 7rem;
   z-index: 1;
   margin-top: -3rem;
   right: 1rem;
   font-weight: $bold;
+  height: fit-content;
   @include mq("md"){
     top: 65%;
     bottom: -10.7875rem;
     font-size: 2.5rem;
     padding: 2rem 1.5rem;
-    width: 10.74rem;
+    inline-size: 10.74rem;
+    height: fit-content;
     right: min(8.874rem, 6%);
   }
 }
+.about__subtitle .subtitle__group {
+    writing-mode: vertical-rl;   
+    display: inline-block;
+    white-space: nowrap;
+}
+.about__subtitle .subtitle__group:first-child{
+    display: block;
+    @include mq("md"){
+        display: inline-block;
+    }
+}
 .about__subtitle {
   letter-spacing: 11px;
-  @include mq("md"){
-    letter-spacing: 14px;
-  }
+   @include mq("md"){
+        letter-spacing: 14px;
+    }
+}
+.subtitle__black{
+    color: $black;
+    writing-mode: vertical-rl; 
+}
+
+.about__subtitle .subtitle__break {
+  display: block;
+   writing-mode: vertical-rl; 
 }
 
 .subtitle__blue{
@@ -111,7 +133,7 @@
     right: 0;
     bottom: 0;
     padding-right: 41.46%;
-    top: max(50%, 18.75rem);
+    top: max(55%, 18.75rem);
     @include mq("sp"){
         padding-right: min(22%, 20.875rem);
     }

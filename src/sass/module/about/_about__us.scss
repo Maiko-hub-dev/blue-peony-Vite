@@ -4,9 +4,9 @@
     width: 100%;
     padding: 2.0625rem 0 0 0.625rem;
     @include mq("md"){
-        padding: 2.0625rem 2.5rem 0 0.625rem;
+        padding: 2.0625rem 0.5rem 0 0.625rem;
         height: 100vh;
-        padding-left: 17.5rem;
+        padding-left: 10.5rem;
         object-fit: cover;
     }
 }
@@ -14,16 +14,48 @@
     position: relative;
     padding: 0 0.625rem;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     margin-top: 4.3125rem;
     border-radius: 0.625rem;
     overflow: hidden;
     @include mq("md"){
-        height: inherit;
+        height: 70dvh;
         padding: 0 2.5rem;
         aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
         margin-top: 0;
         border-radius: 50px 50px 50px 50px;
+    }
+    @include mq("lxg"){
+        height: 100vh;
+    }
+}
+
+
+.about-visual__frame{
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  padding: 0 0.625rem;
+}
+.about-visual__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    @include mq("md"){
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+        z-index: 22;
+    }
+    @include mq("lg"){
+        aspect-ratio: 1120/ 661;
     }
 }
 .about-visual__rightbox {
@@ -42,18 +74,24 @@
 
 .about__us{
     padding: 0 ;
+    margin-top: 4.5rem;
     @include mq("md"){
         padding: 0 0 0 6rem;
     }
     @include mq("lg"){
+        margin-top: 0;
         padding: 0 0 0 4rem;
     }   
 }
 .about__us--inner{
         width: inherit;
         max-width: var(--container);
+        padding-top: 4.5rem;
         @include mq("md"){
             padding: 0 0rem 0 7rem;
+            margin-top: 3.125rem;
+        }
+        @include mq("lxg"){
             margin-top: 4rem;
         }
 }
@@ -154,28 +192,7 @@
   }
 }
 
-.about-visual__img{
-    // position: static;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -o-object-fit: cover;
-    object-fit: cover;
-    overflow: hidden;
-    @include mq("md"){
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-        z-index: 22;
-    }
-    @include mq("lg"){
-        aspect-ratio: 1120/ 661;
-    }
-}
+
 .about__us-list-down{
   display: inline-block;
   vertical-align: middle;

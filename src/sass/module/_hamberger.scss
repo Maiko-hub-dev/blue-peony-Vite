@@ -3,14 +3,27 @@
 $drawer-width: 32px;
 $drawer-height: 2px;
 $drawer-color: $white;
+$drawer-width-md: 40px;
 
 .hamberger {
     transition: 0.3s ease;
     width: 100%;
     height: inherit;
     @include mq("md"){
-        width: 0;
+    }
+    @include mq("lxg"){
         height: 0;
+        width: 0;
+    }
+}
+.sp__btns--box.hamberger{
+    display: block;
+    @include mq("md"){
+        margin-right: 2rem;
+    }
+    @include mq("lxg"){
+        margin-left: 0;
+        display: none;
     }
 }
 .top__drawer.hamberger {
@@ -26,6 +39,9 @@ $drawer-color: $white;
     width: $drawer-width;
     background-color: $white;
     transition: ease 0.3s;
+    @include mq("md"){
+        width: $drawer-width-md;
+    }
 }
 .hamberger .menu__button2,
 .hamberger .menu__button3{
@@ -36,6 +52,9 @@ $drawer-color: $white;
     height: $drawer-height;
     width: $drawer-width;
     transition: ease 0.3s;
+    @include mq("md"){
+        width: $drawer-width-md;
+    }
 }
 
 .js-hamberger.is-active {
@@ -53,9 +72,12 @@ $drawer-color: $white;
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease; // ← transformだけに絞ると安定
     z-index: 999;
-    @include mq("md"){
+      &.is-active{
+    transform: translateX(0);
+  }
+    @include mq("lxg"){
         position: relative;
         top: initial;
         left: initial;
@@ -66,7 +88,16 @@ $drawer-color: $white;
         height: initial;
         overflow-y: initial;
         z-index: 1;
+        &.is-active{
+        transform: initial;
+      }
     }
+}
+
+
+.js__drawer.is-active{
+    display: block;
+    margin-top: 0.875rem;
 }
 .js-hamberger.is-active .menu__button{
     right: 0;

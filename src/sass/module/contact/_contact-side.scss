@@ -1,11 +1,8 @@
-@use "../global" as *;
-
-.common__title{
-    font-weight: $bold;
-}
+@use "@sass/global" as *;
+@use "../../global/" as *;
+/* 例：side-menu は普段は表示の作りのまま、PCでは強制的に隠す */
 @media (min-width: 1120px) {
-  /* PCでは基本：隠す */
-  .side-menu {
+  .side-menu.contact__side {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -13,8 +10,7 @@
     transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
   }
 
-  /* FV内だけ：表示 */
-  body.is-top .side-menu {
+  body.is-top .side-menu.contact__side {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
