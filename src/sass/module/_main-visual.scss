@@ -2,9 +2,10 @@
 
 
 .main-visual {
+    position: relative;
     width: 100%;
     height: 50vh;
-    padding: 2.0625rem 0.625rem 0 0.625rem;
+    padding: 0rem 0 0 0.625rem;
     @include mq("md"){
         height: 70dvh;
         padding-left: 10.5rem;
@@ -14,6 +15,10 @@
         height: 100vh;
     }
 }
+.main-visual.main-top {
+    width: 100%;
+    height: 100vh;
+}
 .contact-visual.main-visual{
     height: auto;
 }
@@ -21,12 +26,12 @@
     padding: 0 0.625rem;
     width: 100%;
     height: inherit;
-    background-color: $content;
-
+    position: relative;
+    z-index: 2;
     margin-top: 2.3125rem;
     border-radius: 10px 0 0 10px;
     @include mq("md"){
-        padding: 0 2.5rem;
+        padding: 0 0 0 2.5rem;
         margin-top: 0;
     }
 }
@@ -37,7 +42,7 @@
     top: 0;
     right: 0;
     background-color: $blue;
-    z-index: 0;
+    z-index: 1;
     width: 50%;
     height: 50%;
     max-width: 45.4375rem;
@@ -52,13 +57,24 @@
     @include mq("sp"){
         padding: 0.75rem 0.75rem 0.75rem 0;
     }
-    
     @include mq("md"){
-        background-color: $content;
-        padding: 2.5em 2.5em 2.5em 0;
-        border-radius: 50px;
+        padding: 3.5rem 2.5em 2.5em 0;
         height: 100vh;
-        z-index: 22;
+        z-index: 1;
+    }
+    @include mq("lxg"){
+        padding: 2.5em 2.5em 2.5em 0;
+    }
+}
+.main-visual__members.members{
+        background-color: $content;
+        height: inherit;
+        border-radius: 0.625rem;
+    @include mq("md"){
+        border-radius: 50px;
+        margin-top: 1.25rem;
+        width: 100%;
+        height: 100%;
     }
 }
 .main-visual__titles{
@@ -134,14 +150,10 @@
     width: fit-content;
   }
 }
-
-.main-visual__members.members{
- height: inherit;
-    @include mq("md"){
-    width: 100%;
-    height: 100%;
-    }
+.top-page--title.main-visual__catch{
+     bottom: 5rem;
 }
+
 
 .main-visual__text{
     position: absolute;
@@ -163,27 +175,28 @@
     transition: opacity .3s ease;
     transform: translateY(40px);
     @include mq("sp"){
-        right: 7.0625rem;
         margin-top: 1.3125rem;
-        right: 0.25rem;
         z-index: 11;
         transform: translateY(0);
     }
     @include mq("md"){
-        padding-left: max(1.5rem,10%);
-        width: fit-content;
+        text-align: end;
         left: auto;
         bottom: max(0.75rem, 1%);
         margin-top: 1.1875rem;
         line-height: 2;
         font-size: 1rem;
-        right: 3.1875rem;
     }
 }
-@media (min-width: 768px) and (max-width: 1180px) {
-    .main-visual__text {
-        font-size: 0.875rem;       // ★ ここで指定
-        right: 3.1875rem;
+.main-visual__text.top-page--subtitle{
+    bottom: 2rem;
+    @include mq("md"){
+        text-align: end;
+        bottom: max(2rem, 3%);
+         margin-top: 2.125rem;
+    }
+    @include mq("lg"){
+        bottom: max(0.125rem, 1%);
     }
 }
 .main-visual__text.is-hidden {

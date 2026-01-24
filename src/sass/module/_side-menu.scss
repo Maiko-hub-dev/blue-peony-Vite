@@ -8,7 +8,7 @@
     left: 0;
     height: 4.25rem;
     background-color: $white;
-    z-index: 1;
+    z-index: 5;
     @include mq("md"){
         max-width: 30%;
         width: min(20%,11rem);
@@ -18,15 +18,17 @@
 
 }
 
-
-
 .side-menu__list{
     width: 100%;
     @include mq("md"){
         min-width: 12.5rem;
     }
 }
+.side-menu__list:first-child{
+    padding-top: 2.5rem;
+}
 .side-menu__nav.menu__nav{
+
     @include mq("md"){
         width: minmax(12.5rem, 20%);
     }
@@ -88,7 +90,7 @@
 .side-menu__nav{
     padding: 2.5rem 0;
     @include mq("md"){
-        padding: 2.35rem 0 2rem 2.5rem;
+        padding: 2.35rem  2.5rem 0;
     }
 }
 .menu__nav--topix{

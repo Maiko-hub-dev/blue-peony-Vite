@@ -1,18 +1,26 @@
 @use "../../global/" as *;
-
+.body.is-drawer-open .header__service.header{
+    padding: 0 0 0 0.5rem;
+}
 .service-visual {
     width: 100%;
+}
+.service-visual.main-visual{
     padding: 2.0625rem 0 0 2.0625rem;
+    height: 50vh;
     @include mq("md"){
-        padding: 2.0625rem 0.5rem 0 2.0625rem;
-        height: 100vh;
-        padding-left: 17.5rem;
+        padding: 2.5rem 0.5rem 0 2.0625rem;
         object-fit: cover;
+        height: 70dvh;
+    }
+    @include mq("lxg"){
+        height: 100vh;
+        padding: 4rem 0.5rem 0 17.5rem;
     }
 }
 .service-visual__inner{
     position: relative;
-    padding: 0 0.625rem;
+    padding: 0.5rem 0.625rem;
     width: 100%;
     height: 50vh;
     margin-top: 4.3125rem;
@@ -23,15 +31,24 @@
         padding: 0 2.5rem;
         aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
         margin-top: 0;
-        border-radius: 50px 50px 50px 50px;
+        border-radius: 3.125rem;
     }
     @include mq("lxg"){
         height: 100vh;
     }
 }
 .service-visual__image{
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 0;   // ← これが超重要（余白があると角が四角く見える）
+    border-radius: 0.625rem;
+    overflow: hidden;      // ← これで“箱の形”に切り抜く
+    @include mq("md"){
+        padding:  3.125rem 0 0 7rem;
+    }
+    @include mq("lxg"){
+        padding: 3.125rem;
+    }
 }
 
 .service-visual__rightbox {
@@ -49,11 +66,12 @@
 }
 
 .service__us{
+    position: relative;
     padding: 0 ;
     margin-top: 4.5rem;
+    z-index: 6;
     @include mq("md"){
         margin-top: 3.125rem;
-        padding: 0 0 0 6rem;
     }
     @include mq("lg"){
         margin-top: 0;
@@ -178,18 +196,14 @@
     width: 100%;
     height: 100%;
     position: static;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(0%, 0%);
-    transform: translate(0%, 0%);
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: 50px;
-    overflow: hidden;
+    object-position: center;
     @include mq("md"){
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-        z-index: 22;
+    z-index: 22;
+    border-radius: 3.125rem;
     }
     @include mq("lg"){
         aspect-ratio: 1120/ 661;

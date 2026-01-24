@@ -65,20 +65,31 @@
 }
 
 .contact__heading{
-    font-family: $eng-font;
-    color: transparent;
+  font-family: $eng-font;
+  color: transparent;
+  -webkit-text-stroke: 1px $blue;
+    letter-spacing: 0.01em;
+  // ぽてっと感を足す（補助）
+  text-shadow: none;
+  line-height: 1.1;
+  font-size: 4.5rem;
 
-    font-size: 4.5rem;
-    -webkit-text-stroke: 2px $blue;     // ← 枠線だけ描画
-     line-height: 1.1;    // ← 枠線だけ描画
-    transform: scaleX(1.02);
   @include mq("md"){
     font-size: 8rem;
+    transform: scale(1.02);
     padding-left: max(2rem, calc((100% - var(--container)) / 2));
   }
 }
 
-
+.page-top .contact__heading{
+    padding-left: 0;
+    font-size: clamp(4.2rem, 12vw, 4.5rem); // ← SPで自動縮小
+    transform: scale(1);
+    @include mq("md"){
+        font-size: 8rem;
+        transform: scale(1.02);
+    }
+}
 
 .contact__info{
     display: flex;
