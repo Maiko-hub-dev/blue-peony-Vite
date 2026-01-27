@@ -42,16 +42,21 @@
     height: auto;
     @include mq("sp"){
         padding: 1.6875rem 0 0;
-        max-width: var(--container);
     }
     @include mq("md"){
     top: 4.5rem;
-    padding: 4rem 0 0 4.5rem;
-    z-index: 2;
-    transform: translateX(-2%);
+    padding: 4rem 0 0 2.5rem;
     }
     @include mq("lg"){
-        padding: 4rem 0 0 8.5rem;
+        padding: 4rem 0 0 4.5rem;
+    }
+}
+.page-top .finance__titles.contract__titles{
+    @include mq("lg"){
+        padding: 4rem 0 0 2rem;
+    }
+    @include mq("lxg"){
+        padding: 4rem 0 0 4rem;
     }
 }
 .contact__title{
@@ -102,10 +107,11 @@
     @include mq("md"){
         padding-top: 0;
         padding-left: 4.5rem;
+        justify-content: flex-start;
     }
-    @include mq("lg"){
+    @include mq("lxg"){
         flex-direction: row;
-        padding: 0 0 0 8.5rem;
+        padding: 0 0 0 4.5rem;
     }
 }
 .contact__wrapper{
@@ -140,11 +146,16 @@
     }
 }
 .contact__telephone{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    
-    @include mq("lg"){
+    @include mq("md"){
+        width: auto;
+        flex-direction: row;
         align-items: center;
+    }
+    @include mq("lxg"){
+        align-items: flex-start;
         flex-direction: row;
     }
 }
@@ -163,14 +174,14 @@
 
 .contact__tel--num.label{
     padding: 1.5rem 0;
-    border-bottom: 1px solid $black;
     @include mq("md"){
         height: 100%;
-        min-width: 74px;
-        width: max(4.625rem, 74px);
-        padding: 0 0 1.5rem 0;
+        border-right: 1px solid $black;
+        width: min(5.625rem, 30%);
     }
     @include mq("lg"){
+        width: max(4.625rem, 74px);
+        padding: 0;
         border-bottom: 0;
     }
 }
@@ -178,21 +189,26 @@
     display: flex;
     flex-direction: column;
     padding: 1.5rem 0;
-
+    @include mq("md"){
+        padding: 1.5rem 0 1.5rem 1.5rem;
+        height: inherit;
+    }
     @include mq("lg"){
-        padding: 0 2rem;
+        padding: 2rem;
         flex-direction: row;
     }
 }
-.contact__label,.contact__number{
-    display: block;
+.contact__label,
+.contact__number{
     font-family: $eng-font;
     font-size: 2rem;
     letter-spacing: 0.02em;
-    @include mq("md"){
+    @include mq("lxg"){
+        display: block;
         padding-bottom: 0.5rem;
     }
 }
+
 .contact__text{
     margin-left: 1rem;
     font-size: 0.75rem;
@@ -216,6 +232,10 @@
 .contact__access{
     padding-top: 0.75rem;
     @include mq("md"){
+        margin-top: 1rem;
+    }
+    @include mq("lxg"){
+        margin-top: 0;
         padding: 1rem 2rem 2px;
     }
 }
@@ -229,6 +249,9 @@
     padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
     transition: background-color 0.5s ease;
     @include mq("md"){
+
+    }
+    @include mq("lxg"){
         padding: 1.25rem 0.5rem 1.25rem 1.25rem;
         width: min(22%, 284px);
         margin-left: 2rem;

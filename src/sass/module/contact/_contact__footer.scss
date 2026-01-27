@@ -1,0 +1,16 @@
+@use "../../global/" as *;
+@use "@sass/global" as *;
+
+.contact.contact__footer{
+    margin-top: 0;
+    padding-top: 0;
+}.contact__footer--inner{
+    @include mq("md"){
+        padding: 0 0 0 3rem;
+    }
+}
+.contact__inner.inform{
+    @include mq("md"){
+        padding: 0;
+    }
+}

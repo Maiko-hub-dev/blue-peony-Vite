@@ -27,7 +27,7 @@
     max-width: var(--container);
     padding: 0 1.25rem 2.5rem;
     @include mq("md"){
-        padding: 0 0 0 3.3125rem ;
+        padding: 0  ;
     }
     @include mq("lg"){
         margin-left: 2rem;
@@ -38,9 +38,13 @@
 }
 
 .contact__form-title {
+  width: fit-content;
   font-weight: $bold;
   margin-bottom: 1rem;
   letter-spacing: 0.04em;
+  @include mq("md"){
+    margin-bottom: 1.6875rem;
+  }
 }
 
 .contact__radio-group {
@@ -51,23 +55,24 @@
 }
 
 .contact__radio {
-position: relative; // ← ★必須
-  padding-left: 36px; // 丸の分の余白
+  position: relative; // ← ★必須
+  padding-left: 0; // 丸の分の余白
   cursor: pointer;
   display: block;
   align-items: center;
 }
 .contact__radio-input{
-      position: absolute;
-  opacity: 0;
-  pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 .contact__radio-text {
     position: relative;
     font-size: 1rem;
     letter-spacing: 0.04em;
     line-height: 1.4;
-    padding-left: 2rem;
+    font-weight: $bold;
+    padding-left: 1.5rem;
 }
 /* 外側の丸 */
 .contact__radio-text::before {
@@ -75,11 +80,11 @@ position: relative; // ← ★必須
   position: absolute;
   left: 0;
   top: 50%;
-  width: 26px;
-  height: 26px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #eee;
+  border: 1px solid $blue;
+  background: transparent;
   transform: translateY(-50%);
   box-sizing: border-box;
 }
@@ -88,12 +93,12 @@ position: relative; // ← ★必須
 .contact__radio-text::after {
   content: "";
   position: absolute;
-  left: 7px;
+  left: 4px;
   top: 50%;
-  width: 12px;
-  height: 12px;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  background: #1e4fff; // いったんベタ書きでOK（後で$blueに）
+  background: $blue; // いったんベタ書きでOK（後で$blueに）
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -102,4 +107,181 @@ position: relative; // ← ★必須
 /* ✅ checked になったら中●を表示 */
 .contact__radio-input:checked + .contact__radio-text::after {
   opacity: 1;
+}
+.contact__form-mark{
+  color: $red;
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+.contact__form-nessesary{
+  color: $black;
+  font-size: 0.75rem;
+}
+.contact__form--box{
+  display: block;
+}
+.contact__form--box.box-top{
+  margin-top: 0.5rem;
+  @include mq("md"){
+    margin-top: 1.625rem;
+  }
+}
+.contact__form-input{
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid $blue-line;
+    background-color: $content;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    box-sizing: border-box;
+    &:focus{
+        outline: 2px solid $blue;
+        outline-offset: 2px;
+    }
+}
+.contact__form-title.contact__box--title{
+    display: block;
+    margin-top: 1rem;
+    @include mq("md"){
+      margin-top: 1.6875rem;
+    }
+}
+.contact__form-names.form-names{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: max(29.375rem, 50%);
+    @include mq("md"){
+      gap: 2.5rem
+    }
+  }
+
+.contact__form-input::placeholder{
+  font-size: 1rem;
+  color: $placeholder;
+}
+.contact__form--input{
+  display: block;
+}
+.form-email,
+.form-telephone,
+.form-address{
+      width: max(29.375rem, 50%);
+}
+.form-email .form-email__input{
+    display: block;
+    margin-top: 1rem;
+    @include mq("md"){
+    margin-top: 1.6875rem;
+
+  }
+}
+
+.contact__check{
+  padding-top: 1rem;
+  @include mq("md"){
+    padding-top: 1.5625rem;
+    width: max(29.375rem, 50%);
+  }
+}
+.contact__check--label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* チェックボックス本体は非表示 */
+.contact__check--input {
+  display: none;
+}
+
+/* テキスト側を基準にする */
+.contact__check--text {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.875rem;
+}
+.contact__check--text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid $blue;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: all 0.1s;
+}
+
+.contact__check--text::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: -0.25em;
+  width: 0.625rem;
+  // transform: translateX(-50%);
+  height: 1rem;
+  color: $black;
+  transform-origin: center right;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: rotate(45deg) translateY(-50%) skewX(16deg);
+  transform-origin: center right;
+  border-right: 3px solid $black;
+  border-bottom: 3px solid $black;
+  transition: all 0.1s;
+}
+
+/* チェックされたら表示 */
+.contact__check--input:checked + .contact__check--text::after {
+  opacity: 1;
+}
+.contact__submit{
+      width: max(29.375rem, 50%);
+}
+.contact__link{
+    text-decoration: none;
+    width: 15rem;
+    display: block;
+    background-color: $blue;
+    color: $white;
+    padding: 1.375rem 5.125rem;
+    width: fit-content;
+    font-size: 1rem;
+    border-radius: 0.625rem;
+    font-family: $base-font;
+    font-weight: $bold;
+    text-align: center;
+    margin: 2rem auto 0;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: $white;
+        color: $blue;
+        border: 1px solid $blue;
+        box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.2);
+    }
+}
+.contact__link:hover .contact__elipse {
+    color: $blue;
+}
+.contact__elipse {
+    font-size: 0.625rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.35rem;
+    color: $white;
+    transition: color 0.1s ease;
+
 }

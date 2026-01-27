@@ -8,16 +8,18 @@
     left: 0;
     height: 4.25rem;
     background-color: $white;
-    z-index: 5;
+    z-index: 7;
     @include mq("md"){
         max-width: 30%;
         width: min(20%,11rem);
         height: 100vh;
         transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     }
-
 }
-
+.body.is-drawer-open .side-menu{
+    padding: 0 0 0 0.5rem;
+    z-index: 2000;
+}
 .side-menu__list{
     width: 100%;
     @include mq("md"){

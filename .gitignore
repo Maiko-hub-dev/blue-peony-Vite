@@ -1,0 +1,21 @@
+# node_modules をGitの追跡対象から外す
+node_modules/
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+
+# cache
+.cache/
+.parcel-cache/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env
+.env
+.env.*

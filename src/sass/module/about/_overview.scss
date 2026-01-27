@@ -2,8 +2,8 @@
 
 .overview{
     margin-top: 3.1875rem;
-    @include mq("md"){
-        padding-left: 12rem;
+    @include mq("lxg"){
+        padding: 0 0 0 5rem;
     }
 }
 
@@ -11,9 +11,14 @@
     position: relative;
     padding: 0 0.625rem;
     margin-top: 4.3125rem;
+    width: 100%;
+    z-index: 5;
     @include mq("md"){
         padding: 0;
         margin-top: 0;
+    }
+    @include mq("lxg"){
+        padding: 0 0rem 0 7rem;
     }
 }
 .overview__wrapper{
@@ -32,7 +37,7 @@
     font-size: 1.75rem;
     font-family: $base-font;
     font-weight: $bold;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 0 0 0;
     letter-spacing: 0.04em;
     @include mq("md"){
         padding: 1rem 0 0 2rem;
@@ -124,10 +129,9 @@
     position: relative;
     margin-top: 4.3125rem;
     width: 100%;
-    padding: 0 2rem;
     @include mq("md"){
         margin-top: 5.125rem;
-        padding: 0 0 0 2rem;
+        padding: 0 2rem;
     }
     @include mq("lg"){
         width: 85%;

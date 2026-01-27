@@ -1,8 +1,8 @@
 @use "../../global/" as *;
 .safety{
     margin-top: 3.1875rem;
-    @include mq("md"){
-        padding-left: 12rem;
+    @include mq("lxg"){
+        padding: 0 0 0 5rem;
     }
 }
 
@@ -10,9 +10,14 @@
     position: relative;
     padding: 0 0.625rem;
     margin-top: 4.3125rem;
+    z-index: 5;
+    width: 100%;
     @include mq("md"){
         padding: 0;
         margin-top: 0;
+    }
+    @include mq("lxg"){
+        padding: 0 0rem 0 7rem;
     }
 }
 .safety__wrapper{
@@ -42,7 +47,7 @@
     }
 }
 .safety__contents{
-    padding: 0 0 0 1rem;
+    padding: 0 ;
     @include mq("md"){
         padding: 0;
         margin: 4rem 0 0 2rem;

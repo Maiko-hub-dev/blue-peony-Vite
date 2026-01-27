@@ -3,6 +3,14 @@ import "/src/sass/style.scss";
 import "@sass/contact.scss";
 
 
+// スマホの中でも、iPhoneの表示を何とかしたい、というときの処理
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 $(document).ready(function () {
   $('.members__img').addClass('open');
 });
@@ -220,7 +228,7 @@ $(document).ready(function () {
             0: function () {
               $(".end-message").slideDown();
               $(".submit-btn").fadeOut();
-              //window.location.href = "thanks.html";
+              window.location.href = "thanks.html";
             },
             200: function () {
               $(".false-message").slideDown();

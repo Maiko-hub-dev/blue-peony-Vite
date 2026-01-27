@@ -1,0 +1,53 @@
+@use "../../global/" as *;
+@use "@sass/global" as *;
+
+.main-thanks{
+    width: 100%;
+    padding: 2rem 0 ;
+    margin-top: 2.75rem;
+    background-color: $blue-line;
+    text-align: center;
+    @include mq("md"){
+        padding: 2rem 12rem;
+        margin-top: 3rem;
+    }
+    @include mq("lg"){
+        margin-top: 4.6875rem;
+        padding: 0 0 0 12rem;
+    }
+}
+.main-thanks__title{
+    font-size: 2rem;
+    line-height: 2.625rem;
+    font-weight: 700;
+    color: $white;
+    padding: 2.5rem 1.25rem 0 1.25rem;
+    text-align: center;
+    @include mq("md"){
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+        padding: 3rem 2rem 0 2rem;
+    }
+    @include mq("lg"){
+        font-size: 3rem;
+        line-height: 3.875rem;
+        padding: 4rem 3rem 0 3rem;
+    }
+}
+.main-thanks__message{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: $white;
+    padding: 2.5rem 1.25rem;
+    @include mq("md"){
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 3rem 2rem;
+    }
+    @include mq("lg"){
+        font-size: 2rem;
+        line-height: 2.625rem;
+        padding: 4rem 3rem;
+    }
+}

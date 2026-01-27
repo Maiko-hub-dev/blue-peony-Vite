@@ -17,6 +17,7 @@ export default defineConfig({
         about: path.resolve(__dirname, "about.html"),
         service: path.resolve(__dirname, "service.html"),
         contact: path.resolve(__dirname, "contact.html"),
+        thanks: path.resolve(__dirname, "thanks.html"),
       },
     },
   },

@@ -15,20 +15,27 @@
         height: 100vh;
     }
 }
+@supports(-webkit-touch-callout: none){
+/* iPhoneの表示のみ指定を上書き */
+.main-visual{
+  height: -webkit-fill-available;
+  }
+}
 .main-visual.main-top {
     width: 100%;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 .contact-visual.main-visual{
     height: auto;
 }
 .main-visual__inner{
-    padding: 0 0.625rem;
+    padding: 0.625rem 0;
     width: 100%;
     height: inherit;
     position: relative;
     z-index: 2;
-    margin-top: 2.3125rem;
+    margin-top: 3rem;
     border-radius: 10px 0 0 10px;
     @include mq("md"){
         padding: 0 0 0 2.5rem;
@@ -68,6 +75,7 @@
 }
 .main-visual__members.members{
         background-color: $content;
+        position: relative;
         height: inherit;
         border-radius: 0.625rem;
     @include mq("md"){
@@ -82,7 +90,7 @@
     visibility: hidden;
     transform: translateY(20px);
     position: static;
-    width: 100%;
+    width: 90%;
     display: block;
     z-index: 2;
     bottom: auto;
@@ -150,9 +158,7 @@
     width: fit-content;
   }
 }
-.top-page--title.main-visual__catch{
-     bottom: 5rem;
-}
+
 
 
 .main-visual__text{
@@ -161,7 +167,7 @@
     bottom: 4rem;
     left: 1.1875rem;
     display: block;
-    width: 100%;
+    width: 90%;
     margin-top: 0.5rem;
     color: $black;
     font-size: 0.75rem;
@@ -169,13 +175,11 @@
     text-align: left;
     font-weight: $bold;
     padding: 0.5rem 1rem 0 0;
-    width: inherit;
     letter-spacing: 0.04em;
     opacity: 1;
     transition: opacity .3s ease;
     transform: translateY(40px);
     @include mq("sp"){
-        margin-top: 1.3125rem;
         z-index: 11;
         transform: translateY(0);
     }
@@ -189,7 +193,6 @@
     }
 }
 .main-visual__text.top-page--subtitle{
-    bottom: 2rem;
     @include mq("md"){
         text-align: end;
         bottom: max(2rem, 3%);

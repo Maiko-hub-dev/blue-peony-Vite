@@ -5,7 +5,6 @@
 
 @use "@sass/module/about/about__us"; 
 @use "@sass/module/about/philosophy"; 
-@use "@sass/module/about/about__side"; 
 @use "@sass/module/about/overview"; 
 @use "@sass/module/about/safety"; 
 
@@ -14,14 +13,14 @@
 
 
 /* --- ガイド線用: ページ全体に表示 --- */
-// body::before {
-//   content: "";
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   width: 1px;
-//   background: rgba(255, 0, 0, 0.4); // 赤いガイド線
-//   left: 27%; // ← 位置をあなたのタイトル位置に合わせて調整
-//   z-index: 9999;
-//   pointer-events: none;
-// }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 0, 0, 0.4); // 赤いガイド線
+  left: 15%; // ← 位置をあなたのタイトル位置に合わせて調整
+  z-index: 9999;
+  pointer-events: none;
+}

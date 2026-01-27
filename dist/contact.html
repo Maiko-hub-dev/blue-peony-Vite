@@ -18,7 +18,7 @@
         <meta property="og:description" content="  大阪府大阪市に拠点をおく青牡丹工務店は、丁寧な家造りで理想を現実にします。住宅建築からリフォームまで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。 ">
         <meta name="twitter:card" content="summary">
         <!-- ファビコン -->
-        <link rel="icon" href="./assets/faviao-CfHEl3Gp.ico">
+        <link rel="icon" href="./assets/favico-CfHEl3Gp.ico">
       
         <!-- Google Fonts -->
        <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +40,8 @@
           <!-- Initialize Swiper -->
       <!-- Viteを使う想定をしたコード -->
 
-      <script type="module" crossorigin src="./assets/script-BSSnX5zb.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/script-BtGwzXaB.css">
+      <script type="module" crossorigin src="./assets/script-CEIluPKN.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/script-Bs31gP3-.css">
     </head>
     <body>
       <header class="header js-header">
@@ -172,7 +172,7 @@
                   action="https://docs.google.com/forms/d/e/1FAIpQLSfdZryH4JHiJMnxWmUb-LIQ2HQVnEfnYgeT1abMJK0VUQPaqw/viewform"
             id="form">
             <div class="contact__form-group">
-            <p class="contact__form-title">お問い合わせの種類</p>
+            <p class="contact__form-title">お問い合わせの種類<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></p>
 
             <div class="contact__radio-group">
               <label class="contact__radio">
@@ -203,12 +203,12 @@
               </label>
               <label class="contact__radio">
                 <input
-                  type="radio"
-                  name="inquiry_type"
-                  value="法人新築の相談"
-                  class="contact__radio-input"
+                type="radio"
+                name="inquiry_type"
+                value="法人新築の相談"
+                class="contact__radio-input"
                 >
-                <span class="contact__radio-text">その他</span>
+                <span class="contact__radio-text">公共工事の相談</span>
               </label>
               <label class="contact__radio">
                 <input
@@ -217,28 +217,66 @@
                   value="法人新築の相談"
                   class="contact__radio-input"
                 >
-                <span class="contact__radio-text">公共工事の相談</span>
+                <span class="contact__radio-text">その他</span>
               </label>
             </div>
-          </div>
-            <div class="box">
-              <label for="name">お名前</label>
-              <input type="text" name="entry.396652" id="name" placeholder="青牡丹" required>
+           </div>
+            <div class="contact__form--box box">
+
+              <label for="name" class="contact__form-title contact__box--title">お名前<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
+              <div class="contact__form-names form-names">
+                <div class="form-name">
+                  <input type="text" name="entry.396652" id="name-family" class="contact__form-input" placeholder="青牡丹" required>
+                </div>
+                <div class="form-name">
+                  <input type="text" name="entry.396652" id="name" class="contact__form-input" placeholder="幸太郎" required>
+                </div>
+              </div>
+
             </div>
-            <div class="box">
-              <label for="mail">メールアドレス</label>
-              <input value="" name="entry.1934980" id="mail" placeholder="aobotan@gmail.com" required>
+            <div class="contact__form--box box">
+              <div class="contact__form--input form-email">
+                <label for="mail" class="contact__form-title">メールアドレス<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
+                <div class="form-email">
+                <input value="" name="entry.1934980" id="mail"  class="contact__form-input form-email__input" placeholder="aobotan@gmail.com" required>
+                </div>
             </div>
-            
-      <input type="submit" class="submit-btn">
+            </div>
+            <div class="contact__form--box box-top">
+              <div class="contact__form--input form-telephone">
+                <label for="tel" class="contact__form-title">電話番号<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
+                <div class="form-email">
+                <input value="" name="entry.1934980" id="tel"  class="contact__form-input form-email__input" placeholder="000-000-0000" required>
+                </div>
+            </div>
+            </div>
+            <div class="contact__form--box box-top">
+              <div class="contact__form--input form-address">
+                <label for="address" class="contact__form-title">住所<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
+                <div class="form-email">
+                <input value="" name="entry.1934980" id="address"  class="contact__form-input form-email__input" placeholder="大阪府大阪市中央区北区南町5-6-7" required>
+                </div>
+            </div>
+            </div>
+            <div class="contact__form--box box-top">
+              <div class="contact__check">
+                <label class="contact__check--label">
+                  <input type="checkbox" name="matter" class="contact__check--input">
+                  <span class="contact__check--text">入力内容に間違いないことを確認しました</span>
+                </label>
+              </div>
+            </div>
+            <button class="contact__submit" type="submit">
+            <span class="contact__link">送信する<span class="contact__elipse">&#9679;</span></span>
+            </button>
             </form>
           </div> 
         </div>  
         <!--contacct__inner-->
       </div>
      
-      <div class="contact">
-        <div class="contact__inner">
+      <div class="contact contact__footer">
+        <div class="contact__footer--inner">
           <div class="contact__wrapper">
           <div class="contact__titles">
           <p class="contact__title common__title">お問い合わせ</p>
