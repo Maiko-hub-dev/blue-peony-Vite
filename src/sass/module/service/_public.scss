@@ -6,8 +6,9 @@
     width: 100%;
     padding: 0 ;
     margin-top: 2.75rem;
+    padding: 3rem 0 0 0;
     @include mq("md"){
-        padding: 0 0 0 12rem;
+        padding: 3rem 0 0 7rem;
         margin-top: 4rem;
     }
     @include mq("lg"){
@@ -52,7 +53,7 @@
 .public__img-wrapper{
     position: relative;
     width: 100%;
-    padding: 0 ;
+    padding: 0 0 2.5rem;
     border-radius: 3.125rem;
     background-color: $white;
     overflow: hidden;
@@ -86,7 +87,7 @@
     }
 }
 .public__contents{
-    padding: 0 0 0 1rem;
+    padding: 0;
     @include mq("md"){
         padding: 0;
         margin: 0;
@@ -100,7 +101,7 @@
     }
 }
 .public__content{
-    padding: 0 1.75rem;
+    padding: 0 0.75rem;
     @include mq("md"){
         padding: 0 2rem 0 1rem;
     }
@@ -141,7 +142,7 @@
 .public__content--information{
     display: flex;
     flex-direction: column;
-    padding: 1.25rem 1.75rem 0;
+    padding: 1.25rem 0.75rem 0;
     @include mq("md"){
         flex-direction: row;
         justify-content: space-between;

@@ -1,6 +1,11 @@
 @use "../../global/" as *;
 .safety{
     margin-top: 3.1875rem;
+    @include mq("md"){
+         @include mq("md"){
+        padding: 0 0 0 5rem;
+    }
+    }
     @include mq("lxg"){
         padding: 0 0 0 5rem;
     }
@@ -13,7 +18,7 @@
     z-index: 5;
     width: 100%;
     @include mq("md"){
-        padding: 0;
+        padding: 0 0 0 5rem;
         margin-top: 0;
     }
     @include mq("lxg"){
@@ -26,9 +31,10 @@
     max-width: var(--container);
     padding: 0 1.25rem 2.5rem;
     @include mq("md"){
-        padding: 0 0 0 2.5rem;
+        padding: 0;
     }
     @include mq("lg"){
+        // padding: 0 0 0 2.5rem;
         margin-left: 2.5rem;
     }
 }
@@ -36,7 +42,7 @@
     font-size: 1.75rem;
     font-family: $base-font;
     font-weight: $bold;
-    padding: 1rem 0 0 0rem;
+    padding: 1rem 0;
     letter-spacing: 0.04em;
     @include mq("md"){
         font-size: 2rem;

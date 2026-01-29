@@ -240,20 +240,20 @@
     }
 }
 .contact__form-button{
-    background-color: $white;
-    border-radius: 0.625rem;
     display: flex;
     align-items: center;
+    background-color: $white;
+    border-radius: 0.625rem;
     min-width: 284px;
     width: fit-content;
     padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
     transition: background-color 0.5s ease;
     @include mq("md"){
-
+    padding: 1.25rem 0.5rem 1.25rem 0.5rem;
     }
     @include mq("lxg"){
-        padding: 1.25rem 0.5rem 1.25rem 1.25rem;
-        width: min(22%, 284px);
+        padding: 1.25rem 0.5rem 1.25rem 0.5rem;
+        width: min(26%, 284px);
         margin-left: 2rem;
     }
 }
@@ -275,23 +275,33 @@
 }
 
 .contact__icon{
+    display: inline-block;
     width: 1.25rem;
     height: 1.25rem;
+    padding-top: 0.25rem;
     margin-right: 0.5rem;
     transition: filter 0.3s ease;
 }
 .contact__form-button:hover .contact__icon{
     filter: invert(1);
 }
+.contact__form-button .contact__elipse {
+    color: $black;
+}
+
 .contact__elipse{
     position: relative;
-    font-size: 0.625rem;
-    color: $black;
+    font-size: 0.75rem;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    padding-left: 1.25rem;
-    transition: color 0.3s ease;
+    width: fit-content;
+    padding: 0.5rem 0 0 0;
+    margin-left: 0;
+    transition: all 0.3s ease;
+    @include mq("md"){
+        margin-left: 0.5rem;
+    }
 }
 .contact__form-button:hover .contact__elipse{
     color: $white;

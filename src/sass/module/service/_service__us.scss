@@ -4,7 +4,7 @@
     width: 100%;
 }
 .service-visual.main-visual{
-    padding: 2.0625rem 0 0 2.0625rem;
+    padding: 2.0625rem 0 0 0;
     height: 50vh;
     @include mq("md"){
         padding: 2.5rem 0.5rem 0 2.0625rem;
@@ -79,7 +79,7 @@
 .service__us--inner{
         width: inherit;
         max-width: var(--container);
-        padding-top: 4.5rem;
+        padding: 4.5rem 1.25rem 0;
         @include mq("md"){
             padding: 0 0rem 0 7rem;
             margin-top: 4rem;
@@ -92,9 +92,9 @@
     position: relative;
     width: inherit;
     max-width: var(--container);
-    padding: 0 1.25rem 2.5rem;
+    padding: 0 0 2.5rem;
     @include mq("md"){
-        padding: 0 0 0 3.3125rem ;
+        padding: 0 0 0 4.5rem ;
     }
     @include mq("lg"){
         margin-left: 2rem;
@@ -152,7 +152,7 @@
     justify-content: start;
     // li間の余白はgapで管理
     gap: 1rem;
-
+    padding: 0;
     margin-top: 4.6875rem;
     @include mq("md"){
          // PC側で最小幅を208pxにするならここで差し替え
@@ -222,19 +222,4 @@
   transform: translateY(-25%) rotate(135deg);
 }
 
-@media (min-width: 1120px) {
-  .side-menu.service__side {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateX(-10px);
-    transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
-  }
 
-  body.is-top .side-menu.service__side {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(0);
-  }
-}

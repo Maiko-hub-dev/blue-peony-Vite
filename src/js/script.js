@@ -25,28 +25,6 @@ $(document).ready(function() {
   });
 
 // ドロワーメニュー
-// $(function () {
-//   const $hamburger = $(".js-hamberger");
-//   const $drawerNav = $(".sp-nav");
-
-//   $hamburger.on("click", function () {
-//     $hamburger.toggleClass("is-active");
-//     $drawerNav.toggleClass("is-active");
-//   });
-
-//   $drawerNav.on("click", "a", function () {
-//     $hamburger.removeClass("is-active");
-//     $drawerNav.removeClass("is-active");
-//   });
-
-//   // 1120px以上になったら状態リセット（保険）
-//   $(window).on("resize", function () {
-//     if (window.matchMedia("(min-width: 1120px)").matches) {
-//       $hamburger.removeClass("is-active");
-//       $drawerNav.removeClass("is-active");
-//     }
-//   });
-// });
 
 //. mainvisual__textを非表示
 $('.js-hamberger').on('click', function () {
@@ -215,12 +193,13 @@ $(function () {
 
 
 //. お問い合わせフォーム
+
 $(document).ready(function () {
 
       $('#form').submit(function (event) {
         var formData = $('#form').serialize();
         $.ajax({
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSfdZryH4JHiJMnxWmUb-LIQ2HQVnEfnYgeT1abMJK0VUQPaqw/viewform",
+          url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfdZryH4JHiJMnxWmUb-LIQ2HQVnEfnYgeT1abMJK0VUQPaqw/formResponse",
           data: formData,
           type: "POST",
           dataType: "xml",
@@ -239,6 +218,7 @@ $(document).ready(function () {
       });
 
     });
+
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   const titles = document.querySelector(".main-visual__titles");

@@ -2,6 +2,9 @@
 
 .overview{
     margin-top: 3.1875rem;
+    @include mq("md"){
+        padding: 0 0 0 5rem;
+    }
     @include mq("lxg"){
         padding: 0 0 0 5rem;
     }
@@ -14,7 +17,7 @@
     width: 100%;
     z-index: 5;
     @include mq("md"){
-        padding: 0;
+        padding: 0 2.5rem 0 5rem;
         margin-top: 0;
     }
     @include mq("lxg"){
@@ -25,9 +28,9 @@
     position: relative;
     width: inherit;
     max-width: var(--container);
-    padding: 0 1.25rem 2.5rem;
+    padding: 0 0.5rem 2.5rem;
     @include mq("md"){
-        padding: 0 0 0 2.5rem;
+        padding: 0;
     }
     @include mq("lg"){
         margin-left: 2.5rem;
@@ -37,7 +40,7 @@
     font-size: 1.75rem;
     font-family: $base-font;
     font-weight: $bold;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 0 0.75rem;
     letter-spacing: 0.04em;
     @include mq("md"){
         padding: 1rem 0 0 2rem;
@@ -69,13 +72,14 @@
     }
 }
 .overview__text{
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.875rem;
+    line-height: 1.875;
     color: $black;
     margin-top: 2rem;
     letter-spacing: 0.04em;
     @include mq("md"){
         width: fit-content;
+        font-size: 1rem;
         line-height: 2;
         padding: 0 ;
     }
@@ -100,10 +104,10 @@
 }
 .overview__ceo-img{
     display: block;
-    margin-top: 2rem;
-    width: min(465px, 80%);
+    margin: 2rem auto 0;
+    width: max(465px, 88%);
     @include mq("md"){
-        width: inherit;
+        width: min(465px, 80%);
         margin-top: 0;
     }
     @include mq("lg"){
@@ -113,21 +117,21 @@
 }
 .overview__ceo-president{
     display: flex;
+    align-items: center;
     margin-top: 2.5rem;
     @include mq("md"){
         margin-top: 1rem;
         padding: 0;
     }
-    @include mq("lg"){
+    @include mq("lxg"){
         justify-content: flex-start;
         flex-direction: column;
-        //. 仮
         margin-top: 0;
     }
 }
 .overview__composition{
     position: relative;
-    margin-top: 4.3125rem;
+    margin-top: 2.3125rem;
     width: 100%;
     @include mq("md"){
         margin-top: 5.125rem;
@@ -142,31 +146,34 @@
     }
 }
 .composition__company{
-    padding: 0 2rem;
+    padding: 0 ;
+    font-size: 0.75rem;
+    @include mq("md"){
+        padding: 0 2rem;
+    }
     @include mq("lg"){
         padding: 0;
     }
 }
 
 .overview__position{
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     @include mq("md"){
-        font-size: 1rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
     }
 }
 .overview__name{
     color: $blue;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: $bold;
     margin-left: 2rem;
     @include mq("md"){
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 3rem;
     }
     @include mq("lg"){
         margin-top: 1rem;
-        margin-left: 0;
     }
     @include mq("lxg"){
         margin-top: 2rem;
@@ -194,6 +201,9 @@
     @include mq("lg"){
         min-width: 242px;
     }
+}
+.company__title.composition__title{
+    min-width:auto
 }
 .company__qualification{
     border-bottom: 1px solid $blue-line;

@@ -1,24 +1,30 @@
 @use "../global/" as *;
 
 
-
 .side-menu {
     position: fixed;
     top: 0;
     left: 0;
     height: 4.25rem;
+    transform: translateX(-100%);
     background-color: $white;
-    z-index: 7;
-    @include mq("md"){
+    z-index: 9;
+    width: 100%;
+    @include mq("lxg"){
         max-width: 30%;
         width: min(20%,11rem);
+        transform: translateX(0);
         height: 100vh;
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        transition: visibility 0.3s ease, transform 0.3s ease;
     }
 }
 .body.is-drawer-open .side-menu{
     padding: 0 0 0 0.5rem;
     z-index: 2000;
+    @include mq("md"){
+        max-width: 100%;
+        width: 100%;
+    }
 }
 .side-menu__list{
     width: 100%;
@@ -29,12 +35,12 @@
 .side-menu__list:first-child{
     padding-top: 2.5rem;
 }
-.side-menu__nav.menu__nav{
+// .side-menu__nav.menu__nav{
 
-    @include mq("md"){
-        width: minmax(12.5rem, 20%);
-    }
-}
+//     @include mq("md"){
+//         width: minmax(12.5rem, 20%);
+//     }
+// }
 
 .side-menu__logo {
     display: none;
