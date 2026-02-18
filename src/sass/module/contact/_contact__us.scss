@@ -3,7 +3,7 @@
 
 .contact-visual {
     width: 100%;
-    padding: 2.0625rem 0 0 2.0625rem;
+    padding: 0;
     @include mq("md"){
         padding: 2.0625rem 0.5rem 0 2.0625rem;
         height: 100vh;
@@ -129,8 +129,10 @@
     position: relative;
     width: inherit;
     max-width: var(--container);
-    padding: 0 1.25rem 2.5rem;
-    
+    padding: 0 0 2.5rem;    
+    @include mq("md"){
+        padding: 0 1.25rem 2.5rem;
+    }
 }
 .contact__inform--title{
     font-size: 2rem;
@@ -163,12 +165,13 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         top: 1rem;
-        right: 2rem;
+        right: 0;
         opacity: 1;
         transform: translateX(-50%);
         aspect-ratio: 165 / 174;
         z-index: 2;
         @include mq("md"){
+            right: 2rem;
             transform: translateX(50%);
             right: 7.5rem; // 例：mdはrem指定
         }
@@ -263,6 +266,7 @@
     flex-direction: column;
     margin-top: 2.75rem;
     align-items: baseline;
+    padding: 0 0.68754rem;
     @include mq("md"){
         margin-top: 3.875rem;
         flex-direction: row;
@@ -286,7 +290,10 @@
     }
 }
 .contact__reception{
+    display: inline-block;
+    padding: 2rem 0 0 0;
     @include mq("md"){
+        padding: 0;
         margin-left: 5rem;
     }
 }

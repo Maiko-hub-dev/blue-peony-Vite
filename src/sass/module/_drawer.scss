@@ -1,0 +1,29 @@
+@use "../global/" as *;
+
+/* ドロワー本体（sp-nav / side-menu どっちでもOK） */
+.sp-nav,
+.side-menu {
+  position: fixed;
+  z-index: 10000; /* まず大きく */
+}
+
+/* もし閉じボタンやハンバーガーが別レイヤーなら */
+.js-hamberger,
+.hamberger {
+  position: relative;
+  z-index: 10001;
+}
+
+/* 開いてる間にコンテンツ側が上に来ないようにする */
+body.is-drawer-open main,
+body.is-drawer-open .wrapper,
+body.is-drawer-open .container {
+  position: relative;
+  z-index: 0;
+}
+body.is-drawer-open .wrapper,
+body.is-drawer-open .main,
+body.is-drawer-open .l-wrapper {
+  transform: none !important;
+  filter: none !important;
+}

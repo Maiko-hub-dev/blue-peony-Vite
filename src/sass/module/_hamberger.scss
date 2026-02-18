@@ -1,7 +1,7 @@
 @use "../global/" as *;
 
 $drawer-width: 32px;
-$drawer-height: 2px;
+$drawer-height: 1px;
 $drawer-color: $white;
 $drawer-width-md: 40px;
 
@@ -29,7 +29,7 @@ $drawer-width-md: 40px;
     position: relative;
     display: block;
     z-index: 1001;
-    margin: 0.75rem auto 0;
+    margin: 0.675rem auto 0;
     height: $drawer-height;
     width: $drawer-width;
     background-color: $white;
@@ -40,7 +40,7 @@ $drawer-width-md: 40px;
 }
 .hamberger .menu__button2,
 .hamberger .menu__button3{
-    margin: rem(8) auto 0;
+    margin: 0.675rem auto 0;
     position: relative;
     display: block;
     z-index: 1001;
@@ -68,14 +68,11 @@ body.is-drawer-open {
     transform: translateX(100%);  // 開いてる状態
   }
 }
-// body.is-drawer-open {
-//     .side-menu{
-//         transform: translateX(0);
-//     }
-// }
+
 .sp-nav{
     position: fixed;
-    top: 3.5rem;
+    // top: 3.5rem;
+    top: 0;
     left: 0;
     right: 0;
     transform: translateX(-100%);
@@ -84,7 +81,7 @@ body.is-drawer-open {
     height: 100vh;
     overflow-y: scroll;
     transition: transform 0.3s ease; // ← transformだけに絞ると安定
-    z-index: 1000;
+    z-index: 2000;
       &.is-active{
     transform: translateX(100%);
     text-align: center;

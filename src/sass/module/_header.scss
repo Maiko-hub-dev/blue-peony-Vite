@@ -13,7 +13,7 @@
     background-color: transparent;
     transition: background-color 0.3s ease;
     z-index: 1000;
-    padding: 0 0 0.5rem 0.5rem;
+    padding: 0 0 0.5rem 0;
     @include mq("md"){
         background-color: initial;
     }
@@ -21,9 +21,12 @@
         height: 0;
     }
 }
+.header.js-header{
+    padding: 0 0 0.5rem 0;
+}
 .header.is-scrolled {
     background-color: $blue;
-    padding: 0.325rem 0 0.325rem 0.5rem;
+    padding: 0.325rem 0 0.325rem 0;
     margin-bottom: 0.3125rem;
     @include mq("lxg"){
         padding: 0;
@@ -32,7 +35,7 @@
 .header__ao {
     display: block;
     height: 3.6875rem;
-    padding: 0.3125rem 0 0.625rem 0;
+    padding: 0.625rem 0 0.625rem 0;
     border-radius: 0.25rem;
     @include mq("md"){
         padding: 0;
@@ -65,9 +68,7 @@
     justify-content: center;
     width: auto;
     height: inherit;
-    @include mq("sp"){
-        margin: 0 0 0 9rem;
-    }
+    
     @include mq("md"){
         margin:  0 auto;
         padding: 0 ;
@@ -80,15 +81,16 @@
     }
 }
 .header__btns{
-    margin-left: 5rem;
-    position: sticky;
+    position: fixed;
     display: flex;
+    right: 0;
     align-items: center;
     justify-content: center;
     background-color: $blue;
     width: 3.5rem;
     height: 3rem;
     padding: 0.625rem 0.345rem;
+    z-index: 3000;
     @include mq("md"){
         background-color: transparent;
         margin-left: 0;
@@ -101,6 +103,12 @@
         width: 0;
         justify-content: end;
     }
+}
+body.is-drawer-open .header__ao,
+body.is-drawer-open .header__nav {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hero__link{

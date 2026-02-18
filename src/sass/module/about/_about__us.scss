@@ -3,14 +3,16 @@
 .about-visual.main-visual {
     width: 100%;
     padding: 2.0625rem 0 0 0.625rem;
+    height: 50dvh;
     @include mq("md"){
         padding: 2.0625rem 0.5rem 0 0.625rem;
-        height: 100vh;
+        height: 70vh;
         padding-left: 10.5rem;
         object-fit: cover;
     }
     @include mq("lxg"){
         width: 100%;
+        height: 100dvh;
         padding: 4.375rem 1rem 0 12rem;
     }
 }

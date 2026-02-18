@@ -23,14 +23,22 @@
 }
 .main-visual.main-top {
     width: 100%;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 70vh;
+    padding: 0rem 0 0 0.625rem;
+    @include mq("md"){
+        padding-left: 10.5rem;
+    }
+    @include mq("lxg"){
+        padding-left: 17.5rem;
+        height: 100vh;
+    }
+    // height: calc(var(--vh, 1vh) * 100);
 }
 .contact-visual.main-visual{
     height: auto;
 }
 .main-visual__inner{
-    padding: 0.625rem 0;
+    padding: 2.5rem 0;
     width: 100%;
     height: inherit;
     position: relative;
@@ -60,7 +68,7 @@
 .main-visual__container {
     position: relative;
     width: 100%;
-    height: inherit;
+    height: 80vh;
     @include mq("sp"){
         padding: 0.75rem 0.75rem 0.75rem 0;
     }
@@ -76,7 +84,7 @@
 .main-visual__members.members{
         background-color: $content;
         position: relative;
-        height: inherit;
+        height: 63dvh;
         border-radius: 0.625rem;
     @include mq("md"){
         border-radius: 50px;
@@ -159,8 +167,6 @@
   }
 }
 
-
-
 .main-visual__text{
     position: absolute;
     right: auto;
@@ -210,38 +216,34 @@
 
 .members__img{
     position: absolute;
-    transition: all 0.8s ease-in-out;
     width: 100%;
+    transition: all 0.8s ease-in-out;
     @include mq("md"){
     }
 } 
-
 .members .members__img.open{
     @include mq("md"){
     }
 }
 
 .members .members__dream{
-    background: url("/src/images/dream-house.svg");
+    background: url("/src/images/dream-house_sp.svg");
     background-size: 6.875rem 9.1875rem;
     background-repeat: no-repeat;
-    bottom: -1rem;
+    bottom: 5rem;
     left: -1rem;
-    @include mq("sp"){
-        background-size: 10rem 13.3635rem;
-    }
     @include mq("md"){
+        background: url("/src/images/dream-house.svg");
         background-size: contain;
+         background-repeat: no-repeat;
     }
 }
 
 .members .members__dream {
     width: 6.875rem;
     height: 9.1875rem;
-    @include mq("sp"){
-        width: 7.5rem;
-        height: 10.5rem;
-    }
+    left: 1rem;
+   
     @include mq("md"){
   width: 28.03571429%;
   height: 47.65177549%;
@@ -249,16 +251,15 @@
 }
 
 .members .members__dream.open {
-    bottom: 40%;
-    left: 0.5rem;
+    bottom: 36.125%;
     @include mq("md"){
         bottom: 3.1875rem;
         left: 5.4375rem;
     }
 }
 .members .members__plan{
-    width: 5.375rem;
-    height: 5.8175rem;
+    width: 8.375rem;
+    height: rem(131);
     @include mq("md"){
         width: 22.85714%;
         height: 22.86%;
@@ -269,17 +270,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
-    @include mq("sp"){
-        aspect-ratio: 256/ 252;
-    }
+    width: 8.375rem;
+
     @include mq("md"){
         top: -1rem;
         right: -1rem;
     }
 }
 .members .members__plan.open {
-    top: 0.875rem;
-    right: 0.5rem;
+    top: 2.05rem;
+    right: 3.5rem;
     @include mq("md"){
         top: 4rem;
         right: 3.4375rem;
@@ -299,6 +299,8 @@
     background-repeat: no-repeat;
     background-size: 6.4375rem 7.7375rem ;
     background-position: center;
+    top: 0.55rem;
+    left: 0.9875rem;
     @include mq("md"){
     top: -1rem;
     left: -1rem;
@@ -333,8 +335,8 @@
     }
 }
 .members .members__estimate.open{
-    right: 0.5rem;
-    bottom: 40%;
+    right: 3.5rem;
+    bottom: 37%;
     @include mq("md"){
         right: 3.5rem;
         bottom: 18.5rem;
@@ -355,8 +357,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
-    top: 0;
-    left: 50%;
+    top: 40%;
+    left: 41%;
     transform: scale(0.8);
     transform: translateX(-50%);
     transform: translateY(-100%);
@@ -365,7 +367,6 @@
 .members .members__screen.open{
     transform: scale(1);
     transform: translateX(-30%);
-    top: 25%;
     @include mq("md"){
         top: 50%;
         transform: translateY(-100%);
