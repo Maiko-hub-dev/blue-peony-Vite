@@ -24,7 +24,7 @@
 .main-visual.main-top {
     width: 100%;
     height: 70vh;
-    padding: 0rem 0 0 0.625rem;
+    padding: 0rem 0 0 0.5rem;
     @include mq("md"){
         padding-left: 10.5rem;
     }
@@ -70,7 +70,7 @@
     width: 100%;
     height: 80vh;
     @include mq("sp"){
-        padding: 0.75rem 0.75rem 0.75rem 0;
+        padding: 0.75rem 0.75rem 0.75rem 0.125rem;
     }
     @include mq("md"){
         padding: 3.5rem 2.5em 2.5em 0;
@@ -98,7 +98,7 @@
     visibility: hidden;
     transform: translateY(20px);
     position: static;
-    width: 90%;
+    width: 100%;
     display: block;
     z-index: 2;
     bottom: auto;
@@ -121,34 +121,33 @@
     @include mq("sp"){
         padding: 0 0.5rem;
         text-align: left;
-        position: static;
+        position: relative;
+        bottom: 9.875rem;
     }
     @include mq("md"){
         width: 100%;
         max-width: 100%; 
+        bottom: 0;
     }
 }
 .main-visual__catch {
     background-color: $white;
-    border-radius: 0.625rem;
+    border-radius: 0.525rem;
     color: $black;
-    font-size: 1.5rem;
-    position: static;
+    font-size: 1.45rem;
     font-family: $base-font;
-    font-weight: $bold;
-    padding: 0.875rem ;
+    // font-weight: $bold;
+    position: absolute;
+    padding: 0.65rem 0.875rem 0.5rem;
     text-align: left;
-    line-height: 1.5;
     display: inline-block;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
     width: auto;
-    bottom: 10rem;
-    // margin-left: 1.1875rem;
-    @include mq("sp"){
-        position: absolute;
-        // right: 1.1875rem;
-        white-space: nowrap;   // ★ 改行しない
-    }
+    white-space: nowrap;   // ★ 改行しない
+    // bottom: 6.25rem;
     @include mq("md"){
+        line-height: 1.5;
         left: auto;
         padding-left: 1rem;
         font-size: 4rem;
@@ -158,9 +157,8 @@
 }
 @media (min-width: 768px) and (max-width: 1180px) {
   .main-visual__catch {
-    position: absolute;
     right: 1.1875rem;
-    bottom: max(8.0625rem, 10%);
+    bottom: max(10.0625rem, 10%);
     font-size: 2.5rem;
     white-space: nowrap;
     width: fit-content;
@@ -170,42 +168,57 @@
 .main-visual__text{
     position: absolute;
     right: auto;
-    bottom: 4rem;
-    left: 1.1875rem;
+    bottom: 2.75rem;
+    left: 0.5rem;
     display: block;
-    width: 90%;
+    width: auto;
     margin-top: 0.5rem;
     color: $black;
     font-size: 0.75rem;
-    line-height: 1.75;
+    line-height: 1.5;
     text-align: left;
     font-weight: $bold;
-    padding: 0.5rem 1rem 0 0;
-    letter-spacing: 0.04em;
-    opacity: 1;
-    transition: opacity .3s ease;
-    transform: translateY(40px);
+    padding: 0.5rem 0.25rem 0 0;
+    font-style: normal;
     @include mq("sp"){
         z-index: 11;
-        transform: translateY(0);
     }
     @include mq("md"){
+        width: 100%;
         text-align: end;
-        left: auto;
+        letter-spacing: 0.04em;
+        right: 1.1875rem;
         bottom: max(0.75rem, 1%);
         margin-top: 1.1875rem;
-        line-height: 2;
+        line-height: 1.5;
         font-size: 1rem;
     }
 }
 .main-visual__text.top-page--subtitle{
     @include mq("md"){
         text-align: end;
-        bottom: max(2rem, 3%);
-         margin-top: 2.125rem;
+        bottom: max(3.5rem, 3%);
+        margin-top: 0.125rem;
     }
     @include mq("lg"){
         bottom: max(0.125rem, 1%);
+        left: auto;
+        line-height: 1.5;
+    }
+}
+.main-visual__span{
+    display: block;
+    margin-top: 0.2em;
+}
+.main-visual__subspan{
+    display: block;
+    font-family: $base-font;
+    font-style: normal;      // 念のためイタリック解除
+    margin-top: 0.2em; 
+    margin-bottom: -0.2em;
+    white-space: nowrap;      // 余白は“em”で自然に（ここを微調整）
+    @include mq("md"){
+        margin-top: 0.6em;
     }
 }
 .main-visual__text.is-hidden {
@@ -242,7 +255,7 @@
 .members .members__dream {
     width: 6.875rem;
     height: 9.1875rem;
-    left: 1rem;
+    left: 1.125rem;
    
     @include mq("md"){
   width: 28.03571429%;
@@ -279,7 +292,7 @@
 }
 .members .members__plan.open {
     top: 2.05rem;
-    right: 3.5rem;
+    right: 0;
     @include mq("md"){
         top: 4rem;
         right: 3.4375rem;
@@ -335,7 +348,7 @@
     }
 }
 .members .members__estimate.open{
-    right: 3.5rem;
+    right: 0;
     bottom: 37%;
     @include mq("md"){
         right: 3.5rem;
@@ -358,11 +371,11 @@
     background-size: contain;
     background-position: left center;
     top: 40%;
-    left: 41%;
+    left: 47%;
     transform: scale(0.8);
     transform: translateX(-50%);
     transform: translateY(-100%);
-    transition-duration: transform 1s ease-in-out;
+    transition-duration: transform 0.8s ease-in-out;
 }
 .members .members__screen.open{
     transform: scale(1);

@@ -19,6 +19,9 @@
     @include mq("md"){
         padding: 0 0 0 1rem;
     }
+    @include mq("lg"){
+        padding: 0 0 0 3rem;
+    }
 }
 
 .news__titles{
@@ -35,7 +38,7 @@
     padding: 0;
     transform: translateX(-2%);
     }@include mq("lg"){
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 6rem;
     }
 }
 .news__title{

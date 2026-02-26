@@ -20,6 +20,9 @@
     margin-top: 4.5rem;
     padding: 0 0rem 0 7rem;   
     }
+    @include mq("lg"){
+        padding: 0 0 0 9rem;
+    }
 }
 .contact__wrapper{
     position: relative;

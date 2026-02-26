@@ -9,7 +9,10 @@
     @include mq("md"){
         padding-left: max(2rem, calc((100% - var(--container)) / 2));
         z-index: 100;
-        padding-left: 11rem;
+        padding-left: 6.75rem;
+    }
+    @include mq("lg"){
+        padding-left: 13.25rem;
     }
 }
 .service__inner{
