@@ -8,7 +8,7 @@
     @include mq("md"){
     padding-left: max(2rem,(100% - var(--container)) / 2);
     z-index: 12;
-    margin-top: 5.25rem;
+    margin-top: 0;
     }
 }
 .footer__inner{
@@ -25,7 +25,9 @@
         padding: 0 0 0 2rem;
     }
     @include mq("lg"){
-        padding: 0 4rem 0 2rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 4rem 0 6rem;
     }   
 }
 .footer__column{
@@ -34,21 +36,32 @@
         padding-top: 0;
         margin-left: 2rem;
     }
+    @include mq("lxg"){
+        padding-left: 9rem;
+        margin-left: 2.5rem;
+    }
 }
 .footer__logo{
     @include mq("md"){
-    width: 13.875rem;}
+    width: 13.875rem;
+    }
+    @include mq("lxg"){
+        width: 14.375rem;
+        padding-top: 0.5rem;
+        padding-left: 0.15rem;
+    }
 }
 .footer__logo .footer__icon {
     display: block;
-    max-width: 222px;
+    max-width: 230px;
     margin: 0 auto;
     @include mq("md"){
         width: inherit;
-        margin: rem(38) 0 0 0;
+        margin: 1.9875rem 0 0 0;
         object-fit: cover;
-        padding-left: 0.5rem;
-        transform: scale(1.2);
+        // padding-left: 0.5rem;
+        transform: scale(1.01);
+        padding-right: 0.75rem;
     }
 }
 .footer__address{
@@ -63,6 +76,11 @@
         margin-top: 2.4375rem;
         padding-top: 2.4375rem;
         text-align: left;
+        letter-spacing: 0.01em;
+    }
+    @include mq("lxg"){
+        margin-top: 0;
+        padding-top: 2.35rem;
     }
 }
 .footer__hours, .footer__holiday{
@@ -73,11 +91,32 @@
         padding-top: 0;
         text-align-last: left;
     }
+    @include mq("lxg"){
+        margin-top: 0.5rem;
+    }
 }
-.address__jp,.hours__jp{
+.address__jp{
+    display: inline-block;
     padding-top: 1.25rem;
     @include mq("md"){
     margin-left: 1rem;}
+    @include mq("lxg"){
+        padding-top: 0;
+        margin-left: 0.9875rem;
+    }
+}
+.hours__jp{
+    display: inline-block;
+    padding-top: 1.25rem;
+    @include mq("md"){
+    margin-left: 1rem;
+    letter-spacing: normal;
+    }
+    @include mq("lxg"){
+        padding-top: 0;
+        margin-left: 0.785rem;
+        transform: scaleX(0.9);
+    }
 }
 .holiday__week{
     margin-left: 1rem;
@@ -87,6 +126,10 @@
         padding: 2.5625rem 0;
         @include mq("md"){
             padding: 0;
+        }
+        @include mq("lxg"){
+            margin-top: 1.25rem;
+            padding: 0 0 0 8%;
         }
 }
 .footer__nav-item.footer__contact{
@@ -130,6 +173,14 @@
     margin-left: 1.5rem;
     padding-top: 0;
     }
+    @include mq("lxg"){
+        margin-left: 1rem;
+    }
+}
+.footer__nav-item.item.item2{
+    @include mq("md"){
+        margin-left: 1.5rem;
+    }
 }
 .footer__nav--first,
 .footer__nav--second,
@@ -138,6 +189,9 @@
     @include mq("md"){
         padding-top: 2.5rem;
     }
+    @include mq("lxg"){
+        padding: 2.5rem 0 0 0.45rem;
+    }
 }
 .footer__nav--second,
 .footer__nav--third{
@@ -145,6 +199,8 @@
 
 }
 .footer__copyright{
+    font-family: $base-font;
+    font-weight: $normal;
     font-size: 0.875rem;
     text-align: center;
     @include mq("md"){
@@ -152,6 +208,18 @@
         text-align: right;
         padding-right: 3.5rem;
         padding-bottom: 1.625rem;
+    }
+    @include mq("lxg"){
+        margin-top: -0.125rem;
+        font-size: 1rem;
+        padding-top: 0;
+        padding-right: 2rem;
+    }
+}
+.copyright__text{
+    @include mq("md"){
+        display: inline-block;
+        transform: scaleX(0.9);
     }
 }
 

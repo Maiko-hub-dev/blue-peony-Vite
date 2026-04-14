@@ -6,7 +6,8 @@
         padding: 0 0 0 5rem;
     }
     @include mq("lxg"){
-        padding: 0 0 0 5rem;
+        margin-top: 2.5rem;
+        padding: 0 0 0 5.5rem;
     }
 }
 
@@ -21,7 +22,7 @@
         margin-top: 0;
     }
     @include mq("lxg"){
-        padding: 0 0rem 0 7rem;
+        padding: 0 0rem 0 7.25rem;
     }
 }
 .philosophy--wrapper{
@@ -41,13 +42,12 @@
     font-family: $base-font;
     font-weight: $bold;
     padding: 1rem 0 0 0;
-    letter-spacing: 0.04em;
     @include mq("md"){
         font-size: 2rem;
         padding: 1rem 0 0 2.5rem;
     }
     @include mq("lg"){
-        padding: 2rem 0 0 2.5rem;
+        padding: 2rem 0 0 2.25rem;
     }
 }
 .pholosophy__vision{
@@ -58,6 +58,8 @@
         margin-top: 4rem;
     }
     @include mq("lxg"){
-        width: 64%;
+        margin-top: 3.5rem;
+        margin-left: 2.35rem;
+        width: 75.5%;
     }
 }

@@ -6,7 +6,8 @@
         padding: 0 0 0 5rem;
     }
     @include mq("lxg"){
-        padding: 0 0 0 5rem;
+        margin-top: 0;
+        padding: 0.75rem 0 0 5.5rem;
     }
 }
 
@@ -21,7 +22,7 @@
         margin-top: 0;
     }
     @include mq("lxg"){
-        padding: 0 0rem 0 7rem;
+        padding: 0 0rem 0 8.25rem;
     }
 }
 .overview__wrapper{
@@ -33,7 +34,8 @@
         padding: 0;
     }
     @include mq("lg"){
-        margin-left: 2.5rem;
+        margin-left: 2.75rem;
+        padding-left: 1rem;
     }
 }
 .overview__title{
@@ -41,13 +43,12 @@
     font-family: $base-font;
     font-weight: $bold;
     padding: 1rem 0 0 0.75rem;
-    letter-spacing: 0.04em;
     @include mq("md"){
         padding: 1rem 0 0 2rem;
         font-size: 2rem;
     }
     @include mq("lg"){
-        padding: 2rem 0 0 0rem;
+        padding: 1.875rem 0 0 0rem;
     }
 }
 .overview__container{
@@ -59,7 +60,7 @@
     display: flex;
     flex-direction: column;
     @include mq("md"){
-        margin-top: 4rem;
+        margin-top: 3rem;
         padding: 0 2rem;
     }
     @include mq("lg"){
@@ -76,7 +77,6 @@
     line-height: 1.875;
     color: $black;
     margin-top: 2rem;
-    letter-spacing: 0.04em;
     @include mq("md"){
         width: fit-content;
         font-size: 1rem;
@@ -86,7 +86,8 @@
     @include mq("lxg"){
         margin-top: 0;
         max-width: 465px;
-        padding: 0;
+        line-height: 1.75;
+        padding: 0.5rem 0 0 0;
     }
 }
 .overview__ceo{
@@ -95,11 +96,11 @@
         padding: 0 0 0 2rem;
     }
     @include mq("lg"){
-        width: auto;
+        width: 70%;
         padding: 0 0 0 2.25rem;
     }
     @include mq("lxg"){
-         padding: 0 0 0 6.25rem;
+         padding: 0 0 0 9.75rem;
     }
 }
 .overview__ceo-img{
@@ -108,11 +109,11 @@
     width: max(465px, 88%);
     @include mq("md"){
         width: min(465px, 80%);
-        margin-top: 0;
+        margin: 0.5rem 0 0;
     }
     @include mq("lg"){
         width: 100%;
-        max-width: 20.6875rem;
+        max-width: 20.75rem;
     }
 }
 .overview__ceo-president{
@@ -125,6 +126,7 @@
     }
     @include mq("lxg"){
         justify-content: flex-start;
+        align-items: flex-start;
         flex-direction: column;
         margin-top: 0;
     }
@@ -139,10 +141,11 @@
     }
     @include mq("lg"){
         width: 85%;
+        margin-top: 4rem;
         padding: 0;
     }
     @include mq("lxg"){
-        width: 70%;
+        width: 75%;
     }
 }
 .composition__company{
@@ -160,7 +163,9 @@
     font-size: 1rem;
     @include mq("md"){
         margin-top: 1rem;
-        font-size: 1.5rem;
+    }
+    @include mq("lxg"){
+        margin-top: 0.675rem;
     }
 }
 .overview__name{
@@ -173,13 +178,47 @@
         margin-left: 3rem;
     }
     @include mq("lg"){
+        margin-left: 0;
+        font-size: 2rem;
         margin-top: 1rem;
     }
     @include mq("lxg"){
-        margin-top: 2rem;
+        margin-top: 0.725rem;
     }
 }
 
+.overview__style{
+    line-height: 1;
+    @include mq("md"){
+        line-height: 1.8;
+    }
+}
+.overview__style.overview__style--modified{
+    @include mq("lxg"){
+        line-height: 1.825;
+    }
+}
+.overview__style.overview__style--second{
+    @include mq("lxg"){
+        line-height: 1.815;
+    }
+}
+.overview__style.overview__style--third{
+        @include mq("lxg"){
+            line-height: 1.815;
+        }
+}
+.overview__style--second .overview__inline-adjust {
+    @include mq("md"){
+        display: inline-block;
+        width: fit-content;
+}
+}
+.overview__style .overview__inline_inline-adjust{
+    @include mq("lxg"){
+    margin-left: -0.25em;
+}
+}
 .company {
     letter-spacing: 0.04em;
 }
@@ -192,6 +231,14 @@
     @include mq("lg"){
         margin-left: 0;
     }
+    @include mq("lxg"){
+        letter-spacing: 0.01em;
+    }
+}
+.company__content.company__content--qualify{
+    @include mq("lxg"){
+    letter-spacing: 0;
+}
 }
 .company__title{
     display: inline-block;
@@ -201,14 +248,52 @@
     @include mq("lg"){
         min-width: 242px;
     }
+    @include mq("lxg"){
+        min-width: 236px;
+    }
 }
 .company__title.composition__title{
-    min-width:auto
+    min-width:auto;
+    @include mq("lxg"){
+        min-width: 236px;
+    }
 }
 .company__qualification{
     border-bottom: 1px solid $blue-line;
     padding: 1.5rem 0;
     @include mq("md"){
         padding: 1.875rem 0;
+        font-size: 1rem;
+    }
+    @include mq("lxg"){
+        padding: 0.875rem 0  1.65rem 0;
+    }
+}
+.company__qualification.company__qualification--modified{
+    @include mq("lxg"){
+        padding: 1.65rem 0 1.5rem 0;
+    }
+}
+.company__qualification.company__qualification--modified_second{
+    @include mq("lxg"){
+        padding: 1.5rem 0 1.585rem 0;
+    }
+}
+.company__qualification.company__qualification--modified_third{
+    @include mq("lxg"){
+        padding: 1.65rem 0 1.615rem 0;
+    }
+}
+.company__qualification.company__qualification--modified_fourth{
+    @include mq("lxg"){
+        padding: 1.675rem 0 1.5rem 0;
+    }
+}
+
+.company__content .company__span{
+    @include mq("lxg"){
+        display: inline-block;
+        padding-right: 1em;
+        letter-spacing: 0;
     }
 }

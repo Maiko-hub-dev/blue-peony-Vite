@@ -69,18 +69,22 @@
         <div class="about-visual__inner">
 
           <div class="about-visual__frame">
-          <img src="./src/images/about-us.jpg" alt="" class="about-visual__img">
+            <picture>
+      <source media="(min-width:768px)" srcset="./src/images/about-us__pc.jpg" class="about__vs_image">
+        <!-- 画面幅1440pxより大のときは、これまでの処理を流用しつつsourceタグに書き換えます。 -->
+                     <img src="./src/images/about-us.jpg" alt="" class="about-visual__img">
+</picture>
           </div>
           </div>
       </div>
 
             <!-- ここにサイドバーを書く -->
        <aside class="side-menu about__side">
-        <div class="side-menu__logo">
+        <div class="side-menu__logo about__side-logo">
           <img src="./src/images/logo-pc.svg" alt="青壮丸工務店のロゴ" loading="lazy">
         </div>
-          <div class="about__side-menu side-menu__nav menu__nav sp-nav js-drawer">
-            <nav class="menu__nav side-menu__list sp-nav__drawers drawers">
+          <div class="about__side-menu side-menu__nav menu__nav sp-nav about__side-menu js-drawer">
+            <nav class="menu__nav side-menu__list sp-nav__drawers drawers about__menu-nav">
                 <div class="sp-nav__drawer drawers_drawer drawer">
               <p class="menu__nav side-menu__item menu__nav--topix menu__nav-top u-mobile">トップページ</p>
               <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
@@ -183,11 +187,13 @@
               <p class="overview__name">谷垣周平</p>
             </div>
             </div>
-            <p class="overview__text">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。<br>
-              創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。<br>
-              その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。
-              私たちの理念は、常に社会に貢献し、持続可能な未来を築くことにあります。地域社会や環境への配慮を大切にし、誠実な姿勢で仕事に取り組むことで、より良い社会を築いていくことを目指しています。<br>
-              今後も、お客様の声に耳を傾けながら、さらなる成長と発展を目指し、青牡丹工務店は邁進してまいります。
+            <p class="overview__text">
+              <span class="overview__style">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。</span><br>
+              <span class="overview__style overview__style--modified">創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。</span><br>
+              <span class="overview__style overview__style--second">その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。<br>
+              私たちの理念は、常に社会に貢献し、持続可能な未来を築くこと<span class="overview__inline-adjust">にあります。</span></span>
+              <span class="overview__style overview__style--third"><span class="overview__inline_inline-adjust">地域社会や環境への配慮を大切にし、誠実な姿勢で</span>仕事に取り組むことで、より良い社会を築いていくことを目指しています。<br>
+              今後も、お客様の声に耳を傾けながら、さらなる成長と発展を目指し、青牡丹工務店は邁進してまいります。</span>
             </p>
           </div>
           </div>
@@ -198,30 +204,26 @@
                   <p class="company__title">商号</p>
                   <p class="company__content">株式会社&emsp;青牡丹工務店 </p>
                 </div>
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified">
                   <p class="company__title">創業</p>
                   <p class="company__content">昭和40年5月3日</p></div>
 
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_second">
                   <p class="company__title">資本金</p>
                   <p class="company__content">2000万円</p></div>
 
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_third">
                   <p class="company__title">従業員数</p>
                   <p class="company__content">24人</p>
                   </div>
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_second">
                   <p class="company__title composition__title">営業種目</p>
-                  <p class="company__content">総合建設設計施工&middot;不動産業&middot;倉庫業&middot;リフォーム工事</p>
+                  <p class="company__content company__content--qualify">総合建設設計施工・不動産業・倉庫業・リフォーム工事</p>
                   </div>
-                  <div class="company__qualification">
-                  <p class="company__title">資&nbsp;本&nbsp;金</p>
-                  <p class="company__content">2000万円</p>
-                  </div>
-                  <div class="company__qualification">
-                  <p class="company__title composition__title">本社所在地</p>
-                  <p class="company__content">〒000-0000&emsp;&nbsp;大阪府大阪市中央区北区南町5-6-7</p></div>
-                   <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_fourth">
+                  <p class="company__title">本社所在地</p>
+                  <p class="company__content">〒000-0000&emsp;<span class="company__span">大阪府大阪市中央区北区南町5-6-7</span></p></div>
+                   <div class="company__qualification company__qualification--modified_fourth">
                   <p class="company__title">代表取締役</p>
                   <p class="company__content">谷垣周平</p></div>
               </div>
@@ -241,22 +243,24 @@
               <h3 class="safety__content--title">経営層による安全衛生巡視</h3>
               <div class="safety__workon workon">
                 <p class="workon__detail">
-                  経営層による安全衛生巡視は、当社の安全管理体制の中核を担う活動の一つです。この巡視では、経営者や上級管理職が定期的に現場を訪問し、安全な作業環境の確保や安全基準の遵守を徹底することが主な目的です。<br>
-                  具体的には、巡視の際には安全規則や法令の遵守状況を点検し、作業現場における危険な箇所や潜在的なリスクを特定します。また、機械や設備の安全装置が正しく機能しているかどうかも確認します。さらに、作業員に対して安全教育や指導を行い、安全意識の向上を図ります。
+                  <span class="workon__detail-sentense">
+                  経営層による安全衛生巡視は、当社の安全管理体制の中核を担う活動の一つです。この巡視では、経営者や上級管理職が定期的に現場を訪問し、安全な作業環境の確保や安全基準の遵守を徹底することが主な目的です。</span><br>
+                   <span class="workon__detail-sentense__second">具体的には、巡視の際には安全規則や法令の遵守状況を点検し、作業現場における危険な箇所や潜在的なリスクを特定します。また、機械や設備の安全装置が正しく機能しているかどうかも確認します。さらに、作業員に対して安全教育や指導を行い、安全意識の向上を図ります。
+                </span>
                 </p>
                 <div class="workon__image">
                   <img src="./src/images/safety01.jpg" alt="工事現場で現場監督が指導を行う様子">
                 </div>
               </div>
             </div>
-            <div class="safety__content">
-              <h3 class="safety__content--title">労働災害防止への取り組み・教育体制</h3>
+            <div class="safety__content content--modified">
+              <h3 class="safety__content--title title__try">労働災害防止への取り組み・教育体制</h3>
               <div class="safety__workon workon">
-                <p class="workon__detail">
+                <p class="workon__detail workon__detrail--second">
                     労働災害の防止に向けた従業員への教育・訓練も欠かせません。新入社員や新規作業員には、安全教育プログラムを実施し、作業時の安全ルールや手順、危険な状況の認識方法などを徹底的に指導しています。さらに、定期的な安全講習会や研修を通じて、従業員の安全意識を高める取り組みを行っています。<br>
                     労働災害が発生した場合には、速やかに原因究明を行い、再発防止策を迅速に実施します。また、従業員からの安全に関する意見や提案を積極的に受け付け、改善に向けた取り組みを推進しています。
                 </p>
-                <div class="workon__image">
+                <div class="workon__image workon__image--second">
                   <img src="./src/images/safety02.jpg" alt="労働災害防止のために講習会を行なっている">
                 </div>
               </div>
@@ -270,6 +274,7 @@
       <div class="contact">
         <div class="contact__inner">
           <div class="contact__wrapper">
+             <div class="wrapper__finance finance"></div>
           <div class="contact__titles">
           <p class="contact__title common__title">お問い合わせ</p>
           <p class="contact__heading">CONTACT</p>
@@ -277,13 +282,16 @@
           <div class="contact__info">
             <div class="contact__telephone">
               <div class="contact__tel--num label">
+                <div class="contact__head-box">
                 <span class="contact__label">Tel</span>
                 <span class="contact__text">お電話</span>
+                </div>
               </div>
               <div class="contact__tel--num number">
+                 <div class="contact__head-box_second">
               <span class="contact__number">0000-000-0000</span>
-              <span class="contact__note">営業時間 9:00～18:00</span>
-              </div>
+              <span class="contact__note">営業時間10:00-20:00</span>
+              </div></div>
             </div>
             <div class="contact__access">
             <a href="contact.html" class="contact__form-button">
@@ -302,31 +310,32 @@
             <div class="footer__logo">
               <img src="./src/images/logo-pc.svg" alt="青牡丹工務店のロゴ" loading="lazy" class="footer__icon">
             </div>
-            <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市北区南町西5-6-7</span></p>
+            <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市中央区北区南町5-6-7</span></p>
             <p class="footer__hours hours">営業時間<span class="hours__jp">10:00〜20:00</span></p>
             <p class="footer__holiday holiday">定休日<span class="holiday__week">日曜日、祝日、年末年始（12月31日から1月3日まで）</span></p>
             </div>
             <div class="footer__tablecontents">
             <ul class="footer__nav--first footer__nav">
               <li class="footer__nav-item"><a href="#">トップページ</a></li>
-              <li class="footer__nav-item item"><a href="#">私たちについて</a></li>
-              <li class="footer__nav-item item"><a href="#">経営理念</a></li>
+              <li class="footer__nav-item item item2"><a href="about.html">私達について</a></li>
+              <li class="footer__nav-item item item2"><a href="#">経営理念</a></li>
             </ul>
             <ul class="footer__nav--second footer__nav">
-              <li class="footer__nav-item"><a href="#">会社概要</a></li>
-              <li class="footer__nav-item item"><a href="#">安全への取り組み</a></li>
-              <li class="footer__nav-item item"><a href="#">事業内容</a></li>
-              <li class="footer__nav-item item"><a href="#">住宅建築・リフォーム</a></li>
+              <li class="footer__nav-item"><a href="about.html">会社概要</a></li>
+              <li class="footer__nav-item item item2"><a href="#">安全への取り組み</a></li>
+              <li class="footer__nav-item item item2"><a href="#">事業内容</a></li>
+              <li class="footer__nav-item item item2"><a href="#">住宅建築・リフォーム</a></li>
             </ul>
             <ul class="footer__nav--third footer__nav">
-              <li class="footer__nav-item"><a href="#">法人新築・リフォーム</a></li>
-              <li class="footer__nav-item item"><a href="#">公共工事</a></li>
-              <li class="footer__nav-item item"><a href="#">お知らせ</a></li>
-              <li class="footer__nav-item footer__contact item"><a href="contact.html" class="footer__contact-contact"><img src="./src/images/mail.svg" alt="メールのアイコン"><span class="footer__contact-text">お問い合わせ</span></a></li>
+              <li class="footer__nav-item"><a href="about.html">法人新築・リフォーム</a></li>
+              <li class="footer__nav-item item item2"><a href="#">公共工事</a></li>
+              <li class="footer__nav-item item item2"><a href="#">お知らせ</a></li>
+              <li class="footer__nav-item footer__contact item item2"><a href="contact.html" class="footer__contact-contact"><img src="./src/images/mail.svg" alt="メールのアイコン"><span class="footer__contact-text">お問い合わせ</span></a></li>
             </ul>
             </div>
           </div>
-          <p class="footer__copyright">© AOSOMARU INC.</p>
+          <p class="footer__copyright copyright">
+            <span class="copyright__text">©&nbsp;AOBOTAN&nbsp;INC.</span></p>
       </div>
 
     </body>

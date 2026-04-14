@@ -21,7 +21,7 @@
     padding: 0 0rem 0 7rem;   
     }
     @include mq("lg"){
-        padding: 0 0 0 9rem;
+        padding: 0 0 0 14rem;
     }
 }
 .contact__wrapper{
@@ -34,10 +34,14 @@
     padding: 0 1.25rem 2.5rem;
     @include mq("md"){
         border-radius: 3.125rem 0 0 3.125rem;
-        padding: 0 0 3.3125rem 0.5rem;
+        padding: 0 0 1.35rem 0.5rem;
     }
     @include mq("lg"){
         margin-left: 2rem;
+    }
+    @include mq("lxg"){
+        margin-top: 5.5rem;
+        margin-left: 3.5rem;
     }
 }
 .contact__titles{
@@ -51,7 +55,7 @@
     padding: 4rem 0 0 2.5rem;
     }
     @include mq("lg"){
-        padding: 4rem 0 0 4.5rem;
+        padding: 1.75rem 0 0 0.75rem;
     }
 }
 .page-top .finance__titles.contract__titles{
@@ -67,25 +71,29 @@
     color: $black;
     @include mq("md"){
         font-size: 1.5rem;
-        // padding-left: 3rem;
-         padding-left:max(2rem, calc((100% - var(--container)) / 2));
+        padding-left: 0.25rem;
     }
 }
 
 .contact__heading{
   font-family: $eng-font;
-  color: transparent;
+   color: transparent;
   -webkit-text-stroke: 1px $blue;
     letter-spacing: 0.01em;
   // ぽてっと感を足す（補助）
   text-shadow: none;
   line-height: 1.1;
   font-size: 4.5rem;
-
-  @include mq("md"){
+  @include mq("lg"){
+    -webkit-text-stroke: 1.5px $blue;
+    max-width: 553px;
+    text-shadow:
+      0 0 1px rgba($blue, 0); // 👈 弱め！！
+    line-height: 1.235;
     font-size: 8rem;
-    transform: scale(1.02);
-    padding-left: max(2rem, calc((100% - var(--container)) / 2));
+    padding: 0.08rem 0.5rem 0 0.25rem;
+    font-weight: 700;
+    letter-spacing: normal;
   }
 }
 
@@ -114,7 +122,7 @@
     }
     @include mq("lxg"){
         flex-direction: row;
-        padding: 0 0 0 4.5rem;
+        padding: 0 0 0 0.75rem;
     }
 }
 .contact__wrapper{
@@ -129,7 +137,6 @@
         position: absolute;
         width: 6.875rem;
         height: 10.05125rem;
-        // background-image: url("@images/common/financing.svg");
         background: url("../../images/financing.svg") no-repeat;
         background-size: 6.875rem 10.05125rem;
         background-repeat: no-repeat;
@@ -140,6 +147,13 @@
     }
     @include mq("md"){
         background-size: contain;
+    }
+    @include mq("lxg"){
+        width: 10.9375rem;
+        height: 16rem;
+        background-size: 10.9375rem 16rem;
+        margin-right: 2.5rem;
+        margin-top: 1.25rem;
     }
 }
 .wrapper__finance.finance{
@@ -160,6 +174,7 @@
     @include mq("lxg"){
         align-items: flex-start;
         flex-direction: row;
+        padding-left: 0.25rem;
     }
 }
 .contact__tel--num{
@@ -171,7 +186,7 @@
         padding: 0.5rem 0;
     }
     @include mq("lg"){
-        border-right: 1px solid $black;
+        justify-content: start;
     }
 }
 
@@ -179,12 +194,10 @@
     padding: 1.5rem 0;
     @include mq("md"){
         height: 100%;
-        border-right: 1px solid $black;
         width: min(5.625rem, 30%);
     }
     @include mq("lg"){
-        width: max(4.625rem, 74px);
-        padding: 0;
+        width: max(4.65rem, 75px);
         border-bottom: 0;
     }
 }
@@ -197,21 +210,32 @@
         height: inherit;
     }
     @include mq("lg"){
-        padding: 2rem;
-        flex-direction: row;
+        padding: 1.5rem 1.75rem 2rem;
     }
 }
 .contact__label,
 .contact__number{
     font-family: $eng-font;
+    line-height: 1;
     font-size: 2rem;
     letter-spacing: 0.02em;
     @include mq("lxg"){
         display: block;
-        padding-bottom: 0.5rem;
+        padding: 0.5rem 0.25rem 0 0;
+        letter-spacing: normal;
     }
 }
-
+.contact__head-box{
+    @include mq("lg"){
+    border-right: 1px solid $black;
+}
+}
+.contact__head-box_second{
+    @include mq("lg"){
+        border-right: 1px solid $black;
+        padding: 0 1.875rem 0 0.15rem;
+    }
+}
 .contact__text{
     margin-left: 1rem;
     font-size: 0.75rem;
@@ -220,7 +244,7 @@
     padding-top: 1.25rem;
     @include mq("md"){
         margin-left: 0;
-        padding-top: 0;
+        padding-top: 0.25rem;
     }
 }
 .contact__note{
@@ -228,7 +252,9 @@
     font-family: $base-font;
     font-weight: $bold;
     margin-top: 0.5rem;
+    letter-spacing: 0.01em;
     @include mq("md"){
+        padding-top: 0.25rem;
         margin-top: 0;
     }
 }
@@ -238,7 +264,8 @@
         margin-top: 1rem;
     }
     @include mq("lxg"){
-        margin-top: 0;
+
+        margin-top: 0.75rem;
         padding: 1rem 2rem 2px;
     }
 }
@@ -255,9 +282,8 @@
     padding: 1.25rem 0.5rem 1.25rem 0.5rem;
     }
     @include mq("lxg"){
-        padding: 1.25rem 0.5rem 1.25rem 0.5rem;
-        width: min(26%, 284px);
-        margin-left: 2rem;
+        padding: 1.15rem 0.5rem 1rem 1rem;
+        // width: min(26%, 284px);
     }
 }
 .contact__form-button:hover{
@@ -271,6 +297,10 @@
     font-family: $base-font;
     font-weight: $bold;
     transition: color 0.3s ease;
+    @include mq("md"){
+        padding-top: 0;
+        padding-left: 0.15rem;
+    }
  }
 .contact__form-button:hover .contact__button{
     text-decoration: none;
@@ -284,6 +314,11 @@
     padding-top: 0.25rem;
     margin-right: 0.5rem;
     transition: filter 0.3s ease;
+    @include mq("md"){
+        padding-top: 0;
+        margin-right: 0.25rem;
+        margin-left: 1.65rem;
+    }
 }
 .contact__form-button:hover .contact__icon{
     filter: invert(1);
@@ -299,11 +334,14 @@
     vertical-align: middle;
     text-align: center;
     width: fit-content;
-    padding: 0.5rem 0 0 0;
+    padding: 0.25rem 0 0 0;
     margin-left: 0;
     transition: all 0.3s ease;
-    @include mq("md"){
-        margin-left: 0.5rem;
+}
+.contact__form-button .contact__elipse{
+    @include mq("lxg"){
+        margin-left: 0.65rem;
+        font-size: 0.75em;
     }
 }
 .contact__form-button:hover .contact__elipse{

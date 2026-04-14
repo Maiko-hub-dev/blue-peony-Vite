@@ -7,6 +7,7 @@
     }
     }
     @include mq("lxg"){
+        margin-top: 3rem;
         padding: 0 0 0 5rem;
     }
 }
@@ -22,7 +23,7 @@
         margin-top: 0;
     }
     @include mq("lxg"){
-        padding: 0 0rem 0 7rem;
+        padding: 0 0rem 0 8.5rem;
     }
 }
 .safety__wrapper{
@@ -34,8 +35,7 @@
         padding: 0;
     }
     @include mq("lg"){
-        // padding: 0 0 0 2.5rem;
-        margin-left: 2.5rem;
+        margin-left: 4rem;
     }
 }
 .safety__title{
@@ -43,13 +43,12 @@
     font-family: $base-font;
     font-weight: $bold;
     padding: 1rem 0;
-    letter-spacing: 0.04em;
     @include mq("md"){
         font-size: 2rem;
         padding: 1rem 0 0 2rem;
     }
-    @include mq("lg"){
-        padding: 2rem 0 0 0rem;
+    @include mq("lxg"){
+        padding: 0rem 0 0 0rem;
     }
 }
 .safety__contents{
@@ -63,13 +62,14 @@
         margin: 4rem 0 0 0;
     }
     @include mq("lxg"){
-        margin: 5.375rem 0 0 0;
+        margin: 5.15rem 0 0 0;
     }
 }
-.safety__content:not(:first-child){
+
+.content--modified.safety__content{
     margin-top: 2rem;
     @include mq("lg"){
-        margin-top: 0;
+        margin-top: 1.75rem;
     }
 }
 .safety__content--title{
@@ -77,14 +77,18 @@
     font-weight: $bold;
     letter-spacing: 0.04em;
     margin-top: 1rem;
-}
-
-.safety__content--title:not(:first-child){
-    margin-top: 1rem;
-    @include mq("md"){
-        margin-top: 1.875rem;
+    @include mq("lxg"){
+        letter-spacing: normal;
+        margin-top: 1.75em;
     }
 }
+.safety__content--title.title__try{
+margin-top: 1rem;
+    @include mq("md"){
+        margin-top: 1rem;
+    }
+}
+
 .safety__workon{
     display: flex;
     flex-direction: column;
@@ -111,7 +115,14 @@
         width: max(642px,70%);
     }
     @include mq("lg"){
-        width: min(642px, 48%);
+        width: max(692px, 52%);
+        padding-top: 0.25em;
+        line-height: 1.7985;
+    }
+}
+.workon__detail.workon__detrail--second{
+    @include mq("lg"){
+        padding-top: 0.15em;
     }
 }
 .workon__image img{
@@ -126,6 +137,21 @@
         margin-top: 0;
     }
     @include mq("lxg"){
+        width: max(267px,58%);
+        padding: 0.25rem 0 0 2.75rem;
+    }
+}
+.workon__image.workon__image--second img {
+    display: block;
+    @include mq("lxg"){
         padding: 0 0 0 2.75rem;
+    }
+}
+.workon__detail .workon__detail-sentense__second{
+    display: inline-block;
+   
+    @include mq("lxg"){
+        padding-top: 0.125rem;
+        line-height: 1.785;
     }
 }

@@ -35,12 +35,9 @@
 .side-menu__list:first-child{
     padding-top: 2.5rem;
 }
-// .side-menu__nav.menu__nav{
-
-//     @include mq("md"){
-//         width: minmax(12.5rem, 20%);
-//     }
-// }
+.side-menu__list:first-child.about__menu-nav{
+    padding-top: 0.5rem;
+}
 
 .side-menu__logo {
     display: none;
@@ -58,6 +55,7 @@
         display: block;
     }
 }
+
 .side-menu__item{
     font-family: $base-font;
     font-size: 1rem;
@@ -83,22 +81,34 @@
         transform: scale(1.2);
     }
 }
+.side-menu__logo.about__side-logo img{
+    @include mq("md"){
+        padding-left: 0.65rem;
+    }
+}
 .menu__nav .side-menu__link{
     text-decoration: none;
     color: $black;
     width: 100%;
+    font-weight: $bold;
     @include mq("md"){
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
         padding: 1.5rem 0;
+        font-weight: $bold;
     }
 }
 .side-menu__nav{
     padding: 2.5rem 0;
     @include mq("md"){
         padding: 2.35rem  2.5rem 0;
+    }
+}
+.side-menu__nav.about__side-menu{
+    @include mq("md"){
+        padding: 0 2.5rem;
     }
 }
 .menu__nav--topix{
@@ -191,6 +201,9 @@
     padding: 0 0 0 0.5rem;
     @include mq("md"){
         width: 100%;
-        padding: 2rem 0;;
+        padding: 1.25rem 0;;
+    }
+    @include mq("lxg"){
+        padding: 1.5rem 0;
     }
 }
