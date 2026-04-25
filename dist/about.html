@@ -42,9 +42,9 @@
 
 
    
-      <script type="module" crossorigin src="./assets/script-BLKaO3hM.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/script-DOCmFD_B.css">
-      <link rel="stylesheet" crossorigin href="./assets/about-IXsg-fcp.css">
+      <script type="module" crossorigin src="./assets/script-DIIvOjar.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/script-C0l0lkrs.css">
+      <link rel="stylesheet" crossorigin href="./assets/about-DWuT0QG1.css">
     </head>
     <body>
       <header class="header js-header">
@@ -69,18 +69,22 @@
         <div class="about-visual__inner">
 
           <div class="about-visual__frame">
-          <img src="./assets/about-us-j1rVjLLF.jpg" alt="" class="about-visual__img">
+            <picture>
+      <source media="(min-width:768px)" srcset="./assets/about-us-j1rVjLLF.jpg" class="about__vs_image">
+        <!-- 画面幅1440pxより大のときは、これまでの処理を流用しつつsourceタグに書き換えます。 -->
+                     <img src="./assets/about-us-j1rVjLLF.jpg" alt="" class="about-visual__img">
+</picture>
           </div>
           </div>
       </div>
 
             <!-- ここにサイドバーを書く -->
        <aside class="side-menu about__side">
-        <div class="side-menu__logo">
+        <div class="side-menu__logo about__side-logo">
           <img src="./assets/logo-pc-CYiJcSy5.svg" alt="青壮丸工務店のロゴ" loading="lazy">
         </div>
-          <div class="about__side-menu side-menu__nav menu__nav sp-nav js-drawer">
-            <nav class="menu__nav side-menu__list sp-nav__drawers drawers">
+          <div class="about__side-menu side-menu__nav menu__nav sp-nav about__side-menu js-drawer">
+            <nav class="menu__nav side-menu__list sp-nav__drawers drawers about__menu-nav">
                 <div class="sp-nav__drawer drawers_drawer drawer">
               <p class="menu__nav side-menu__item menu__nav--topix menu__nav-top u-mobile">トップページ</p>
               <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
@@ -183,11 +187,13 @@
               <p class="overview__name">谷垣周平</p>
             </div>
             </div>
-            <p class="overview__text">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。<br>
-              創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。<br>
-              その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。
-              私たちの理念は、常に社会に貢献し、持続可能な未来を築くことにあります。地域社会や環境への配慮を大切にし、誠実な姿勢で仕事に取り組むことで、より良い社会を築いていくことを目指しています。<br>
-              今後も、お客様の声に耳を傾けながら、さらなる成長と発展を目指し、青牡丹工務店は邁進してまいります。
+            <p class="overview__text">
+              <span class="overview__style">青牡丹工務店は、1965年に創業しました。当初は小さな地域の工務店として始まりましたが、顧客志向の高いサービスと品質へのこだわりが徐々に評判を高め、地域の信頼を得ることとなりました。</span><br>
+              <span class="overview__style overview__style--modified">創業以来、私たちの経営理念は変わることなく、品質第一と顧客満足を常に追求することを掲げています。私たちは、建物を単なる建築物としてではなく、人々の生活や夢の実現の場として捉え、お客様の要望に応えるために最善の努力を惜しまず取り組んできました。</span><br>
+              <span class="overview__style overview__style--second">その結果、地域社会だけでなく、広く多くのお客様からの信頼を得て、業績を着実に拡大させてまいりました。途中で直面した困難や挑戦もありましたが、常に創造性と革新を重視し、チーム全体で協力し合いながら、克服してまいりました。<br>
+              私たちの理念は、常に社会に貢献し、持続可能な未来を築くこと<span class="overview__inline-adjust">にあります。</span></span>
+              <span class="overview__style overview__style--third"><span class="overview__inline_inline-adjust">地域社会や環境への配慮を大切にし、誠実な姿勢で</span>仕事に取り組むことで、より良い社会を築いていくことを目指しています。<br>
+              今後も、お客様の声に耳を傾けながら、さらなる成長と発展を目指し、青牡丹工務店は邁進してまいります。</span>
             </p>
           </div>
           </div>
@@ -198,30 +204,26 @@
                   <p class="company__title">商号</p>
                   <p class="company__content">株式会社&emsp;青牡丹工務店 </p>
                 </div>
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified">
                   <p class="company__title">創業</p>
                   <p class="company__content">昭和40年5月3日</p></div>
 
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_second">
                   <p class="company__title">資本金</p>
                   <p class="company__content">2000万円</p></div>
 
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_third">
                   <p class="company__title">従業員数</p>
                   <p class="company__content">24人</p>
                   </div>
-                  <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_second">
                   <p class="company__title composition__title">営業種目</p>
-                  <p class="company__content">総合建設設計施工&middot;不動産業&middot;倉庫業&middot;リフォーム工事</p>
+                  <p class="company__content company__content--qualify">総合建設設計施工・不動産業・倉庫業・リフォーム工事</p>
                   </div>
-                  <div class="company__qualification">
-                  <p class="company__title">資&nbsp;本&nbsp;金</p>
-                  <p class="company__content">2000万円</p>
-                  </div>
-                  <div class="company__qualification">
-                  <p class="company__title composition__title">本社所在地</p>
-                  <p class="company__content">〒000-0000&emsp;&nbsp;大阪府大阪市中央区北区南町5-6-7</p></div>
-                   <div class="company__qualification">
+                  <div class="company__qualification company__qualification--modified_fourth">
+                  <p class="company__title">本社所在地</p>
+                  <p class="company__content">〒000-0000&emsp;<span class="company__span">大阪府大阪市中央区北区南町5-6-7</span></p></div>
+                   <div class="company__qualification company__qualification--modified_fourth">
                   <p class="company__title">代表取締役</p>
                   <p class="company__content">谷垣周平</p></div>
               </div>
@@ -241,22 +243,24 @@
               <h3 class="safety__content--title">経営層による安全衛生巡視</h3>
               <div class="safety__workon workon">
                 <p class="workon__detail">
-                  経営層による安全衛生巡視は、当社の安全管理体制の中核を担う活動の一つです。この巡視では、経営者や上級管理職が定期的に現場を訪問し、安全な作業環境の確保や安全基準の遵守を徹底することが主な目的です。<br>
-                  具体的には、巡視の際には安全規則や法令の遵守状況を点検し、作業現場における危険な箇所や潜在的なリスクを特定します。また、機械や設備の安全装置が正しく機能しているかどうかも確認します。さらに、作業員に対して安全教育や指導を行い、安全意識の向上を図ります。
+                  <span class="workon__detail-sentense">
+                  経営層による安全衛生巡視は、当社の安全管理体制の中核を担う活動の一つです。この巡視では、経営者や上級管理職が定期的に現場を訪問し、安全な作業環境の確保や安全基準の遵守を徹底することが主な目的です。</span><br>
+                   <span class="workon__detail-sentense__second">具体的には、巡視の際には安全規則や法令の遵守状況を点検し、作業現場における危険な箇所や潜在的なリスクを特定します。また、機械や設備の安全装置が正しく機能しているかどうかも確認します。さらに、作業員に対して安全教育や指導を行い、安全意識の向上を図ります。
+                </span>
                 </p>
                 <div class="workon__image">
                   <img src="./assets/safety01-BGQ0SPxe.jpg" alt="工事現場で現場監督が指導を行う様子">
                 </div>
               </div>
             </div>
-            <div class="safety__content">
-              <h3 class="safety__content--title">労働災害防止への取り組み・教育体制</h3>
+            <div class="safety__content content--modified">
+              <h3 class="safety__content--title title__try">労働災害防止への取り組み・教育体制</h3>
               <div class="safety__workon workon">
-                <p class="workon__detail">
+                <p class="workon__detail workon__detrail--second">
                     労働災害の防止に向けた従業員への教育・訓練も欠かせません。新入社員や新規作業員には、安全教育プログラムを実施し、作業時の安全ルールや手順、危険な状況の認識方法などを徹底的に指導しています。さらに、定期的な安全講習会や研修を通じて、従業員の安全意識を高める取り組みを行っています。<br>
                     労働災害が発生した場合には、速やかに原因究明を行い、再発防止策を迅速に実施します。また、従業員からの安全に関する意見や提案を積極的に受け付け、改善に向けた取り組みを推進しています。
                 </p>
-                <div class="workon__image">
+                <div class="workon__image workon__image--second">
                   <img src="./assets/safety02-BEZw3sIY.jpg" alt="労働災害防止のために講習会を行なっている">
                 </div>
               </div>
@@ -270,6 +274,7 @@
       <div class="contact">
         <div class="contact__inner">
           <div class="contact__wrapper">
+             <div class="wrapper__finance finance"></div>
           <div class="contact__titles">
           <p class="contact__title common__title">お問い合わせ</p>
           <p class="contact__heading">CONTACT</p>
@@ -277,13 +282,16 @@
           <div class="contact__info">
             <div class="contact__telephone">
               <div class="contact__tel--num label">
+                <div class="contact__head-box">
                 <span class="contact__label">Tel</span>
                 <span class="contact__text">お電話</span>
+                </div>
               </div>
               <div class="contact__tel--num number">
+                 <div class="contact__head-box_second">
               <span class="contact__number">0000-000-0000</span>
-              <span class="contact__note">営業時間 9:00～18:00</span>
-              </div>
+              <span class="contact__note">営業時間10:00-20:00</span>
+              </div></div>
             </div>
             <div class="contact__access">
             <a href="contact.html" class="contact__form-button">
@@ -302,31 +310,32 @@
             <div class="footer__logo">
               <img src="./assets/logo-pc-CYiJcSy5.svg" alt="青牡丹工務店のロゴ" loading="lazy" class="footer__icon">
             </div>
-            <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市北区南町西5-6-7</span></p>
+            <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市中央区北区南町5-6-7</span></p>
             <p class="footer__hours hours">営業時間<span class="hours__jp">10:00〜20:00</span></p>
             <p class="footer__holiday holiday">定休日<span class="holiday__week">日曜日、祝日、年末年始（12月31日から1月3日まで）</span></p>
             </div>
             <div class="footer__tablecontents">
             <ul class="footer__nav--first footer__nav">
               <li class="footer__nav-item"><a href="#">トップページ</a></li>
-              <li class="footer__nav-item item"><a href="#">私たちについて</a></li>
-              <li class="footer__nav-item item"><a href="#">経営理念</a></li>
+              <li class="footer__nav-item item item2"><a href="about.html">私達について</a></li>
+              <li class="footer__nav-item item item2"><a href="#">経営理念</a></li>
             </ul>
             <ul class="footer__nav--second footer__nav">
-              <li class="footer__nav-item"><a href="#">会社概要</a></li>
-              <li class="footer__nav-item item"><a href="#">安全への取り組み</a></li>
-              <li class="footer__nav-item item"><a href="#">事業内容</a></li>
-              <li class="footer__nav-item item"><a href="#">住宅建築・リフォーム</a></li>
+              <li class="footer__nav-item"><a href="about.html">会社概要</a></li>
+              <li class="footer__nav-item item item2"><a href="#">安全への取り組み</a></li>
+              <li class="footer__nav-item item item2"><a href="#">事業内容</a></li>
+              <li class="footer__nav-item item item2"><a href="#">住宅建築・リフォーム</a></li>
             </ul>
             <ul class="footer__nav--third footer__nav">
-              <li class="footer__nav-item"><a href="#">法人新築・リフォーム</a></li>
-              <li class="footer__nav-item item"><a href="#">公共工事</a></li>
-              <li class="footer__nav-item item"><a href="#">お知らせ</a></li>
-              <li class="footer__nav-item footer__contact item"><a href="contact.html" class="footer__contact-contact"><img src="data:image/svg+xml,%3csvg%20wiph='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9484%204.38576C19.8582%203.93162%2019.6568%203.51604%2019.3756%203.17271C19.3163%203.09791%2019.2544%203.03092%2019.1872%202.96393C18.689%202.46322%2017.9897%202.15088%2017.2257%202.15088H2.77426C2.01031%202.15088%201.31352%202.46322%200.81293%202.96393C0.745938%203.03092%200.683984%203.09791%200.624531%203.17271C0.343164%203.516%200.141797%203.93162%200.0541406%204.38576C0.018125%204.56104%200%204.74217%200%204.92529V15.075C0%2015.4644%200.0825781%2015.8387%200.229844%2016.1767C0.366445%2016.4994%200.567852%2016.7913%200.812891%2017.0361C0.875%2017.0981%200.93668%2017.155%201.00398%2017.2117C1.48391%2017.6091%202.1034%2017.8492%202.77426%2017.8492H17.2257C17.8968%2017.8492%2018.519%2017.6091%2018.9962%2017.2092C19.0633%2017.155%2019.1253%2017.0981%2019.1872%2017.0361C19.4321%2016.7913%2019.6335%2016.4994%2019.7729%2016.1767V16.1742C19.9202%2015.8362%2020%2015.4644%2020%2015.0751V4.92529C20%204.74217%2019.9821%204.56104%2019.9484%204.38576ZM1.81676%203.96764C2.06461%203.72006%202.39746%203.57018%202.77426%203.57018H17.2257C17.6025%203.57018%2017.9383%203.72006%2018.1832%203.96764C18.2271%204.01174%2018.2684%204.06088%2018.3048%204.10971L10.7303%2010.7111C10.5214%2010.8942%2010.2634%2010.9846%2010%2010.9846C9.7393%2010.9846%209.48141%2010.8942%209.26973%2010.7111L1.69813%204.10689C1.73164%204.05807%201.77293%204.01174%201.81676%203.96764ZM1.4193%2015.075V5.57561L6.9007%2010.3574L1.42207%2015.1342C1.4193%2015.1161%201.4193%2015.0957%201.4193%2015.075ZM17.2257%2016.4296H2.77426C2.52891%2016.4296%202.29934%2016.3651%202.1034%2016.2518L7.88379%2011.2143L8.42344%2011.6838C8.87504%2012.0762%209.44016%2012.2749%2010%2012.2749C10.5627%2012.2749%2011.1278%2012.0762%2011.5794%2011.6838L12.1187%2011.2143L17.8969%2016.2518C17.7007%2016.3651%2017.4711%2016.4296%2017.2257%2016.4296ZM18.5807%2015.075C18.5807%2015.0957%2018.5807%2015.1161%2018.578%2015.1342L13.0995%2010.3602L18.5807%205.57814V15.075Z'%20fill='black'/%3e%3c/svg%3e" alt="メールのアイコン"><span class="footer__contact-text">お問い合わせ</span></a></li>
+              <li class="footer__nav-item"><a href="about.html">法人新築・リフォーム</a></li>
+              <li class="footer__nav-item item item2"><a href="#">公共工事</a></li>
+              <li class="footer__nav-item item item2"><a href="#">お知らせ</a></li>
+              <li class="footer__nav-item footer__contact item item2"><a href="contact.html" class="footer__contact-contact"><img src="data:image/svg+xml,%3csvg%20wiph='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M19.9484%204.38576C19.8582%203.93162%2019.6568%203.51604%2019.3756%203.17271C19.3163%203.09791%2019.2544%203.03092%2019.1872%202.96393C18.689%202.46322%2017.9897%202.15088%2017.2257%202.15088H2.77426C2.01031%202.15088%201.31352%202.46322%200.81293%202.96393C0.745938%203.03092%200.683984%203.09791%200.624531%203.17271C0.343164%203.516%200.141797%203.93162%200.0541406%204.38576C0.018125%204.56104%200%204.74217%200%204.92529V15.075C0%2015.4644%200.0825781%2015.8387%200.229844%2016.1767C0.366445%2016.4994%200.567852%2016.7913%200.812891%2017.0361C0.875%2017.0981%200.93668%2017.155%201.00398%2017.2117C1.48391%2017.6091%202.1034%2017.8492%202.77426%2017.8492H17.2257C17.8968%2017.8492%2018.519%2017.6091%2018.9962%2017.2092C19.0633%2017.155%2019.1253%2017.0981%2019.1872%2017.0361C19.4321%2016.7913%2019.6335%2016.4994%2019.7729%2016.1767V16.1742C19.9202%2015.8362%2020%2015.4644%2020%2015.0751V4.92529C20%204.74217%2019.9821%204.56104%2019.9484%204.38576ZM1.81676%203.96764C2.06461%203.72006%202.39746%203.57018%202.77426%203.57018H17.2257C17.6025%203.57018%2017.9383%203.72006%2018.1832%203.96764C18.2271%204.01174%2018.2684%204.06088%2018.3048%204.10971L10.7303%2010.7111C10.5214%2010.8942%2010.2634%2010.9846%2010%2010.9846C9.7393%2010.9846%209.48141%2010.8942%209.26973%2010.7111L1.69813%204.10689C1.73164%204.05807%201.77293%204.01174%201.81676%203.96764ZM1.4193%2015.075V5.57561L6.9007%2010.3574L1.42207%2015.1342C1.4193%2015.1161%201.4193%2015.0957%201.4193%2015.075ZM17.2257%2016.4296H2.77426C2.52891%2016.4296%202.29934%2016.3651%202.1034%2016.2518L7.88379%2011.2143L8.42344%2011.6838C8.87504%2012.0762%209.44016%2012.2749%2010%2012.2749C10.5627%2012.2749%2011.1278%2012.0762%2011.5794%2011.6838L12.1187%2011.2143L17.8969%2016.2518C17.7007%2016.3651%2017.4711%2016.4296%2017.2257%2016.4296ZM18.5807%2015.075C18.5807%2015.0957%2018.5807%2015.1161%2018.578%2015.1342L13.0995%2010.3602L18.5807%205.57814V15.075Z'%20fill='black'/%3e%3c/svg%3e" alt="メールのアイコン"><span class="footer__contact-text">お問い合わせ</span></a></li>
             </ul>
             </div>
           </div>
-          <p class="footer__copyright">© AOSOMARU INC.</p>
+          <p class="footer__copyright copyright">
+            <span class="copyright__text">©&nbsp;AOBOTAN&nbsp;INC.</span></p>
       </div>
 
     </body>

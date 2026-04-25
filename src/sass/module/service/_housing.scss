@@ -1,216 +1,265 @@
 @use "../../global/" as *;
 
-.housing{
+.housing {
+  width: 100%;
+  padding: 0;
+  margin-top: 2.75rem;
+  @include mq("md") {
+    padding: 0 0 0 7rem;
+  }
+  @include mq("lg") {
+    margin-top: 4.25rem;
+    padding: 0 0 0 12rem;
+  }
+}
+.housing__inner {
+  width: inherit;
+  max-width: var(--container);
+  @include mq("md") {
+    padding: 0 0rem 0 4rem;
+  }
+
+  @include mq("lxg") {
+    padding: 0 1.25rem 0 4.25rem;
+  }
+}
+.housing__wrapper {
+  position: relative;
+  width: inherit;
+  height: 100%;
+  max-width: var(--container);
+  padding: 0 0.625rem 2.5rem;
+  @include mq("md") {
+    padding: 2rem 1rem 0 0;
+  }
+  @include mq("lg") {
+    width: max(770px, 90%);
+    margin: 0 auto;
+    padding: 0 0 0 2rem;
+  }
+  @include mq("lxg") {
     width: 100%;
-    padding: 0 ;
-    margin-top: 2.75rem;
-    @include mq("md"){
-        padding: 0 0 0 7rem;
-    }
-    @include mq("lg"){
-        margin-top: 4.6875rem;
-        padding: 0 0 0 12rem;
-    }   
+    padding: 0.25rem 3.5rem 0.5rem 0.25rem;
+    margin: 0 auto 0 1rem;
+  }
 }
-.housing__inner{
-        width: inherit;
-        max-width: var(--container);
-        @include mq("md"){
-            padding: 0 0rem 0 4rem;
-        }
-    
-        @include mq("lxg"){
-            padding: 0 0 0 7rem;
-        }
-        
-}
-.housing__wrapper{
-    position: relative;
-    width: inherit;
-    height: 100%;
-    max-width: var(--container);
-    padding: 0 1.25rem 2.5rem;
-    @include mq("md"){
-        padding: 2rem 1rem 0 0;
-    }
-    @include mq("lg"){
-        width: max(770px, 90%);
-        margin: 0 auto;
-        padding: 0 0 0 2rem;
-    }
-    @include mq("lg"){
-        width: min(960px,90%);
-        padding: 0 3.5rem 0 0rem;
-        margin: 0 auto 0 0;
-    }
-}
-.housing__img-wrapper{
-    position: relative;
-    width: 100%;
-    padding: 0 ;
+.housing__img-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background-color: $white;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  @include mq("lg") {
     border-radius: 3.125rem;
-    background-color: $white;
-    overflow: hidden;
-    @include mq("lg"){
-        max-width: 960px;
-    }
+    max-width: 960px;
+  }
+  @include mq("xl") {
+    width: max(960px, 80%);
+    max-width: none;
+    border-radius: 3rem;
+  }
 }
-.housing__vision{
-    display: block;
-    width: min(960px,100%);
-    height: 50dvh;
-    position: static;
-    top: 50%;
+.housing__vision {
+  display: block;
+  width: min(960px, 100%);
+  height: 50dvh;
+  position: static;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center; // ← 中央を見せる
+  // border-radius: 0;
+  @include mq("md") {
+    width: 100%;
     left: 50%;
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: left center; // ← 左を見せる
-    border-radius: 0;
-    @include mq("md"){
-        width: 100%;
-        left: 50%;
-        -webkit-transform: translate(0%, 0%);
-        transform: translate(0%, 0%);
-        z-index: 22;
-    }
-    @include mq("lg"){
-        padding-left: 1.25rem;
-        aspect-ratio: 960/ 400;
-    }
+    z-index: 22;
+  }
+  @include mq("lg") {
+    height: 100%;
+  }
 }
 
-.service__contents{
+.service__contents {
+  padding: 0;
+  @include mq("md") {
     padding: 0;
-    @include mq("md"){
-        padding: 0;
-        margin: 0;
-    }
-    @include mq("lg"){
-        padding: 0 2rem 0 0rem;
-        margin: 1rem 0 0 0;
-    }
-    @include mq("lxg"){
-        margin: 2.375rem 0 0 0;
-    }
+    margin: 0;
+  }
+  @include mq("lg") {
+    padding: 0 2rem 0 0rem;
+    margin: 1rem 0 0 0;
+  }
+  @include mq("lxg") {
+    margin: 1.5rem 0 0 0;
+  }
 }
-.service__content{
-    padding: 0 0.75rem;
-    @include mq("md"){
-        padding: 0 2rem 0 1rem;
-    }
-    @include mq("lg"){
-        padding: 0 2rem;
-    }
-    @include mq("lxg"){
-        padding: 0 2.125rem;
-    }
-    @include mq("xl"){
-        padding: 0 2.125rem;
-    }
-}
-.service__content:not(:first-child){
-    margin-top: 2rem;
-    @include mq("lg"){
-        margin-top: 0;
-    }
-}
-.service__content--title{
-    font-size: 1.5rem;
-    font-weight: $bold;
-    letter-spacing: 0.04em;
-    margin-top: 1rem;
-    border-bottom: 1px solid $blue-line;
-    padding-bottom: 1.5rem;
-    @include mq("md"){
-        padding-bottom: 2.5rem;
-    }
-}
-
-.service__content--title:not(:first-child){
-    margin-top: 1rem;
-    @include mq("md"){
-        margin-top: 1.875rem;
-    }
-}
-.service__content--information{
-    display: flex;
-    flex-direction: column;
-    padding: 1.25rem 0.75rem 0;
-    @include mq("md"){
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1.25rem 3.125rem 1.25rem 1rem;
-    }
-    @include mq("lg"){
-        padding: 1.5rem 0rem 1.5rem 2rem;
-    }
-}
-.service__content--how_works{
-    font-size: 1.25rem;
-    font-weight: $bold;
-    line-height: 1.75;
-    @include mq("md"){
-        line-height: 1.8;
-            span {
-                display: block; // ← これで必ず改行
-            }
-    }
-    
-}
-
-.housing-contents{
-    margin-top: 1rem;
-}
-.service__content--detail{
-    font-size: 1rem;
-    line-height: 1.8;
-    width: fit-content;
-    @include mq("md"){
-        width: max(45%,474px);
-        padding-left: 2.5rem;
-        span {
-                   display: block; // ← これで必ず改行
-               }
-    }
-}
-
-.service__workon.workon{
+.service__content {
+  padding: 0 0.75rem;
+  @include mq("md") {
+    padding: 0 2rem 0 1rem;
+  }
+  @include mq("lg") {
     padding: 0 2rem;
-    margin-top: 2rem;
-    @include mq("md"){
-        padding: 0 2.125rem;
-        margin-top: 4rem;
-    }
+  }
+  @include mq("lxg") {
+    padding: 0 3rem 0 3.125rem;
+  }
+}
+.service__content:not(:first-child) {
+  margin-top: 2rem;
+  @include mq("lg") {
+    margin-top: 0;
+  }
+}
+.service__content--title {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+  border-bottom: 1px solid $blue-line;
+  padding-bottom: 1.5rem;
+  @include mq("md") {
+    padding-bottom: 2rem;
+    letter-spacing: normal;
+  }
 }
 
-.workon__cards.card{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-    gap: 2rem;
-    @include mq("md"){
-        grid-template-columns:  repeat(auto-fit, minmax(352px, 1fr));
+.service__content--title:not(:first-child) {
+  margin-top: 1rem;
+  @include mq("md") {
+    margin-top: 1.875rem;
+  }
+}
+.service__content--information {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0.75rem 0;
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1.25rem 3.125rem 1.25rem 1rem;
+  }
+  @include mq("lg") {
+    padding: 1.35rem 0rem 1.5rem 3.125rem;
+  }
+}
+.service__content--how_works {
+  font-size: 1.25rem;
+  font-weight: $bold;
+  line-height: 1.75;
+  @include mq("md") {
+    line-height: 1.8;
+    span {
+      display: block; // ← これで必ず改行
     }
+  }
 }
-.workon__card--title{
-    color: $black;
-    font-weight: $bold;
+
+.housing-contents {
+  margin-top: 1rem;
 }
-.workon__card--image{
-    padding-top: 1.25rem;
+.service__content--detail {
+  font-size: 1rem;
+  line-height: 1.8;
+  width: fit-content;
+  @include mq("md") {
+    width: max(45%, 474px);
+    padding-left: 3.35rem;
+    span {
+      display: block; // ← これで必ず改行
+    }
+  }
+  @include mq("lg") {
+    width: max(45%, 490px);
+    span {
+      display: block; // ← これで必ず改行
+    }
+  }
+}
+.service__workon.workon {
+  padding: 0 2rem;
+  margin-top: 2rem;
+  @include mq("md") {
+    padding: 0 2.125rem;
+    margin-top: 2rem;
+  }
+  @include mq("lg") {
+    padding: 1.25rem 3.125rem 0;
+  }
+}
+.card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.workon__cards.card {
+  @include mq("md") {
+    padding: 0 1rem;
+  }
+}
+.card__workon.workon__card2 {
+  @include mq("md") {
+    margin-left: 2rem;
+  }
+}
+.card__workon.workon__card3 {
+  @include mq("md") {
+    margin-left: 1.875rem;
+  }
+}
+.card__workon {
+  width: 100%;
+  @include mq("md") {
+    width: min(352px, 50%);
+  }
+}
+.workon__card--title {
+  color: $black;
+  font-weight: $bold;
+}
+.workon__card--image {
+  padding-top: 1.25rem;
+  @include mq("md") {
+    padding-top: 1rem !important;
+  }
 }
 .workon__card--image img {
-    display: block;
+  display: block;
 }
-.card__workon{
-    @include mq("md"){
-        padding-right: 3.875rem;
-    }
+// .card__workon{
+//     @include mq("md"){
+//         padding-right: 3.875rem;
+//     }
+// }
+.workon__card--const.construct {
+  font-size: 0.875rem;
+  margin-top: 1rem !important;
+  padding: 0;
+  letter-spacing: 0.01em !important;
 }
-.workon__card--const{
-    font-size: 0.875rem;
-    margin-top: 1.25rem;
-    letter-spacing: 0.04em;
-    padding-left: 0.5rem;
+.workon__card--const .construct-how {
+  @include mq("md") {
+    letter-spacing: 0.03em !important;
+  }
+}
+.workon__card--const .construct-when {
+  @include mq("md") {
+    letter-spacing: 0.03em !important;
+    padding-left: 0.25rem !important;
+  }
+}
+.workon__card--const .construct-time {
+  @include mq("md") {
+    letter-spacing: 0.04em !important;
+  }
 }

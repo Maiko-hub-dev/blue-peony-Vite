@@ -1,233 +1,237 @@
 @use "../../global/" as *;
 
-@use "../../global/" as *;
-
-.public{
-    width: 100%;
-    padding: 0 ;
-    margin-top: 2.75rem;
-    padding: 3rem 0 0 0;
-    @include mq("md"){
-        padding: 3rem 0 0 7rem;
-        margin-top: 4rem;
-    }
-    @include mq("lg"){
-        margin-top: 4.6875rem;
-        padding: 0 0 0 12rem;
-    }   
+.public {
+  width: 100%;
+  padding: 0;
+  margin-top: 2.75rem;
+  padding: 3rem 0 0 0;
+  @include mq("md") {
+    padding: 3rem 0 0 7rem;
+    margin-top: 4rem;
+  }
+  @include mq("lg") {
+    margin-top: 2.875rem;
+    padding: 0 0 0 12rem;
+  }
 }
-.public__inner{
-        width: inherit;
-        max-width: var(--container);
-        @include mq("md"){
-            padding: 0 0rem 0 5rem;
-        }
-        @include mq("lg"){
-            padding: 0 0rem 0 4rem;
-        }
-        @include mq("lxg"){
-            padding: 0 0 0 7rem;
-        }
-        
+.public__inner {
+  width: inherit;
+  max-width: var(--container);
+  @include mq("md") {
+    padding: 0 0rem 0 5rem;
+  }
+  @include mq("lg") {
+    padding: 0 0rem 0 4rem;
+  }
+  @include mq("lxg") {
+    padding: 0.5rem 0 0 5.5rem;
+  }
 }
-.public__wrapper{
-    position: relative;
-    width: inherit;
-    height: 100%;
-    max-width: var(--container);
-    padding: 0 1.25rem 2.5rem;
-    @include mq("md"){
-        padding: 2rem 1rem 0 0;
-    }
-    @include mq("lg"){
-        width: max(770px, 90%);
-        margin: 0 auto;
-        padding: 0 0 0 2rem;
-    }
-    @include mq("lg"){
-        width: min(960px,90%);
-        padding: 0 3.5rem 0 0rem;
-        margin: 0 auto 0 0;
-    }
+.public__wrapper {
+  position: relative;
+  width: inherit;
+  height: 100%;
+  max-width: var(--container);
+  padding: 0 0.625rem 2.5rem;
+  @include mq("md") {
+    padding: 2rem 1rem 0 0;
+  }
+  @include mq("lg") {
+    width: max(770px, 90%);
+    margin: 0 auto;
+    padding: 0 0 0 2rem;
+  }
+  @include mq("lxg") {
+    width: max(960px, 80%);
+    padding: 0;
+    margin: 0 auto 0 0;
+  }
 }
-.public__img-wrapper{
-    position: relative;
-    width: 100%;
-    padding: 0 0 2.5rem;
+.public__img-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  @include mq("lxg") {
     border-radius: 3.125rem;
-    background-color: $white;
-    overflow: hidden;
-    @include mq("lg"){
-        max-width: 960px;
-    }
+    padding: 0 0;
+    aspect-ratio: 960 / 400;
+    max-width: none;
+  }
+  @include mq("xl") {
+    border-radius: 4.125rem;
+  }
 }
-.public__vision{
-    display: block;
-    width: min(960px,100%);
-    height: 50dvh;
-    position: static;
-    top: 50%;
+
+.public__vision {
+  display: block;
+  width: min(960px, 100%);
+  height: 50dvh;
+  position: static;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  // border-radius: 0;
+  object-position: center;
+  @include mq("md") {
+    width: 100%;
     left: 50%;
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: left center; // ← 左を見せる
-    border-radius: 0;
-    @include mq("md"){
-        width: 100%;
-        left: 50%;
-        -webkit-transform: translate(0%, 0%);
-        transform: translate(0%, 0%);
-        z-index: 22;
-    }
-    @include mq("lg"){
-        padding-left: 1.25rem;
-        aspect-ratio: 960/ 400;
-    }
-}
-.public__contents{
-    padding: 0;
-    @include mq("md"){
-        padding: 0;
-        margin: 0;
-    }
-    @include mq("lg"){
-        padding: 0 2rem 0 0rem;
-        margin: 1rem 0 0 0;
-    }
-    @include mq("lxg"){
-        margin: 2.375rem 0 0 0;
-    }
-}
-.public__content{
-    padding: 0 0.75rem;
-    @include mq("md"){
-        padding: 0 2rem 0 1rem;
-    }
-    @include mq("lg"){
-        padding: 0 1.75rem;
-    }
-    @include mq("lxg"){
-        padding: 0 2rem;
-    }
-    @include mq("xl"){
-        padding: 0 2.125rem;
-    }
-}
-.public__content:not(:first-child){
-    margin-top: 2rem;
-    @include mq("lg"){
-        margin-top: 0;
-    }
-}
-.public__content--title{
-    font-size: 1.5rem;
-    font-weight: $bold;
-    letter-spacing: 0.04em;
-    margin-top: 1rem;
-    border-bottom: 1px solid $blue-line;
-    padding-bottom: 1.5rem;
-    @include mq("md"){
-        padding-bottom: 2.5rem;
-    }
-}
-
-.public__content--title:not(:first-child){
-    margin-top: 1rem;
-    @include mq("md"){
-        margin-top: 1.875rem;
-    }
-}
-.public__content--information{
-    display: flex;
-    flex-direction: column;
-    padding: 1.25rem 0.75rem 0;
-    @include mq("md"){
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1.25rem 3.125rem 1.25rem 1rem;
-    }
-    @include mq("lg"){
-        padding: 1.5rem 0rem 1.5rem 1.75rem;
-    }
-}
-.public__content--how_works{
-    font-size: 1.25rem;
-    font-weight: $bold;
-    line-height: 1.75;
-    letter-spacing: 0.01em;
-    line-height: 1.8;
-    @include mq("md"){
-    width: max(374px, 46%);
-    }
-    
-}
-.public__content--detail{
-    font-size: 1rem;
-    line-height: 1.8;
-    width: fit-content;
-    @include mq("md"){
-        width: max(45%,500px);
-        padding-left: 2.5rem;
-        span {
-                   display: block; // ← これで必ず改行
-               }
-    }
-}
-.public__workon.workon{
-    padding: 0 2rem;
-    margin-top: 2rem;
-    @include mq("md"){
-        padding: 5.125rem 2.125rem 0;
-        margin-top: 4rem;
-    }
-}
-
-.workon__cards.card{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-    gap: 2rem;
-    @include mq("md"){
-        grid-template-columns:  repeat(auto-fit, minmax(352px, 1fr));
-    }
-}
-
-.workon__cards.card.public__card{
+    z-index: 22;
+  }
+  @include mq("lg") {
     height: 100%;
+    aspect-ratio: 960/ 400;
+  }
 }
-.workon__card--title{
-    color: $black;
-    font-weight: $bold;
+.public__contents {
+  padding: 0;
+  @include mq("md") {
+    padding: 0;
+    margin: 0;
+  }
+  @include mq("lg") {
+    padding: 0.5rem 2rem 0 0rem;
+    margin: 1rem 0 0 0;
+  }
+  @include mq("lxg") {
+    margin: 1.5rem 0 0 0;
+  }
+}
+.public__content {
+  padding: 0 0.75rem;
+  @include mq("md") {
+    padding: 0 2rem 0 1rem;
+  }
+  @include mq("lg") {
+    padding: 0 1.65rem;
+  }
+  @include mq("lxg") {
+    padding: 0 3rem 0 0 3.125rem;
+  }
+}
+.public__content:not(:first-child) {
+  margin-top: 2rem;
+  @include mq("lg") {
+    margin-top: 0;
+  }
+}
+.public__content--title {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+  border-bottom: 1px solid $blue-line;
+  padding-bottom: 1.5rem;
+  @include mq("md") {
+    padding-bottom: 2.5rem;
+    letter-spacing: normal;
+  }
+  @include mq("lxg") {
+    padding: 0.01rem 0 2.1025rem 1.5rem;
+  }
+}
+
+.public__content--title:not(:first-child) {
+  margin-top: 1rem;
+  @include mq("md") {
+    margin-top: 1.875rem;
+  }
+}
+.public__content--information {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0.75rem 0;
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.25rem 3.125rem 1.25rem 1rem;
+  }
+  @include mq("lg") {
+    padding: 1.25rem 0rem 1.5rem 3.125rem;
+    justify-content: flex-start;
+  }
+}
+.public__content--how_works {
+  font-size: 1.25rem;
+  font-weight: $bold;
+  line-height: 1.75;
+  @include mq("md") {
+    width: min(374px, 49%);
+  }
+}
+.public__content--detail {
+  font-size: 1rem;
+  line-height: 1.8;
+  width: fit-content;
+  @include mq("md") {
+    width: max(45%, 500px);
+    padding-left: 2.5rem;
+    span {
+      display: block; // ← これで必ず改行
+    }
+  }
+  @include mq("lxg") {
+    letter-spacing: normal;
+    width: max(55%, 446px);
+    span {
+      display: block; // ← これで必ず改行
+    }
+  }
+}
+.public__workon.workon {
+  padding: 0 2rem;
+  margin-top: 2rem;
+  @include mq("md") {
+    padding: 3.5rem 2.125rem 0;
+    margin-top: 4rem;
+  }
+}
+
+.workon__cards.card.public__card {
+  height: 100%;
+  @include mq("lg") {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start;
+  }
+}
+
+.card__workon.public__card2 {
+  @include mq("lg") {
+    margin-left: 2rem;
+  }
+}
+.workon__card--title {
+  color: $black;
+  font-weight: $bold;
 }
 
 .workon__card--image {
-//   position: relative;
-//   width: 100%;
-//   aspect-ratio: 352 / 274; // （写真系はこれ）
-//   overflow: hidden;
+  //   position: relative;
+  //   width: 100%;
+  //   aspect-ratio: 352 / 274; // （写真系はこれ）
+  //   overflow: hidden;
   padding-top: 1.25rem;
 }
-.public__cards-image.workon__card--image{
-    height: inherit;
-}
+
 .workon__card--image img {
-    display: block;
+  display: block;
 }
 
-.public__cards-image.workon__card--image img{
-    width: 100%;
-    object-fit: cover;
+.card__workon.public__cards {
+  @include mq("md") {
+    padding-right: 3.875rem;
+  }
 }
-.card__workon.public__cards{
-    height: inherit;
-    @include mq("md"){
-        padding-right: 3.875rem;
-    }
-}
-.workon__card--const{
-    font-size: 0.875rem;
-    margin-top: 1.25rem;
-       letter-spacing: 0.04em;
-    padding-left: 0.5rem;
+.workon__card--const {
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+  letter-spacing: 0.04em;
+  padding-left: 0.5rem;
 }
