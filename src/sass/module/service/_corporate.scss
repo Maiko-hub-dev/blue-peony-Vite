@@ -191,6 +191,8 @@
   padding: 0 2rem;
   margin-top: 2rem;
   @include mq("md") {
+    display: flex;
+    align-items: center;
     padding: 2.875rem 2.125rem 1rem 3.25rem;
     margin-top: 4rem;
   }

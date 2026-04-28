@@ -209,12 +209,18 @@
 }
 .card__workon.workon__card2 {
   @include mq("md") {
-    margin-left: 2rem;
+    margin-left: 1.875rem;
+  }
+  @include mq("lxg") {
+    margin-left: 3.75rem;
   }
 }
 .card__workon.workon__card3 {
   @include mq("md") {
     margin-left: 1.875rem;
+  }
+  @include mq("lxg") {
+    margin-left: 3.5rem;
   }
 }
 .card__workon {
@@ -222,10 +228,33 @@
   @include mq("md") {
     width: min(352px, 50%);
   }
+  @include mq("lxg") {
+    width: min(355px, 50%);
+  }
+}
+.card__workon.card__workon2 {
+  @include mq("md") {
+    width: min(352px, 50%);
+  }
 }
 .workon__card--title {
   color: $black;
   font-weight: $bold;
+  font-size: 1rem;
+  letter-spacing: normal;
+  padding: 0 0 0 0.25em;
+}
+.workon__card--title.workon__card--title2 {
+  @include mq("md") {
+    padding: 0 0 0 0.25em;
+    letter-spacing: normal;
+  }
+}
+.workon__card--title.workon__card--title3 {
+  @include mq("md") {
+    padding: 0;
+    letter-spacing: normal;
+  }
 }
 .workon__card--image {
   padding-top: 1.25rem;
@@ -233,28 +262,59 @@
     padding-top: 1rem !important;
   }
 }
+.workon__card--image.workon__card--image2 {
+  @include mq("md") {
+    padding-left: 0.125rem;
+  }
+}
 .workon__card--image img {
   display: block;
+  // @include mq("md") {
+  //   padding-left: 0.25rem;
+  // }
 }
-// .card__workon{
-//     @include mq("md"){
-//         padding-right: 3.875rem;
-//     }
-// }
+.workon__card--image .workon__card--image-img {
+  display: block;
+  @include mq("md") {
+    padding-left: 0.125rem;
+  }
+}
 .workon__card--const.construct {
   font-size: 0.875rem;
   margin-top: 1rem !important;
   padding: 0;
-  letter-spacing: 0.01em !important;
+  // letter-spacing: 0.01em !important;
+  @include mq("md") {
+    padding: 0 0 0 0;
+  }
+}
+.workon__card--const.construct2 {
+  font-size: 0.875rem;
+  margin-top: 1rem !important;
+  padding: 0;
+  // letter-spacing: 0.01em !important;
+  @include mq("md") {
+    padding: 0 0 0 0.25em;
+  }
+}
+
+.workon__card--const.construct3 {
+  font-size: 0.875rem;
+  margin-top: 1.125rem !important;
+  padding: 0;
+  // letter-spacing: 0.01em !important;
+  @include mq("md") {
+    padding: 0 0 0 0;
+  }
 }
 .workon__card--const .construct-how {
   @include mq("md") {
-    letter-spacing: 0.03em !important;
+    letter-spacing: 0.02em !important;
   }
 }
 .workon__card--const .construct-when {
   @include mq("md") {
-    letter-spacing: 0.03em !important;
+    letter-spacing: 0.02em !important;
     padding-left: 0.25rem !important;
   }
 }

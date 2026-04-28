@@ -188,11 +188,15 @@
   padding: 0 2rem;
   margin-top: 2rem;
   @include mq("md") {
-    padding: 3.5rem 2.125rem 0;
+    padding: 3.25rem 2.125rem 0;
     margin-top: 4rem;
   }
 }
-
+.workon__card--image.public__cards-image {
+  @include mq("md") {
+    padding: 0.75rem 0 0 0.125rem;
+  }
+}
 .workon__cards.card.public__card {
   height: 100%;
   @include mq("lg") {
@@ -204,7 +208,7 @@
 
 .card__workon.public__card2 {
   @include mq("lg") {
-    margin-left: 2rem;
+    margin-left: 3.675rem;
   }
 }
 .workon__card--title {
@@ -232,6 +236,6 @@
 .workon__card--const {
   font-size: 0.875rem;
   margin-top: 1.25rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   padding-left: 0.5rem;
 }

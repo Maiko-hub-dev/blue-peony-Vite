@@ -1,349 +1,353 @@
 @use "../global" as *;
 
 .contact {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: $white;
-    padding-top: 0.5rem;
-    @include mq("md"){
-    padding-left: max(2rem,(100% - var(--container)) / 2);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  padding-top: 0.5rem;
+  @include mq("md") {
+    padding-left: max(2rem, (100% - var(--container)) / 2);
     z-index: 12;
-    margin-top: 6rem;
-    }
+    margin-top: 1rem;
+  }
 }
-.contact__inner{
-    padding: 0;
-    @include mq("md"){
+.contact__inner {
+  padding: 0;
+  @include mq("md") {
     width: inherit;
     max-width: var(--container);
-    margin-top: 4.5rem;
-    padding: 0 0rem 0 7rem;   
-    }
-    @include mq("lg"){
-        padding: 0 0 0 14rem;
-    }
+    margin-top: 1.5rem;
+    padding: 0 0rem 0 7rem;
+  }
+  @include mq("lg") {
+    margin-top: 2.75rem;
+    padding: 0 0 0 14rem;
+  }
 }
-.contact__wrapper{
-    position: relative;
-    border-radius: 0;
-    background-color: $content;
-    width: inherit;
-    max-width: var(--container);
-    margin-top: 4.5rem;
-    padding: 0 1.25rem 2.5rem;
-    @include mq("md"){
-        border-radius: 3.125rem 0 0 3.125rem;
-        padding: 0 0 1.35rem 0.5rem;
-    }
-    @include mq("lg"){
-        margin-left: 2rem;
-    }
-    @include mq("lxg"){
-        margin-top: 5.5rem;
-        margin-left: 3.5rem;
-    }
+.contact__wrapper {
+  position: relative;
+  border-radius: 0;
+  background-color: $content;
+  width: inherit;
+  max-width: var(--container);
+  margin-top: 4.5rem;
+  padding: 0 1.25rem 2.5rem;
+  @include mq("md") {
+    border-radius: 3.125rem 0 0 3.125rem;
+    padding: 0 0 1.35rem 0.5rem;
+  }
+  @include mq("lg") {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+  @include mq("lxg") {
+    margin-left: 3.5rem;
+  }
 }
-.contact__titles{
-    width: 100%;
-    height: auto;
-    @include mq("sp"){
-        padding: 1.6875rem 0 0;
-    }
-    @include mq("md"){
+.contact__titles {
+  width: 100%;
+  height: auto;
+  @include mq("sp") {
+    padding: 1.6875rem 0 0;
+  }
+  @include mq("md") {
     top: 4.5rem;
     padding: 4rem 0 0 2.5rem;
-    }
-    @include mq("lg"){
-        padding: 1.75rem 0 0 0.75rem;
-    }
+  }
+  @include mq("lg") {
+    padding: 1.65rem 0 0 0.75rem;
+  }
 }
-.page-top .finance__titles.contract__titles{
-    @include mq("lg"){
-        padding: 4rem 0 0 2rem;
-    }
-    @include mq("lxg"){
-        padding: 4rem 0 0 4rem;
-    }
+.page-top .finance__titles.contract__titles {
+  @include mq("lg") {
+    padding: 4rem 0 0 2rem;
+  }
+  @include mq("lxg") {
+    padding: 4rem 0 0 4rem;
+  }
 }
-.contact__title{
-    font-size: 1.25rem;
-    color: $black;
-    @include mq("md"){
-        font-size: 1.5rem;
-        padding-left: 0.25rem;
-    }
+.contact__title {
+  font-size: 1.25rem;
+  color: $black;
+  @include mq("md") {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+  }
 }
 
-.contact__heading{
+.contact__heading {
   font-family: $eng-font;
-   color: transparent;
+  color: transparent;
   -webkit-text-stroke: 1px $blue;
-    letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
   // ぽてっと感を足す（補助）
   text-shadow: none;
   line-height: 1.1;
   font-size: 4.5rem;
-  @include mq("lg"){
+  @include mq("lg") {
     -webkit-text-stroke: 1.5px $blue;
     max-width: 553px;
-    text-shadow:
-      0 0 1px rgba($blue, 0); // 👈 弱め！！
+    text-shadow: 0 0 1px rgba($blue, 0); // 👈 弱め！！
     line-height: 1.235;
     font-size: 8rem;
-    padding: 0.08rem 0.5rem 0 0.25rem;
+    padding: 0 0.45rem 0 0.25rem;
     font-weight: 700;
     letter-spacing: normal;
   }
 }
 
-.page-top .contact__heading{
+.page-top .contact__heading {
+  padding-left: 0;
+  font-size: clamp(4.2rem, 12vw, 4.5rem); // ← SPで自動縮小
+  transform: scale(1);
+  @include mq("md") {
+    font-size: 8rem;
+    transform: scale(1.02);
+  }
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.4375rem;
+  @include mq("sp") {
     padding-left: 0;
-    font-size: clamp(4.2rem, 12vw, 4.5rem); // ← SPで自動縮小
-    transform: scale(1);
-    @include mq("md"){
-        font-size: 8rem;
-        transform: scale(1.02);
-    }
+    max-width: var(--container);
+  }
+  @include mq("md") {
+    padding-top: 0;
+    padding-left: 4.5rem;
+    justify-content: flex-start;
+  }
+  @include mq("lxg") {
+    flex-direction: row;
+    padding: 0 0 0 0.75rem;
+  }
+}
+.contact__wrapper {
+  position: relative;
 }
 
-.contact__info{
-    display: flex;
-    flex-direction: column;
-    padding-top: 1.4375rem;
-    @include mq("sp"){
-        padding-left: 0;
-        max-width: var(--container);
-    }
-    @include mq("md"){
-        padding-top: 0;
-        padding-left: 4.5rem;
-        justify-content: flex-start;
-    }
-    @include mq("lxg"){
-        flex-direction: row;
-        padding: 0 0 0 0.75rem;
-    }
+.finance {
+  visibility: hidden;
+  @include mq("sp") {
+    visibility: visible;
+    margin-right: 2rem;
+    position: absolute;
+    width: 6.875rem;
+    height: 10.05125rem;
+    background: url("../../images/financing.svg") no-repeat;
+    background-size: 6.875rem 10.05125rem;
+    background-repeat: no-repeat;
+    top: 1rem;
+    right: 2.5rem;
+    margin-top: 1rem;
+    opacity: 1;
+  }
+  @include mq("md") {
+    background-size: contain;
+  }
+  @include mq("lxg") {
+    width: 10.9375rem;
+    height: 16rem;
+    background-size: 10.9375rem 16rem;
+    margin-right: 2.5rem;
+    margin-top: 1rem;
+  }
 }
-.contact__wrapper{
-     position: relative;
+.wrapper__finance.finance {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+.contact__telephone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include mq("lxg") {
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left: 0.25rem;
+  }
+}
+.contact__tel--num {
+  display: flex;
+
+  @include mq("md") {
+    justify-content: center;
+    flex-direction: column; // 中身を縦並び
+    padding: 0.5rem 0;
+  }
+  @include mq("lg") {
+    justify-content: start;
+  }
 }
 
-.finance{
-    visibility: hidden;
-    @include mq("sp"){
-        visibility: visible;
-        margin-right: 2rem;
-        position: absolute;
-        width: 6.875rem;
-        height: 10.05125rem;
-        background: url("../../images/financing.svg") no-repeat;
-        background-size: 6.875rem 10.05125rem;
-        background-repeat: no-repeat;
-        top: 1rem;
-        right: 2.5rem;
-        margin-top: 1rem;
-        opacity: 1;
-    }
-    @include mq("md"){
-        background-size: contain;
-    }
-    @include mq("lxg"){
-        width: 10.9375rem;
-        height: 16rem;
-        background-size: 10.9375rem 16rem;
-        margin-right: 2.5rem;
-        margin-top: 1.25rem;
-    }
+.contact__tel--num.label {
+  padding: 1.5rem 0;
+  @include mq("md") {
+    height: 100%;
+    width: min(5.625rem, 30%);
+  }
+  @include mq("lg") {
+    width: max(4.65rem, 75px);
+    border-bottom: 0;
+  }
 }
-.wrapper__finance.finance{
-    display: none;
-    @include mq("md"){
-        display: block;
-    }
-}
-.contact__telephone{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @include mq("md"){
-        width: auto;
-        flex-direction: row;
-        align-items: center;
-    }
-    @include mq("lxg"){
-        align-items: flex-start;
-        flex-direction: row;
-        padding-left: 0.25rem;
-    }
-}
-.contact__tel--num{
-    display: flex;
-    
-    @include mq("md"){
-        justify-content: center;
-        flex-direction: column; // 中身を縦並び
-        padding: 0.5rem 0;
-    }
-    @include mq("lg"){
-        justify-content: start;
-    }
-}
-
-.contact__tel--num.label{
-    padding: 1.5rem 0;
-    @include mq("md"){
-        height: 100%;
-        width: min(5.625rem, 30%);
-    }
-    @include mq("lg"){
-        width: max(4.65rem, 75px);
-        border-bottom: 0;
-    }
-}
-.contact__tel--num.number{
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0;
-    @include mq("md"){
-        padding: 1.5rem 0 1.5rem 1.5rem;
-        height: inherit;
-    }
-    @include mq("lg"){
-        padding: 1.5rem 1.75rem 2rem;
-    }
+.contact__tel--num.number {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  @include mq("md") {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    height: inherit;
+  }
+  @include mq("lg") {
+    padding: 1.5rem 1.985rem 1.5rem 1.85rem;
+  }
 }
 .contact__label,
-.contact__number{
-    font-family: $eng-font;
-    line-height: 1;
-    font-size: 2rem;
-    letter-spacing: 0.02em;
-    @include mq("lxg"){
-        display: block;
-        padding: 0.5rem 0.25rem 0 0;
-        letter-spacing: normal;
-    }
+.contact__number {
+  font-family: $eng-font;
+  line-height: 1;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  @include mq("lxg") {
+    display: block;
+    padding: 0.5rem 0.25rem 0 0;
+    letter-spacing: normal;
+  }
 }
-.contact__head-box{
-    @include mq("lg"){
+.contact__head-box {
+  @include mq("lg") {
     border-right: 1px solid $black;
+  }
 }
+.contact__head-box_second {
+  @include mq("lg") {
+    border-right: 1px solid $black;
+    padding: 0 1.75rem 0 0.15rem;
+  }
 }
-.contact__head-box_second{
-    @include mq("lg"){
-        border-right: 1px solid $black;
-        padding: 0 1.875rem 0 0.15rem;
-    }
-}
-.contact__text{
-    margin-left: 1rem;
-    font-size: 0.75rem;
-    font-family: $base-font;
-    font-weight: $bold;
-    padding-top: 1.25rem;
-    @include mq("md"){
-        margin-left: 0;
-        padding-top: 0.25rem;
-    }
-}
-.contact__note{
-    font-size: 0.75rem;
-    font-family: $base-font;
-    font-weight: $bold;
-    margin-top: 0.5rem;
-    letter-spacing: 0.01em;
-    @include mq("md"){
-        padding-top: 0.25rem;
-        margin-top: 0;
-    }
-}
-.contact__access{
-    padding-top: 0.75rem;
-    @include mq("md"){
-        margin-top: 1rem;
-    }
-    @include mq("lxg"){
-
-        margin-top: 0.75rem;
-        padding: 1rem 2rem 2px;
-    }
-}
-.contact__form-button{
-    display: flex;
-    align-items: center;
-    background-color: $white;
-    border-radius: 0.625rem;
-    min-width: 284px;
-    width: fit-content;
-    padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
-    transition: background-color 0.5s ease;
-    @include mq("md"){
-    padding: 1.25rem 0.5rem 1.25rem 0.5rem;
-    }
-    @include mq("lxg"){
-        padding: 1.15rem 0.5rem 1rem 1rem;
-        // width: min(26%, 284px);
-    }
-}
-.contact__form-button:hover{
-    background-color: $black;
-    color: $white;
-}
- .contact__button{
-    display: inline-block;
-    text-decoration: none;
-    color: $black;
-    font-family: $base-font;
-    font-weight: $bold;
-    transition: color 0.3s ease;
-    @include mq("md"){
-        padding-top: 0;
-        padding-left: 0.15rem;
-    }
- }
-.contact__form-button:hover .contact__button{
-    text-decoration: none;
-    color: $white;
-}
-
-.contact__icon{
-    display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
+.contact__text {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  font-family: $base-font;
+  font-weight: $bold;
+  padding-top: 1.25rem;
+  @include mq("md") {
+    margin-left: 0;
     padding-top: 0.25rem;
-    margin-right: 0.5rem;
-    transition: filter 0.3s ease;
-    @include mq("md"){
-        padding-top: 0;
-        margin-right: 0.25rem;
-        margin-left: 1.65rem;
-    }
+  }
 }
-.contact__form-button:hover .contact__icon{
-    filter: invert(1);
+.contact__note {
+  font-size: 0.75rem;
+  font-family: $base-font;
+  font-weight: $bold;
+  margin-top: 0.5rem;
+  letter-spacing: 0.01em;
+  @include mq("md") {
+    padding-top: 0.25rem;
+    margin-top: 0;
+  }
+}
+.contact__access {
+  padding-top: 0.75rem;
+  @include mq("md") {
+    margin-top: 1rem;
+  }
+  @include mq("lxg") {
+    margin-top: 0.75rem;
+    padding: 1rem 2rem 2px;
+  }
+}
+.contact__access.service__contact__access {
+  @include mq("lxg") {
+    padding: 1rem 0.75rem 2px 2rem;
+  }
+}
+.contact__form-button {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border-radius: 0.625rem;
+  min-width: 284px;
+  width: fit-content;
+  padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
+  transition: background-color 0.5s ease;
+  @include mq("md") {
+    padding: 1.25rem 0.5rem 1.25rem 0.5rem;
+  }
+  @include mq("lxg") {
+    padding: 1.15rem 0.5rem 1rem 1rem;
+    font-weight: 800;
+  }
+}
+.contact__form-button:hover {
+  background-color: $black;
+  color: $white;
+}
+.contact__button {
+  display: inline-block;
+  text-decoration: none;
+  color: $black;
+  font-family: $base-font;
+  font-weight: 800;
+  transition: color 0.3s ease;
+  @include mq("md") {
+    padding-top: 0;
+    padding-left: 0.15rem;
+  }
+}
+.contact__form-button:hover .contact__button {
+  text-decoration: none;
+  color: $white;
+}
+
+.contact__icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding-top: 0.25rem;
+  margin-right: 0.5rem;
+  transition: filter 0.3s ease;
+  @include mq("md") {
+    padding-top: 0;
+    margin-right: 0.25rem;
+    margin-left: 1.5rem;
+  }
+}
+.contact__form-button:hover .contact__icon {
+  filter: invert(1);
 }
 .contact__form-button .contact__elipse {
-    color: $black;
+  color: $black;
 }
 
-.contact__elipse{
-    position: relative;
-    font-size: 0.75rem;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: fit-content;
-    padding: 0.25rem 0 0 0;
-    margin-left: 0;
-    transition: all 0.3s ease;
+.contact__elipse {
+  position: relative;
+  font-size: 0.75rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: fit-content;
+  padding: 0.25rem 0 0 0;
+  margin-left: 0;
+  transition: all 0.3s ease;
 }
-.contact__form-button .contact__elipse{
-    @include mq("lxg"){
-        margin-left: 0.65rem;
-        font-size: 0.75em;
-    }
+.contact__form-button .contact__elipse {
+  @include mq("lxg") {
+    margin-left: 0.65rem;
+    font-size: 0.75em;
+  }
 }
-.contact__form-button:hover .contact__elipse{
-    color: $white;
+.contact__form-button:hover .contact__elipse {
+  color: $white;
 }
