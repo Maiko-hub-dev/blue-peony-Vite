@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   background-color: $white;
-  padding-top: 0.5rem;
+  padding-top: 0.55rem;
   @include mq("md") {
     padding-left: max(2rem, (100% - var(--container)) / 2);
     z-index: 12;
@@ -15,7 +15,7 @@
 .footer__inner {
   width: inherit;
   max-width: var(--container);
-  padding: 0 2rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   @include mq("md") {
@@ -54,8 +54,9 @@
 }
 .footer__logo .footer__icon {
   display: block;
-  max-width: 230px;
+  max-width: 222px;
   margin: 0 auto;
+  width: 100%;
   @include mq("md") {
     width: inherit;
     margin: 1.9875rem 0 0 0;
@@ -67,16 +68,18 @@
 }
 .footer__address {
   font-family: $base-font;
+  font-size: 0.75rem;
   color: $black;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 2.25rem;
+  padding-top: 1rem;
   @include mq("md") {
     flex-direction: row;
     margin-top: 2.4375rem;
     padding-top: 2.4375rem;
     text-align: left;
+    font-size: 1rem;
     letter-spacing: 0.01em;
   }
   @include mq("lxg") {
@@ -86,12 +89,12 @@
 }
 .footer__hours,
 .footer__holiday {
-  margin-top: 1rem;
   text-align: center;
-  padding-top: 0.25rem;
+  font-size: 0.75rem;
   @include mq("md") {
     padding-top: 0;
     text-align-last: left;
+    font-size: 1rem;
   }
   @include mq("lxg") {
     margin-top: 0.5rem;
@@ -99,9 +102,10 @@
 }
 .address__jp {
   display: inline-block;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
   @include mq("md") {
     margin-left: 1rem;
+    margin-top: 0;
     letter-spacing: normal;
   }
   @include mq("lxg") {
@@ -110,11 +114,20 @@
     margin-left: 0.75rem;
   }
 }
+.address__jp.address__jp2 {
+  margin-top: -0.25rem;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
 .hours__jp {
+  font-size: 0.75rem;
   display: inline-block;
-  padding-top: 1.25rem;
+  padding-top: 0.875rem;
+  letter-spacing: 0.01em;
   @include mq("md") {
     margin-left: 1rem;
+    font-size: 1rem;
     letter-spacing: normal;
   }
   @include mq("lxg") {
@@ -122,12 +135,18 @@
     margin-left: 1rem;
   }
 }
-.holiday__week {
+.footer__holiday {
+  padding-top: 0.875rem;
+  @include mq("md") {
+    padding-top: 0;
+  }
+}
+.holiday__week.holiday__week-day {
   margin-left: 1rem;
 }
 .footer__tablecontents {
   margin-top: 1.5625rem;
-  padding: 2.5625rem 0;
+  padding: 0.5625rem 0;
   @include mq("md") {
     padding: 0;
   }
@@ -139,14 +158,9 @@
 .footer__nav-item.footer__contact {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.footer__contact-contact img {
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 0.5rem;
-}
 .footer__contact-text {
   display: block;
   font-family: $base-font;
@@ -166,23 +180,44 @@
 .footer__nav-item a {
   display: flex;
   font-family: $base-font;
+  line-height: 1.5;
   align-items: center;
   text-decoration: none;
   color: $black;
   font-weight: $bold;
 }
-.footer__nav-item.item {
-  padding-top: 2rem;
+.footer__nav-item {
+  display: block;
   @include mq("md") {
-    margin-left: 1.5rem;
-    padding-top: 0;
+    dinplay: inline-block;
   }
-  @include mq("lxg") {
-    margin-left: 1rem;
+}
+.footer__contact-contact img {
+  display: inline-block;
+  width: 1.25rem;
+  margin: 0 0.45rem;
+  height: 1.25rem;
+  @include mq("md") {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem 0 0;
+  }
+}
+.footer__contact-item.footer__contact-contact {
+  display: flex;
+  align-items: center;
+  min-width: 164px;
+  margin: 0 auto;
+  width: 100%;
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: 1.5rem;
   }
 }
 .footer__nav-item.item2 {
+  margin-top: 1.5rem;
   @include mq("md") {
+    margin-top: 0;
     margin-left: 1.5rem;
   }
 }
@@ -199,24 +234,27 @@
 }
 .footer__nav--second,
 .footer__nav--third {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  @include mq("md") {
+    padding-top: 2rem;
+  }
 }
 .footer__copyright {
   font-family: $base-font;
   font-weight: $normal;
   font-size: 0.875rem;
   text-align: center;
+  margin-top: 2.5rem;
+  padding: 0 0.5rem 0 0;
   @include mq("md") {
-    padding-top: 0.5rem;
+    padding: 0.5rem 3.5rem 1.625rem 0;
     text-align: right;
-    padding-right: 3.5rem;
-    padding-bottom: 1.625rem;
+    margin-top: 0;
   }
   @include mq("lxg") {
+    padding: 0 2.675rem 1.625rem 0;
     margin-top: -0.125rem;
     font-size: 0.875rem;
-    padding-top: 0;
-    padding-right: 2.675rem;
     letter-spacing: normal;
   }
 }
@@ -225,9 +263,10 @@
     display: inline-block;
   }
 }
-.copyright__text {
+.copyright__text2 {
+  font-size: 0.75rem;
   @include mq("md") {
     display: inline-block;
-    // transform: scaleX(0.9);
+    font-size: 0.875rem;
   }
 }

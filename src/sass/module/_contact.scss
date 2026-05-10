@@ -48,9 +48,8 @@
 .contact__titles {
   width: 100%;
   height: auto;
-  @include mq("sp") {
-    padding: 1.6875rem 0 0;
-  }
+  padding: 1.5rem 0 0;
+
   @include mq("md") {
     top: 4.5rem;
     padding: 4rem 0 0 2.5rem;
@@ -80,19 +79,20 @@
   font-family: $eng-font;
   color: transparent;
   -webkit-text-stroke: 1px $blue;
-  letter-spacing: 0.01em;
+  letter-spacing: normal;
   // ぽてっと感を足す（補助）
+  text-shadow: 0 0 1px rgba($blue, 0); // 👈 弱め！！
   text-shadow: none;
-  line-height: 1.1;
+  line-height: 1.05;
+  font-weight: 700;
   font-size: 4.5rem;
+  padding: 0.5rem 0 0 0;
   @include mq("lg") {
     -webkit-text-stroke: 1.5px $blue;
     max-width: 553px;
-    text-shadow: 0 0 1px rgba($blue, 0); // 👈 弱め！！
     line-height: 1.235;
     font-size: 8rem;
     padding: 0 0.45rem 0 0.25rem;
-    font-weight: 700;
     letter-spacing: normal;
   }
 }
@@ -110,7 +110,7 @@
 .contact__info {
   display: flex;
   flex-direction: column;
-  padding-top: 1.4375rem;
+  padding-top: 1.295rem;
   @include mq("sp") {
     padding-left: 0;
     max-width: var(--container);
@@ -218,11 +218,12 @@
   font-family: $eng-font;
   line-height: 1;
   font-size: 2rem;
-  letter-spacing: 0.02em;
+  transform: scaleX(0.95);
   @include mq("lxg") {
     display: block;
     padding: 0.5rem 0.25rem 0 0;
     letter-spacing: normal;
+    transform: scaleX(1);
   }
 }
 .contact__head-box {
@@ -237,7 +238,7 @@
   }
 }
 .contact__text {
-  margin-left: 1rem;
+  margin-left: 0.75rem;
   font-size: 0.75rem;
   font-family: $base-font;
   font-weight: $bold;
@@ -252,14 +253,14 @@
   font-family: $base-font;
   font-weight: $bold;
   margin-top: 0.5rem;
-  letter-spacing: 0.01em;
+  letter-spacing: normal;
   @include mq("md") {
     padding-top: 0.25rem;
     margin-top: 0;
   }
 }
 .contact__access {
-  padding-top: 0.75rem;
+  padding: 0.55rem 0 0 0;
   @include mq("md") {
     margin-top: 1rem;
   }
@@ -280,7 +281,7 @@
   border-radius: 0.625rem;
   min-width: 284px;
   width: fit-content;
-  padding: 1.25rem 1.5625rem 1.25rem 2.5rem;
+  padding: 1.125rem 0.25rem 1.125rem 2.45rem;
   transition: background-color 0.5s ease;
   @include mq("md") {
     padding: 1.25rem 0.5rem 1.25rem 0.5rem;
@@ -315,11 +316,10 @@
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
-  padding-top: 0.25rem;
+  padding-top: 0;
   margin-right: 0.5rem;
   transition: filter 0.3s ease;
   @include mq("md") {
-    padding-top: 0;
     margin-right: 0.25rem;
     margin-left: 1.5rem;
   }
@@ -333,21 +333,22 @@
 
 .contact__elipse {
   position: relative;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
   width: fit-content;
-  padding: 0.25rem 0 0 0;
-  margin-left: 0;
+  margin-left: 0.65rem;
+  // margin-left: 0;
   transition: all 0.3s ease;
-}
-.contact__form-button .contact__elipse {
-  @include mq("lxg") {
-    margin-left: 0.65rem;
-    font-size: 0.75em;
+  @include mq("md") {
+    padding: 0.25rem 0 0 0;
+    @include mq("lxg") {
+      font-size: 0.75em;
+    }
   }
 }
+
 .contact__form-button:hover .contact__elipse {
   color: $white;
 }

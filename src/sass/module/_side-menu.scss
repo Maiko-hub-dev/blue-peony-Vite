@@ -1,302 +1,347 @@
 @use "../global/" as *;
 
-
 .side-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4.25rem;
-    transform: translateX(-100%);
-    background-color: $white;
-    z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4.25rem;
+  transform: translateX(-100%);
+  background-color: $white;
+  z-index: 9;
+  width: 100%;
+  @include mq("lxg") {
+    max-width: 30%;
+    width: min(20%, 11rem);
+    transform: translateX(0);
+    height: 100vh;
+    transition:
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+}
+.body.is-drawer-open .side-menu {
+  padding: 0 0 0 0.5rem;
+  z-index: 2000;
+  @include mq("md") {
+    max-width: 100%;
     width: 100%;
-    @include mq("lxg"){
-        max-width: 30%;
-        width: min(20%,11rem);
-        transform: translateX(0);
-        height: 100vh;
-        transition: visibility 0.3s ease, transform 0.3s ease;
-    }
+  }
 }
-.body.is-drawer-open .side-menu{
-    padding: 0 0 0 0.5rem;
-    z-index: 2000;
-    @include mq("md"){
-        max-width: 100%;
-        width: 100%;
-    }
+.side-menu__list {
+  width: 100%;
+  @include mq("md") {
+    min-width: 12.5rem;
+  }
 }
-.side-menu__list{
-    width: 100%;
-    @include mq("md"){
-        min-width: 12.5rem;
-    }
+.pade-top__list.side-menu__list {
+  padding-top: 2.5rem;
 }
-.pade-top__list.side-menu__list{
-    padding-top: 2.5rem;
-}
-.side-menu__list:first-child.about__menu-nav{
-    padding-top: 0.5rem;
+.side-menu__list:first-child.about__menu-nav {
+  padding-top: 0.5rem;
 }
 
 .side-menu__logo {
-    display: none;
-    align-items: center;
-    height: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
-    @include mq("md"){
-        flex-direction: column;
-        padding: 2.75rem 0 2rem 2.75rem;
-        height: auto;
-        width: 14rem;
-    }
-    @include mq("lxg"){
-        display: block;
-    }
+  display: none;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  @include mq("md") {
+    flex-direction: column;
+    padding: 2.75rem 0 2rem 2.75rem;
+    height: auto;
+    width: 14rem;
+  }
+  @include mq("lxg") {
+    display: block;
+  }
 }
 
-.side-menu__item{
-    font-family: $base-font;
-    font-size: 1rem;
-    font-weight: $bold;
-    @include mq("md"){
-        font-size: 0.875rem;
-    }
+.side-menu__item {
+  font-family: $base-font;
+  font-size: 1rem;
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: 0.875rem;
+  }
 }
-.side-menu__item.menu__nav--topix{
-    padding: 1rem 0;
-    @include mq("md"){
-        padding: 0;
-    }
+.side-menu__item.menu__nav--topix {
+  padding: 1rem 0;
+  @include mq("md") {
+    padding: 0;
+  }
 }
 
 .side-menu__logo img {
-    display: block;
-    width: 3rem;
-    @include mq("md"){
-        width: inherit;
-        margin-top: rem(38);
-        object-fit: cover;
-        padding-left: 0.5rem;
-        transform: scale(1.2);
-    }
+  display: block;
+  width: 3rem;
+  @include mq("md") {
+    width: inherit;
+    margin-top: rem(38);
+    object-fit: cover;
+    padding-left: 0.5rem;
+    transform: scale(1.2);
+  }
+  @include mq("lxg") {
+    padding-left: 0.75rem;
+  }
 }
-.side-menu__logo.about__side-logo img{
-    @include mq("md"){
-        padding-left: 0.65rem;
-    }
+.side-menu__logo.about__side-logo img {
+  @include mq("md") {
+    padding-left: 0.65rem;
+  }
 }
-.menu__nav .side-menu__link{
+.menu__nav .side-menu__link {
+  text-decoration: none;
+  color: $black;
+  width: 100%;
+  font-weight: $bold;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
-    color: $black;
-    width: 100%;
+    padding: 1.55rem 0 1.65rem 0;
     font-weight: $bold;
-    @include mq("md"){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        padding: 1.55rem 0;
-        font-weight: $bold;
-    }
+  }
+  @include mq("lxg") {
+    padding: 1.685rem 0 1.75rem 0;
+  }
 }
-.menu__nav .side-menu__link2{
+.menu__nav .side-menu__link2 {
+  text-decoration: none;
+  color: $black;
+  width: 100%;
+  font-weight: $bold;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
-    color: $black;
-    width: 100%;
+    padding: 1.5rem 0 1.65rem;
     font-weight: $bold;
-    @include mq("md"){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        padding: 1.5rem 0 1.65rem;
-        font-weight: $bold;
-    }
+  }
 }
-.menu__nav .side-menu__link3{
+.menu__nav .side-menu__link3 {
+  text-decoration: none;
+  color: $black;
+  width: 100%;
+  font-weight: $bold;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
-    color: $black;
-    width: 100%;
+    padding: 1.685rem 0;
     font-weight: $bold;
-    @include mq("md"){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        padding: 1.685rem 0;
-        font-weight: $bold;
-    }
+  }
 }
-.menu__nav .side-menu__link4{
+.menu__nav .side-menu__link4 {
+  text-decoration: none;
+  color: $black;
+  width: 100%;
+  font-weight: $bold;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
-    color: $black;
-    width: 100%;
+    padding: 1.685rem 0 1.685rem 0.5rem;
     font-weight: $bold;
-    @include mq("md"){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        padding: 1.685rem 0 1.685rem 0.5rem;
-        font-weight: $bold;
-    }
+  }
 }
 .menu__nav.side-menu__list .side-menu__link2,
 .menu__nav.side-menu__list .side-menu__link3,
 .menu__nav.side-menu__list .side-menu__link4 {
-    @include mq("md"){
-        font-size: 1.25rem;
-    }
-    @include mq("lxg"){
-        line-height: 1.5;
-    }
+  @include mq("md") {
+    font-size: 1.25rem;
+  }
+  @include mq("lxg") {
+    line-height: 1.5;
+  }
 }
- .menu__nav.accordion--open{
-    @include mq("md"){
-        box-sizing: content-box;
-        border-bottom: 1px solid $blue-line;
-    }
+.menu__nav.accordion--open {
+  @include mq("md") {
+    box-sizing: content-box;
+    border-bottom: 1px solid $blue-line;
+  }
 }
-.side-menu__nav{
-    padding: 2.5rem 0;
-    @include mq("md"){
-        padding: 2.35rem  2.5rem 0;
-    }
+.side-menu__nav {
+  padding: 2.5rem 0;
+  @include mq("md") {
+    padding: 2.35rem 2.5rem 0;
+  }
 }
-.side-menu__nav.about__side-menu{
-    @include mq("md"){
-        padding: 0 2.5rem;
-    }
+.side-menu__nav.about__side-menu {
+  @include mq("md") {
+    padding: 0 2.5rem 0 2.4875rem;
+  }
 }
-.menu__nav--topix{
-    text-align: center;
-    @include mq("md"){
-        text-align: left;
-        border-bottom: 1px solid $blue-line;
-    }
+.menu__nav--topix {
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+    border-bottom: 1px solid $blue-line;
+  }
 }
-.menu__nav--topix.side-menu__item{
-    text-decoration: none;
-    color: $black;
-    display: flex;
-    justify-content: space-between;
-    @include mq("md"){
+.menu__nav--topix.side-menu__item {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
     padding: 0.5rem 0 0.245em;
-    }
-    @include mq("lxg"){
-        padding: 0.5rem 0 0;
-    }
+  }
+  @include mq("lxg") {
+    padding: 0.25rem 0 0;
+  }
 }
-.menu__nav--topix2.side-menu__item{
-    text-decoration: none;
-    color: $black;
-    display: flex;
-    justify-content: space-between;
-    @include mq("md"){
+.side-menu__item2.menu__nav--topix--contact {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq("lxg") {
+    padding: 0;
+  }
+}
+.menu__nav--topix2.side-menu__item {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
     padding: 0.5rem 0 0.245em;
-     border-bottom: 1px solid $blue-line;
-    }
-    @include mq("lxg"){
-        padding: 0.125rem 0 0 0;
-    }
+    border-bottom: 1px solid $blue-line;
+  }
+  @include mq("lxg") {
+    padding: 0.125rem 0 0 0;
+  }
 }
-.menu__nav.menu__nav--topix.side-menu__contact{
-        text-decoration: none;
-        color: $black;
-    justify-content: center;
-    @include mq("md"){
-        justify-content: space-between;
-    }
+.menu__nav--topix3.side-menu__item {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
+    padding: 0.5rem 0 0.245em;
+    border-bottom: 1px solid $blue-line;
+  }
+  @include mq("lxg") {
+    padding: 0rem 0 0 0;
+  }
 }
-.side-menu__sublink{
-    font-family: $base-font;
-    letter-spacing: 0.04em;
-    @include mq("md"){
-        font-size: 0.875rem;
-        font-weight: $bold;
-    }
-    @include mq("lxg"){
-        letter-spacing: normal;
-    }
+.side-menu__item2.side-menu__contact {
+  display: flex;
+  text-decoration: none;
+  color: $black;
+  justify-content: center;
+  align-items: center;
+  @include mq("md") {
+    justify-content: space-between;
+    margin-top: 0.125rem;
+  }
 }
-.side-menu__subitem{
-    @include mq("md"){
-        padding: 0.75rem 0;
-    }
+.side-menu__sublink {
+  font-family: $base-font;
+  letter-spacing: 0.04em;
+  @include mq("md") {
+    font-size: 0.875rem;
+    font-weight: $bold;
+  }
+  @include mq("lxg") {
+    letter-spacing: normal;
+  }
 }
-.menu__nav.side-menu__subitem.service__subitem{
-    @include mq("md"){
-        padding: 0.5rem 0 0.35em;
-    }
+.side-menu__subitem {
+  @include mq("md") {
+    padding: 0.75rem 0;
+  }
 }
-.menu__nav.side-menu__subitem.service__subitem2{
-    @include mq("md"){
-        padding: 0.45em 0 0.35em;
-    }
+.menu__nav.side-menu__subitem.service__subitem {
+  @include mq("md") {
+    padding: 0.5rem 0 0.35em;
+  }
 }
-.menu__nav.side-menu__subitem.service__subitem3{
-    @include mq("md"){
-        padding: 0.25em 0 0.35em;
-    }
+.menu__nav.side-menu__subitem.service__subitem2 {
+  @include mq("md") {
+    padding: 0.45em 0 0.35em;
+  }
 }
-.menu__nav--info{
-    display: block;
-    width: 1.5rem;
-    height: 1.5rem;
+.menu__nav.side-menu__subitem.service__subitem3 {
+  @include mq("md") {
+    padding: 0.25em 0 0.35em;
+  }
+}
+.menu__nav--info {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  @include mq("md") {
     margin-right: 0.5rem;
-    @include mq("md"){
-        margin-top: 0.25rem;
-        margin-right: 0.5rem;
-    }
+  }
 }
-.side-menu__link{
-    letter-spacing: 0.04em;
-    @include mq("md"){
-        font-size: 1.25rem;
-        font-weight: $bold;
-        letter-spacing: normal;
-    }
+.side-menu__link {
+  letter-spacing: 0.04em;
+  @include mq("md") {
+    font-size: 1.25rem;
+    font-weight: $bold;
+    letter-spacing: normal;
+  }
 }
 
-.side-menu__sublist a{
-    text-decoration: none;
-    color: $black;
+.side-menu__sublist a {
+  text-decoration: none;
+  color: $black;
 }
-.side-menu__contact.side-menu__item{
-    display: flex;
-    align-items: center;
+.side-menu__contact.side-menu__item {
+  display: flex;
+  align-items: center;
+  max-width: 10rem;
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: none;
+    margin: 0;
+  }
 }
 
-
-.menu__nav.side-menu__subitem{
-    padding: 1rem 0;
-    @include mq("md"){
-        padding: 0.5rem 0;
-    }
+.menu__nav.side-menu__subitem {
+  padding: 0.75rem 0;
+  @include mq("md") {
+    padding: 0.75rem 0;
+  }
+}
+.menu__nav.side-menu__subitem2 {
+  padding: 0.5rem 0;
+  @include mq("md") {
+    padding: 0 0;
+  }
 }
 .side-menu__item.side-menu__info,
-.side-menu__item.menu__nav--contact{
-    padding: 1rem 0;
-    @include mq("md"){
-        padding: 0;
-    }
+.side-menu__item.menu__nav--contact {
+  padding: 1rem 0;
+  @include mq("md") {
+    padding: 0;
+  }
 }
-.side-menu__item.menu__nav--contact{
-    justify-content: center;
-    @include mq("md"){
-        justify-content: space-between;
-    }
+.side-menu__item.menu__nav--contact {
+  justify-content: center;
+  @include mq("md") {
+    justify-content: space-between;
+  }
 }
-.side-menu__link.side-menu__link--contact{
-    width: fit-content;
-    padding: 0 0 0 0.5rem;
-    @include mq("md"){
-        width: 100%;
-        padding: 1.25rem 0;;
-    }
-    @include mq("lxg"){
-        padding: 1.5rem 0;
-    }
+.side-menu__link.side-menu__link--contact {
+  display: block;
+  width: fit-content;
+  padding: 0 0 0 0.5rem;
+  @include mq("md") {
+    width: 100%;
+    padding: 1.25rem 0;
+  }
+  @include mq("lxg") {
+    padding: 1.5rem 0;
+    margin-left: 0.5rem;
+  }
 }

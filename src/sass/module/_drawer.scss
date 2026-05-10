@@ -4,7 +4,7 @@
 .sp-nav,
 .side-menu {
   position: fixed;
-  z-index: 10000; /* まず大きく */
+  z-index: 9990; /* まず大きく */
 }
 
 /* もし閉じボタンやハンバーガーが別レイヤーなら */

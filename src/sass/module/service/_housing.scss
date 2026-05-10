@@ -28,7 +28,7 @@
   width: inherit;
   height: 100%;
   max-width: var(--container);
-  padding: 0 0.625rem 2.5rem;
+  padding: 0 0.625rem 2rem;
   @include mq("md") {
     padding: 2rem 1rem 0 0;
   }
@@ -139,7 +139,7 @@
 .service__content--information {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem 0.75rem 0;
+  padding: 1.25rem 0 0;
   @include mq("md") {
     flex-direction: row;
     justify-content: flex-start;
@@ -166,9 +166,12 @@
 }
 .service__content--detail {
   font-size: 1rem;
-  line-height: 1.8;
   width: fit-content;
+  margin-top: 1.5rem;
+  line-height: 1.75;
   @include mq("md") {
+    line-height: 1.8;
+    margin-top: 0;
     width: max(45%, 474px);
     padding-left: 3.35rem;
     span {
@@ -183,7 +186,7 @@
   }
 }
 .service__workon.workon {
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   margin-top: 2rem;
   @include mq("md") {
     padding: 0 2.125rem;
@@ -208,7 +211,9 @@
   }
 }
 .card__workon.workon__card2 {
+  margin-top: 2rem;
   @include mq("md") {
+    margin-top: 0;
     margin-left: 1.875rem;
   }
   @include mq("lxg") {
@@ -216,8 +221,10 @@
   }
 }
 .card__workon.workon__card3 {
+  margin-top: 2rem;
   @include mq("md") {
     margin-left: 1.875rem;
+    margin-top: 0;
   }
   @include mq("lxg") {
     margin-left: 3.5rem;

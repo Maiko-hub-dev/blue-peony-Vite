@@ -1,108 +1,114 @@
 @use "../global/" as *;
 
-.header{
-    width: 100%;
-    height: 4.3125rem;
-    position: fixed;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-    padding: 0 0 0.5rem 0;
-    @include mq("md"){
-        background-color: initial;
-    }
-    @include mq("lxg"){
-        height: 0;
-    }
+.header {
+  width: 100%;
+  height: 4.3125rem;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+  padding: 0 0 0.5rem 0;
+  @include mq("md") {
+    background-color: initial;
+  }
+  @include mq("lxg") {
+    height: 0;
+  }
 }
-.header.js-header{
-    padding: 0 0 0.5rem 0;
+.header.js-header {
+  padding: 0 0 0.5rem 0;
 }
 .header.is-scrolled {
-    background-color: $blue;
-    padding: 0.325rem 0 0.325rem 0;
-    margin-bottom: 0.3125rem;
-    @include mq("lxg"){
-        padding: 0;
-    }
-}
-.header__ao {
-    display: block;
-    height: 3.6875rem;
-    padding: 0.625rem 0 0.625rem 0;
-    border-radius: 0.25rem;
-    @include mq("md"){
-        padding: 0;
-    }
-    @include mq("lxg"){
-    }
+  background-color: $blue;
+  padding: 0.325rem 0 0.325rem 0;
+  margin-bottom: 0.3125rem;
+  @include mq("lxg") {
+    padding: 0;
+  }
 }
 .header.is-scrolled .header__ao {
-    background-color: rgba($color: $white, $alpha: 0.6);
-    padding: 0.3125rem 0;
+  margin-left: 0.5rem;
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+.header__ao {
+  display: block;
+  height: 3.6875rem;
+  padding: 0.625rem 0 0.625rem 0;
+  border-radius: 0.25rem;
+  @include mq("md") {
+    padding: 0;
+  }
+  @include mq("lxg") {
+  }
+}
+.header.is-scrolled .header__ao {
+  background-color: rgba($color: $white, $alpha: 0.6);
+  padding: 0.3125rem 0;
 }
 .header__ao--sp {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 1rem;
-    @include mq("lxg"){
-        display: none;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  @include mq("lxg") {
+    display: none;
+  }
 }
-.header__ao-sp-logo{
-    padding: 0.625rem 0;
-    @include mq("md"){
-        padding: 0;
-    }
+.header__ao-sp-logo {
+  padding: 0.625rem 0;
+  @include mq("md") {
+    padding: 0;
+  }
 }
 .header__nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: inherit;
-    
-    @include mq("md"){
-        margin:  0 auto;
-        padding: 0 ;
-    }
-    @include mq("lxg"){
-            display: none;
-            transform: scale(1);
-            padding: 0 3% 0 1em;
-            max-width: 100%;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: inherit;
+
+  @include mq("md") {
+    margin: 0 auto;
+    padding: 0;
+  }
+  @include mq("lxg") {
+    display: none;
+    transform: scale(1);
+    padding: 0 3% 0 1em;
+    max-width: 100%;
+  }
 }
-.header__btns{
-    position: fixed;
-    display: flex;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: $blue;
-    width: 3.5rem;
-    height: 3rem;
-    padding: 0.625rem 0.345rem;
-    z-index: 3000;
-    @include mq("md"){
-        background-color: transparent;
-        margin-left: 0;
-        padding: 0rem;
-        width: auto;
-    }
-    @include mq("lxg"){
-        display: none;
-        height: 0;
-        width: 0;
-        justify-content: end;
-    }
+.header__btns {
+  position: fixed;
+  display: flex;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  width: 3.5rem;
+  height: 3rem;
+  padding: 0.625rem 0.345rem;
+  z-index: 9999;
+  @include mq("md") {
+    background-color: transparent;
+    margin-left: 0;
+    padding: 0rem;
+    width: auto;
+  }
+  @include mq("lxg") {
+    display: none;
+    height: 0;
+    width: 0;
+    justify-content: end;
+  }
 }
 body.is-drawer-open .header__ao,
 body.is-drawer-open .header__nav {
@@ -111,45 +117,42 @@ body.is-drawer-open .header__nav {
   pointer-events: none;
 }
 
-.hero__link{
-    display: block;
-    height: inherit;
-    padding:0.625rem 0;
-    @include mq("md"){
-        padding: 0;
+.hero__link {
+  display: block;
+  height: inherit;
+  padding: 0.625rem 0;
+  @include mq("md") {
+    padding: 0;
     max-width: 14.1875rem;
     margin-left: 1.25rem;
     margin-top: 1rem;
-    }
-    @include mq("lg"){
-        width: 15.875rem;
-    }
+  }
+  @include mq("lg") {
+    width: 15.875rem;
+  }
 }
 .header__logo {
-    display: block;
-    width: 6.125rem;
-    height: 3.6875rem;
-    @include mq("lxg"){
-        display: none;
-    }
+  display: block;
+  width: 6.125rem;
+  height: 3.6875rem;
+  @include mq("lxg") {
+    display: none;
+  }
 }
 
 .header__menu-button {
-    position: sticky;
-    display: block;
-    width: 4rem;
-    height: inherit;
-    padding:  0.5rem;
-    cursor: pointer;
-    right: 0;
-    @include mq("sp"){
-        height: 0;
-        width: 0;
-    }
-    @include mq("lxg"){
-        display: none;
-    }
+  position: sticky;
+  display: block;
+  width: 4rem;
+  height: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+  right: 0;
+  @include mq("sp") {
+    height: 0;
+    width: 0;
+  }
+  @include mq("lxg") {
+    display: none;
+  }
 }
-
-
-

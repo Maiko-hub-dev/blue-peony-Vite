@@ -31,7 +31,7 @@
   width: inherit;
   height: 100%;
   max-width: var(--container);
-  padding: 0 0.625rem 2.5rem;
+  padding: 0 0.625rem 2rem;
   @include mq("md") {
     padding: 2rem 1rem 0 0;
   }
@@ -103,7 +103,7 @@
   }
 }
 .corporate__content {
-  padding: 0 0.75rem;
+  padding: 2.5rem 0.75rem 0;
   @include mq("md") {
     padding: 0 2rem 0 1rem;
   }
@@ -173,7 +173,9 @@
   font-size: 1rem;
   line-height: 1.8;
   width: fit-content;
+  margin-top: 1.5rem;
   @include mq("md") {
+    margin-top: 0;
     letter-spacing: 0.02em;
     width: max(47%, 446px);
     padding-left: 2.5rem;
@@ -188,7 +190,7 @@
   }
 }
 .corporate__workon.workon {
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   margin-top: 2rem;
   @include mq("md") {
     display: flex;

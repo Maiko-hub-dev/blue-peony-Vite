@@ -1,55 +1,82 @@
 @use "../global/" as *;
 
-
 .main-visual {
-    position: relative;
-    width: 100%;
-    padding: 0rem 0 0 0.625rem;
-    @include mq("md"){
-        padding-left: 10.5rem;
-    }
-    @include mq("lxg"){
-        padding-left: 17.5rem;
-    }
+  position: relative;
+  width: 100%;
+  padding: 0rem 0 0 0.625rem;
+  @include mq("md") {
+    padding-left: 10.5rem;
+  }
+  @include mq("lxg") {
+    padding-left: 17.5rem;
+  }
 }
-@supports(-webkit-touch-callout: none){
-/* iPhoneの表示のみ指定を上書き */
-.main-visual{
-  height: -webkit-fill-available;
+@supports (-webkit-touch-callout: none) {
+  /* iPhoneの表示のみ指定を上書き */
+  .main-visual {
+    height: -webkit-fill-available;
   }
 }
 .main-visual.main-top {
-    width: 100%;
-    height: 70vh;
-    padding: 0rem 0 0 0.5rem;
-    @include mq("md"){
-        padding-left: 10.5rem;
-    }
-    @include mq("lxg"){
-        padding-left: 17.5rem;
-        height: 100vh;
-    }
-    // height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  height: 70vh;
+  padding: 0rem 0 0 0.5rem;
+  @include mq("md") {
+    padding-left: 10.5rem;
+  }
+  @include mq("lxg") {
+    padding-left: 17.5rem;
+    height: 100vh;
+  }
+  // height: calc(var(--vh, 1vh) * 100);
 }
-.contact-visual.main-visual{
-    height: auto;
+.contact-visual.main-visual {
+  height: auto;
 }
-.main-visual__inner{
-    padding: 2.5rem 0;
-    width: 100%;
-    height: inherit;
-    position: relative;
-    z-index: 2;
-    margin-top: 3rem;
-    border-radius: 10px 0 0 10px;
-    @include mq("md"){
-        padding: 0 0 0 2.5rem;
-        margin-top: 0;
-    }
+.main-visual__inner {
+  padding: 2.5rem 0;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  z-index: 2;
+  margin-top: 3rem;
+  border-radius: 10px 0 0 10px;
+  @include mq("md") {
+    padding: 0 0 0 2.5rem;
+    margin-top: 0;
+  }
+}
+.main-visual.main-top .main-visual__members {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  &.is-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* =========================
+main-visual__titles
+========================= */
+
+.main-visual.main-top .main-visual__titles {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  &.is-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .main-visual__rightbox {
-    @include mq("md"){
+  @include mq("md") {
     position: absolute;
     top: 0;
     right: 0;
@@ -59,98 +86,167 @@
     height: 50%;
     max-width: 45.4375rem;
     max-height: 45.4375rem;
-    }
+  }
 }
+.main-visual.main-top .main-visual__rightbox {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  &.is-active {
+    opacity: 1;
+  }
+}
+.main-visual.main-top {
+  .members .members__dream {
+    width: 6.875rem;
+    height: 9.1875rem;
+    @include mq("sp") {
+      width: 7.5rem;
+      height: 10.5rem;
+    }
+    @include mq("md") {
+      width: 28.03571429%;
+      height: 47.65177549%;
+    }
+  }
 
+  .members .members__screen {
+    transform: translate(0.5);
+    width: 5.125rem;
+    height: 5.875rem;
+    @include mq("sp") {
+      width: 7.5rem;
+      height: 8.5995rem;
+    }
+    @include mq("md") {
+      width: 18.39285714%;
+      height: 26.88%;
+    }
+  }
+
+  .members .members__homeloan {
+    @include mq("md") {
+      top: 0;
+      left: 50%;
+      transform: scale(0.8);
+      transform: translateX(-50%);
+      transform: translateY(-100%);
+      transition-duration: transform 1s ease-in-out;
+    }
+  }
+  .members .members__homeloan.open {
+    @include mq("sp") {
+      background-size: contain;
+    }
+    @include mq("md") {
+      margin-top: 4.0625rem;
+      left: 4.4375rem;
+    }
+  }
+  .members .members__screen.open {
+    @include mq("md") {
+      transform: scale(1);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .members .members__dream.open {
+    @include mq("md") {
+      bottom: 3.1875rem;
+      left: 5.4375rem;
+    }
+  }
+}
 .main-visual__container {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    @include mq("sp"){
-        padding: 0.75rem 0.75rem 0.75rem 0.125rem;
-    }
-    @include mq("md"){
-        padding: 3.5rem 2.5em 2.5em 0;
-        height: 100vh;
-        z-index: 1;
-    }
-    @include mq("lxg"){
-        padding: 2.5em 2.5em 2.5em 0;
-    }
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  @include mq("sp") {
+    padding: 0.75rem 0.75rem 0.75rem 0.125rem;
+  }
+  @include mq("md") {
+    padding: 3.5rem 2.5em 2.5em 0;
+    height: 100vh;
+    z-index: 1;
+  }
+  @include mq("lxg") {
+    padding: 2.5em 2.5em 2.5em 0;
+  }
 }
-.main-visual__members.members{
-        background-color: $content;
-        position: relative;
-        height: 63dvh;
-        border-radius: 0.625rem;
-    @include mq("md"){
-        border-radius: 50px;
-        margin-top: 1.25rem;
-        width: 100%;
-        height: 100%;
-    }
-}
-.main-visual__titles{
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    position: static;
+.main-visual__members.members {
+  background-color: $content;
+  position: relative;
+  height: 63dvh;
+  border-radius: 0.625rem;
+  @include mq("md") {
+    border-radius: 50px;
+    margin-top: 1.25rem;
     width: 100%;
-    display: block;
-    z-index: 2;
-    bottom: auto;
-    @include mq("sp"){
-        width: 100%;
-        bottom: initial;
-        transform: translateY(-25px);
-    }
-    @include mq("md"){
-            justify-content: flex-end; // ← 右寄せ
-        }
+    height: 100%;
+  }
+}
+.main-visual__titles {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  position: static;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  bottom: auto;
+  @include mq("sp") {
+    width: 100%;
+    bottom: initial;
+    transform: translateY(-25px);
+  }
+  @include mq("md") {
+    justify-content: flex-end; // ← 右寄せ
+  }
 }
 .main-visual__titles.is-show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
-.main-visual__title{
-    @include mq("sp"){
-        padding: 0 0.5rem;
-        text-align: left;
-        position: relative;
-        bottom: 9.875rem;
-    }
-    @include mq("md"){
-        width: 100%;
-        max-width: 100%; 
-        bottom: 0;
-    }
+.main-visual__title {
+  @include mq("sp") {
+    padding: 0 0.5rem;
+    text-align: left;
+    position: relative;
+    bottom: 9.875rem;
+  }
+  @include mq("md") {
+    width: 100%;
+    max-width: 100%;
+    bottom: 0;
+  }
 }
 .main-visual__catch {
-    background-color: $white;
-    border-radius: 0.525rem;
-    color: $black;
-    font-size: 1.45rem;
-    font-family: $base-font;
-    // font-weight: $bold;
-    position: absolute;
-    padding: 0.65rem 0.875rem 0.5rem;
-    text-align: left;
-    display: inline-block;
+  background-color: $white;
+  border-radius: 0.525rem;
+  color: $black;
+  font-size: 1.45rem;
+  font-family: $base-font;
+  // font-weight: $bold;
+  position: absolute;
+  padding: 0.65rem 0.875rem 0.5rem;
+  text-align: left;
+  display: inline-block;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  width: auto;
+  white-space: nowrap; // ★ 改行しない
+  // bottom: 6.25rem;
+  @include mq("md") {
     line-height: 1.5;
-    letter-spacing: 0.03em;
-    width: auto;
-    white-space: nowrap;   // ★ 改行しない
-    // bottom: 6.25rem;
-    @include mq("md"){
-        line-height: 1.5;
-        left: auto;
-        padding-left: 1rem;
-        font-size: 4rem;
-        right: 1.1875rem;
-        bottom: 8.0625rem;
-    }
+    left: auto;
+    padding-left: 1rem;
+    font-size: 4rem;
+    right: 1.1875rem;
+    bottom: 8.0625rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 1180px) {
   .main-visual__catch {
@@ -162,243 +258,241 @@
   }
 }
 
-.main-visual__text{
-    position: absolute;
-    right: auto;
-    bottom: 2.75rem;
-    left: 0.5rem;
-    display: block;
-    width: auto;
-    margin-top: 0.5rem;
-    color: $black;
-    font-size: 0.75rem;
+.main-visual__text {
+  position: absolute;
+  right: auto;
+  bottom: 2.75rem;
+  left: 0.5rem;
+  display: block;
+  width: auto;
+  margin-top: 0.5rem;
+  color: $black;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: $bold;
+  padding: 0.5rem 0.25rem 0 0;
+  font-style: normal;
+  @include mq("sp") {
+    z-index: 11;
+  }
+  @include mq("md") {
+    width: 100%;
+    text-align: end;
+    letter-spacing: 0.04em;
+    right: 1.1875rem;
+    bottom: max(0.75rem, 1%);
+    margin-top: 1.1875rem;
     line-height: 1.5;
-    text-align: left;
-    font-weight: $bold;
-    padding: 0.5rem 0.25rem 0 0;
-    font-style: normal;
-    @include mq("sp"){
-        z-index: 11;
-    }
-    @include mq("md"){
-        width: 100%;
-        text-align: end;
-        letter-spacing: 0.04em;
-        right: 1.1875rem;
-        bottom: max(0.75rem, 1%);
-        margin-top: 1.1875rem;
-        line-height: 1.5;
-        font-size: 1rem;
-    }
+    font-size: 1rem;
+  }
 }
-.main-visual__text.top-page--subtitle{
-    @include mq("md"){
-        text-align: end;
-        bottom: max(3.5rem, 3%);
-        margin-top: 0.125rem;
-    }
-    @include mq("lg"){
-        bottom: max(0.125rem, 1%);
-        left: auto;
-        line-height: 1.5;
-    }
+.main-visual__text.top-page--subtitle {
+  @include mq("md") {
+    text-align: end;
+    bottom: max(3.5rem, 3%);
+    margin-top: 0.125rem;
+  }
+  @include mq("lg") {
+    bottom: max(0.125rem, 1%);
+    left: auto;
+    line-height: 1.5;
+  }
 }
-.main-visual__span{
-    display: block;
-    margin-top: 0.2em;
+.main-visual__span {
+  display: block;
+  margin-top: 0.2em;
 }
-.main-visual__subspan{
-    display: block;
-    font-family: $base-font;
-    font-style: normal;      // 念のためイタリック解除
-    margin-top: 0.2em; 
-    margin-bottom: -0.2em;
-    white-space: nowrap;      // 余白は“em”で自然に（ここを微調整）
-    @include mq("md"){
-        margin-top: 0.6em;
-    }
+.main-visual__subspan {
+  display: block;
+  font-family: $base-font;
+  font-style: normal; // 念のためイタリック解除
+  margin-top: 0.2em;
+  margin-bottom: -0.2em;
+  white-space: nowrap; // 余白は“em”で自然に（ここを微調整）
+  @include mq("md") {
+    margin-top: 0.6em;
+  }
 }
 .main-visual__text.is-hidden {
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
-
-.members__img{
-    position: absolute;
-    width: 100%;
-    transition: all 0.8s ease-in-out;
-    @include mq("md"){
-    }
-} 
-.members .members__img.open{
-    @include mq("md"){
-    }
+.members__img {
+  position: absolute;
+  width: 100%;
+  transition: all 0.8s ease-in-out;
+  @include mq("md") {
+  }
 }
-
-.members .members__dream{
-    background: url("/src/images/dream-house_sp.svg");
-    background-size: 6.875rem 9.1875rem;
-    background-repeat: no-repeat;
-    bottom: 5rem;
-    left: -1rem;
-    @include mq("md"){
-        background: url("/src/images/dream-house.svg");
-        background-size: contain;
-         background-repeat: no-repeat;
-    }
+.members .members__img.open {
+  @include mq("md") {
+  }
 }
 
 .members .members__dream {
-    width: 6.875rem;
-    height: 9.1875rem;
-    left: 1.125rem;
-   
-    @include mq("md"){
-  width: 28.03571429%;
-  height: 47.65177549%;
+  background: url("/src/images/dream-house_sp.svg");
+  background-size: 6.875rem 9.1875rem;
+  background-repeat: no-repeat;
+  bottom: 5rem;
+  left: -1rem;
+  @include mq("md") {
+    background: url("/src/images/dream-house.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
+
+.members .members__dream {
+  width: 6.875rem;
+  height: 9.1875rem;
+  left: 1.125rem;
+
+  @include mq("md") {
+    width: 28.03571429%;
+    height: 47.65177549%;
+  }
 }
 
 .members .members__dream.open {
-    bottom: 36.125%;
-    @include mq("md"){
-        bottom: 3.1875rem;
-        left: 5.4375rem;
-    }
+  bottom: 36.125%;
+  @include mq("md") {
+    bottom: 3.1875rem;
+    left: 5.4375rem;
+  }
 }
-.members .members__plan{
-    width: 8.375rem;
-    height: rem(131);
-    @include mq("md"){
-        width: 22.85714%;
-        height: 22.86%;
-    }
+.members .members__plan {
+  width: 8.375rem;
+  height: rem(131);
+  @include mq("md") {
+    width: 22.85714%;
+    height: 22.86%;
+  }
 }
-.members .members__plan{
-    background: url("/src/images/home-loan-application.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    width: 8.375rem;
+.members .members__plan {
+  background: url("/src/images/home-loan-application.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 8.375rem;
 
-    @include mq("md"){
-        top: -1rem;
-        right: -1rem;
-    }
+  @include mq("md") {
+    top: -1rem;
+    right: -1rem;
+  }
 }
 .members .members__plan.open {
-    top: 2.05rem;
-    right: 0;
-    @include mq("md"){
-        top: 4rem;
-        right: 3.4375rem;
-    }
+  top: 2.05rem;
+  right: 0;
+  @include mq("md") {
+    top: 4rem;
+    right: 3.4375rem;
+  }
 }
 //. ここまでCSSで指定
-.members .members__homeloan{
-    width: 6.4375rem;
-    height: 7.7375rem;
-    @include mq("md"){
-        min-width: 17.4%;
-        height: 25.4%;
-    }
+.members .members__homeloan {
+  width: 6.4375rem;
+  height: 7.7375rem;
+  @include mq("md") {
+    min-width: 17.4%;
+    height: 25.4%;
+  }
 }
-.members .members__homeloan{
-    background: url("/src/images/planning.svg");
-    background-repeat: no-repeat;
-    background-size: 6.4375rem 7.7375rem ;
-    background-position: center;
-    top: 0.55rem;
-    left: 0.9875rem;
-    @include mq("md"){
+.members .members__homeloan {
+  background: url("/src/images/planning.svg");
+  background-repeat: no-repeat;
+  background-size: 6.4375rem 7.7375rem;
+  background-position: center;
+  top: 0.55rem;
+  left: 0.9875rem;
+  @include mq("md") {
     top: -1rem;
     left: -1rem;
-    }
+  }
 }
-.members .members__homeloan.open{
-    @include mq("sp"){
-        background-size: contain;
-    }
-    @include mq("md"){
-        margin-top: 4.0625rem;
-        left: 4.4375rem;
-    }
+.members .members__homeloan.open {
+  @include mq("sp") {
+    background-size: contain;
+  }
+  @include mq("md") {
+    margin-top: 4.0625rem;
+    left: 4.4375rem;
+  }
 }
-.members .members__estimate{
-    width: 5.5rem;
-    height: 6.3125rem;
-    @include mq("md"){
-        width: 10.125rem;
-        height: 11.6875rem;
-    }
+.members .members__estimate {
+  width: 5.5rem;
+  height: 6.3125rem;
+  @include mq("md") {
+    width: 10.125rem;
+    height: 11.6875rem;
+  }
 }
-.members .members__estimate{
-    background: url("/src/images/estimate.svg");
-    background-repeat: no-repeat;
-    background-size: 88px 101px;
-    background-position: center;
-    @include mq("md"){
-        background-size: 162px 187px;
-        bottom: -1rem;
-        right: -1rem;
-    }
+.members .members__estimate {
+  background: url("/src/images/estimate.svg");
+  background-repeat: no-repeat;
+  background-size: 88px 101px;
+  background-position: center;
+  @include mq("md") {
+    background-size: 162px 187px;
+    bottom: -1rem;
+    right: -1rem;
+  }
 }
-.members .members__estimate.open{
-    right: 0;
-    bottom: 37%;
-    @include mq("md"){
-        right: 3.5rem;
-        bottom: 18.5rem;
-    }
+.members .members__estimate.open {
+  right: 0;
+  bottom: 37%;
+  @include mq("md") {
+    right: 3.5rem;
+    bottom: 18.5rem;
+  }
 }
 .members .members__screen {
-    width: 5.125rem;
-    height: 5.875rem;
-    
-    @include mq("md"){
-        width: 18.39285714%;
-        height: 26.88%;
-    }
+  width: 5.125rem;
+  height: 5.875rem;
 
+  @include mq("md") {
+    width: 18.39285714%;
+    height: 26.88%;
+  }
 }
 .members .members__img.members__screen {
-    background: url("/src/images/loan-screening.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left center;
-    top: 40%;
-    left: 47%;
-    transform: scale(0.8);
-    transform: translateX(-50%);
+  background: url("/src/images/loan-screening.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  top: 40%;
+  left: 47%;
+  transform: scale(0.8);
+  transform: translateX(-50%);
+  transform: translateY(-100%);
+  transition-duration: transform 0.8s ease-in-out;
+}
+.members .members__screen.open {
+  transform: scale(1);
+  transform: translateX(-30%);
+  @include mq("md") {
+    top: 50%;
     transform: translateY(-100%);
-    transition-duration: transform 0.8s ease-in-out;
+  }
 }
-.members .members__screen.open{
-    transform: scale(1);
-    transform: translateX(-30%);
-    @include mq("md"){
-        top: 50%;
-        transform: translateY(-100%);
-    }
-}
-.main-visual__scroll{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: $blue;
-    font-family: $base-font;
+.main-visual__scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $blue;
+  font-family: $base-font;
 }
 /* スクロールダウンの位置 */
 .scroll {
-        position: absolute;
-        bottom: -5.8125rem;
-        z-index: 10;
-        @include mq("md"){
-            z-index: 100;
-            bottom: 1.1875rem;
-            margin-left: -1rem;
-        }
+  position: absolute;
+  bottom: -5.8125rem;
+  z-index: 10;
+  @include mq("md") {
+    z-index: 100;
+    bottom: 1.1875rem;
+    margin-left: -1rem;
+  }
 }
 /* 線のアニメーション部分 */
 .scroll::before {
@@ -412,7 +506,7 @@
   position: absolute;
   right: 0;
   width: 1px;
-  @include mq("md"){
+  @include mq("md") {
     bottom: -7rem;
     height: 7rem;
   }
@@ -436,8 +530,8 @@
     transform-origin: 0 100%;
   }
 }
-.scroll__text{
-    letter-spacing: 0.04em;
-    margin-left: rem(9);
-    margin-bottom: 0.5rem;
+.scroll__text {
+  letter-spacing: 0.04em;
+  margin-left: rem(9);
+  margin-bottom: 0.5rem;
 }

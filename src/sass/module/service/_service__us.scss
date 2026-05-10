@@ -1,197 +1,197 @@
 @use "../../global/" as *;
 
 .service-visual {
-    width: 100%;
+  width: 100%;
 }
-.service-visual.main-visual{
-    padding: 2.0625rem 0 0 0;
-        height: 100vh;
-    @include mq("md"){
-        height: initial;
+.service-visual.main-visual {
+  padding: 2.0625rem 0 0 0;
+  height: 100vh;
+  @include mq("md") {
+    height: initial;
 
-        padding: 2.5rem 0.5rem 0 2.0625rem;
-        padding-left: 10.5rem;
-        object-fit: cover;
-    }
-    @include mq("lxg"){
-        width: 100%;
-        padding: 0 0.5rem 0 11.5rem;
-    }
-}
-.service-visual__inner{
-    position: relative;
-    padding: 0rem 0.625rem;
-    height: inherit;
-    margin-top: 4.3125rem;
-    border-radius: 0.625rem;
-    overflow: hidden;
-    @include mq("md"){
-        width: 100%;
-        padding: 0;
-        aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
-        margin-top: 0;
-        border-radius: 3.125rem;
-    }
-    @include mq("lg"){
-        border-radius: 3.125rem;
-    }
-    @include mq("xl"){
-        border-radius: 4.125rem;
-}
-}
-.service-visual__image{
+    padding: 2.5rem 0.5rem 0 2.0625rem;
+    padding-left: 10.5rem;
+    object-fit: cover;
+  }
+  @include mq("lxg") {
     width: 100%;
-    height: 100%;
-    padding: 0;   // ← これが超重要（余白があると角が四角く見える）
-    border-radius: 0.625rem;
-    overflow: hidden;      // ← これで“箱の形”に切り抜く
-    @include mq("md"){
-        padding:  3.125rem 0 0 7rem;
-    }
-    @include mq("lxg"){
-        padding: 2.5rem 1rem 1REM 6.125rem;
-    }
+    padding: 0 0.5rem 0 11.5rem;
+  }
+}
+.service-visual__inner {
+  position: relative;
+  padding: 0rem 0.625rem;
+  height: inherit;
+  margin-top: 4.3125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  @include mq("md") {
+    width: 100%;
+    padding: 0;
+    aspect-ratio: 1120 / 661; // SPでも高さを確保（好きな比率でOK）
+    margin-top: 0;
+    border-radius: 3.125rem;
+  }
+  @include mq("lg") {
+    border-radius: 3.125rem;
+  }
+  @include mq("xl") {
+    border-radius: 4.125rem;
+  }
+}
+.service-visual__image {
+  width: 100%;
+  height: 100%;
+  padding: 0; // ← これが超重要（余白があると角が四角く見える）
+  border-radius: 0.625rem;
+  overflow: hidden; // ← これで“箱の形”に切り抜く
+  @include mq("md") {
+    padding: 3.125rem 0 0 7rem;
+  }
+  @include mq("lxg") {
+    padding: 2.5rem 1rem 1rem 6.125rem;
+  }
 }
 
 .service-visual__rightbox {
-    @include mq("md"){
-        width: 50%;
-        height: 77.45%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: $blue;
-        z-index: 0;
-        max-width: 45.4375rem;
-        max-height: 50.4375rem;
-    }
+  @include mq("md") {
+    width: 50%;
+    height: 77.45%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $blue;
+    z-index: 0;
+    max-width: 45.4375rem;
+    max-height: 50.4375rem;
+  }
 }
 
-.service__us{
-    position: relative;
-    padding: 0 ;
-    margin-top: 4.5rem;
-    z-index: 6;
-    @include mq("md"){
-        margin-top: 3.125rem;
-    }
-    @include mq("lg"){
-        margin-top: 0;
-        padding: 0 0 0 4rem;
-    }   
+.service__us {
+  position: relative;
+  padding: 0;
+  margin-top: 4.5rem;
+  z-index: 6;
+  @include mq("md") {
+    margin-top: 3.125rem;
+  }
+  @include mq("lg") {
+    margin-top: 0;
+    padding: 0 0 0 4rem;
+  }
 }
-.service__us--inner{
-        width: inherit;
-        max-width: var(--container);
-        padding: 4.5rem 1.25rem 0;
-        @include mq("md"){
-            padding: 0 0rem 0 7rem;
-            margin-top: 4rem;
-        }
-        @include mq("lg"){
-            margin-top: 0;
-        }
-        @include mq("xl"){
-            padding: 0 0 0 12rem;
-        }
+.service__us--inner {
+  width: inherit;
+  max-width: var(--container);
+  padding: 4.5rem 1.25rem 0;
+  @include mq("md") {
+    padding: 0 0rem 0 7rem;
+    margin-top: 4rem;
+  }
+  @include mq("lg") {
+    margin-top: 0;
+  }
+  @include mq("xl") {
+    padding: 0 0 0 12rem;
+  }
 }
-.service-visual__frame{
+.service-visual__frame {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.service__us--wrapper{
-    position: relative;
-    width: inherit;
-    max-width: var(--container);
-    padding: 0 0 2.5rem;
-    @include mq("md"){
-        padding: 0 0 0 4.5rem ;
-    }
-    @include mq("lg"){
-        padding: 0 0 0 0.8875rem ;
-    }
+.service__us--wrapper {
+  position: relative;
+  width: inherit;
+  max-width: var(--container);
+  padding: 0 0 2.5rem;
+  @include mq("md") {
+    padding: 0 0 0 4.5rem;
+  }
+  @include mq("lg") {
+    padding: 0 0 0 0.8875rem;
+  }
 }
-.service__us--title{
-    font-size: 2rem;
-    font-family: $base-font;
-    font-weight: $bold;
-    padding: 2rem 0 0 0.685rem;
-    @include mq("md"){
-        font-size: 2.5rem;
-        padding: 1.65rem 0 0 0.685rem;
-    }
+.service__us--title {
+  font-size: 2rem;
+  font-family: $base-font;
+  font-weight: $bold;
+  padding: 2rem 0 0 0.685rem;
+  @include mq("md") {
+    font-size: 2.5rem;
+    padding: 1.65rem 0 0 0.685rem;
+  }
 }
-.service__us--text{
-        line-height: 1.825;
-        padding: 2rem 0 0 0.6875rem;
-        @include mq("md"){
-        max-width: 37%;
-        padding: 3.45rem 0 0 0.685rem;
-        line-height: 1.8;
-        }
+.service__us--text {
+  line-height: 1.825;
+  padding: 2rem 0 0 0.6875rem;
+  @include mq("md") {
+    max-width: 37%;
+    padding: 3.45rem 0 0 0.685rem;
+    line-height: 1.8;
+  }
 }
-.service__us--illust.paperless{
-    display: block;
-    object-fit: contain;
+.service__us--illust.paperless {
+  display: block;
+  object-fit: contain;
 }
-.service__us--illust{
-        visibility: visible;
-        position: absolute;
-        width:  4.875rem;
-        height: 7.1175rem;
-        background: url(/src/images/paperless.svg) no-repeat;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        top: 1rem;
-        right: 26px;
-        aspect-ratio: 110 / 161; 
-        opacity: 1;
-        z-index: 2;
-        @include mq("md"){
-            right: 7.5rem; // 例：mdはrem指定
-        }
-        @include mq("lg"){
-            right: 37.75%;
-            top: 2.345rem;
-            width: 165px;
-            height: 203px;
-        }
+.service__us--illust {
+  visibility: visible;
+  position: absolute;
+  width: 4.875rem;
+  height: 7.1175rem;
+  background: url(/src/images/paperless.svg) no-repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: 1rem;
+  right: 26px;
+  aspect-ratio: 110 / 161;
+  opacity: 1;
+  z-index: 2;
+  @include mq("md") {
+    right: 7.5rem; // 例：mdはrem指定
+  }
+  @include mq("lg") {
+    right: 37.75%;
+    top: 2.345rem;
+    width: 165px;
+    height: 203px;
+  }
 }
 
-.service__us--navs{
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
-    justify-content: start;
-    // li間の余白はgapで管理
-    gap: 1rem;
-    padding: 0;
-    margin: 4.6875rem auto 0;
-    @include mq("md"){
-         // PC側で最小幅を208pxにするならここで差し替え
+.service__us--navs {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+  justify-content: start;
+  // li間の余白はgapで管理
+  gap: 1rem;
+  padding: 0;
+  margin: 4.6875rem auto 0;
+  @include mq("md") {
+    // PC側で最小幅を208pxにするならここで差し替え
     grid-template-columns: repeat(auto-fit, minmax(208px, max-content));
     gap: 1.5rem;
     margin: 3.9875rem 0 0 0;
     padding: 0 0 0 0.65rem;
-    }
-    
+  }
 }
-.service__us--nav{
-    display: block;
-    border: 1px solid $blue;
-    border-radius: 0.65rem;
-    //. 最低208px
-    max-width: 208px;
-    text-align: center;
-    margin: 0 auto;
-    min-width: 208px;
-    @include mq("md"){
-        padding: 0;
-        margin: 0;
+.service__us--nav {
+  display: block;
+  border: 1px solid $blue;
+  border-radius: 0.65rem;
+  //. 最低208px
+  max-width: 208px;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 208px;
+  overflow: hidden;
+  @include mq("md") {
+    padding: 0;
+    margin: 0;
+  }
 }
-}
-.service__us--nav-link{
+.service__us--nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,66 +201,68 @@
   text-decoration: none;
   color: inherit;
   text-align: center;
-  @include mq("md"){
-      padding: 0.6875rem 1rem;
+  @include mq("md") {
+    padding: 0.6875rem 1rem;
   }
-  @include mq("lxg"){
-      padding: 0.45rem 1rem 0.75rem;
+  @include mq("lxg") {
+    padding: 0.45rem 1rem 0.75rem;
   }
 }
-
-.service__side-menu.side-menu__nav{
-    @include mq("lxg"){
-        padding: 0 0 0 2.5rem;
-    }
-    }
-.service__side-logo.side-menu__logo{
-    @include mq("md"){
-        width: 13.875rem;
-        padding: 2.875rem 0 0 2.875rem;
-    }
+.service__us--nav-link:hover {
+  background-color: $blue;
+  color: $white;
 }
-.menu__nav.service__menu--link{
-    @include mq("md"){
-        letter-spacing: 0.01rem;
-    }
-    @include mq("lxg"){
-        padding: 1.5rem 0 1.55rem;
-    }
+.service__side-menu.side-menu__nav {
+  @include mq("lxg") {
+    padding: 0 0 0 2.5rem;
+  }
 }
-.service__side-logo.side-menu__logo >.side-menu__icon{
-    padding-left: 0.65rem;
-    @include mq("md"){
-        margin-top: 2.45rem;
-    }
+.service__side-logo.side-menu__logo {
+  @include mq("md") {
+    width: 13.875rem;
+    padding: 2.875rem 0 0 2.875rem;
+  }
 }
-.side-menu__list.service__seide-menu__list{
-    @include mq("lxg"){
-        padding-top: 1.875rem;
-    }
+.menu__nav.service__menu--link {
+  @include mq("md") {
+    letter-spacing: 0.01rem;
+  }
+  @include mq("lxg") {
+    padding: 1.5rem 0 1.55rem;
+  }
 }
-.service-visual__img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: static;
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: center;
-    @include mq("md"){
+.service__side-logo.side-menu__logo > .side-menu__icon {
+  padding-left: 0.65rem;
+  @include mq("md") {
+    margin-top: 2.45rem;
+  }
+}
+.side-menu__list.service__seide-menu__list {
+  @include mq("lxg") {
+    padding-top: 1.875rem;
+  }
+}
+.service-visual__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: static;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center;
+  @include mq("md") {
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
     z-index: 22;
     border-radius: 3.125rem;
-    }
-    @include mq("lg"){
-        aspect-ratio: 1120/ 661;
-        border-radius: 4.125rem;
-    }
-    // @include mq("xl"){
-
+  }
+  @include mq("lg") {
+    aspect-ratio: 1120/ 661;
+    border-radius: 4.125rem;
+  }
+  // @include mq("xl"){
 }
-.service__us-list-down{
+.service__us-list-down {
   display: inline-block;
   vertical-align: middle;
   color: $blue;
@@ -273,7 +275,7 @@
   border-bottom: 0;
   box-sizing: border-box;
   transform: translateY(-25%) rotate(135deg);
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 0.55rem;
     width: 0.5em;
     height: 0.5em;
@@ -282,9 +284,11 @@
     border-bottom: 0;
   }
 }
-
-.side-menu__sublist.accordion__hide{
-    @include mq("md"){
-        padding: 1.125rem 2rem 1.25rem 1.0625rem;
-    }
+.service__us--nav-link:hover .service__us-list-down {
+  color: $white;
+}
+.side-menu__sublist.accordion__hide {
+  @include mq("md") {
+    padding: 1.125rem 2rem 1.25rem 1.0625rem;
+  }
 }
