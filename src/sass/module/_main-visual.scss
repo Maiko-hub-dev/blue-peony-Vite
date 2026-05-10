@@ -45,6 +45,9 @@
     padding: 0 0 0 2.5rem;
     margin-top: 0;
   }
+  @include mq("lxg") {
+    padding: 0;
+  }
 }
 .main-visual.main-top .main-visual__members {
   opacity: 0;
@@ -82,8 +85,8 @@ main-visual__titles
     right: 0;
     background-color: $blue;
     z-index: 1;
-    width: 50%;
-    height: 50%;
+    width: 62.187%;
+    height: 78%;
     max-width: 45.4375rem;
     max-height: 45.4375rem;
   }
@@ -95,67 +98,7 @@ main-visual__titles
     opacity: 1;
   }
 }
-.main-visual.main-top {
-  .members .members__dream {
-    width: 6.875rem;
-    height: 9.1875rem;
-    @include mq("sp") {
-      width: 7.5rem;
-      height: 10.5rem;
-    }
-    @include mq("md") {
-      width: 28.03571429%;
-      height: 47.65177549%;
-    }
-  }
 
-  .members .members__screen {
-    transform: translate(0.5);
-    width: 5.125rem;
-    height: 5.875rem;
-    @include mq("sp") {
-      width: 7.5rem;
-      height: 8.5995rem;
-    }
-    @include mq("md") {
-      width: 18.39285714%;
-      height: 26.88%;
-    }
-  }
-
-  .members .members__homeloan {
-    @include mq("md") {
-      top: 0;
-      left: 50%;
-      transform: scale(0.8);
-      transform: translateX(-50%);
-      transform: translateY(-100%);
-      transition-duration: transform 1s ease-in-out;
-    }
-  }
-  .members .members__homeloan.open {
-    @include mq("sp") {
-      background-size: contain;
-    }
-    @include mq("md") {
-      margin-top: 4.0625rem;
-      left: 4.4375rem;
-    }
-  }
-  .members .members__screen.open {
-    @include mq("md") {
-      transform: scale(1);
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-  .members .members__dream.open {
-    @include mq("md") {
-      bottom: 3.1875rem;
-      left: 5.4375rem;
-    }
-  }
-}
 .main-visual__container {
   position: relative;
   width: 100%;
@@ -169,7 +112,7 @@ main-visual__titles
     z-index: 1;
   }
   @include mq("lxg") {
-    padding: 2.5em 2.5em 2.5em 0;
+    padding: 1.25rem 1.55em 2.5em 0;
   }
 }
 .main-visual__members.members {
@@ -234,27 +177,23 @@ main-visual__titles
   padding: 0.65rem 0.875rem 0.5rem;
   text-align: left;
   display: inline-block;
-  line-height: 1.5;
+  line-height: 1;
   letter-spacing: 0.03em;
   width: auto;
   white-space: nowrap; // ★ 改行しない
   // bottom: 6.25rem;
+  letter-spacing: normal;
   @include mq("md") {
-    line-height: 1.5;
     left: auto;
     padding-left: 1rem;
     font-size: 4rem;
     right: 1.1875rem;
     bottom: 8.0625rem;
   }
-}
-@media (min-width: 768px) and (max-width: 1180px) {
-  .main-visual__catch {
-    right: 1.1875rem;
-    bottom: max(10.0625rem, 10%);
-    font-size: 2.5rem;
-    white-space: nowrap;
-    width: fit-content;
+  @include mq("lxg") {
+    padding: 0.875rem;
+    right: 7.125rem;
+    bottom: 11.025rem;
   }
 }
 
@@ -276,16 +215,6 @@ main-visual__titles
   @include mq("sp") {
     z-index: 11;
   }
-  @include mq("md") {
-    width: 100%;
-    text-align: end;
-    letter-spacing: 0.04em;
-    right: 1.1875rem;
-    bottom: max(0.75rem, 1%);
-    margin-top: 1.1875rem;
-    line-height: 1.5;
-    font-size: 1rem;
-  }
 }
 .main-visual__text.top-page--subtitle {
   @include mq("md") {
@@ -293,10 +222,14 @@ main-visual__titles
     bottom: max(3.5rem, 3%);
     margin-top: 0.125rem;
   }
-  @include mq("lg") {
-    bottom: max(0.125rem, 1%);
+  @include mq("lxg") {
+    bottom: 6.55rem;
     left: auto;
-    line-height: 1.5;
+    font-weight: $bold;
+    line-height: 0.675;
+    font-size: 1rem;
+    right: 11.55rem;
+    text-align: left;
   }
 }
 .main-visual__span {
@@ -326,10 +259,6 @@ main-visual__titles
   @include mq("md") {
   }
 }
-.members .members__img.open {
-  @include mq("md") {
-  }
-}
 
 .members .members__dream {
   background: url("/src/images/dream-house_sp.svg");
@@ -355,18 +284,20 @@ main-visual__titles
   }
 }
 
-.members .members__dream.open {
+.members .members__dream.is-active {
   bottom: 36.125%;
   @include mq("md") {
     bottom: 3.1875rem;
     left: 5.4375rem;
+  }
+  @include mq("lxg") {
+    bottom: 4.1875rem;
   }
 }
 .members .members__plan {
   width: 8.375rem;
   height: rem(131);
   @include mq("md") {
-    width: 22.85714%;
     height: 22.86%;
   }
 }
@@ -375,11 +306,14 @@ main-visual__titles
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right center;
-  width: 8.375rem;
-
   @include mq("md") {
     top: -1rem;
     right: -1rem;
+    width: 16rem;
+  }
+  @include mq("lxg") {
+    width: 22.856%;
+    height: 15.75rem;
   }
 }
 .members .members__plan.open {
@@ -388,6 +322,11 @@ main-visual__titles
   @include mq("md") {
     top: 4rem;
     right: 3.4375rem;
+  }
+  @include mq("lxg") {
+    top: 4rem;
+    width: 22.857%;
+    // right: 5.9375rem;
   }
 }
 //. ここまでCSSで指定
@@ -411,12 +350,12 @@ main-visual__titles
     left: -1rem;
   }
 }
-.members .members__homeloan.open {
+.members .members__homeloan.is-active {
   @include mq("sp") {
     background-size: contain;
   }
   @include mq("md") {
-    margin-top: 4.0625rem;
+    margin-top: 4.75rem;
     left: 4.4375rem;
   }
 }
@@ -444,7 +383,7 @@ main-visual__titles
   bottom: 37%;
   @include mq("md") {
     right: 3.5rem;
-    bottom: 18.5rem;
+    bottom: 20.25rem;
   }
 }
 .members .members__screen {
@@ -468,11 +407,16 @@ main-visual__titles
   transform: translateY(-100%);
   transition-duration: transform 0.8s ease-in-out;
 }
-.members .members__screen.open {
+.members .members__screen.is-active {
   transform: scale(1);
   transform: translateX(-30%);
   @include mq("md") {
     top: 50%;
+    transform: translateY(-100%);
+  }
+  @include mq("lxg") {
+    top: 61.75%;
+    left: 40.75%;
     transform: translateY(-100%);
   }
 }
@@ -493,9 +437,14 @@ main-visual__titles
     bottom: 1.1875rem;
     margin-left: -1rem;
   }
+  @include mq("lxg") {
+    bottom: 6.45rem;
+    margin-left: 0.65rem;
+  }
 }
 /* 線のアニメーション部分 */
 .scroll::before {
+  position: absolute;
   animation: scroll 2s infinite;
   background-color: $blue;
   content: "";
@@ -503,12 +452,15 @@ main-visual__titles
   height: 4rem;
   left: 0;
   margin: auto;
-  position: absolute;
   right: 0;
   width: 1px;
+  top: 14px;
   @include mq("md") {
     bottom: -7rem;
-    height: 7rem;
+    height: 6.875rem;
+  }
+  @include mq("lxg") {
+    right: -0.275rem;
   }
 }
 /* 線のアニメーション */
@@ -531,7 +483,8 @@ main-visual__titles
   }
 }
 .scroll__text {
-  letter-spacing: 0.04em;
-  margin-left: rem(9);
+  letter-spacing: normal;
+  margin-left: 0.5rem;
   margin-bottom: 0.5rem;
+  font-size: 0.625rem;
 }

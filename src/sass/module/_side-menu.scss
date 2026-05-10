@@ -172,6 +172,11 @@
     padding: 2.35rem 2.5rem 0;
   }
 }
+.side-menu__nav.menu__nav {
+  @include mq("md") {
+    padding: 0 2.5rem 0 2.4875rem;
+  }
+}
 .side-menu__nav.about__side-menu {
   @include mq("md") {
     padding: 0 2.5rem 0 2.4875rem;

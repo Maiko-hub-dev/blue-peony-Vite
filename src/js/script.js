@@ -83,6 +83,9 @@ $(function () {
     const members = mainVisual.querySelector(".main-visual__members");
     const titles = mainVisual.querySelector(".main-visual__titles");
     const rightBox = mainVisual.querySelector(".main-visual__rightbox");
+    const homeLoan = mainVisual.querySelector(".members__homeloan");
+    const sCreen = mainVisual.querySelector(".members__screen");
+    const dReam = mainVisual.querySelector(".members__dream");
 
     // 0.5秒後
     setTimeout(() => {
@@ -97,6 +100,16 @@ $(function () {
     setTimeout(() => {
       rightBox.classList.add("is-active");
     }, 1600);
+
+    setTimeout(() => {
+      homeLoan.classList.add("is-active");
+    }, 1700);
+    setTimeout(() => {
+      sCreen.classList.add("is-active");
+    }, 1800);
+    setTimeout(() => {
+      dReam.classList.add("is-active");
+    }, 1900);
   });
   // ハンバーガーで開閉
   $hamburger.on("click", function () {
