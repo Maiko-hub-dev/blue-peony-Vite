@@ -19,14 +19,13 @@
 }
 .main-visual.main-top {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   padding: 0rem 0 0 0.5rem;
   @include mq("md") {
     padding-left: 10.5rem;
   }
   @include mq("lxg") {
     padding-left: 17.5rem;
-    height: 100vh;
   }
   // height: calc(var(--vh, 1vh) * 100);
 }
@@ -34,13 +33,13 @@
   height: auto;
 }
 .main-visual__inner {
-  padding: 2.5rem 0;
+  // padding: 2.5rem 0;
   width: 100%;
   height: inherit;
   position: relative;
   z-index: 2;
   margin-top: 3rem;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px;
   @include mq("md") {
     padding: 0 0 0 2.5rem;
     margin-top: 0;
@@ -50,16 +49,7 @@
   }
 }
 .main-visual.main-top .main-visual__members {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-
-  &.is-active {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  height: inherit;
 }
 
 /* =========================
@@ -102,13 +92,14 @@ main-visual__titles
 .main-visual__container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: inherit;
+  // height: 80vh;
   @include mq("sp") {
     padding: 0.75rem 0.75rem 0.75rem 0.125rem;
   }
   @include mq("md") {
     padding: 3.5rem 2.5em 2.5em 0;
-    height: 100vh;
+    // height: 100vh;
     z-index: 1;
   }
   @include mq("lxg") {
@@ -168,12 +159,11 @@ main-visual__titles
 }
 .main-visual__catch {
   background-color: $white;
+  position: absolute;
   border-radius: 0.525rem;
   color: $black;
   font-size: 1.45rem;
   font-family: $base-font;
-  // font-weight: $bold;
-  position: absolute;
   padding: 0.65rem 0.875rem 0.5rem;
   text-align: left;
   display: inline-block;
@@ -181,9 +171,9 @@ main-visual__titles
   letter-spacing: 0.03em;
   width: auto;
   white-space: nowrap; // ★ 改行しない
-  // bottom: 6.25rem;
-  letter-spacing: normal;
+  bottom: 0.875rem;
   @include mq("md") {
+    letter-spacing: normal;
     left: auto;
     padding-left: 1rem;
     font-size: 4rem;
@@ -193,26 +183,27 @@ main-visual__titles
   @include mq("lxg") {
     padding: 0.875rem;
     right: 7.125rem;
-    bottom: 11.025rem;
+    bottom: 14.5rem;
   }
 }
 
 .main-visual__text {
   position: absolute;
   right: auto;
-  bottom: 2.75rem;
   left: 0.5rem;
   display: block;
   width: auto;
-  margin-top: 0.5rem;
+  bottom: -3.625rem;
   color: $black;
   font-size: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.75;
   text-align: left;
   font-weight: $bold;
   padding: 0.5rem 0.25rem 0 0;
   font-style: normal;
   @include mq("sp") {
+    bottom: -3.75re;
+    margin-top: 0.5rem;
     z-index: 11;
   }
 }
@@ -223,7 +214,7 @@ main-visual__titles
     margin-top: 0.125rem;
   }
   @include mq("lxg") {
-    bottom: 6.55rem;
+    bottom: 10.125rem;
     left: auto;
     font-weight: $bold;
     line-height: 0.675;
@@ -246,10 +237,6 @@ main-visual__titles
   @include mq("md") {
     margin-top: 0.6em;
   }
-}
-.main-visual__text.is-hidden {
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .members__img {
@@ -285,13 +272,13 @@ main-visual__titles
 }
 
 .members .members__dream.is-active {
-  bottom: 36.125%;
+  bottom: 37%;
   @include mq("md") {
     bottom: 3.1875rem;
     left: 5.4375rem;
   }
   @include mq("lxg") {
-    bottom: 4.1875rem;
+    bottom: 5.875rem;
   }
 }
 .members .members__plan {
@@ -317,14 +304,13 @@ main-visual__titles
   }
 }
 .members .members__plan.open {
-  top: 2.05rem;
+  top: 4.5rem;
   right: 0;
   @include mq("md") {
     top: 4rem;
     right: 3.4375rem;
   }
   @include mq("lxg") {
-    top: 4rem;
     width: 22.857%;
     // right: 5.9375rem;
   }
@@ -343,7 +329,7 @@ main-visual__titles
   background-repeat: no-repeat;
   background-size: 6.4375rem 7.7375rem;
   background-position: center;
-  top: 0.55rem;
+  top: 3rem;
   left: 0.9875rem;
   @include mq("md") {
     top: -1rem;
@@ -355,8 +341,9 @@ main-visual__titles
     background-size: contain;
   }
   @include mq("md") {
-    margin-top: 4.75rem;
+    margin-top: 3.45rem;
     left: 4.4375rem;
+    top: 0;
   }
 }
 .members .members__estimate {
@@ -370,7 +357,7 @@ main-visual__titles
 .members .members__estimate {
   background: url("/src/images/estimate.svg");
   background-repeat: no-repeat;
-  background-size: 88px 101px;
+  background-size: cover;
   background-position: center;
   @include mq("md") {
     background-size: 162px 187px;
@@ -380,10 +367,13 @@ main-visual__titles
 }
 .members .members__estimate.open {
   right: 0;
-  bottom: 37%;
+  bottom: 38%;
   @include mq("md") {
     right: 3.5rem;
     bottom: 20.25rem;
+  }
+  @include mq("lxg") {
+    bottom: 23.75rem;
   }
 }
 .members .members__screen {
@@ -400,7 +390,7 @@ main-visual__titles
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
-  top: 40%;
+  top: 41.45%;
   left: 47%;
   transform: scale(0.8);
   transform: translateX(-50%);
@@ -415,7 +405,7 @@ main-visual__titles
     transform: translateY(-100%);
   }
   @include mq("lxg") {
-    top: 61.75%;
+    top: 58.875%;
     left: 40.75%;
     transform: translateY(-100%);
   }
@@ -438,7 +428,7 @@ main-visual__titles
     margin-left: -1rem;
   }
   @include mq("lxg") {
-    bottom: 6.45rem;
+    bottom: 6.125rem;
     margin-left: 0.65rem;
   }
 }

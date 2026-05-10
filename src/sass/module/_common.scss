@@ -3,21 +3,24 @@
 .common__title {
   font-weight: $bold;
 }
-// @media (min-width: 1120px) {
-//   /* PCでは基本：隠す */
-//   .side-menu {
-//     opacity: 0;
-//     visibility: hidden;
-//     pointer-events: none;
-//     transform: translateX(-10px);
-//     transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
-//   }
+@media (min-width: 1120px) {
+  /* PCでは基本：隠す */
+  .side-menu {
+    opacity: 0;
+    visibility: hidden;
+    // pointer-events: none;
+    transform: translateX(-10px);
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
 
-//   /* FV内だけ：表示 */
-//   body.is-top .side-menu {
-//     opacity: 1;
-//     visibility: visible;
-//     pointer-events: auto;
-//     transform: translateX(0);
-//   }
-// }
+  /* FV内だけ：表示 */
+  body.is-top .side-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+}

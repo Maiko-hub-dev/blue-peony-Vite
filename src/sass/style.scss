@@ -3,7 +3,6 @@
 @use "./module/index";
 @use "./global" as *;
 
-
 /* --- ガイド線用: ページ全体に表示 --- */
 // body::before {
 //   content: "";
@@ -24,7 +23,7 @@ body.is-loading {
 body.is-loading main,
 body.is-loading header,
 body.is-loading .side-menu {
-  opacity: 0;
+  // opacity: 0;
   visibility: hidden;
 }
 

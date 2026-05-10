@@ -22,6 +22,7 @@
 .body.is-drawer-open .side-menu {
   padding: 0 0 0 0.5rem;
   z-index: 2000;
+  transform: translateX(0);
   @include mq("md") {
     max-width: 100%;
     width: 100%;
@@ -34,7 +35,7 @@
   }
 }
 .pade-top__list.side-menu__list {
-  padding-top: 2.5rem;
+  padding-top: 0;
 }
 .side-menu__list:first-child.about__menu-nav {
   padding-top: 0.5rem;
@@ -167,7 +168,7 @@
   }
 }
 .side-menu__nav {
-  padding: 2.5rem 0;
+  padding: 3.5rem 0 2.5rem;
   @include mq("md") {
     padding: 2.35rem 2.5rem 0;
   }

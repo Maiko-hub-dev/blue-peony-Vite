@@ -1,56 +1,58 @@
 @use "../global" as *;
 
 .about {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-top: 4.5rem;
-    background-color: $white;
-    padding-top: 0.5rem;
-    z-index: 6;
-    @include mq("md"){
-        padding-left: 15rem;
-        padding-top: 0;
-        margin-top: 12.5rem;
-    }
-    @include mq("lg"){
-        padding-left: 15.75rem;
-    }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  background-color: $white;
+  padding-top: 0.5rem;
+  z-index: 6;
+  @include mq("md") {
+    padding-left: 15rem;
+    padding-top: 0;
+    margin-top: 12.5rem;
+  }
+  @include mq("lg") {
+    padding-left: 15.75rem;
+  }
 }
-.about__inner{
-    width: inherit;
-     max-width: var(--container);
-    background-color: $content;
+.about__inner {
+  width: inherit;
+  max-width: var(--container);
+  background-color: $content;
+  padding: 0 1.25rem;
+  @include mq("md") {
     margin-top: 4.5rem;
-    padding: 0 1.25rem;
-    @include mq("md"){
-        padding: 3.875rem 0;
-        position: relative;
-    }
+    padding: 3.875rem 0;
+    position: relative;
+  }
 }
 
-.about__swiper{
-    width: inherit;
-    padding-top: 4.5rem;
-    @include mq("md"){
-        padding-top: 0;
-    }
+.about__swiper {
+  width: inherit;
+  padding-top: 3.5rem;
+  @include mq("md") {
+    padding-top: 0;
+  }
 }
 .about__subtitle {
   position: absolute;
   top: 30%;
   background-color: $content;
-  writing-mode: vertical-rl;   /* テキストを縦書きに */
+  writing-mode: vertical-rl; /* テキストを縦書きに */
   font-size: 1.5rem;
   color: black;
-  inline-size: 7rem;   // ← これが正解
-  padding: 1rem 1.5rem;
+  inline-size: 7rem; // ← これが正解
+  padding: 1.5rem 1rem 0.5rem 1rem;
   z-index: 1;
+  line-height: 1.5;
   margin-top: -3rem;
-  right: 1rem;
+  right: 1.75rem;
   font-weight: $bold;
   height: fit-content;
-  @include mq("md"){
+  letter-spacing: 0.5em;
+  @include mq("md") {
     top: 65%;
     bottom: -10.7875rem;
     font-size: 2.5rem;
@@ -61,125 +63,134 @@
   }
 }
 .about__subtitle .subtitle__group {
-    writing-mode: vertical-rl;   
-    display: inline-block;
-    white-space: nowrap;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  white-space: nowrap;
 }
-.about__subtitle .subtitle__group:first-child{
-    display: block;
-    @include mq("md"){
-        display: inline-block;
-    }
+.about__subtitle .subtitle__group:first-child {
+  display: block;
+  @include mq("md") {
+    display: inline-block;
+  }
 }
 .about__subtitle {
-  letter-spacing: 11px;
-   @include mq("md"){
-        letter-spacing: 14px;
-    }
+  letter-spacing: 12px;
+  @include mq("md") {
+    letter-spacing: 14px;
+  }
 }
-.subtitle__black{
-    color: $black;
-    writing-mode: vertical-rl; 
+.subtitle__black {
+  color: $black;
+  writing-mode: vertical-rl;
 }
 
 .about__subtitle .subtitle__break {
   display: block;
-   writing-mode: vertical-rl; 
+  writing-mode: vertical-rl;
+  margin-right: 0.25rem;
+  @include mq("md") {
+    margin-right: 0rem;
+  }
 }
 
-.subtitle__blue{
-    color: $blue;
+.subtitle__blue {
+  color: $blue;
 }
 
-.about__text-block{
-    position: relative;
-    top: 50%;
-    bottom: 0;
-    margin: 2rem auto 4rem 0;
-    max-width: rem(600);
-    padding: 0 1.25rem;
-    @include mq("md"){
-        margin: 3rem auto 5.3125rem 0;
-        transform: translateX(-20%);
-    }
-    @include mq("lg"){
-        margin: 4rem auto 5.3125rem 0;
-        transform: translateX(-5%);
-    }
+.about__text-block {
+  position: relative;
+  top: 50%;
+  bottom: 0;
+  margin: 2rem auto 4rem 0;
+  max-width: rem(600);
+  padding: 0 1.25rem;
+  @include mq("md") {
+    margin: 3rem auto 5.3125rem 0;
+    transform: translateX(-20%);
+  }
+  @include mq("lg") {
+    margin: 4rem auto 5.3125rem 0;
+    transform: translateX(-5%);
+  }
 }
-.about__title{
-    font-size: 1.25rem;
-    color: $black;
-    @include mq("md"){
-        font-size: 1.5rem;
-        padding-left: 0.5rem;
-        margin-left: 0.5rem;
-    }
+.about__title {
+  font-size: 1.25rem;
+  color: $black;
+  @include mq("md") {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
-.about__heading{
-    font-family: $eng-font;
-    color: $white;
-    text-shadow:  1px 1px 0 $blue,1px -1px 0 $blue,-1px 1px 0 $blue,-1px -1px 0 $blue;
-    // text-stroke: 2px  $blue;
-    font-size: 4.5rem;
-    @include mq("md"){
-        font-size: 8rem;
-        padding-left: 0.5rem;
-    }
-}
-
-.about__interview{
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    padding-right: 41.46%;
-    top: max(55%, 18.75rem);
-    @include mq("sp"){
-        padding-right: min(22%, 20.875rem);
-    }
-    @include mq("md"){
-        top: 0;
-        transform: translateY(60%);
-        padding-right: min(23%,20.875rem);
-    }
+.about__heading {
+  font-family: $eng-font;
+  color: $white;
+  text-shadow:
+    1px 1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px 1px 0 $blue,
+    -1px -1px 0 $blue;
+  // text-stroke: 2px  $blue;
+  font-size: 4.5rem;
+  @include mq("md") {
+    font-size: 8rem;
+    padding-left: 0.5rem;
+  }
 }
 
-.about__interview img{
-    display: block;
-    aspect-ratio: 161/213;
-    width: 100%;
-    height: 5rem;
-    @include mq("md"){
-        width: 10.0625em;
-        height: 13.3125em;
-    }
+.about__interview {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  padding-right: 41.46%;
+  top: max(55%, 18.75rem);
+  @include mq("sp") {
+    padding-right: min(22%, 20.875rem);
+  }
+  @include mq("md") {
+    top: 0;
+    transform: translateY(60%);
+    padding-right: min(23%, 20.875rem);
+  }
+}
+
+.about__interview img {
+  display: block;
+  aspect-ratio: 161/213;
+  width: 100%;
+  height: 5rem;
+  @include mq("md") {
+    width: 10.0625em;
+    height: 13.3125em;
+  }
 }
 .about__link {
-    text-decoration: none;
-    width: 15rem;
-    display: block;
-    color: $black;
-    padding: 1.375rem 5.125rem;
-    width: fit-content;
-    border: 1px solid $black;
-    border-radius: 0.625rem;
-    font-family: $base-font;
-    font-weight: $bold;
-    margin-top: 2rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    &:hover {
-        background-color: $black;
-        color: $white;
-    @include mq("md"){
-
-    };
+  text-decoration: none;
+  width: 15rem;
+  display: block;
+  color: $black;
+  padding: 1.375rem 5.125rem;
+  width: fit-content;
+  border: 1px solid $black;
+  border-radius: 0.625rem;
+  font-family: $base-font;
+  font-weight: $bold;
+  margin-top: 2rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    background-color: $black;
+    color: $white;
+    @include mq("md") {
     }
+  }
 }
 .about__elipse {
-    font-size: 0.625rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 1.75rem;
-    text-align: center;
+  font-size: 0.625rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1.75rem;
+  text-align: center;
 }

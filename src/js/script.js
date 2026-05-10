@@ -55,22 +55,22 @@ $(function () {
       });
   };
 
-  // const unlockBodyScroll = () => {
-  //   $("body").removeClass("is-drawer-open").attr("style", "");
-  //   window.scrollTo(0, scrollY);
-  // };
+  const unlockBodyScroll = () => {
+    $("body").removeClass("is-drawer-open").attr("style", "");
+    window.scrollTo(0, scrollY);
+  };
 
-  // const openDrawer = () => {
-  //   $hamburger.addClass("is-active");
-  //   $drawerNav.addClass("is-active");
-  //   lockBodyScroll();
-  // };
+  const openDrawer = () => {
+    $hamburger.addClass("is-active");
+    $drawerNav.addClass("is-active");
+    lockBodyScroll();
+  };
 
-  // const closeDrawer = () => {
-  //   $hamburger.removeClass("is-active");
-  //   $drawerNav.removeClass("is-active");
-  //   unlockBodyScroll();
-  // };
+  const closeDrawer = () => {
+    $hamburger.removeClass("is-active");
+    $drawerNav.removeClass("is-active");
+    unlockBodyScroll();
+  };
 
   // index.htmlにだけ実装させるJS
   window.addEventListener("load", () => {
