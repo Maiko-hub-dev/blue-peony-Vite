@@ -11,10 +11,11 @@
   @include mq("md") {
     padding-left: 15rem;
     padding-top: 0;
-    margin-top: 12.5rem;
+    padding-left: 4.5rem;
   }
-  @include mq("lg") {
-    padding-left: 15.75rem;
+  @include mq("lxg") {
+    margin-left: 10rem;
+    padding-left: 7.5rem;
   }
 }
 .about__inner {
@@ -27,8 +28,10 @@
     padding: 3.875rem 0;
     position: relative;
   }
+  @include mq("lxg") {
+    padding: 3.875rem 0 3.25rem 0;
+  }
 }
-
 .about__swiper {
   width: inherit;
   padding-top: 3.5rem;
@@ -60,6 +63,13 @@
     inline-size: 10.74rem;
     height: fit-content;
     right: min(8.874rem, 6%);
+    font-weight: 800;
+    letter-spacing: normal;
+    @include mq("lxg") {
+      top: 61.875%;
+      right: max(8.874rem, 25%);
+      padding: 1.675rem 1.65rem 0.5rem 1.875rem;
+    }
   }
 }
 .about__subtitle .subtitle__group {
@@ -78,18 +88,32 @@
   @include mq("md") {
     letter-spacing: 14px;
   }
+  @include mq("lxg") {
+    letter-spacing: 0.5em;
+  }
 }
 .subtitle__black {
   color: $black;
   writing-mode: vertical-rl;
 }
-
+.subtitle__group.subtitle__break {
+  @include mq("md") {
+    display: block;
+  }
+  @include mq("lxg") {
+    margin-left: 0.5rem;
+  }
+}
 .about__subtitle .subtitle__break {
   display: block;
   writing-mode: vertical-rl;
   margin-right: 0.25rem;
   @include mq("md") {
     margin-right: 0rem;
+  }
+  @include mq("lxg") {
+    padding-right: 0.25rem;
+    line-height: 1;
   }
 }
 
@@ -121,6 +145,10 @@
     padding-left: 0.5rem;
     margin-left: 0.5rem;
   }
+  @include mq("lxg") {
+    padding-left: 0.65rem;
+    margin-left: 0;
+  }
 }
 .about__heading {
   font-family: $eng-font;
@@ -136,8 +164,27 @@
     font-size: 8rem;
     padding-left: 0.5rem;
   }
+  @include mq("lxg") {
+    font-weight: 600;
+    margin-top: -1rem;
+    padding: 0 0.5rem 0 0.65rem;
+    letter-spacing: 0.06rem;
+  }
 }
-
+.about__description {
+  color: $black;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
+  @include mq("md") {
+    margin-top: 0.5rem;
+    padding-left: 0.65rem;
+  }
+  @include mq("lxg") {
+    line-height: 1.785rem;
+    max-width: 429px;
+  }
+}
 .about__interview {
   position: absolute;
   z-index: 1;
@@ -152,6 +199,12 @@
     top: 0;
     transform: translateY(60%);
     padding-right: min(23%, 20.875rem);
+  }
+  @include mq("lxg") {
+    top: 32.75%;
+    right: 14.25rem;
+    padding-right: 20.5%;
+    bottom: initial;
   }
 }
 
@@ -171,6 +224,7 @@
   display: block;
   color: $black;
   padding: 1.375rem 5.125rem;
+  letter-spacing: normal;
   width: fit-content;
   border: 1px solid $black;
   border-radius: 0.625rem;
@@ -180,12 +234,18 @@
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  &:hover {
-    background-color: $black;
-    color: $white;
-    @include mq("md") {
-    }
+}
+.about__link {
+  @include mq("lxg") {
+    width: 15rem;
+    position: relative;
+    margin: 2.5rem 0 0 0.65rem;
+    padding: 1.125rem 4.25rem 1rem 5rem;
   }
+}
+.about__link:hover {
+  background-color: $black;
+  color: $white;
 }
 .about__elipse {
   font-size: 0.625rem;
@@ -193,4 +253,13 @@
   vertical-align: middle;
   margin-left: 1.75rem;
   text-align: center;
+  @include mq("lxg") {
+    font-size: 0.6875rem;
+    text-align: left;
+    position: absolute;
+    margin-left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.125rem;
+  }
 }

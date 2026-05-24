@@ -50,6 +50,9 @@
 }
 .main-visual.main-top .main-visual__members {
   height: inherit;
+  @include mq("md") {
+    height: 100%;
+  }
 }
 
 /* =========================
@@ -80,6 +83,9 @@ main-visual__titles
     max-width: 45.4375rem;
     max-height: 45.4375rem;
   }
+  @include mq("lxg") {
+    width: 50.625%;
+  }
 }
 .main-visual.main-top .main-visual__rightbox {
   opacity: 0;
@@ -103,7 +109,7 @@ main-visual__titles
     z-index: 1;
   }
   @include mq("lxg") {
-    padding: 1.25rem 1.55em 2.5em 0;
+    padding: 1.25rem 1.55em 1.75em 0;
   }
 }
 .main-visual__members.members {
@@ -183,7 +189,8 @@ main-visual__titles
   @include mq("lxg") {
     padding: 0.875rem;
     right: 7.125rem;
-    bottom: 14.5rem;
+    bottom: 9.125rem;
+    font-weight: 900;
   }
 }
 
@@ -202,8 +209,9 @@ main-visual__titles
   padding: 0.5rem 0.25rem 0 0;
   font-style: normal;
   @include mq("sp") {
-    bottom: -3.75re;
+    bottom: -3.75rem;
     margin-top: 0.5rem;
+    padding: 0.25rem 0.25rem 0 0;
     z-index: 11;
   }
 }
@@ -214,7 +222,7 @@ main-visual__titles
     margin-top: 0.125rem;
   }
   @include mq("lxg") {
-    bottom: 10.125rem;
+    bottom: 4.65rem;
     left: auto;
     font-weight: $bold;
     line-height: 0.675;
@@ -278,7 +286,7 @@ main-visual__titles
     left: 5.4375rem;
   }
   @include mq("lxg") {
-    bottom: 5.875rem;
+    bottom: 3.125rem;
   }
 }
 .members .members__plan {
@@ -345,6 +353,9 @@ main-visual__titles
     left: 4.4375rem;
     top: 0;
   }
+  @include mq("lxg") {
+    margin-top: 4.125rem;
+  }
 }
 .members .members__estimate {
   width: 5.5rem;
@@ -373,7 +384,7 @@ main-visual__titles
     bottom: 20.25rem;
   }
   @include mq("lxg") {
-    bottom: 23.75rem;
+    bottom: 18.35rem;
   }
 }
 .members .members__screen {
@@ -405,7 +416,7 @@ main-visual__titles
     transform: translateY(-100%);
   }
   @include mq("lxg") {
-    top: 58.875%;
+    top: 63.45%;
     left: 40.75%;
     transform: translateY(-100%);
   }
@@ -428,7 +439,7 @@ main-visual__titles
     margin-left: -1rem;
   }
   @include mq("lxg") {
-    bottom: 6.125rem;
+    bottom: 3.65rem;
     margin-left: 0.65rem;
   }
 }

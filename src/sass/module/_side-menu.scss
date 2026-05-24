@@ -84,7 +84,7 @@
     transform: scale(1.2);
   }
   @include mq("lxg") {
-    padding-left: 0.75rem;
+    padding-left: 0.65rem;
   }
 }
 .side-menu__logo.about__side-logo img {
@@ -106,7 +106,7 @@
     font-weight: $bold;
   }
   @include mq("lxg") {
-    padding: 1.685rem 0 1.75rem 0;
+    padding: 1.685rem 0;
   }
 }
 .menu__nav .side-menu__link2 {
@@ -135,6 +135,9 @@
     text-decoration: none;
     padding: 1.685rem 0;
     font-weight: $bold;
+  }
+  @include mq("lxg") {
+    padding: 1.6875rem 0 1.55rem 0;
   }
 }
 .menu__nav .side-menu__link4 {
@@ -236,6 +239,20 @@
   }
   @include mq("lxg") {
     padding: 0rem 0 0 0;
+  }
+}
+.menu__nav--topix4.side-menu__item {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
+    padding: 0.5rem 0 0.245em;
+    border-bottom: 1px solid $blue-line;
+  }
+  @include mq("lxg") {
+    padding: 0;
+    border-bottom: 1px solid $blue-line;
   }
 }
 .side-menu__item2.side-menu__contact {

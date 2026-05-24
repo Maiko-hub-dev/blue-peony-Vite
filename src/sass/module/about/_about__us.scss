@@ -32,8 +32,8 @@
   }
   @include mq("lxg") {
     margin-top: 0;
-    width: 90.25%;
-    margin-left: 6rem;
+    width: 92%;
+    margin-left: 5.5rem;
     border-radius: 4rem;
   }
 }
@@ -44,7 +44,10 @@
   overflow: hidden;
   padding: 0;
   @include mq("md") {
-    padding: 0 0.625rem;
+    padding: 0 0.25rem;
+  }
+  @include mq("lxg") {
+    padding: 0 0.75rem 0.75rem 0.5rem;
   }
 }
 // CSSは意味がない。sourceタグにCSSは当たりません。
@@ -95,7 +98,7 @@
   }
   @include mq("lg") {
     margin-top: 0;
-    padding: 1.5rem 0 0 4rem;
+    padding: 0.675rem 0.75rem 0 4rem;
   }
 }
 .about__us--inner {
@@ -118,7 +121,7 @@
     padding: 0 0 0 4rem;
   }
   @include mq("lg") {
-    margin-left: 1.875rem;
+    margin-left: 1.785rem;
   }
 }
 .about__us--title {
@@ -159,7 +162,7 @@
   }
   @include mq("lg") {
     top: 2.5rem;
-    right: 36.125%; // 例：lgは%指定
+    right: 35.5%; // 例：lgは%指定
     width: 10.3125rem;
     height: 12.375rem;
   }

@@ -273,22 +273,22 @@
     padding: 0 0.625rem;
   }
 }
-body.is-top .side-menu.contact__side {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateX(-10px);
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease,
-    transform 0.3s ease;
-  @include mq("lxg") {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateX(0);
-  }
-}
+// body.is-top .side-menu.contact__side {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+//   transform: translateX(-10px);
+//   transition:
+//     opacity 0.3s ease,
+//     visibility 0.3s ease,
+//     transform 0.3s ease;
+//   @include mq("lxg") {
+//     opacity: 1;
+//     visibility: visible;
+//     pointer-events: auto;
+//     transform: translateX(0);
+//   }
+// }
 .contact__reception {
   display: inline-block;
   padding: 2rem 0 0 0;

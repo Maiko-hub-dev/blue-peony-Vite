@@ -1,35 +1,39 @@
 @use "../global" as *;
 
 .service {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: $white;
-    padding-top: 0.5rem;
-    @include mq("md"){
-        padding-left: max(2rem, calc((100% - var(--container)) / 2));
-        z-index: 100;
-        padding-left: 6.75rem;
-    }
-    @include mq("lg"){
-        padding-left: 13.25rem;
-    }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  padding-top: 0.5rem;
+  @include mq("md") {
+    padding-left: max(2rem, calc((100% - var(--container)) / 2));
+    z-index: 100;
+    padding-left: 6.75rem;
+  }
+  @include mq("lxg") {
+    padding-top: 0;
+    padding-left: 14.25rem;
+  }
 }
-.service__inner{
-    position: relative;
-    width: inherit;
-    max-width: var(--container);
-    padding: 0 1.25rem;
-    margin-top: 2rem;
-    @include mq("md"){
-        padding: 0;
-        margin-top: 4.5rem;
-    }
+.service__inner {
+  position: relative;
+  width: inherit;
+  max-width: var(--container);
+  padding: 0 1.25rem;
+  margin-top: 2rem;
+  @include mq("md") {
+    padding: 0;
+    margin-top: 4.5rem;
+  }
+  @include mq("lxg") {
+    margin-top: 0;
+  }
 }
-.service__wall{
-    position: relative;
-    z-index: 1;
-    overflow: hidden; // ← 角丸のはみ出しを防ぐので必須！
+.service__wall {
+  position: relative;
+  z-index: 1;
+  overflow: hidden; // ← 角丸のはみ出しを防ぐので必須！
   // 擬似要素で背景色を右側に付ける
   &::after {
     content: "";
@@ -42,230 +46,346 @@
     z-index: -1;
     pointer-events: none;
     width: 73%;
-    @include mq("md"){
-        width: 70%;
+    @include mq("md") {
+      width: 70%;
     }
-}
-}
-.service__text-block{
-    position: relative;
-    top: 50%;
-    bottom: 0;
-    max-width: rem(600);
-    padding: 0 1.25rem;
-    @include mq("md"){
-        transform: translateX(-20%);
+    @include mq("lxg") {
+      width: 78%;
     }
-    @include mq("lg"){
-        transform: translateX(-5%);
-    }
+  }
 }
-.service__titles{
-    width: 100%;
-    height: auto;
-    @include mq("md"){
+.service__text-block {
+  position: relative;
+  top: 50%;
+  bottom: 0;
+  max-width: rem(600);
+  padding: 0 1.25rem;
+  @include mq("md") {
+    transform: translateX(-20%);
+  }
+  @include mq("lg") {
+    transform: translateX(-5%);
+  }
+}
+.service__titles {
+  width: 100%;
+  height: auto;
+  @include mq("md") {
     position: absolute;
-    top: 4.5rem;
+    top: 2rem;
     // left: 20%;
     z-index: 2;
     padding-left: 2.75rem;
     // transform: translateX(-20%);
-    }
-
+  }
+  @include mq("lxg") {
+    padding-top: 0.5rem;
+    padding-left: 3rem;
+  }
 }
-.service__text-block{
-    position: relative;
-    bottom: 0;
-    margin: 2rem auto 4rem 0;
-    max-width: rem(600);
-    padding: 0 1.25rem;
-    @include mq("md"){
-        margin: 3rem auto 6rem 0;
-    }
-    @include mq("lg"){
-        margin: 4rem auto 8rem 0;
-        padding-left:max(2rem, calc((100% - var(--container)) / 2));
-    }
-}
-
-.service__icon{
-    position: absolute;
-    background: url(../../images/contract.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    aspect-ratio: 124/ 172;
-    object-fit: contain;
-    top: 1rem;
-    top: 2.25rem;
-    right: 2rem;
-
-    @include mq("lxg"){
-        top: 5.8125rem;
-        right: 11.125rem;
-    }
-}
-.service__icon{
-    width: 4.5rem;
-    height: auto;
-
-    @include mq("lg"){
-        width: 7.75rem;
-        height: 10.75rem;
-    }
-}
-
-.service__title{
-    font-size: 1.25rem;
-    color: $black;
-    @include mq("md"){
-        font-size: 1.5rem;
-        padding-left: 0.5rem;
-    }
-}
-.service__heading{
-    font-family: $eng-font;
-    color: transparent;
-
-    font-size: 4.5rem;
-    -webkit-text-stroke: 1px $blue;     // ← 枠線だけ描画
-     line-height: 1.1;    // ← 枠線だけ描画
-    transform: scaleX(1.02);
-  @include mq("md"){
-    font-size: 8rem;
+.service__text-block {
+  position: relative;
+  bottom: 0;
+  margin: 2rem auto 4rem 0;
+  max-width: rem(600);
+  padding: 0 1.25rem;
+  @include mq("md") {
+    margin: 3rem auto 6rem 0;
+  }
+  @include mq("lg") {
+    margin: 4rem auto 8rem 0;
     padding-left: max(2rem, calc((100% - var(--container)) / 2));
   }
 }
-.service__items{
-    margin-top: 6rem;
-    margin-bottom: 5.35rem;
-    @include mq("sp"){
-        margin-top: 8rem;
-    }
-   @include mq("md"){
+
+.service__icon {
+  position: absolute;
+  background: url(../../images/contract.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  aspect-ratio: 124/ 172;
+  object-fit: contain;
+  top: 1rem;
+  top: 2.25rem;
+  right: 2rem;
+
+  @include mq("lxg") {
+    top: 5.875rem;
+    right: 10.15rem;
+  }
+}
+.service__icon {
+  width: 4.5rem;
+  height: auto;
+
+  @include mq("lg") {
+    width: 7.75rem;
+    height: 10.75rem;
+  }
+}
+
+.service__title {
+  font-size: 1.25rem;
+  color: $black;
+  @include mq("md") {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+  }
+  @include mq("lxg") {
+    padding-top: 0.125rem;
+  }
+}
+.service__heading {
+  font-family: $eng-font;
+  color: transparent;
+
+  font-size: 4.5rem;
+  -webkit-text-stroke: 1px $blue; // ← 枠線だけ描画
+  line-height: 1.1; // ← 枠線だけ描画
+  transform: scaleX(1.02);
+  @include mq("md") {
+    font-size: 8rem;
+    font-weight: 700;
+    transform: scale(1);
+    padding-left: max(2rem, calc((100% - var(--container)) / 2));
+  }
+  @include mq("lxg") {
+    letter-spacing: normal;
+    padding: 0 0.5rem 0 0.25rem;
+    line-height: 1.25;
+  }
+}
+.service__items {
+  margin-top: 6rem;
+  margin-bottom: 5.35rem;
+  @include mq("sp") {
+    margin-top: 8rem;
+  }
+  @include mq("md") {
     margin-top: 12rem;
-   }
+    margin-bottom: 0;
+  }
 }
-.service__item{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3.125rem;
-    @include mq("md"){
-        flex-direction: row;
-        align-items: center;
-        max-width: 1002px;
-        margin: 4rem auto ;
-        padding-top: 4rem;
-        padding-left: 4rem;
-    }
+// .service__items:not(:first-child) {
+//   @include mq("md") {
+//     margin-top: 2rem;
+//   }
+//   @include mq("lxg") {
+//     margin-top: 0;
+//   }
+// }
+.service__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3.125rem;
+  @include mq("md") {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 1002px;
+    margin: 4rem auto;
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+  @include mq("lxg") {
+    margin: 5em auto 0 0;
+    max-width: 1058px;
+    padding: 5.85rem 0 3.125rem 3.25rem;
+  }
 }
-.service__item:last-child{
-    padding-bottom: 0;
+.service__item:last-child {
+  padding-bottom: 0;
 }
-
-.service__item.service__reverse{
-    @include mq("md"){
-        flex-direction: row-reverse;
-    }
+.service__item.service__item2 {
+  @include mq("md") {
+    margin-top: 1rem;
+  }
+  @include mq("lxg") {
+    margin-top: 0;
+  }
 }
-.service__image{
-    position: relative;
-    z-index: 1;
-    @include mq("md"){
-        overflow: hidden;
-    }
+.service__item.service__reverse {
+  @include mq("md") {
+    flex-direction: row-reverse;
+  }
+  @include mq("lxg") {
+    padding: 5.75rem 0 3.125rem 3.25rem;
+  }
 }
-.service__content{
-    position: relative;
-    z-index: 0;
-
+.service__item.service__item3 {
+  @include mq("lxg") {
+    margin: 1.65rem 0 0 3.25rem;
+    padding: 1rem 0 3.125rem 0;
+  }
 }
-.service__number{
-    color: $blue-line;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: $eng-font;
-    @include mq("sp"){
-        font-size: clamp(3rem, 8dvw, 10.5rem);
-        margin-left: 0;
-    }
-    @include mq("lg"){
-        margin-left: -1.5rem;
-        
-    }
+.service__image {
+  position: relative;
+  z-index: 1;
+  @include mq("md") {
+    overflow: hidden;
+    width: 51.25%;
+  }
 }
-.service__name{
-     font-size: 1.5rem;
-     font-family: $base-font;
-     color: $black;
-     font-weight: $bold;
-     background-color: $white;
-     padding: 0.625rem 1rem;
-     width: fit-content;
-    @include mq("md"){
-        font-size: 1.5rem;
-        margin-left: 3.5rem;
-    }
+.service__content {
+  position: relative;
+  z-index: 0;
+  @include mq("md") {
+    padding-left: 0.75rem;
+  }
 }
-.service__description{
-    color: $black;
+.service__content.content__2x {
+  @include mq("md") {
+    padding-left: 0;
+    // padding-right: 0.75rem;
+  }
+}
+.service__number {
+  color: $blue-line;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: $eng-font;
+  @include mq("sp") {
+    font-size: 9.5rem;
+    // font-size: clamp(3rem, 8dvw, 10.5rem);
+    margin-left: 0;
+  }
+  @include mq("lxg") {
+    font-size: 10.5rem;
+    margin-left: -2rem;
+    margin-top: -2.5rem;
+  }
+}
+.service__number.service__num {
+  @include mq("lxg") {
+    margin-left: -3.65rem;
+  }
+}
+.service__name {
+  font-size: 1.5rem;
+  font-family: $base-font;
+  color: $black;
+  font-weight: $bold;
+  background-color: $white;
+  padding: 0.625rem 1rem;
+  width: fit-content;
+  @include mq("md") {
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+  }
+  @include mq("lxg") {
+    margin-top: -2.75rem;
+    padding: 0.25rem 1rem;
+    margin-left: 2.875rem;
+  }
+}
+.service__name.service__name--corporate {
+  font-weight: $bold;
+  letter-spacing: normal;
+  @include mq("lxg") {
+    margin-top: -2.75rem;
+    padding: 0.25rem 1rem;
+    margin-left: -0.25rem;
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 1.35rem;
+  }
+}
+.service__description {
+  color: $black;
+  line-height: 1.8;
+  @include mq("md") {
+    max-width: 430px;
+    margin-left: 3.5rem;
+  }
+  @include mq("lxg") {
+    margin-top: 3rem;
+    margin-left: 2.75rem;
     line-height: 1.8;
-    @include mq("md"){
-        max-width: 430px;
-        margin-left: 3.5rem;
-    }
+    padding: 0 0.5em 0 0;
+    letter-spacing: normal;
+    max-width: 430px;
+  }
 }
-.service__link{
-      text-decoration: none;
-    width: 15rem;
-    display: block;
-    color: $black;
-    padding: 1.375rem 5.125rem;
-    width: fit-content;
-    border: 1px solid $black;
-    border-radius: 0.625rem;
-    font-family: $base-font;
-    font-weight: $bold;
-    margin-top: 2rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
-
-    @include mq("md"){
-        margin-left: 3.5rem;
-        word-break: break-all
-    };
+.service__description .service__description-words {
+  @include mq("md") {
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+  }
 }
-.service__link:hover{
-    background-color: $black;
-    color: $white;    
+.service__description.service__corporate {
+  @include mq("md") {
+    margin-left: 0;
+    margin-right: 2.75rem;
+  }
+  @include mq("lxg") {
+    margin-right: 3.65rem;
+  }
 }
-.service__photo{
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 335/ 301;
-    @include mq("md"){
-        aspect-ratio: 516 /464;
-        max-width: 516px;
-    }
+.service__link {
+  text-decoration: none;
+  width: 15rem;
+  display: block;
+  color: $black;
+  position: relative;
+  padding: 1.375rem 5.125rem;
+  width: fit-content;
+  border: 1px solid $black;
+  border-radius: 0.625rem;
+  font-family: $base-font;
+  font-weight: $bold;
+  margin-top: 2rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  @include mq("md") {
+    margin-top: 1.75rem;
+    margin-left: 2.75rem;
+    word-break: break-all;
+  }
+  @include mq("lxg") {
+    padding: 1rem 5.125rem;
+    margin-top: 1.875rem;
+  }
 }
-.service__reverse .service__number{
-    @include mq("md"){
+.service__link:hover {
+  background-color: $black;
+  color: $white;
+}
+.service__link.service__corporate--link {
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+.service__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 335/ 301;
+  @include mq("md") {
+    aspect-ratio: 516 /464;
+    max-width: 516px;
+  }
+  // @include mq("lxg") {
+  //   max-width: 521px;
+  // }
+}
+.service__reverse .service__number {
+  @include mq("md") {
     text-align: right;
-}
-@include mq("lg"){
-        margin-right: -1.5rem;
-    }
+  }
+  @include mq("lg") {
+    margin-right: -1.25rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1180px) {
-    .service__image{
-        width: 50%;
-        flex-shrink: 0;
-    }
-    .service__item {
-        align-items: flex-start;
-    }
-    .service__item.service__reverse{
-        align-items: flex-start;
-    }
+  .service__image {
+    width: 50%;
+    flex-shrink: 0;
+  }
+  .service__item {
+    align-items: flex-start;
+  }
+  .service__item.service__reverse {
+    align-items: flex-start;
+  }
 }
