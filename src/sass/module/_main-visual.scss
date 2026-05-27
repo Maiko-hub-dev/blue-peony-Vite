@@ -35,13 +35,14 @@
 .main-visual__inner {
   // padding: 2.5rem 0;
   width: 100%;
-  height: inherit;
   position: relative;
+  height: 100%;
   z-index: 2;
   margin-top: 3rem;
   border-radius: 10px 10px;
   @include mq("md") {
     padding: 0 0 0 2.5rem;
+    height: inherit;
     margin-top: 0;
   }
   @include mq("lxg") {
@@ -84,7 +85,7 @@ main-visual__titles
     max-height: 45.4375rem;
   }
   @include mq("lxg") {
-    width: 50.625%;
+    width: 62.25%;
   }
 }
 .main-visual.main-top .main-visual__rightbox {
@@ -101,7 +102,7 @@ main-visual__titles
   height: inherit;
   // height: 80vh;
   @include mq("sp") {
-    padding: 0.75rem 0.75rem 0.75rem 0.125rem;
+    padding: 0.75rem 0.75rem 1.65rem 0.125rem;
   }
   @include mq("md") {
     padding: 3.5rem 2.5em 2.5em 0;
@@ -177,7 +178,7 @@ main-visual__titles
   letter-spacing: 0.03em;
   width: auto;
   white-space: nowrap; // ★ 改行しない
-  bottom: 0.875rem;
+  bottom: -1.5rem;
   @include mq("md") {
     letter-spacing: normal;
     left: auto;
@@ -200,7 +201,7 @@ main-visual__titles
   left: 0.5rem;
   display: block;
   width: auto;
-  bottom: -3.625rem;
+  bottom: -6rem;
   color: $black;
   font-size: 0.75rem;
   line-height: 1.75;
@@ -209,7 +210,6 @@ main-visual__titles
   padding: 0.5rem 0.25rem 0 0;
   font-style: normal;
   @include mq("sp") {
-    bottom: -3.75rem;
     margin-top: 0.5rem;
     padding: 0.25rem 0.25rem 0 0;
     z-index: 11;
@@ -280,7 +280,7 @@ main-visual__titles
 }
 
 .members .members__dream.is-active {
-  bottom: 37%;
+  bottom: 33%;
   @include mq("md") {
     bottom: 3.1875rem;
     left: 5.4375rem;
@@ -401,12 +401,15 @@ main-visual__titles
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
-  top: 41.45%;
+  top: 44%;
   left: 47%;
   transform: scale(0.8);
   transform: translateX(-50%);
   transform: translateY(-100%);
   transition-duration: transform 0.8s ease-in-out;
+  @include mq("md") {
+    top: 41.45%;
+  }
 }
 .members .members__screen.is-active {
   transform: scale(1);
@@ -431,12 +434,14 @@ main-visual__titles
 /* スクロールダウンの位置 */
 .scroll {
   position: absolute;
-  bottom: -5.8125rem;
+  bottom: 3rem;
+  left: 0.75rem;
   z-index: 10;
   @include mq("md") {
     z-index: 100;
     bottom: 1.1875rem;
     margin-left: -1rem;
+    left: initial;
   }
   @include mq("lxg") {
     bottom: 3.65rem;
@@ -451,7 +456,7 @@ main-visual__titles
   content: "";
   bottom: -4rem;
   height: 4rem;
-  left: 0;
+  left: 0.125rem;
   margin: auto;
   right: 0;
   width: 1px;

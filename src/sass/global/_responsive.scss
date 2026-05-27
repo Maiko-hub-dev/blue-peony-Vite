@@ -17,7 +17,6 @@ $mediaqueries: (
   xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
 );
 
-
 //メディアクエリー
 $mediaquerys: (
   sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
@@ -38,7 +37,7 @@ $mediaquerys: (
   @media #{map-get($mediaquerys, $mediaquery)} {
     @content;
   }
-}  
+}
 
 .u-desktop {
   display: none;
@@ -52,5 +51,13 @@ $mediaquerys: (
   display: block;
   @include mq("md") {
     display: none;
+  }
+}
+.u-desktop-space {
+  display: none;
+
+  @include mq("md") {
+    display: inline-block;
+    width: 1rem;
   }
 }

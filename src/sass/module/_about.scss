@@ -23,6 +23,7 @@
   max-width: var(--container);
   background-color: $content;
   padding: 0 1.25rem;
+  margin-top: 2.5rem;
   @include mq("md") {
     margin-top: 4.5rem;
     padding: 3.875rem 0;
@@ -34,14 +35,14 @@
 }
 .about__swiper {
   width: inherit;
-  padding-top: 3.5rem;
+  padding-top: 0.9875rem;
   @include mq("md") {
     padding-top: 0;
   }
 }
 .about__subtitle {
   position: absolute;
-  top: 30%;
+  top: 26.9%;
   background-color: $content;
   writing-mode: vertical-rl; /* テキストを縦書きに */
   font-size: 1.5rem;
@@ -125,14 +126,16 @@
   position: relative;
   top: 50%;
   bottom: 0;
-  margin: 2rem auto 4rem 0;
-  max-width: rem(600);
-  padding: 0 1.25rem;
+  margin: 2rem auto 0 0;
+  letter-spacing: -0.01em;
+  padding: 2rem 1.25rem 0;
   @include mq("md") {
     margin: 3rem auto 5.3125rem 0;
+    max-width: rem(600);
     transform: translateX(-20%);
   }
   @include mq("lg") {
+    padding: 4.5rem 1.25rem 0;
     margin: 4rem auto 5.3125rem 0;
     transform: translateX(-5%);
   }
@@ -160,12 +163,15 @@
     -1px -1px 0 $blue;
   // text-stroke: 2px  $blue;
   font-size: 4.5rem;
+  font-weight: 600;
+  margin-top: -0.5rem;
+  letter-spacing: 0.01em;
   @include mq("md") {
     font-size: 8rem;
     padding-left: 0.5rem;
   }
   @include mq("lxg") {
-    font-weight: 600;
+    font-weight: 700;
     margin-top: -1rem;
     padding: 0 0.5rem 0 0.65rem;
     letter-spacing: 0.06rem;
@@ -173,12 +179,17 @@
 }
 .about__description {
   color: $black;
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: normal;
+  padding-top: 0.05rem;
   @include mq("md") {
     margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.75;
     padding-left: 0.65rem;
+    letter-spacing: normal;
   }
   @include mq("lxg") {
     line-height: 1.785rem;
@@ -191,9 +202,10 @@
   right: 0;
   bottom: 0;
   padding-right: 41.46%;
-  top: max(55%, 18.75rem);
+  top: 39%;
+  height: fit-content;
   @include mq("sp") {
-    padding-right: min(22%, 20.875rem);
+    padding-right: max(39.5%, 2.875rem);
   }
   @include mq("md") {
     top: 0;
@@ -220,20 +232,27 @@
 }
 .about__link {
   text-decoration: none;
-  width: 15rem;
+  position: relative;
+  max-width: 240px;
   display: block;
   color: $black;
-  padding: 1.375rem 5.125rem;
   letter-spacing: normal;
-  width: fit-content;
+  padding: 1rem 2rem 1.125rem;
   border: 1px solid $black;
   border-radius: 0.625rem;
   font-family: $base-font;
   font-weight: $bold;
-  margin-top: 2rem;
+  margin-top: 1.875rem;
+  text-align: center;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  @include mq("md") {
+    margin-top: 2rem;
+    padding: 1.375rem 5.125rem;
+    max-width: initial;
+    width: fit-content;
+  }
 }
 .about__link {
   @include mq("lxg") {
@@ -248,18 +267,18 @@
   color: $white;
 }
 .about__elipse {
-  font-size: 0.625rem;
+  position: absolute;
   display: inline-block;
   vertical-align: middle;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6875rem;
   margin-left: 1.75rem;
+  right: 1.125rem;
   text-align: center;
   @include mq("lxg") {
-    font-size: 0.6875rem;
     text-align: left;
-    position: absolute;
+    right: 1.25rem;
     margin-left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1.125rem;
   }
 }
