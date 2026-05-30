@@ -61,3 +61,19 @@ $mediaquerys: (
     width: 1rem;
   }
 }
+.u-desktop-space2 {
+  display: none;
+
+  @include mq("md") {
+    display: inline-block;
+    width: 0.05rem;
+  }
+}
+.u-desktop-space3 {
+  display: none;
+
+  @include mq("md") {
+    display: inline-block;
+    width: 0.05rem;
+  }
+}

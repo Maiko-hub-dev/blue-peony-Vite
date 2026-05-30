@@ -11,7 +11,7 @@
     z-index: 12;
   }
   @include mq("lxg") {
-    margin-top: 3rem;
+    margin-top: 2.75rem;
     padding-left: 14.25rem;
   }
 }
@@ -24,6 +24,7 @@
     padding: 0 0 0 1rem;
   }
   @include mq("lg") {
+    margin-top: 2rem;
     padding: 0 0 0 3rem;
   }
 }
@@ -154,7 +155,7 @@
     padding: 2rem 0;
   }
   @include mq("lxg") {
-    padding: 1.9875rem 0 0.5rem 0;
+    padding: 1.875rem 0 0.5rem 0;
   }
 }
 .news__content.news__safety {
@@ -180,7 +181,7 @@
     padding: 0.5rem 1.6875rem 1.75rem 2rem;
   }
   @include mq("lxg") {
-    padding: 0 1.6875rem 1.75rem 0.25rem;
+    padding: 0 1.6875rem 1.5rem 0.25rem;
   }
 }
 
@@ -199,11 +200,18 @@
     padding: 0.085rem 0.975rem 0.05rem;
     margin-right: 0.875rem;
   }
+  @include mq("lxg") {
+    padding: 0.25rem 0.975rem;
+  }
 }
 .news__category.news__cate {
+  font-size: 0.875em;
   @include mq("md") {
     padding: 0.075rem 0.975rem 0.045rem;
     margin-right: 1rem;
+  }
+  @include mq("lxg") {
+    padding: 0.25rem 0.975rem;
   }
 }
 .news__date {
@@ -212,6 +220,7 @@
   @include mq("md") {
     font-size: 0.875rem;
     font-weight: $bold;
+    letter-spacing: normal;
   }
 }
 .news__text {
@@ -220,7 +229,9 @@
   padding-top: 0.125rem;
   line-height: 1.75;
   @include mq("md") {
+    font-size: 1rem;
     padding-top: 0.65rem;
+    font-weight: $bold;
   }
 }
 .news__text.news__txt {

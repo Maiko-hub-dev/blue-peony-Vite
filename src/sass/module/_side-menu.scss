@@ -35,7 +35,10 @@
   }
 }
 .pade-top__list.side-menu__list {
-  padding-top: 0;
+  padding-top: 2rem;
+  @include mq("md") {
+    padding: 0;
+  }
 }
 .side-menu__list:first-child.about__menu-nav {
   padding-top: 0.5rem;
@@ -106,7 +109,12 @@
     font-weight: $bold;
   }
   @include mq("lxg") {
-    padding: 1.685rem 0;
+    padding: 1.65rem 0 1.65rem;
+  }
+}
+.menu__nav .side-menu__link.side-menu__link-info {
+  @include mq("lxg") {
+    padding: 1.75rem 0 1.65rem;
   }
 }
 .menu__nav .side-menu__link2 {
@@ -137,7 +145,7 @@
     font-weight: $bold;
   }
   @include mq("lxg") {
-    padding: 1.6875rem 0 1.55rem 0;
+    padding: 1.65rem 0 1.65rem 0;
   }
 }
 .menu__nav .side-menu__link4 {
@@ -205,16 +213,34 @@
     padding: 0.25rem 0 0;
   }
 }
-.side-menu__item2.menu__nav--topix--contact {
-  text-decoration: none;
-  color: $black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include mq("lxg") {
+.side-menu__item.side-menu__item2.accordion__title {
+  padding: 0.25rem 0 0 0;
+  @include mq("md") {
     padding: 0;
   }
 }
+.side-menu__item.side-menu__item2.menu__nav--topix {
+  padding: 0.5rem 0 0.75rem 0.25rem;
+  @include mq("md") {
+    padding: 0.25rem 0 0 0;
+  }
+}
+.menu__nav.side-menu__sublist.accordion__hide.menu__nav--topix {
+  padding: 1rem 0 0 0;
+  @include mq("lxg") {
+    padding: 1.65rem 0 0.75rem 1rem;
+  }
+}
+// .side-menu__item.side-menu__item2 .side-menu__item2.menu__nav--topix--contact {
+//   text-decoration: none;
+//   color: $black;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   @include mq("lxg") {
+//     padding: 0;
+//   }
+// }
 .menu__nav--topix2.side-menu__item {
   text-decoration: none;
   color: $black;
@@ -259,10 +285,11 @@
   display: flex;
   text-decoration: none;
   color: $black;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
   @include mq("md") {
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-top: 0.125rem;
   }
 }
@@ -279,7 +306,7 @@
 }
 .side-menu__subitem {
   @include mq("md") {
-    padding: 0.75rem 0;
+    padding: 0.65rem 0 0;
   }
 }
 .menu__nav.side-menu__subitem.service__subitem {
@@ -298,12 +325,15 @@
   }
 }
 .menu__nav--info {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  display: inline-block;
   margin-right: 0.5rem;
+  margin-left: 7rem;
+  width: 1.25rem;
   @include mq("md") {
+    width: 1.5rem;
+    height: 1.5rem;
     margin-right: 0.5rem;
+    margin-left: 0;
   }
 }
 .side-menu__link {
@@ -318,6 +348,12 @@
 .side-menu__sublist a {
   text-decoration: none;
   color: $black;
+  display: inline-block;
+  padding: 0 0.25rem 0 0;
+  letter-spacing: normal;
+  @include mq("md") {
+    padding: 0;
+  }
 }
 .side-menu__contact.side-menu__item {
   display: flex;
@@ -331,20 +367,59 @@
 }
 
 .menu__nav.side-menu__subitem {
-  padding: 0.75rem 0;
+  display: inline-block;
+  padding: 0.65rem 0 0.65rem 0.125rem;
+  letter-spacing: -0.01rem;
+  width: 100%;
   @include mq("md") {
-    padding: 0.75rem 0;
+    padding: 0.65rem 0 0;
   }
 }
 .menu__nav.side-menu__subitem2 {
-  padding: 0.5rem 0;
+  padding: 0;
+  @include mq("md") {
+    padding: 0.25rem 0 0;
+  }
+}
+.menu__nav.side-menu__subitem3 {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0 0.65rem 0.125rem;
+  @include mq("md") {
+    padding: 0.75rem 0 0;
+  }
+}
+.menu__nav.side-menu__subitem4 {
+  padding: 0.25rem 0 0 0.25rem;
   @include mq("md") {
     padding: 0 0;
   }
 }
+.menu__nav.side-menu__subitem5 {
+  display: inline-block;
+  width: 100%;
+  padding: 1.15rem 0 0.65rem 0.25rem;
+  @include mq("md") {
+    padding: 0.75rem 0;
+  }
+}
+.menu__nav.side-menu__subitem6 {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0 0.65rem 0.25rem;
+  @include mq("md") {
+    padding: 0 0 0.75rem 0;
+  }
+}
 .side-menu__item.side-menu__info,
 .side-menu__item.menu__nav--contact {
-  padding: 1rem 0;
+  padding: 0.65rem 0;
+  @include mq("md") {
+    padding: 0;
+  }
+}
+.menu__nav--topix.menu__nav--contact-row {
+  padding: 0.875rem 0 0 0;
   @include mq("md") {
     padding: 0;
   }
@@ -356,15 +431,16 @@
   }
 }
 .side-menu__link.side-menu__link--contact {
-  display: block;
+  display: inline-block;
   width: fit-content;
-  padding: 0 0 0 0.5rem;
+  padding: 0 0;
+  letter-spacing: normal;
   @include mq("md") {
     width: 100%;
     padding: 1.25rem 0;
   }
   @include mq("lxg") {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 1.65rem;
     margin-left: 0.5rem;
   }
 }
