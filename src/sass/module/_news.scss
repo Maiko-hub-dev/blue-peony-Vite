@@ -24,8 +24,11 @@
     padding: 0 0 0 1rem;
   }
   @include mq("lg") {
-    margin-top: 2rem;
+    padding: 0;
+  }
+  @include mq("xl") {
     padding: 0 0 0 3rem;
+    margin-top: 2rem;
   }
 }
 
@@ -41,12 +44,13 @@
   }
   @include mq("md") {
     padding: 0;
-    transform: translateX(-2%);
+    transform: translateX(2%);
   }
   @include mq("lg") {
-    padding: 0 0 0 6rem;
+    padding: 0 2rem 0 0;
+    transform: translateX(-2%);
   }
-  @include mq("lxg") {
+  @include mq("xl") {
     padding: 0 0 0 1.5rem;
   }
 }
@@ -97,7 +101,7 @@
   background-color: $white;
   padding-top: 1.75rem;
   @include mq("md") {
-    padding: 1rem 1rem 0 0;
+    padding: 1rem 3rem 0 5rem;
     margin-left: 0;
     margin-top: 0;
   }
@@ -152,7 +156,7 @@
   color: $blue;
   padding: 1rem 0;
   @include mq("md") {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   @include mq("lxg") {
     padding: 1.875rem 0 0.5rem 0;
@@ -178,7 +182,7 @@
   text-align: left;
   @include mq("md") {
     max-width: 1120px;
-    padding: 0.5rem 1.6875rem 1.75rem 2rem;
+    padding: 0.5rem 0 1.75rem 0;
   }
   @include mq("lxg") {
     padding: 0 1.6875rem 1.5rem 0.25rem;
@@ -197,7 +201,7 @@
   line-height: 1;
   text-align: center;
   @include mq("md") {
-    padding: 0.085rem 0.975rem 0.05rem;
+    padding: 0.25rem 0.975rem 0.25rem;
     margin-right: 0.875rem;
   }
   @include mq("lxg") {
@@ -207,7 +211,7 @@
 .news__category.news__cate {
   font-size: 0.875em;
   @include mq("md") {
-    padding: 0.075rem 0.975rem 0.045rem;
+    padding: 0.25rem 0.975rem 0.25rem;
     margin-right: 1rem;
   }
   @include mq("lxg") {
@@ -346,7 +350,10 @@
 }
 .news__iconbox.iconbox__renewal {
   position: absolute;
-  top: 41%;
+  @include mq("md") {
+    position: relative;
+    top: 41%;
+  }
 }
 .news__modalicon {
   display: block;

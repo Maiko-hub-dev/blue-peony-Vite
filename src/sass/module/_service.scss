@@ -266,17 +266,23 @@
   line-height: 1;
   @include mq("md") {
     justify-content: initial;
+    flex-direction: row;
+    align-items: center;
   }
 }
-.service__numbers.service__number2x {
+.service__numbers.numbers__2x {
   @include mq("md") {
     flex-direction: row;
+  }
+  @include mq("lxg") {
+    flex-direction: row-reverse;
   }
 }
 .service__numbers.service__number1x {
   @include mq("md") {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 .service__number {
@@ -290,8 +296,9 @@
   @include mq("md") {
     display: block;
     margin-top: 0;
+    font-size: 5rem;
   }
-  @include mq("lxg") {
+  @include mq("xl") {
     font-size: 10.5rem;
     margin-left: -2rem;
     margin-top: -2.5rem;
@@ -301,6 +308,9 @@
   @include mq("md") {
     margin-top: 0;
     padding-left: 0.5rem;
+  }
+  @include mq("lxg") {
+    margin-top: -2rem;
   }
 }
 .service__number.service__num {
@@ -320,6 +330,7 @@
   width: fit-content;
   display: inline-block;
   @include mq("md") {
+    padding: 0.5rem 1rem;
     display: block;
     font-size: 1.5rem;
     margin-left: 3.5rem;
@@ -334,6 +345,9 @@
   font-weight: $bold;
   letter-spacing: normal;
   @include mq("lxg") {
+    margin: 0 0 0 2rem;
+  }
+  @include mq("xl") {
     margin-top: 10.5rem;
     padding: 0.25rem 1rem;
     margin-left: 0;
@@ -344,6 +358,11 @@
 .service__name.service__name--public {
   @include mq("lxg") {
     margin-left: 1.35rem;
+    min-width: 240px;
+    text-align: center;
+  }
+  @include mq("lg") {
+    min-width: initial;
   }
 }
 .service__description {
@@ -353,7 +372,7 @@
   @include mq("md") {
     max-width: 430px;
     margin-left: 3.5rem;
-    margin-top: 0;
+    margin-top: 1.25rem;
   }
   @include mq("lxg") {
     margin-top: 2.75rem;

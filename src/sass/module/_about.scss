@@ -30,7 +30,8 @@
     position: relative;
   }
   @include mq("lxg") {
-    margin-top: 5.75rem;
+    // margin-top: 5.75rem;
+    margin-top: 4.5em;
     padding: 3.875rem 0 3.25rem 0;
   }
 }
@@ -58,7 +59,8 @@
   height: fit-content;
   letter-spacing: 0.5em;
   @include mq("md") {
-    top: 65%;
+    // top: 65%;
+    top: 62.5%;
     bottom: -10.7875rem;
     font-size: 2.5rem;
     padding: 2rem 1.5rem;
@@ -131,7 +133,7 @@
   letter-spacing: -0.01em;
   padding: 2rem 1.25rem 0;
   @include mq("md") {
-    margin: 3rem auto 5.3125rem 0;
+    margin: 3rem auto 5.3125rem auto;
     max-width: rem(600);
     transform: translateX(-20%);
   }
@@ -175,7 +177,7 @@
     font-weight: 700;
     margin-top: -1rem;
     padding: 0 0.5rem 0 0.65rem;
-    letter-spacing: 0.06rem;
+    letter-spacing: normal;
   }
 }
 .about__description {
@@ -209,7 +211,7 @@
     padding-right: max(39.5%, 2.875rem);
   }
   @include mq("md") {
-    top: 0;
+    top: 40%;
     transform: translateY(60%);
     padding-right: min(23%, 20.875rem);
   }

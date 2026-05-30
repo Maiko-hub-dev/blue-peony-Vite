@@ -21,13 +21,13 @@
     width: inherit;
     max-width: var(--container);
     margin-top: 1.5rem;
-    padding: 0 0rem 0 7rem;
+    padding: 0 0rem 0 6.5rem;
   }
   @include mq("lg") {
     margin-top: 2.75rem;
-    padding: 0 0 0 14rem;
   }
   @include mq("lxg") {
+    padding: 0 0 0 14rem;
     margin-top: 2.75rem;
   }
 }
@@ -128,6 +128,9 @@
     padding-left: 4.5rem;
     justify-content: flex-start;
   }
+  @include mq("lg") {
+    flex-direction: row;
+  }
   @include mq("lxg") {
     flex-direction: row;
     padding: 0 0 0 0.25rem;
@@ -156,7 +159,7 @@
   @include mq("md") {
     background-size: contain;
   }
-  @include mq("lxg") {
+  @include mq("xl") {
     width: 10.9375rem;
     height: 16rem;
     background-size: 10.9375rem 16rem;
@@ -217,7 +220,7 @@
     padding: 1.5rem 0 1.5rem 1.5rem;
     height: inherit;
   }
-  @include mq("lg") {
+  @include mq("xl") {
     padding: 1.5rem 1.985rem 1.5rem 1.85rem;
   }
 }
@@ -279,6 +282,8 @@
   @include mq("lxg") {
     margin-top: 0.75rem;
     padding: 1.125rem 2rem 2px;
+  }
+  @include mq("xl") {
     margin-left: 2rem;
   }
 }
