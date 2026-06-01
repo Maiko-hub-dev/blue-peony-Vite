@@ -160,6 +160,18 @@ MicroModal.init({
   openClass: "is-open",
   disableScroll: true,
 });
+// モーダル内だけで52文字に切るJavaScript を既存コードに合わせて組み込む
+document.querySelectorAll(".news__modal-description").forEach((el) => {
+  const limit = 62;
+  const text = el.textContent.trim();
+
+  if (text.length > limit) {
+    el.innerHTML = `
+      ${text.substring(0, limit)}
+      <span class="news__modal-ellipsis">～～～～～～</span>
+    `;
+  }
+});
 
 // スクロールで見えなくするサイドメニュー
 document.addEventListener("DOMContentLoaded", () => {
