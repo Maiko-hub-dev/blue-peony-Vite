@@ -33,6 +33,10 @@
     margin-right: 0;
     right: 1.65rem;
   }
+  @include mq("lxg") {
+    width: 10.9375rem;
+    height: 16rem;
+  }
 }
 .holiday-span {
   display: none;
@@ -51,5 +55,73 @@
   @include mq("md") {
     padding-top: 0;
     margin-left: 0rem;
+  }
+}
+.contact__note.contact__footer-note {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  @include mq("md") {
+    display: inline-block;
+    margin: 0;
+    padding: 0.35rem 0.25rem 0.65em 0;
+  }
+}
+.footer__address.address-contact {
+  font-family: $base-font;
+  font-size: 0.75rem;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 2rem;
+  @include mq("md") {
+    flex-direction: row;
+    margin-top: 2.4375rem;
+    padding-top: 2.4375rem;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: normal;
+  }
+  @include mq("lxg") {
+    margin-top: 0;
+    padding: 2.35rem 0 0 1rem;
+  }
+}
+.footer__logo .footer__icon-contact {
+  @include mq("lxg") {
+    width: inherit;
+    margin: 2.125rem 0 0 1rem;
+    transform: scale(1);
+    object-fit: cover;
+    transform: scale(1.05);
+    padding-right: 0.75rem;
+  }
+  @include mq("lxg") {
+    padding-right: 0.75rem;
+  }
+}
+.footer__hours.hours-contact {
+  text-align: center;
+  font-size: 0.75rem;
+  @include mq("md") {
+    padding: 0.5rem 0 0 1rem;
+    text-align: initial;
+    font-size: 1rem;
+  }
+  @include mq("xl") {
+    margin-top: 0.5rem;
+  }
+}
+.footer__holiday.holiday-contact {
+  text-align: center;
+  font-size: 0.75rem;
+  @include mq("md") {
+    padding: 0.5rem 0 0 1rem;
+    text-align: initial;
+    font-size: 1rem;
+  }
+  @include mq("xl") {
+    margin-top: 0.5rem;
   }
 }

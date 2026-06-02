@@ -189,9 +189,8 @@
   }
 }
 .contact__tel--num {
-  display: flex;
-
   @include mq("md") {
+    display: flex;
     justify-content: center;
     flex-direction: column; // 中身を縦並び
     padding: 0.5rem 0;
@@ -246,6 +245,7 @@
     margin-top: 0;
   }
 }
+
 .contact__head-box {
   @include mq("lg") {
     border-right: 1px solid $black;
@@ -290,11 +290,7 @@
     padding: 0.75rem 0.125rem 0 0.75rem;
   }
 }
-.contact__note.contact__footer-note {
-  @include mq("md") {
-    padding: 0.35rem 0.25rem 0.65em 0;
-  }
-}
+
 .contact__access {
   padding: 0.55rem 0 0 0;
   @include mq("md") {

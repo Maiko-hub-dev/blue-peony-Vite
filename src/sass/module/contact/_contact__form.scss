@@ -4,9 +4,9 @@
 .contact__form {
   padding: 1.5rem 0 0 0;
   @include mq("md") {
-    padding: 0 0 0 6rem;
+    padding: 0 0 0 10rem;
   }
-  @include mq("lg") {
+  @include mq("xl") {
     padding: 0 0 0 4rem;
   }
 }
@@ -30,7 +30,7 @@
     padding: 0;
   }
   @include mq("lxg") {
-    margin-left: 1rem;
+    margin-left: 0;
     padding-left: 0.5rem;
   }
 }
@@ -38,7 +38,7 @@
   margin-bottom: 2rem;
   @include mq("md") {
     margin-bottom: 0;
-    // padding-top: 1rem;
+    padding-top: 0.25rem;
   }
 }
 
@@ -48,7 +48,7 @@
   margin-bottom: 1rem;
   letter-spacing: 0.04em;
   @include mq("md") {
-    // margin-bottom: 1.25rem;
+    margin-bottom: 0.875rem;
     letter-spacing: normal;
   }
 }
@@ -187,16 +187,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
+  justify-content: space-between;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   width: auto;
   @include mq("md") {
+    justify-content: initial;
     width: max(29.375rem, 50%);
     gap: 2.5rem;
   }
   @include mq("lxg") {
-    padding-top: 0.35rem;
+    padding-top: 0.5rem;
     margin-bottom: 0;
   }
 }
@@ -209,6 +210,12 @@
   display: block;
   @include mq("md") {
     max-width: 215px;
+  }
+}
+.form-name:not(:first-child) {
+  margin-left: 0.5rem;
+  @include mq("md") {
+    margin-left: 0;
   }
 }
 .form-email,
@@ -331,8 +338,9 @@
   margin: 1.5rem 0;
   @include mq("md") {
     width: fit-content;
-    max-width: initial;
-    margin: 2rem auto 0;
+    min-width: 240px;
+    margin: 4rem 0 0 5.35rem;
+    padding: 1.125rem 6.875rem 1.125rem 6.875rem;
   }
   &:hover {
     background-color: $white;
@@ -340,12 +348,9 @@
     border: 1px solid $blue;
     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
   }
-  @include mq("lxg") {
-    width: 15rem;
+  @include mq("xl") {
     letter-spacing: normal;
-    min-width: 240px;
-    margin: 4rem auto 0 5.35rem;
-    padding: 1.125rem 6.875rem 1.125rem 6.875rem;
+    margin: 4rem auto 0 6.5rem;
   }
 }
 .contact__link:hover .contact__elipse {

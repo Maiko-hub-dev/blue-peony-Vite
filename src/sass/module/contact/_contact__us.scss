@@ -359,3 +359,31 @@
     padding-top: 0.875rem;
   }
 }
+.contact__number.contact__site-num {
+  display: block;
+  font-size: 1.75rem;
+  @include mq("md") {
+    display: inline;
+    font-size: 2rem;
+  }
+}
+.side-menu__list.contact__page-nav {
+  padding-top: 2rem;
+  @include mq("md") {
+    padding-top: 0;
+  }
+}
+.side-menu__list.contact__page-nav:not(:first-child) {
+  padding-top: 0;
+}
+.side-menu__copyright.side__copyright {
+  font-family: $base-font;
+  font-weight: $normal;
+  text-align: center;
+  margin-top: 1.15rem;
+  font-size: 0.75rem;
+  padding: 0;
+  @include mq("md") {
+    display: none;
+  }
+}
