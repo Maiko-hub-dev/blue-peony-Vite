@@ -29,8 +29,8 @@
     flex-direction: row;
     margin-top: 4.675rem;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 4rem 0 6rem;
+    justify-content: stretch;
+    padding: 0 2rem 0 6rem;
   }
 }
 .footer__column {
@@ -99,7 +99,7 @@
   font-size: 0.75rem;
   @include mq("md") {
     padding-top: 2rem;
-    text-align-last: left;
+    text-align: initial;
     font-size: 1rem;
   }
   @include mq("xl") {
@@ -176,7 +176,7 @@
   }
   @include mq("xl") {
     margin-top: 1.25rem;
-    padding: 0 0 0 8%;
+    padding: 0 0 0 6rem;
   }
 }
 
@@ -201,6 +201,9 @@
   @include mq("md") {
     min-width: 164px;
     margin-top: 0;
+    margin-left: 0.5rem;
+  }
+  @include mq("lxg") {
     margin-left: 1.5rem;
   }
 }
@@ -289,7 +292,7 @@
     padding-top: 2.5rem;
   }
   @include mq("lxg") {
-    padding: 2.5rem 0 0 0.45rem;
+    padding: 2.5rem 0 0 0.75rem;
   }
 }
 .footer__nav--second,
@@ -305,7 +308,7 @@
     padding-top: 2.5rem;
   }
   @include mq("lxg") {
-    padding: 2rem 0 0 0.45rem;
+    padding: 2rem 0 0 0.875rem;
   }
 }
 .footer__copyright {

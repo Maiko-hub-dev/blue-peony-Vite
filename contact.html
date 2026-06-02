@@ -81,7 +81,7 @@
             <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
               <a href="#" class="menu__nav side-menu__link accordion__door">私達について </a>
             </p>
-            <ul class="menu__nav side-menu__sublist accordion__hide accordion--open">
+            <ul class="menu__nav side-menu__sublist accordion__hide accordion--open contact__nav-hide">
               <li class="menu__nav side-menu__subitem drawer__link">
                 <a href="about.html#philosophy" class="menu__nav side-menu__sublink">経営理念</a>
               </li>
@@ -98,11 +98,11 @@
           <p class="menu__nav side-menu__item menu__nav--topix3 accordion__title">
             <a href="#service" class="menu__nav side-menu__link accordion__door">事業内容</a>
           </p>
-          <ul class="menu__nav side-menu__sublist menu__nav--topix accordion__hide accordion--open">
+          <ul class="menu__nav side-menu__sublist menu__nav--topix accordion__hide accordion--open contact__nav--hide">
             <li class="menu__nav side-menu__subitem">
               <a href="service.html#housing" class="side-menu__sublink">住宅建築・リフォーム</a>
             </li>
-            <li class="menu__nav side-menu__subitem2">
+            <li class="menu__nav side-menu__subitem2 side-menu__subitem-contact">
               <a href="service.html#corporate" class="menu__nav side-menu__sublink">法人新築・リフォーム</a>
             </li>
             <li class="menu__nav side-menu__subitem">
@@ -152,7 +152,7 @@
               <li class="contact__reception--number">
                 <span class="contact__number">0000-000-0000</span>
               </li>
-              <li class="contact__note">営業時間10:00-20:00</li>
+              <li class="contact__note contact__us--note">営業時間10:00-20:00</li>
             </ul>
           </div>
           <div class="contact__us--illust contact-input"></div>
@@ -201,7 +201,7 @@
                 </div>
               </div>
             </div>
-            <div class="contact__form--box box">
+            <div class="contact__form--box box2">
               <div class="contact__form--input form-email">
                 <label for="mail" class="contact__form-title">メールアドレス<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
                 <div class="form-email">
@@ -213,15 +213,15 @@
               <div class="contact__form--input form-telephone">
                 <label for="tel" class="contact__form-title">電話番号<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
                 <div class="form-email">
-                  <input value="tel" name="entry.1792375108" id="tel" class="contact__form-input form-email__input" placeholder="000-000-0000" required />
+                  <input name="entry.1792375108" id="tel" class="contact__form-input form-email__input" placeholder="000-000-0000" required />
                 </div>
               </div>
             </div>
-            <div class="contact__form--box box-top">
+            <div class="contact__form--box box-top contact__form--box2">
               <div class="contact__form--input form-address">
                 <label for="address" class="contact__form-title">住所<span class="contact__form-mark">&#9733;</span><span class="contact__form-nessesary">必須</span></label>
                 <div class="form-email">
-                  <input value="address" name="entry.1009915887" id="address" class="contact__form-input form-email__input" placeholder="大阪府大阪市中央区北区南町5-6-7" required />
+                  <input name="entry.1009915887" id="address" class="contact__form-input form-email__input" placeholder="大阪府大阪市中央区北区南町5-6-7" required />
                 </div>
               </div>
             </div>
@@ -245,9 +245,10 @@
     <div class="contact contact__footer">
       <div class="contact__footer--inner">
         <div class="contact__wrapper">
+          <div class="wrapper__finance finance contact__site-finance"></div>
           <div class="contact__titles">
             <p class="contact__title common__title">お問い合わせ</p>
-            <p class="contact__heading">CONTACT</p>
+            <p class="contact__heading contact__site-head">CONTACT</p>
           </div>
           <div class="contact__info">
             <div class="contact__telephone">
@@ -255,12 +256,12 @@
                 <span class="contact__label">Tel</span>
                 <span class="contact__text">お電話</span>
               </div>
-              <div class="contact__tel--num number">
+              <div class="contact__tel--num contact__footer-number">
                 <span class="contact__number">0000-000-0000</span>
-                <span class="contact__note">営業時間 9:00～18:00</span>
+                <span class="contact__note contact__footer-note">営業時間10:00-20:00</span>
               </div>
             </div>
-            <div class="contact__access">
+            <div class="contact__access contact-site__access">
               <a href="contact.html" class="contact__form-button">
                 <img src="./src/images/mail.svg" alt="" class="contact__icon" />
                 <span class="contact__button">メールフォームはこちら</span>
@@ -277,27 +278,27 @@
           <div class="footer__logo">
             <img src="./src/images/logo-pc.svg" alt="青牡丹工務店のロゴ" loading="lazy" class="footer__icon" />
           </div>
-          <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市北区南町西5-6-7</span></p>
-          <p class="footer__hours hours">営業時間<span class="hours__jp">10:00〜20:00</span></p>
-          <p class="footer__holiday holiday">定休日<span class="holiday__week">日曜日、祝日、年末年始（12月31日から1月3日まで）</span></p>
+          <p class="footer__address address">〒000-0000 <span class="address__jp">大阪府大阪市中央区北区南町5-6-7</span></p>
+          <p class="footer__hours hours">営業時間<span class="hours__jp">10:00~20:00</span></p>
+          <p class="footer__holiday holiday">定休日<span class="holiday-span"></span><span class="holiday__week">日曜日、祝日、年末年始（12月31日から1月3日まで）</span></p>
         </div>
         <div class="footer__tablecontents">
           <ul class="footer__nav--first footer__nav">
             <li class="footer__nav-item"><a href="#" class="footer__nav--link">トップページ</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">私たちについて</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">経営理念</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">私達について</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">経営理念</a></li>
           </ul>
           <ul class="footer__nav--second footer__nav">
             <li class="footer__nav-item"><a href="#" class="footer__nav--link">会社概要</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">安全への取り組み</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">事業内容</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">住宅建築・リフォーム</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">安全への取り組み</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">事業内容</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">住宅建築・リフォーム</a></li>
           </ul>
           <ul class="footer__nav--third footer__nav">
             <li class="footer__nav-item"><a href="#" class="footer__nav--link">法人新築・リフォーム</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">公共工事</a></li>
-            <li class="footer__nav-item item"><a href="#" class="footer__nav--link">お知らせ</a></li>
-            <li class="footer__nav-item footer__contact item">
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">公共工事</a></li>
+            <li class="footer__nav-item item footer__contact-nav"><a href="#" class="footer__nav--link">お知らせ</a></li>
+            <li class="footer__nav-item footer__contact item footer__contact-nav2">
               <a href="contact.html" class="footer__contact-contact"><img src="./src/images/mail.svg" alt="メールのアイコン" /><span class="footer__contact-text">お問い合わせ</span></a>
             </li>
           </ul>

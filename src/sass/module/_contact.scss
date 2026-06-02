@@ -200,7 +200,12 @@
     justify-content: start;
   }
 }
-
+.contact__tel--num.contact__footer-number {
+  @include mq("md") {
+    // padding: 0.5rem 1.875rem 0;
+    padding: 1.5rem 0 0 2rem;
+  }
+}
 .contact__tel--num.label {
   padding: 1.5rem 0;
   @include mq("md") {
@@ -234,6 +239,11 @@
     padding: 0.5rem 0.25rem 0 0;
     letter-spacing: normal;
     transform: scaleX(1);
+  }
+}
+.contact__number {
+  @include mq("md") {
+    margin-top: 0;
   }
 }
 .contact__head-box {
@@ -270,8 +280,19 @@
   }
   @include mq("lxg") {
     letter-spacing: 0.01rem;
-    transform: scaleX(0.9875);
-    padding: 0.35rem 0.125rem 0 0;
+    transform: scaleX(0.975);
+    padding: 0.35rem 0.125rem 0 0.125rem;
+    margin-left: -0.25em;
+  }
+}
+.contact__note.contact__us--note {
+  @include mq("md") {
+    padding: 0.75rem 0.125rem 0 0.75rem;
+  }
+}
+.contact__note.contact__footer-note {
+  @include mq("md") {
+    padding: 0.35rem 0.25rem 0.65em 0;
   }
 }
 .contact__access {
@@ -287,12 +308,19 @@
     margin-left: 2rem;
   }
 }
+.contact__access.contact-site__access {
+  @include mq("lxg") {
+    margin-left: 3rem;
+    padding: 1.125rem 2rem 0.25rem 2.75rem;
+  }
+}
 .contact__access.service__contact__access {
   @include mq("lxg") {
     padding: 1rem 0.75rem 2px 2rem;
   }
 }
 .contact__form-button {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: $white;
@@ -305,7 +333,7 @@
     padding: 1.25rem 0.5rem 1.25rem 0.5rem;
   }
   @include mq("lxg") {
-    padding: 1.15rem 0.5rem 1rem 1rem;
+    padding: 1.25rem 0.5rem 1rem 1rem;
     font-weight: 800;
   }
 }
@@ -363,9 +391,11 @@
     padding: 0.25rem 0 0 0;
   }
   @include mq("lxg") {
-    font-size: 0.75em;
+    position: absolute;
+    right: 1.185rem;
+    top: 1.35rem;
     padding: 0;
-    margin-left: 0.55rem;
+    margin-left: 0;
   }
 }
 

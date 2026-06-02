@@ -88,7 +88,7 @@
   @include mq("lxg") {
     width: fit-content;
     font-weight: 700;
-    margin-top: -1rem;
+    margin-top: -1.125rem;
     padding: 0 0 0 0.25rem;
     letter-spacing: normal;
   }
@@ -106,7 +106,7 @@
     margin-top: 0;
   }
   @include mq("lxg") {
-    padding: 0.875rem 1.85rem 0 0;
+    padding: 0.9875rem 1.85rem 0 0;
   }
 }
 .news__item {
@@ -121,7 +121,7 @@
     padding: 0 1.6875rem 0 2rem;
   }
   @include mq("lxg") {
-    padding: 0 1.5rem 0 0;
+    padding: 1.5rem 1.5rem 0.5rem 0;
   }
 }
 .news__item.news__line {
@@ -138,7 +138,7 @@
     padding: 0 1.6875rem 0 2rem;
   }
   @include mq("lxg") {
-    padding: 0 1.5rem 0 0;
+    padding: 0 1.5rem 1.25rem 0rem;
   }
 }
 .news__item.news__renewal.news__line {
@@ -147,7 +147,7 @@
     padding: 0 1.6875rem 0 2rem;
   }
   @include mq("lxg") {
-    padding: 0 1.5rem 0 0;
+    padding: 0 1.5rem 1.185rem 0;
   }
 }
 .news__content {
@@ -165,13 +165,16 @@
 .news__content.news__safety {
   padding: 1rem 0 0.5rem;
   @include mq("lxg") {
-    padding: 1.9875rem 0 0.5rem 0;
+    padding: 1.9875rem 0 1.25rem 0;
   }
 }
 .news__link {
   padding: 0;
   border: none;
   background: transparent;
+}
+.news__link.news__link2 {
+  padding-bottom: 0.25rem;
 }
 .news__link {
   display: inline-block;
@@ -185,7 +188,7 @@
     padding: 0.5rem 0 1.75rem 0;
   }
   @include mq("lxg") {
-    padding: 0 1.6875rem 1.5rem 0.25rem;
+    padding: 0 1.6875rem 1.125rem 0.25rem;
   }
 }
 
@@ -234,7 +237,8 @@
   line-height: 1.75;
   @include mq("md") {
     font-size: 1rem;
-    padding-top: 0.65rem;
+    // padding-top: 0.65rem;
+    padding-top: 0;
     font-weight: $bold;
   }
 }
@@ -388,16 +392,15 @@
   top: 43%;
   right: 0;
   @include mq("md") {
-    position: relative;
     padding: 0;
     width: fit-content;
+    right: 1.35rem;
   }
 }
 .news__iconbox.iconbox__renewal {
   position: absolute;
   @include mq("md") {
-    position: relative;
-    top: 41%;
+    top: 43%;
   }
 }
 .news__modalicon {

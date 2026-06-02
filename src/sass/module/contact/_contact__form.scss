@@ -15,7 +15,7 @@
   max-width: var(--container);
   @include mq("md") {
     padding: 0 0rem 0 7rem;
-    margin-top: 4rem;
+    margin-top: 0.5rem;
   }
   @include mq("xl") {
     padding: 0 0 0 12rem;
@@ -29,12 +29,17 @@
   @include mq("md") {
     padding: 0;
   }
-  @include mq("lg") {
-    margin-left: 2rem;
+  @include mq("lxg") {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
   }
 }
 .contact__form-group {
   margin-bottom: 2rem;
+  @include mq("md") {
+    margin-bottom: 0;
+    // padding-top: 1rem;
+  }
 }
 
 .contact__form-title {
@@ -43,7 +48,8 @@
   margin-bottom: 1rem;
   letter-spacing: 0.04em;
   @include mq("md") {
-    margin-bottom: 1.6875rem;
+    // margin-bottom: 1.25rem;
+    letter-spacing: normal;
   }
 }
 
@@ -51,6 +57,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  @include mq("md") {
+    gap: 0.35rem;
+    padding-top: 0.25rem;
+  }
 }
 
 .contact__radio {
@@ -72,6 +82,9 @@
   line-height: 1.4;
   font-weight: $bold;
   padding-left: 1.5rem;
+  @include mq("md") {
+    letter-spacing: normal;
+  }
 }
 /* 外側の丸 */
 .contact__radio-text::before {
@@ -120,10 +133,26 @@
 .contact__form--box {
   display: block;
 }
+.contact__form--box.box {
+  @include mq("md") {
+    padding-top: 1.25rem;
+  }
+}
+.contact__form--box.box2 {
+  @include mq("md") {
+    padding-top: 1rem;
+  }
+}
 .contact__form--box.box-top {
   margin-top: 0.5rem;
   @include mq("md") {
-    margin-top: 1.625rem;
+    margin-top: 1.35rem;
+  }
+}
+.contact__form--box.box-top.contact__form--box2 {
+  margin-top: 0.5rem;
+  @include mq("md") {
+    margin-top: 1.25rem;
   }
 }
 .contact__form-input {
@@ -135,27 +164,40 @@
   letter-spacing: 0.04em;
   box-sizing: border-box;
   &:focus {
-    outline: 2px solid $blue;
+    // outline: 2px solid $blue;
     outline-offset: 2px;
+  }
+  @include mq("md") {
+    width: 13.4375rem;
+    padding: 1rem 1rem 1.125rem 0.875rem;
   }
 }
 .contact__form-title.contact__box--title {
   display: block;
   margin-top: 1rem;
   @include mq("md") {
-    margin-top: 1.6875rem;
+    margin-top: 1.25rem;
+  }
+  @include mq("lxg") {
+    margin-top: 0;
+    // margin-bottom: 1;
   }
 }
 .contact__form-names.form-names {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   width: auto;
   @include mq("md") {
     width: max(29.375rem, 50%);
     gap: 2.5rem;
+  }
+  @include mq("lxg") {
+    padding-top: 0.35rem;
+    margin-bottom: 0;
   }
 }
 
@@ -165,6 +207,9 @@
 }
 .contact__form--input {
   display: block;
+  @include mq("md") {
+    max-width: 215px;
+  }
 }
 .form-email,
 .form-telephone,
@@ -174,11 +219,17 @@
     width: max(29.375rem, 50%);
   }
 }
+.contact__form--input.form-email {
+  @include mq("md") {
+    padding-top: 0.35rem;
+  }
+}
 .form-email .form-email__input {
   display: block;
   margin-top: 1rem;
+  width: 100%;
   @include mq("md") {
-    margin-top: 1.6875rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -195,6 +246,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  @include mq("md") {
+    justify-content: start;
+    margin-left: 3rem;
+  }
+  @include mq("lxg") {
+    margin-left: 4.5rem;
+  }
 }
 
 /* チェックボックス本体は非表示 */
@@ -207,6 +265,10 @@
   position: relative;
   padding-left: 1.75rem;
   font-size: 0.875rem;
+  @include mq("md") {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
 }
 .contact__check--text::before {
   content: "";
@@ -251,13 +313,14 @@
   width: max(29.375rem, 50%);
 }
 .contact__link {
+  width: 100%;
+  max-width: 330px;
+  position: relative;
   text-decoration: none;
-  width: 15rem;
   display: block;
   background-color: $blue;
   color: $white;
   padding: 1.375rem 5.125rem;
-  width: fit-content;
   font-size: 1rem;
   border-radius: 0.625rem;
   font-family: $base-font;
@@ -267,6 +330,8 @@
   transition: all 0.3s ease;
   margin: 1.5rem 0;
   @include mq("md") {
+    width: fit-content;
+    max-width: initial;
     margin: 2rem auto 0;
   }
   &:hover {
@@ -274,6 +339,13 @@
     color: $blue;
     border: 1px solid $blue;
     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+  @include mq("lxg") {
+    width: 15rem;
+    letter-spacing: normal;
+    min-width: 240px;
+    margin: 4rem auto 0 5.35rem;
+    padding: 1.125rem 6.875rem 1.125rem 6.875rem;
   }
 }
 .contact__link:hover .contact__elipse {

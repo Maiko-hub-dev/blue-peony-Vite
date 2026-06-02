@@ -1,16 +1,55 @@
 @use "../../global/" as *;
 @use "@sass/global" as *;
 
-.contact.contact__footer{
-    margin-top: 0;
-    padding-top: 0;
-}.contact__footer--inner{
-    @include mq("md"){
-        padding: 0 0 0 3rem;
-    }
+.contact.contact__footer {
+  margin-top: 0;
+  padding-top: 0;
+  @include mq("lxg") {
+    margin-top: 4.5rem;
+  }
 }
-.contact__inner.inform{
-    @include mq("md"){
-        padding: 0;
-    }
+.contact__footer--inner {
+  @include mq("md") {
+    padding: 0 0 0 3rem;
+  }
+  @include mq("lxg") {
+    padding: 0 0 0 14rem;
+  }
+}
+.contact__inner.inform {
+  @include mq("md") {
+    padding: 0;
+    height: 100%;
+  }
+}
+.contact__site-head.contact__heading {
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+.finance.contact__site-finance {
+  @include mq("md") {
+    top: 0.875rem;
+    margin-right: 0;
+    right: 1.65rem;
+  }
+}
+.holiday-span {
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+    width: 1rem;
+  }
+}
+.footer__nav-item.item.footer__contact-nav {
+  @include mq("md") {
+    padding-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+.footer__nav-item.item.footer__contact-nav2 {
+  @include mq("md") {
+    padding-top: 0;
+    margin-left: 0rem;
+  }
 }
