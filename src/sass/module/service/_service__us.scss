@@ -289,6 +289,12 @@
 }
 .side-menu__sublist.accordion__hide {
   @include mq("md") {
-    padding: 1.125rem 2rem 1.25rem 1.0625rem;
+    padding: 1.315rem 2rem 1.125rem 1rem;
+  }
+}
+.menu__nav.accordion__door.service__menu--link::before,
+.menu__nav.accordion__door.service__menu--link::after {
+  @include mq("md") {
+    top: 51%;
   }
 }

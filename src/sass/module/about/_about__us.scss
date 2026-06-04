@@ -88,6 +88,9 @@
     max-width: 45.4375rem;
     max-height: 50.4375rem;
   }
+  @include mq("lxg") {
+    height: 79%;
+  }
 }
 
 .about__us {
@@ -110,6 +113,17 @@
   }
   @include mq("lxg") {
     padding: 0 0rem 0 7rem;
+  }
+}
+.menu__nav.side-menu__link.about__us-link {
+  @include mq("lxg") {
+    padding: 1.215rem 0 1.65rem;
+  }
+}
+.accordion__door.about__us-link::before,
+.accordion__door.about__us-link::after {
+  @include mq("lxg") {
+    top: 47%;
   }
 }
 .about__us--wrapper {
@@ -237,4 +251,20 @@
 .about__us--nav-link:hover .about__us-list-down {
   color: $white;
   transition: color 0.3s ease;
+}
+.accordion__hide.accordion__hide.menu__nav {
+  @include mq("md") {
+    padding: 1.315rem 2rem 1.125rem 1rem;
+  }
+}
+.accordion__hide.accordion__hide.menu__nav.about__us-open {
+  @include mq("md") {
+    padding: 1.315rem 2rem 1.125rem 1rem;
+  }
+}
+.menu__nav.accordion__door.about__menu--link::before,
+.menu__nav.accordion__door.about__menu--link::after {
+  @include mq("md") {
+    top: 49%;
+  }
 }
