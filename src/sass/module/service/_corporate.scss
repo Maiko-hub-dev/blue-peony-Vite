@@ -114,7 +114,7 @@
     padding: 0 2.125rem;
   }
   @include mq("xl") {
-    padding: 0 2.125rem 0 2.25rem;
+    padding: 0 2.125rem 0 2.125rem;
   }
 }
 .corporate__content:not(:first-child) {
@@ -154,7 +154,7 @@
   }
   @include mq("lg") {
     justify-content: flex-start;
-    padding: 1.25rem 0rem 1.5rem 2.75rem;
+    padding: 1.25rem 0rem 1.5rem 2.65rem;
   }
 }
 .corporate__content--how_works {

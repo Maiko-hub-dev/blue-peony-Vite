@@ -13,15 +13,15 @@ $(document).ready(function () {
   $(".members__img").addClass("open");
 });
 //アコーディオンをクリックした時の動作
-$(document).ready(function () {
-  $(".accordion__title, .accordion__door").click(function () {
-    // アコーディオン（内容）の開閉
-    $(this).next(".accordion__hide").slideToggle(500);
-    // タイトルにopenクラスを付与または削除してプラスマイナス可変
-    $(this).toggleClass("open", 700);
+$(function () {
+  $(".accordion__title").on("click", function (e) {
+    e.preventDefault();
+
+    $(this).toggleClass("open");
+
+    $(this).next(".accordion__hide").stop().slideToggle(500);
   });
 });
-
 // ドロワーメニュー
 
 //. mainvisual__textを非表示

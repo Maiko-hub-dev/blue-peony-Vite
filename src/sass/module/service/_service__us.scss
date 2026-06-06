@@ -35,9 +35,6 @@
   @include mq("lg") {
     border-radius: 3.125rem;
   }
-  @include mq("xl") {
-    border-radius: 4.125rem;
-  }
 }
 .service-visual__image {
   width: 100%;
@@ -66,7 +63,20 @@
     max-height: 50.4375rem;
   }
 }
-
+.service__side-menu.side-menu__nav.menu__nav.service-site__menu-nav {
+  @include mq("lxg") {
+    padding-top: 2rem;
+  }
+}
+.menu__nav .side-menu__link5.service__menu--link {
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 0 1.5rem 0rem;
+    font-weight: $bold;
+  }
+}
 .service__us {
   position: relative;
   padding: 0;
@@ -88,10 +98,8 @@
     padding: 0 0rem 0 7rem;
     margin-top: 4rem;
   }
-  @include mq("lg") {
+  @include mq("lxg") {
     margin-top: 0;
-  }
-  @include mq("xl") {
     padding: 0 0 0 12rem;
   }
 }
@@ -213,6 +221,7 @@
   color: $white;
 }
 .service__side-menu.side-menu__nav {
+  padding: 3.125rem 0 2.5rem;
   @include mq("lxg") {
     padding: 0 0 0 2.5rem;
   }
@@ -258,7 +267,6 @@
   }
   @include mq("lg") {
     aspect-ratio: 1120/ 661;
-    border-radius: 4.125rem;
   }
   // @include mq("xl"){
 }
@@ -296,5 +304,227 @@
 .menu__nav.accordion__door.service__menu--link::after {
   @include mq("md") {
     top: 51%;
+  }
+}
+.contact.service-site__contact {
+  @include mq("lxg") {
+    margin-top: 0.25rem;
+  }
+}
+.contact__inner.service-site__inner {
+  @include mq("lxg") {
+    margin-top: 2.25rem;
+    padding-top: 1.25rem;
+  }
+}
+.contact__wrapper.service-site__wrapper {
+  @include mq("lxg") {
+    margin-left: 3.5rem;
+    margin-right: 0.75rem;
+    padding: 1.5rem 0 1.35rem 1rem;
+  }
+}
+.contact__titles.service-site__titles {
+  @include mq("md") {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+.contact__heading.service-site__heading {
+  @include mq("lxg") {
+    margin-left: 0;
+    padding: 0 0.45rem 0 0.25rem;
+  }
+}
+.finance.service-site__finance {
+  @include mq("lxg") {
+    width: 10.9375rem;
+    height: 16rem;
+    background-size: 10.9375rem 16rem;
+    margin-right: 2.5rem;
+    margin-top: 1.125rem;
+  }
+}
+.address__jp.service-site__address {
+  @include mq("md") {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+.hours__jp.service-site__hours {
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+.contact__tel--num.number.service-site__number {
+  @include mq("lxg") {
+    padding: 1.5rem 0 1.5rem 1.875rem;
+    height: inherit;
+  }
+}
+.contact__head-box_second.service-site__box_second {
+  @include mq("lxg") {
+    border-right: 1px solid #000000;
+    padding: 0 1.875rem 0 0;
+  }
+}
+.contact__note.service-site__contact__note {
+  @include mq("lxg") {
+    letter-spacing: 0.01rem;
+    transform: scaleX(0.975);
+    padding: 0.35rem 0.125rem 0 0.125rem;
+    margin-left: -0.125em;
+  }
+}
+.contact__elipse.service-site__elipse {
+  @include mq("lxg") {
+    right: 1.185rem;
+    top: 1.35rem;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 0.125rem;
+    margin-right: 0.125rem;
+  }
+}
+.footer__inner.service-site__footer-inner {
+  @include mq("lxg") {
+    flex-direction: row;
+    align-items: self-start;
+    margin-top: 4.25rem;
+    justify-content: space-around;
+    padding: 0.25rem 4rem 0 0;
+  }
+}
+.footer__column.service-site__footer-column {
+  @include mq("lxg") {
+    padding-top: 0;
+    margin-left: 11rem;
+    padding-left: 5.5rem;
+  }
+}
+.footer__logo.service-site__footer-logo .footer__icon.service-site__footer-icon {
+  @include mq("lxg") {
+    transform: scale(1);
+    padding-right: 0;
+  }
+}
+.footer__address.service-site__footer-address {
+  @include mq("lxg") {
+    padding: 2.15rem 0 0 0.25rem;
+  }
+}
+.address__jp2.service-site__add2 {
+  @include mq("lxg") {
+    padding-top: 0;
+    padding-left: 0.25rem;
+    margin-left: 0.75rem;
+  }
+}
+.footer__tablecontents.service-site__tablecontents {
+  @include mq("lxg") {
+    margin-left: 1rem;
+    margin-top: 1.25rem;
+    padding: 0.25rem 0 0 4rem;
+  }
+}
+.footer__hours.service-site__footer-hour {
+  @include mq("lxg") {
+    padding: 0.5rem 0 0 0.25rem;
+    text-align: initial;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+.footer__holiday.holiday.service-site__footer-holiday {
+  @include mq("lxg") {
+    padding: 0.5rem 0 0 0.25rem;
+    text-align: initial;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+.contact__button.service-site-button {
+  @include mq("lxg") {
+    padding-top: 0;
+    padding-left: 0.25rem;
+  }
+}
+.footer__nav--first.service-site__footer-nav {
+  @include mq("lxg") {
+    padding: 2.5rem 0 0 0.5rem;
+  }
+}
+.footer__nav--second.service-site__footer-nav {
+  @include mq("lxg") {
+    padding: 2rem 0 0 0.5rem;
+  }
+}
+
+.footer__nav--third.service-site__footer-nav3 {
+  @include mq("lxg") {
+    padding: 2rem 0 0 0.5rem;
+  }
+}
+.footer__nav-item.item2.service-site__item2 {
+  @include mq("lxg") {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1.5rem;
+  }
+}
+.footer__copyright.service-site__copyright {
+  @include mq("lxg") {
+    padding: 0 2.55rem 1.625rem 0;
+    margin-top: 0;
+    font-size: 0.875rem;
+    letter-spacing: normal;
+  }
+}
+/*  ここからドロワー部分の調整. */
+.side-menu__list.service-site__list {
+  padding-top: 1.5rem;
+  @include mq("md") {
+    padding-top: initial;
+  }
+}
+.accordion__title.accordion-side__service {
+  position: relative;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 0.75rem 0.125rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  margin-right: -0.75rem;
+  @include mq("md") {
+    padding: initial;
+    font-size: initial;
+    margin-right: initial;
+  }
+}
+.menu__nav.side-menu__sublist2.accordion__hide.menu__nav--topix.service-site__corp {
+  padding: 0.75rem 0.25rem 0 0.25rem;
+  @include mq("md") {
+    padding: 1rem 2rem 0.75rem 1rem;
+  }
+}
+.menu__nav.side-menu__subitem .side-menu__sublink {
+  letter-spacing: normal;
+  width: 100%;
+  @include mq("md") {
+    padding: initial;
+  }
+}
+.menu__nav.side-menu__subitem8 .side-menu__sublink {
+  letter-spacing: normal;
+  width: 100%;
+  @include mq("md") {
+    padding: initial;
+  }
+}
+/*. まだ治ってないところ　*/
+.side-menu__sublist.accordion__hide.service-sublist {
+  @include mq("md") {
+    padding: 1.315rem 2rem 0.75rem 1rem;
   }
 }

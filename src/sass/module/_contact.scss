@@ -302,6 +302,7 @@
   }
   @include mq("xl") {
     margin-left: 2rem;
+    padding: 1rem 2rem 0 0;
   }
 }
 .contact__access.contact-site__access {
@@ -312,7 +313,8 @@
 }
 .contact__access.service__contact__access {
   @include mq("lxg") {
-    padding: 1rem 0.75rem 2px 2rem;
+    margin-left: 2rem;
+    padding: 1.125rem 0.75rem 2px 1.875rem;
   }
 }
 .contact__form-button {

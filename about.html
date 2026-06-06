@@ -66,11 +66,13 @@
       <div class="about-visual__rightbox"></div>
       <div class="about-visual__inner">
         <div class="about-visual__frame">
-          <picture>
-            <source media="(min-width:768px)" srcset="./src/images/about-us__pc.jpg" class="about__vs_image" />
+          <div class="about-visual__image about-image">
+            <!-- <picture> -->
+            <!-- <source media="(min-width:768px)" srcset="./src/images/about-us__pc.jpg" class="about__vs_image" /> -->
             <!-- 画面幅1440pxより大のときは、これまでの処理を流用しつつsourceタグに書き換えます。 -->
             <img src="./src/images/about-us.jpg" alt="" class="about-visual__img" />
-          </picture>
+            <!-- </picture> -->
+          </div>
         </div>
       </div>
     </div>
@@ -82,36 +84,36 @@
       </div>
       <div class="about__side-menu side-menu__nav menu__nav sp-nav about__side-menu js-drawer">
         <nav class="menu__nav side-menu__list sp-nav__drawers drawers about__menu-nav">
-          <div class="sp-nav__drawer drawers_drawer drawer">
+          <div class="sp-nav__drawer drawers_drawer drawer about_us-drawers">
             <p class="menu__nav side-menu__item menu__nav--topix menu__nav-top u-mobile">トップページ</p>
-            <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
+            <p class="menu__nav side-menu__item side-menu__item2 menu__nav--topix accordion__title">
               <a href="#" class="menu__nav side-menu__link accordion__door about__us-link">私達について </a>
             </p>
             <ul class="menu__nav side-menu__sublist accordion__hide accordion--open about__us-open">
               <li class="menu__nav side-menu__subitem2 drawer__link">
                 <a href="#philosophy" class="menu__nav side-menu__sublink">経営理念</a>
               </li>
-              <li class="menu__nav side-menu__subitem drawer__link">
+              <li class="menu__nav side-menu__subitem side-menu__subitem8 drawer__link">
                 <a href="#overview" class="menu__nav side-menu__sublink">会社概要</a>
               </li>
-              <li class="menu__nav side-menu__subitem10 drawer__link">
+              <li class="menu__nav side-menu__subitem41 drawer__link">
                 <a href="#efforts" class="side-menu__sublink side-menu__sublink">安全への取り組み </a>
               </li>
             </ul>
           </div>
         </nav>
         <nav class="menu__nav side-menu__list">
-          <p class="menu__nav side-menu__item menu__nav--topix accordion__title">
+          <p class="menu__nav side-menu__item menu__nav--topix accordion__title accordion-side__about">
             <a href="#service" class="menu__nav side-menu__link side-menu__link6 accordion__door about__menu--link">事業内容</a>
           </p>
           <ul class="menu__nav side-menu__sublist2 menu__nav--topix accordion__hide accordion--open about__menu--link">
-            <li class="menu__nav side-menu__subitem">
+            <li class="menu__nav side-menu__subitem side-menu__subitem53">
               <a href="service.html#housing" class="side-menu__sublink">住宅建築・リフォーム</a>
             </li>
-            <li class="menu__nav side-menu__subitem">
+            <li class="menu__nav side-menu__subitem side-menu__subitem5">
               <a href="service.html#corporate" class="menu__nav side-menu__sublink">法人新築・リフォーム</a>
             </li>
-            <li class="menu__nav side-menu__subitem">
+            <li class="menu__nav side-menu__subitem side-menu__subitem7">
               <a href="service.html#public-work" class="menu__nav side-menu__sublink">公共工事</a>
             </li>
           </ul>
@@ -121,12 +123,13 @@
             <a href="index.html" class="side-menu__link">お知らせ</a>
           </li>
         </ul>
-        <ul class="menu__nav side-menu__list menu__nav--topix">
+        <ul class="menu__nav side-menu__list menu__nav--topix menu__nav--contact-row">
           <li class="side-menu__item2 side-menu__contact">
             <img src="././src/images/info.png" alt="メールのイラスト" class="menu__nav--info" />
             <a href="contact.html" class="menu__nav side-menu__link side-menu__link--contact"> お問い合わせ</a>
           </li>
         </ul>
+        <p class="side-menu__copyright">© AOBOTAN INC.</p>
       </div>
     </aside>
     <div class="about__us">
@@ -274,7 +277,7 @@
     </div>
 
     <div class="contact">
-      <div class="contact__inner">
+      <div class="contact__inner about-site__contact">
         <div class="contact__wrapper">
           <div class="wrapper__finance finance"></div>
           <div class="contact__titles">

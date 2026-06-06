@@ -110,12 +110,6 @@
     justify-content: end;
   }
 }
-body.is-drawer-open .header__ao,
-body.is-drawer-open .header__nav {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
 
 .hero__link {
   display: block;

@@ -24,7 +24,7 @@
     padding: 0 0rem 0 4rem;
   }
   @include mq("lxg") {
-    padding: 0.5rem 0 0 5.5rem;
+    padding: 0.25rem 0 0 5.5rem;
   }
 }
 .public__wrapper {
@@ -58,9 +58,6 @@
     padding: 0 0;
     aspect-ratio: 960 / 400;
     max-width: none;
-  }
-  @include mq("xl") {
-    border-radius: 4.125rem;
   }
 }
 
@@ -100,6 +97,7 @@
     margin: 1rem 0 0 0;
   }
   @include mq("lxg") {
+    padding: 0.75rem 2rem 0 0rem;
     margin: 1.5rem 0 0 0;
   }
 }
@@ -192,6 +190,9 @@
   @include mq("md") {
     padding: 3.25rem 2.125rem 0;
     margin-top: 4rem;
+  }
+  @include mq("lxg") {
+    padding: 3.25rem 2.125rem 0;
   }
 }
 .workon__card--image.public__cards-image {
